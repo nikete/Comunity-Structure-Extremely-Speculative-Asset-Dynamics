@@ -3,42 +3,46 @@
 \begin{center}
 \begin{tabular}{lcccc}
 \hline
-                                               &   User  & Nodes  &  Graph   & Satoshi   \\
+                                               &   User  &   Node  & Graph  & Satoshi   \\
 \hline
 \hline
 \end{tabular}
 \begin{tabular}{lllll}
-Intercept                                      & 0.06    & 0.00   & 0.02     & 0.02      \\
-                                               & (0.06)  & (0.05) & (0.05)   & (0.05)    \\
-technical                                      & 0.22*** &        & 0.18***  & 0.18***   \\
-                                               & (0.07)  &        & (0.05)   & (0.05)    \\
-user1_betweenness_centrality_weighted          &         &        &          & -0.03     \\
-                                               &         &        &          & (0.04)    \\
-user1_closeness_centrality_outgoing_unweighted &         &        & -0.25*** & -146.05   \\
-                                               &         &        & (0.04)   & (142.31)  \\
-user1_closeness_centrality_outgoing_weighted   &         &        &          & 145.62    \\
-                                               &         &        &          & (142.14)  \\
-user1_closeness_centrality_unweighted          &         &        & 0.44***  & 0.90*     \\
-                                               &         &        & (0.06)   & (0.47)    \\
-user1_clustering_coefficient                   &         &        & 0.05     & 0.04      \\
-                                               &         &        & (0.05)   & (0.05)    \\
-user1_days_since_first_post                    & 0.08    &        & 0.06     & 0.06      \\
-                                               & (0.06)  &        & (0.06)   & (0.06)    \\
-user1_num_posts                                &         &        & -0.05    & -0.03     \\
-                                               &         &        & (0.05)   & (0.05)    \\
-user1_num_subjects                             &         &        & -0.14*   & -0.12     \\
-                                               &         &        & (0.08)   & (0.08)    \\
-user1_satoshi_distance                         &         &        & -0.43*** & -0.42***  \\
-                                               &         &        & (0.13)   & (0.14)    \\
-user1_satoshi_distance_inf                     &         &        & 0.27**   & 0.26**    \\
-                                               &         &        & (0.12)   & (0.12)    \\
-user1_satoshi_pagerank_weighted                &         &        & -0.26*** & -0.46**   \\
-                                               &         &        & (0.07)   & (0.23)    \\
-Adjusted-R2                                    & 0.05    & 0.00   & 0.18     & 0.17      \\
-Condition Number                               & 1.06    & 1.00   & 9.56     & 11155.25  \\
-AIC                                            & 783.20  & 937.50 & 750.79   & 753.72    \\
-R2                                             & 0.06    & 0.00   & 0.21     & 0.21      \\
-BIC                                            & 794.09  & 941.30 & 790.73   & 800.92    \\
+Intercept                                      & 0.05    & 0.05    & 0.00   & 0.01      \\
+                                               & (0.06)  & (0.06)  & (0.00) & (0.06)    \\
+technical                                      & 0.21*** & 0.21*** &        & 0.17***   \\
+                                               & (0.06)  & (0.06)  &        & (0.05)    \\
+user1_betweenness_centrality_weighted          &         &         &        & -0.07     \\
+                                               &         &         &        & (0.07)    \\
+user1_closeness_centrality_outgoing_unweighted &         &         &        & -0.21     \\
+                                               &         &         &        & (194.95)  \\
+user1_closeness_centrality_outgoing_weighted   &         &         &        & -0.04     \\
+                                               &         &         &        & (194.70)  \\
+user1_closeness_centrality_unweighted          &         &         &        & 0.37      \\
+                                               &         &         &        & (0.64)    \\
+user1_clustering_coefficient                   &         &         &        & 0.07      \\
+                                               &         &         &        & (0.06)    \\
+user1_days_since_first_post                    & 0.07    & 0.09    &        & 0.05      \\
+                                               & (0.06)  & (0.07)  &        & (0.06)    \\
+user1_degree_incoming                          &         & 0.07    &        & 0.10      \\
+                                               &         & (0.06)  &        & (0.09)    \\
+user1_degree_outgoing                          &         & -0.09   &        & -0.06     \\
+                                               &         & (0.07)  &        & (0.08)    \\
+user1_num_posts                                &         &         &        & 0.00      \\
+                                               &         &         &        & (0.00)    \\
+user1_num_subjects                             &         &         &        & -0.13     \\
+                                               &         &         &        & (0.10)    \\
+user1_satoshi_distance                         &         &         &        & -0.33***  \\
+                                               &         &         &        & (0.13)    \\
+user1_satoshi_distance_inf                     &         &         &        & 0.18      \\
+                                               &         &         &        & (0.11)    \\
+user1_satoshi_pagerank_weighted                &         &         &        & -0.18     \\
+                                               &         &         &        & (0.35)    \\
+Adjusted-R2                                    & 0.05    & 0.05    & 0.00   & 0.17      \\
+Condition Number                               & 1.06    & 2.06    & 1.00   & 11312.33  \\
+AIC                                            & 783.28  & 784.38  & 937.50 & 756.25    \\
+R2                                             & 0.06    & 0.07    & 0.00   & 0.21      \\
+BIC                                            & 794.17  & 802.54  & 941.30 & 810.71    \\
 \hline
 \end{tabular}
 \end{center}

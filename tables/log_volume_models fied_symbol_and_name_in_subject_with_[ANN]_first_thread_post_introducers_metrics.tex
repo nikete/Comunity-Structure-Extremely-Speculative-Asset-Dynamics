@@ -3,32 +3,34 @@
 \begin{center}
 \begin{tabular}{lcccc}
 \hline
-                                               &   User   &  Nodes  &  Graph  &  Satoshi    \\
+                                               &   User  &   Node  &  Graph  & Satoshi   \\
 \hline
 \hline
 \end{tabular}
 \begin{tabular}{lllll}
-Intercept                                      & 0.01     & -0.01   & -0.01   & -0.01       \\
-                                               & (0.06)   & (0.05)  & (0.05)  & (0.05)      \\
-technical                                      & 0.22***  & 0.18*** & 0.19*** & 0.18***     \\
-                                               & (0.06)   & (0.06)  & (0.06)  & (0.06)      \\
-user1_closeness_centrality_outgoing_unweighted &          & 0.33*** & 0.30*** & 2305.26**   \\
-                                               &          & (0.10)  & (0.09)  & (935.27)    \\
-user1_closeness_centrality_outgoing_weighted   &          &         &         & -2304.95**  \\
-                                               &          &         &         & (935.29)    \\
-user1_clustering_coefficient                   &          & -0.08   &         &             \\
-                                               &          & (0.07)  &         &             \\
-user1_days_since_first_post                    & 0.09*    & 0.09*   & 0.09*   & 0.10*       \\
-                                               & (0.05)   & (0.05)  & (0.05)  & (0.06)      \\
-user1_num_posts                                & -0.15*** & -0.10   & -0.10   & -0.09       \\
-                                               & (0.06)   & (0.11)  & (0.11)  & (0.10)      \\
-user1_num_subjects                             &          & -0.15   & -0.14   & -0.16*      \\
-                                               &          & (0.09)  & (0.09)  & (0.09)      \\
-Adjusted-R2                                    & 0.06     & 0.15    & 0.14    & 0.17        \\
-Condition Number                               & 1.60     & 3.37    & 3.32    & 34950.94    \\
-AIC                                            & 773.96   & 749.94  & 749.73  & 743.35      \\
-R2                                             & 0.07     & 0.17    & 0.16    & 0.19        \\
-BIC                                            & 788.49   & 775.36  & 771.52  & 768.76      \\
+Intercept                                      & 0.00    & 0.00    & 0.00    & 0.00      \\
+                                               & (0.00)  & (0.00)  & (0.00)  & (0.00)    \\
+technical                                      & 0.21*** & 0.21*** & 0.18*** & 0.18***   \\
+                                               & (0.06)  & (0.06)  & (0.05)  & (0.05)    \\
+user1_closeness_centrality_outgoing_unweighted &         &         & 0.32*** & 0.28      \\
+                                               &         &         & (0.06)  & (805.24)  \\
+user1_closeness_centrality_outgoing_weighted   &         &         &         & 0.02      \\
+                                               &         &         &         & (805.24)  \\
+user1_clustering_coefficient                   &         &         & -0.05   &           \\
+                                               &         &         & (0.06)  &           \\
+user1_days_since_first_post                    & 0.08    & 0.06    & 0.05    &           \\
+                                               & (0.06)  & (0.06)  & (0.06)  &           \\
+user1_degree_incoming                          &         & 0.12    & 0.14**  & 0.16**    \\
+                                               &         & (0.07)  & (0.07)  & (0.07)    \\
+user1_num_posts                                & -0.13** & -0.18*  & -0.16*  & -0.15     \\
+                                               & (0.06)  & (0.10)  & (0.09)  & (0.09)    \\
+user1_num_subjects                             &         & -0.01   & -0.15   & -0.14     \\
+                                               &         & (0.09)  & (0.09)  & (0.09)    \\
+Adjusted-R2                                    & 0.06    & 0.07    & 0.16    & 0.16      \\
+Condition Number                               & 1.60    & 3.60    & 3.75    & 35549.72  \\
+AIC                                            & 774.11  & 774.39  & 746.65  & 746.62    \\
+R2                                             & 0.07    & 0.08    & 0.18    & 0.18      \\
+BIC                                            & 788.64  & 796.18  & 775.70  & 772.04    \\
 \hline
 \end{tabular}
 \end{center}
