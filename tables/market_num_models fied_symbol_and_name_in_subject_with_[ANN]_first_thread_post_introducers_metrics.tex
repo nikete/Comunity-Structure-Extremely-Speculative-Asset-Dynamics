@@ -1,0 +1,35 @@
+\begin{table}
+\caption{}
+\begin{center}
+\begin{tabular}{lcccc}
+\hline
+                                               &  User  &  Nodes   &  Graph   &  Satoshi   \\
+\hline
+\hline
+\end{tabular}
+\begin{tabular}{lllll}
+Intercept                                      & -0.00  & -0.02    & -0.02    & -0.03      \\
+                                               & (0.05) & (0.05)   & (0.05)   & (0.05)     \\
+technical                                      & 0.29** & 0.24***  & 0.24***  & 0.23***    \\
+                                               & (0.12) & (0.09)   & (0.09)   & (0.09)     \\
+user1_closeness_centrality_outgoing_unweighted &        & 0.43**   & 0.42**   & 2346.73    \\
+                                               &        & (0.18)   & (0.18)   & (1853.38)  \\
+user1_closeness_centrality_outgoing_weighted   &        &          &          & -2346.29   \\
+                                               &        &          &          & (1853.34)  \\
+user1_clustering_coefficient                   &        & -0.18*   & -0.17*   & -0.21**    \\
+                                               &        & (0.10)   & (0.09)   & (0.10)     \\
+user1_num_posts                                & -0.04  &          &          &            \\
+                                               & (0.05) &          &          &            \\
+user1_num_subjects                             & -0.02  & -0.18*** & -0.17*** & -0.18***   \\
+                                               & (0.04) & (0.06)   & (0.06)   & (0.06)     \\
+user1_satoshi_distance_inf                     &        &          & 0.06     & 0.05       \\
+                                               &        &          & (0.07)   & (0.07)     \\
+Adjusted-R2                                    & 0.08   & 0.23     & 0.23     & 0.25       \\
+Condition Number                               & 2.88   & 1.74     & 1.78     & 34609.39   \\
+AIC                                            & 775.79 & 728.81   & 729.28   & 722.42     \\
+R2                                             & 0.09   & 0.24     & 0.24     & 0.26       \\
+BIC                                            & 790.31 & 746.96   & 751.07   & 747.84     \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}

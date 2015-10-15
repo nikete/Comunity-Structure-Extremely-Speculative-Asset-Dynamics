@@ -1,0 +1,39 @@
+\begin{table}
+\caption{}
+\begin{center}
+\begin{tabular}{lcccc}
+\hline
+                                               &   User  &  Nodes  &  Graph   & Satoshi  \\
+\hline
+\hline
+\end{tabular}
+\begin{tabular}{lllll}
+Intercept                                      & 0.05    & 0.02    & 0.03     & 0.03     \\
+                                               & (0.06)  & (0.06)  & (0.06)   & (0.06)   \\
+technical                                      & 0.19*** & 0.19*** & 0.19***  & 0.19***  \\
+                                               & (0.06)  & (0.06)  & (0.06)   & (0.06)   \\
+user1_closeness_centrality_incoming_unweighted &         & 0.65    &          &          \\
+                                               &         & (1.39)  &          &          \\
+user1_closeness_centrality_outgoing_unweighted &         & -0.75   & -0.07*** & -16.82   \\
+                                               &         & (1.38)  & (0.01)   & (18.96)  \\
+user1_closeness_centrality_outgoing_weighted   &         &         &          & 16.73    \\
+                                               &         &         &          & (18.94)  \\
+user1_clustering_coefficient                   &         & 0.24*** & 0.25***  & 0.26***  \\
+                                               &         & (0.05)  & (0.05)   & (0.05)   \\
+user1_days_since_first_post                    & -0.07   &         &          &          \\
+                                               & (0.07)  &         &          &          \\
+user1_num_posts                                &         & -0.06   &          &          \\
+                                               &         & (0.09)  &          &          \\
+user1_num_subjects                             &         & -0.01   &          &          \\
+                                               &         & (0.08)  &          &          \\
+user1_satoshi_pagerank_weighted                &         &         & -0.03**  & -0.01    \\
+                                               &         &         & (0.01)   & (0.02)   \\
+Adjusted-R2                                    & 0.04    & 0.10    & 0.10     & 0.10     \\
+Condition Number                               & 1.30    & 57.26   & 3.02     & 1111.64  \\
+AIC                                            & 779.96  & 765.07  & 762.02   & 763.45   \\
+R2                                             & 0.04    & 0.12    & 0.12     & 0.12     \\
+BIC                                            & 790.83  & 790.44  & 780.14   & 785.19   \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
