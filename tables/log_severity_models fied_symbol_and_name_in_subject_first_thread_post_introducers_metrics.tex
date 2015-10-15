@@ -1,38 +1,35 @@
 \begin{table}
 \caption{}
 \begin{center}
-\begin{tabular}{lcccc}
+\begin{tabular}{lccccc}
 \hline
-                                      &  User  &  Node  &  Graph  & Satoshi   \\
+                                      &  User  &  Node  & Graph  & Satoshi & Weighted  \\
 \hline
 \hline
 \end{tabular}
-\begin{tabular}{lllll}
-Intercept                             & 0.00   & 0.00   & 0.00    & -0.00     \\
-                                      & (0.00) & (0.00) & (0.00)  & (0.05)    \\
-user1_betweenness_centrality_weighted &        &        &         & -0.03     \\
-                                      &        &        &         & (0.06)    \\
-user1_closeness_centrality_unweighted &        &        & -0.08   &           \\
-                                      &        &        & (0.05)  &           \\
-user1_closeness_centrality_weighted   &        &        &         & -0.13**   \\
-                                      &        &        &         & (0.05)    \\
-user1_clustering_coefficient          &        &        & 0.17*** & 0.13**    \\
-                                      &        &        & (0.05)  & (0.05)    \\
-user1_degree_outgoing                 &        &        & 0.00    & 0.00      \\
-                                      &        &        & (0.00)  & (0.00)    \\
-user1_num_posts                       &        &        & -0.03   & -0.05     \\
-                                      &        &        & (0.06)  & (0.06)    \\
-user1_num_subjects                    &        &        & 0.05    & 0.01      \\
-                                      &        &        & (0.06)  & (0.06)    \\
-user1_satoshi_distance                &        &        &         & -0.31***  \\
-                                      &        &        &         & (0.11)    \\
-user1_satoshi_distance_inf            &        &        &         & 0.28***   \\
-                                      &        &        &         & (0.10)    \\
-Adjusted-R2                           & 0.00   & 0.00   & 0.03    & 0.06      \\
-Condition Number                      & 1.00   & 1.00   & 3.13    & 4.70      \\
-AIC                                   & 937.50 & 937.50 & 933.86  & 926.04    \\
-R2                                    & 0.00   & 0.00   & 0.04    & 0.08      \\
-BIC                                   & 941.30 & 941.30 & 956.65  & 960.23    \\
+\begin{tabular}{llllll}
+Intercept                             & 0.00   & 0.00   & 0.00   & 0.00    & 0.00      \\
+                                      & (0.00) & (0.00) & (0.00) & (0.00)  & (0.00)    \\
+user1_closeness_centrality_unweighted &        &        & -0.03  & 0.00    &           \\
+                                      &        &        & (0.05) & (0.00)  &           \\
+user1_clustering_coefficient          &        &        & 0.12** & 0.10*   & 0.10*     \\
+                                      &        &        & (0.05) & (0.05)  & (0.05)    \\
+user1_degree_outgoing                 &        &        & 0.00   & 0.00    & 0.00      \\
+                                      &        &        & (0.00) & (0.00)  & (0.00)    \\
+user1_num_posts                       &        &        &        & 0.00    & 0.00      \\
+                                      &        &        &        & (0.00)  & (0.00)    \\
+user1_num_subjects                    &        &        & 0.00   & 0.00    & 0.00      \\
+                                      &        &        & (0.00) & (0.00)  & (0.00)    \\
+user1_satoshi_distance                &        &        &        &         & 0.00      \\
+                                      &        &        &        &         & (0.00)    \\
+user1_satoshi_pagerank_weighted       &        &        &        &         & 0.00      \\
+                                      &        &        &        &         & (0.00)    \\
+R2                                    & 0.00   & 0.00   & 0.03   & 0.02    & 0.02      \\
+BIC                                   & 941.30 & 941.30 & 954.08 & 962.14  & 967.94    \\
+5-fold CV average MSE:                & 1.03   & 1.05   & 0.97   & 0.97    & 0.97      \\
+Adjusted-R2                           & 0.00   & 0.00   & 0.02   & 0.01    & 0.01      \\
+Condition Number                      & 1.00   & 1.00   & 1.67   & 3.13    & 3.27      \\
+AIC                                   & 937.50 & 937.50 & 935.08 & 939.34  & 941.34    \\
 \hline
 \end{tabular}
 \end{center}

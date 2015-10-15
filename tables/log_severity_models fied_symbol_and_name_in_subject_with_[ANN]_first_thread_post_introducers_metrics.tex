@@ -1,26 +1,28 @@
 \begin{table}
 \caption{}
 \begin{center}
-\begin{tabular}{lcccc}
+\begin{tabular}{lccccc}
 \hline
-                                      &  User  &  Node  &  Graph  & Satoshi  \\
+                                      &  User  &  Node  &  Graph  & Satoshi & Weighted  \\
 \hline
 \hline
 \end{tabular}
-\begin{tabular}{lllll}
-Intercept                             & 0.00   & 0.00   & -0.00   & -0.01    \\
-                                      & (0.00) & (0.00) & (0.06)  & (0.06)   \\
-user1_closeness_centrality_unweighted &        &        & 0.22*** & 0.23***  \\
-                                      &        &        & (0.06)  & (0.06)   \\
-user1_clustering_coefficient          &        &        & 0.12*   & 0.12*    \\
-                                      &        &        & (0.06)  & (0.06)   \\
-user1_satoshi_distance_inf            &        &        &         & 0.08     \\
-                                      &        &        &         & (0.05)   \\
-Adjusted-R2                           & -0.00  & -0.00  & 0.09    & 0.10     \\
-Condition Number                      & 1.00   & 1.00   & 1.67    & 1.68     \\
-AIC                                   & 804.12 & 804.12 & 778.52  & 777.71   \\
-R2                                    & -0.00  & -0.00  & 0.10    & 0.11     \\
-BIC                                   & 807.76 & 807.76 & 789.46  & 792.29   \\
+\begin{tabular}{llllll}
+Intercept                             & 0.00   & 0.00   & 0.00    & 0.00    & 0.00      \\
+                                      & (0.00) & (0.00) & (0.00)  & (0.00)  & (0.00)    \\
+user1_closeness_centrality_unweighted &        &        & 0.17*** & 0.17*** & 0.17***   \\
+                                      &        &        & (0.06)  & (0.06)  & (0.06)    \\
+user1_clustering_coefficient          &        &        & 0.05    & 0.05    & 0.05      \\
+                                      &        &        & (0.06)  & (0.06)  & (0.06)    \\
+user1_satoshi_pagerank_weighted       &        &        &         &         & 0.00      \\
+                                      &        &        &         &         & (0.00)    \\
+R2                                    & -0.00  & -0.00  & 0.09    & 0.09    & 0.09      \\
+BIC                                   & 807.76 & 807.76 & 793.49  & 793.49  & 799.13    \\
+Elastic Net 5-fold CV MSE:            & 16.42  & 16.66  & 16.12   & 16.20   & 16.32     \\
+Adjusted-R2                           & -0.00  & -0.00  & 0.08    & 0.08    & 0.08      \\
+Condition Number                      & 1.00   & 1.00   & 1.67    & 1.67    & 2.00      \\
+Elastic Net L1 ratio                  & 0.10   & 0.10   & 0.90    & 0.90    & 0.90      \\
+AIC                                   & 804.12 & 804.12 & 782.55  & 782.55  & 784.55    \\
 \hline
 \end{tabular}
 \end{center}

@@ -1,26 +1,39 @@
 \begin{table}
 \caption{}
 \begin{center}
-\begin{tabular}{lcccc}
+\begin{tabular}{lccccc}
 \hline
-                             &   User  &   Node  &  Graph  & Satoshi  \\
+                                               &   User  &   Node  &  Graph  & Satoshi & Weighted  \\
 \hline
 \hline
 \end{tabular}
-\begin{tabular}{lllll}
-Intercept                    & 0.02    & 0.02    & 0.01    & 0.02     \\
-                             & (0.06)  & (0.06)  & (0.06)  & (0.06)   \\
-technical                    & 0.26*** & 0.26*** & 0.26*** & 0.26***  \\
-                             & (0.06)  & (0.06)  & (0.06)  & (0.06)   \\
-user1_clustering_coefficient &         &         & 0.07    &          \\
-                             &         &         & (0.06)  &          \\
-user1_days_since_first_post  & 0.01    &         &         &          \\
-                             & (0.08)  &         &         &          \\
-Adjusted-R2                  & 0.06    & 0.06    & 0.07    & 0.06     \\
-Condition Number             & 1.30    & 1.05    & 1.15    & 1.05     \\
-AIC                          & 809.23  & 807.29  & 807.41  & 807.29   \\
-R2                           & 0.07    & 0.07    & 0.07    & 0.07     \\
-BIC                          & 820.10  & 814.54  & 818.28  & 814.54   \\
+\begin{tabular}{llllll}
+Intercept                                      & 0.00    & 0.00    & 0.00    & 0.00    & 0.00      \\
+                                               & (0.00)  & (0.00)  & (0.00)  & (0.00)  & (0.00)    \\
+technical                                      & 0.22*** & 0.18*** & 0.18*** & 0.18*** & 0.18***   \\
+                                               & (0.06)  & (0.06)  & (0.06)  & (0.06)  & (0.06)    \\
+user1_closeness_centrality_incoming_unweighted &         &         & 0.00    &         &           \\
+                                               &         &         & (0.00)  &         &           \\
+user1_closeness_centrality_outgoing_unweighted &         &         & 0.00    &         &           \\
+                                               &         &         & (0.00)  &         &           \\
+user1_clustering_coefficient                   &         &         & 0.00    &         &           \\
+                                               &         &         & (0.00)  &         &           \\
+user1_days_since_first_post                    &         & 0.00    & 0.00    &         &           \\
+                                               &         & (0.00)  & (0.00)  &         &           \\
+user1_degree_incoming                          &         & 0.00    & 0.00    &         &           \\
+                                               &         & (0.00)  & (0.00)  &         &           \\
+user1_degree_outgoing                          &         & 0.00    & 0.00    &         &           \\
+                                               &         & (0.00)  & (0.00)  &         &           \\
+user1_num_posts                                &         & 0.00    & 0.00    &         &           \\
+                                               &         & (0.00)  & (0.00)  &         &           \\
+user1_num_subjects                             &         & 0.00    & 0.00    &         &           \\
+                                               &         & (0.00)  & (0.00)  &         &           \\
+R2                                             & 0.06    & 0.06    & 0.06    & 0.06    & 0.06      \\
+BIC                                            & 815.30  & 845.24  & 862.11  & 817.12  & 817.12    \\
+5-fold CV average MSE:                         & 0.96    & 0.96    & 0.97    & 0.99    & 0.99      \\
+Adjusted-R2                                    & 0.06    & 0.04    & 0.03    & 0.06    & 0.06      \\
+Condition Number                               & 1.05    & 4.86    & 58.08   & 1.05    & 1.05      \\
+AIC                                            & 808.05  & 819.87  & 825.87  & 809.87  & 809.87    \\
 \hline
 \end{tabular}
 \end{center}
