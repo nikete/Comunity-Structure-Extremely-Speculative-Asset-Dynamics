@@ -26,8 +26,8 @@ user1_degree_incoming                          &         & 0.01    &        & 0.
                                                &         & (0.06)  &        & (0.05)  & (0.09)    \\
 user1_degree_outgoing                          &         &         &        & -0.12   & -0.10     \\
                                                &         &         &        & (0.09)  & (0.09)    \\
-user1_degree_total                             &         &         &        & 0.04    & 0.00      \\
-                                               &         &         &        & (0.03)  & (0.00)    \\
+user1_degree_total                             &         &         &        & 0.04    &           \\
+                                               &         &         &        & (0.03)  &           \\
 user1_num_posts                                &         &         &        & 0.01    & 0.00      \\
                                                &         &         &        & (0.09)  & (0.09)    \\
 user1_num_subjects                             &         &         &        & -0.11   & -0.16     \\
@@ -40,12 +40,13 @@ user1_satoshi_distance_inf                     &         &         &        &   
                                                &         &         &        &         & (0.11)    \\
 user1_satoshi_pagerank_weighted                &         &         &        &         & -0.86     \\
                                                &         &         &        &         & (3.10)    \\
+ElasticNet CV alpha                            & 7.00    & 7.00    & 11.00  & 0.00    & 0.00      \\
+ElasticNet CV  L1 ratio                        & 0.70    & 1.00    & 0.10   & 0.10    & 0.90      \\
 R2                                             & 0.05    & 0.05    & -0.00  & 0.18    & 0.22      \\
-BIC                                            & 796.21  & 801.69  & 811.59 & 801.78  & 810.18    \\
-Elastic Net 5-fold CV MSE:                     & 15.72   & 15.81   & 31.82  & 16.07   & 15.79     \\
 Adjusted-R2                                    & 0.04    & 0.04    & -0.01  & 0.14    & 0.17      \\
-Condition Number                               & 1.06    & 1.40    & 1.10   & nan     & nan       \\
-Elastic Net L1 ratio                           & 0.70    & 1.00    & 0.10   & 0.10    & 0.70      \\
+Condition Number                               & 1.06    & 1.40    & 1.10   & nan     & 349.66    \\
+ElasticNet CV MSE:                             & 0.98    & 0.99    & 1.99   & 1.00    & 0.99      \\
+BIC                                            & 796.21  & 801.69  & 811.59 & 801.78  & 810.18    \\
 AIC                                            & 785.31  & 787.16  & 800.69 & 761.83  & 755.72    \\
 \hline
 \end{tabular}
