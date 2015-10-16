@@ -1,0 +1,26 @@
+An inquiry about altcoins
+So, after more or less keeping up with this course, I have started to become pretty comfortable with the technical aspects of cryptocurrencies. Now, I was curious about mining and got an easy start mining Darkcoins in a pool. I'm enjoying it so far but am a little concerned about the closed source mixing techniques they use. What're your opinions on this specific coin and the x11 hashing algorithm? Any bias is welcome with substantiation. I am also curious about other altcoins which might be worth exploring, so let me be slightly overzealous here and ask which altcoins do you think are worth looking into? 
+
+lecture6
+edit·good question1Updated 6 months ago by A. Saad Imran
+the students' answer,where students collectively construct a single answer
+x11 is what happens when someone who doesn't understand proof of work creates a hashing algorithm. The only altcoin technically interesting in my opinion is Monero and the only altcoin economically interesting in Freicoin.
+ 
+Almost every other altcoin, Ripple, Ethereum, Darkcoin, Bitshares, NXT, etc have broken security models and can be considered scams.
+ 
+https://download.wpsoftware.net/bitcoin/alts.pdf
+ 
+(Saad: This is exactly the answer I wanted. Thanks a lot for sharing!)
+edit·thanks!2Updated 6 months ago by A. Saad Imran and Andrew Lapp
+followup discussionsfor lingering questions and comments
+Resolved   Unresolved
+Vijayakumar Subburaj
+Vijayakumar Subburaj 6 months ago Altcoins vary in few aspects, like, mining algorithms, total units, block confirmation time, ledger consensus, etc.
+
+IMHO, all altcoins are equal competitors. In any situation, do we need an altcoin (second cryptocurrency)? No. Gold/silver analogy will not apply for altcoins in the long term. I mean, there will be only one major cryptocurrency, and all other altcoins will disappear sooner, or later. Or, may be I'm wrong. Some altcoins may survive test of time.
+
+All altcoins are not equal; some may give you the mining experience, or good profit when you hold/trade.
+
+Ethereum is different beast. DAPP has the potential to disrupt current economic / political landscape.
+A. Saad Imran
+A. Saad Imran 6 months ago I mostly agree with the sentiment. It is next to impossible to actually compete with Bitcoin unless you have something really genuine and innovative to offer. Since cryptocurrencies can't thrive without an active and healthy community, I can see how it is a bit of a moot point. People aren't going to abandon Bitcoins for altcoins and that is probably for the best. Still, I am motivated to mine/explore altcoins due to a curiosity in the technical aspects and am not expecting to make a profit or anything like that. Quite honestly I am a bit intimidated by the scale of the Bitcoin network and as a developer, I find altcoins to be more accessible while being less overwhelming. The power of decentralized software applications is definitely really exciting!.
