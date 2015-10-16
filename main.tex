@@ -1,5 +1,8 @@
 
 \documentclass{article}%acm_proc_article_sp}
+
+\usepackage{pdflscape}
+
 \begin{document}
 \title{Comunity Structure \& Extremely Speculative Asset Dynamics}
 %
@@ -71,13 +74,17 @@
 \input{method.tex}
 \input{results.tex}
 \newpage
+
+\begin{landscape}
 \input{tables/volumeAND.tex}
 \newpage
+
 \input{tables/volumeOR.tex}
 \newpage
 \input{tables/severityAND.tex}
 \newpage
 \input{tables/severityOR.tex}
+\end{landscape}
 
 \input{limitations.tex}
 \input{conclusion.tex}
