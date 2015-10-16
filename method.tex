@@ -30,16 +30,16 @@ naive_vars  + degree_vars + graph_vars  + satoshi_vars + technical_vars , data_n
         
 \section{Methods & Model}
 
-Initially we we start with a baseline model that considers only the user characteristics that are directly observable from their profile: the number of posts and of subjects subjects, and their senirity in the forum as measured since they first post.
-We then extend this model to one that uses properties that cna be simply read of the relevant node in the directed graph described in section (TODO ref), the total number of edges, as well as the number of inbound and outbound.
+Initially we we start with a baseline model that considers only the user characteristics that are directly observable from their profile: the number of posts and of subjects subjects, and their seniority in the forum as measured since they first post.
+We then extend this model to one that uses properties that can be simply read of the relevant node in the directed graph described in section (TODO ref), the total number of edges, as well as the number of inbound and outbound.
 A further step is to compute network measures on the unweighted projection of the graph to a simply connected one, while alternatively one cold use the network weights (todo in ipython). 
 
-These network measures are possible for any generic discussion, we introduce two further sets of variables to enrich our models that rely on domain knowledge of the underlying assets: satoshi network measures, and a classification of the literature surronding a coin as presenting it as a potential technical advance.
+These network measures are possible for any generic discussion, we introduce two further sets of variables to enrich our models that rely on domain knowledge of the underlying assets: satoshi network measures, and a classification of the literature surrounding a coin as presenting it as a potential technical advance.
 
 We estimate linear regularized least squares using a combination of L1 and L2 norm, with their parameters set by 5 fold cross validation. 
-We then estiamte a OLS model of the support of the variables and calculate White robust standard errors, to allow formodle introspection. 
-Disclaimer that the regularization might make them not maktch (TODO: add set with normal SE that is estiamted with the regularization, in results compare the coeficients) 
-To evaluate nonlinearities and interactions  in the model we fit a gradient boosted machine on the full support, cross vlaidating its hyper parameters; as well as on the OLS selected subset.  TODO add graphs showing interactions and nonlinearities; table with model comparisons.
+We then estimate a OLS model of the support of the variables and calculate White robust standard errors, to allow for model introspection. 
+Disclaimer that the regularization might make them not match (TODO: add set with normal SE that is estimated with the regularization, in results compare the coefficients) 
+To evaluate nonlinearities and interactions  in the model we fit a gradient boosted machine on the full support, cross validating its hyper parameters; as well as on the OLS selected subset.  TODO add graphs showing interactions and nonlinearities; table with model comparisons.
 
 
-The initial analysis pipeline and debuging, hyperparameter setting was done using only th initial 270 of the eventual 560 in the sample. The full set of samples used for these estiamtes was only estimated before writting the results section. The method will not be revized beyond this point.
+The initial analysis pipeline and debugging, hyperparameter setting was done using only th initial 270 of the eventual 560 in the sample. The full set of samples used for these estimates was only estimated before writing the results section. The method will not be revised beyond this point.
