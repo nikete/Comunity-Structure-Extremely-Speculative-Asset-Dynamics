@@ -1,33 +1,4 @@
 
-degree_vars = ['user1_degree_total',
-           'user1_degree_incoming', 'user1_degree_outgoing',]
-
-graph_vars=       ['user1_clustering_coefficient',
-           'user1_closeness_centrality_unweighted',
-           'user1_closeness_centrality_incoming_unweighted',
-           'user1_closeness_centrality_outgoing_unweighted']
-
-satoshi_vars=       ['user1_satoshi_distance',
-            'user1_satoshi_pagerank_weighted',
-            'user1_satoshi_distance_inf']
-
-weighted_vars=       [ 'user1_pagerank_weighted','user1_closeness_centrality_weighted']#,  'user1_betweenness_centrality_weighted',
-           #user1_closeness_centrality_incoming_weighted',
-           #'user1_closeness_centrality_outgoing_weighted']
-
-technical_vars = ['technical']
-naive_vars = ['user1_num_posts', 'user1_num_subjects',
-           'user1_days_since_first_post']
-           
-           
-
-naive_vars  + degree_vars + graph_vars  + satoshi_vars + technical_vars , data_norm)
-        reg4 =  fit_model(yvar,naive_vars  + degree_vars + graph_vars  + satoshi_vars + weighted_vars , data_norm)
-        reg3 =  fit_model(yvar,naive_vars  + degree_vars + graph_vars  + satoshi_vars, data_norm)
-        reg2 =  fit_model(yvar,naive_vars  + degree_vars + graph_vars ,data_norm)
-        reg1 =  fit_model(yvar,naive_vars  + degree_vars,data_norm)
-        reg0 = fit_model(yvar,naive_vars,data_norm)
-        
 \section{Methods & Model}
 
 Initially we we start with a baseline model that considers only the user characteristics that are directly observable from their profile: the number of posts and of subjects subjects, and their seniority in the forum as measured since they first post.
