@@ -3,6 +3,8 @@
 
 
 \subsection{Prices and Exchanges}
+TODO: NIKETE I did not remove this, I just moved it down to analysis vars. Wanted this subsection
+to only talk about the data and not how you make the bubble measure.
 
 Our main outcome measures are the severity of the inflation an asset price, and the magnitude of money transacted in it.
 We operationalize the intensity of a bubble as the proportion of a 1 dollar (TODO check currency base) that would be lost buying at the maximum price and selling after that proportionally to the volume of the market till the present, we call this severity.
@@ -20,7 +22,7 @@ online community, bitcointalk.  Our data consisted of all the posts that were
 made between January 2010 and July 2015 on the most acitve crypto-related forums:
 \begin{enumerate}
   \item{Bitcoin Discussion} This is the oldest forum on the website which mainly focuses
-    on issues only related to bitcoin. Interestingly, Satoshi Nakamoto, the alleged
+    on issues only related to Bitcoin. Interestingly, Satoshi Nakamoto, the alleged
     creator of Bitcoin made the first post on this forum in January 2010 and
     was active until January 2011. The presence of Satoshi in the data set enables us
     to study the position of various actors in the online community relative to Satoshi
@@ -46,17 +48,31 @@ made between January 2010 and July 2015 on the most acitve crypto-related forums
     and exchange tips.
 
 \end{enumerate}
+TODO: CHECK AVERAGE NUMBER OF POSTS PER THREAD, and other statistics
+Each forum consists of many subjects or threads initiated by different users. Each thread
+contains several posts or replies, with an average of 10 posts per thread. Each post has several fields
+which contain valuable information in our context.
+\begin{enumerate}
+  \item{Subject}: Usually, the initiator of the thread chooses subject and all the
+    following posts inherit the same subject.
+  \item{Content}: The acutal text of the message.
+  \item{Author}
+  \item{Date}
+  \item{Position in the thread}: The later posts in the thread might not be as important
+    as earlier posts and could be about issues other than the original topic of the thread.
+\end{enumerate}
 
-TODO: discuss structure of each forum
-TODO: SOME preliminary statistics on forum? ave num posts per thread?
-TODO: NUMBER OF UNIQUE USERS IN THE COMMUNITY
-TODO: HOW MANY ARE ACITVE IN A 30 DAY PERIOD?
+The community had only 10000 unique users until early 2013, however the
+community size grew considerably faster after 2013 and reached 70000 by early
+2015. Neverthelss, there are only 10000 active users within any 30 day period on average.
 
-Our network measurement data consisted of discussions in Bitcoin and Altcoin
-online forums on bitcointalk.org from January 2010 until July 2014.  Bitcoin
-forum is mainly concerned with Bitcoin and related technological issues whereas
-Altcoin discussions are concerned about alternative cryptocurrencies. Each
-forum consists of hundreds of threads and each thread contains many posts.
+
+\section{Forum Interaction Network}
+TODO: EAMAN WILL WRITE THIS
+TODO: TALK ABOUT UNDIRECTED NETWORK WITHOUT RESULTS?
+
+The reply structure within each thread constitutes the basis of our discussion network, discussed later.
+
 Given the forum discussion data at the level of individual posts, we
 constructed the undirected graph of user discussions. In this network, nodes
 are the forum users and are connected by an edge if the corresponding users
@@ -77,10 +93,6 @@ coefficient, average path length and average degree. We also computed the
 following network measures for the user who introduced the crypto coin for the
 first time: clustering coefficient, closeness centrality, betweenness
 centrality and laplacian centrality.
-
-\section{Forum Interaction Network}
-TODO: EAMAN WILL WRITE THIS
-TODO: TALK ABOUT UNDIRECTED NETWORK WITHOUT RESULTS?
 
 
 
