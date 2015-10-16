@@ -1,36 +1,51 @@
+\section{Introduction}
 
-dufwenberg2005bubbles, Bubbles and experience: An experiment (on learning iwthout social stucture)
+Speculative bubbles , since at least the dutch tulip mania (\cite{garber2001famous} pp 127-31 for references) periodically take over markets. %note quite what he says; fundamentals driven then morals story.
+The public notoriety of Bitcoin and the massive price increases that it has seen relative to its starting prices a few eyars ago have lead to an explosion of attempts to create \''the next bitcoin\'' often refered to as cryptocurrencies.
+While speculation during bubbles as a social process that has been theoretically studied \cite{abolafia1988enacting, earl2007decision, bakker2010social, harras2011grow}, data on a real social network underpinning it has not been used.
+The attempts to introduce these new \''coins\'' largely take place in a forum called Bitcoin talk.
+We present a novel dataset constructed based on this that allows us to identify the introducers of each coin and build measures of their position in the network based on whcih users have engaged with whom in the forum before the coin is announced or traded (TODO clarify on when which).
+By considering the comunity structure that exists in the forum before a coin is introduced we are able to sidestep problems of reverse causation that would plague a analisys that relied on in time variaiton between prices and network structure. 
+We also collect the set of prices and traded volumes accross the cryptocurrencies that are itnroduced in the disucssions on the forums, and construct measures of both the intensity (aka severity, for each dollar invested at the peak what could be recovered on average) and the magnitude (how many dollars or bitcoins where nominally traded in the asset).
+This allows us to evaluate the predictive power of the features of the node in our constructed network that corresponds to the user who first introduces the coin. 
+While the magnitude of the assets traded is small relative to most financial and commodity markets, it is much larger than even the most lavishly funded experimenter could hope for.
+Furthermore, the rich market structure that surrounds (some 45 exchanges appear on the dataset, raning in credibility from VC backed and registered int he US, to anonimous and mysteriously run) provides a rich source of institutional variaiton with extremely open data, a striking constrast to most financial or commodities market trade level data. 
+Our contribution aims to beging in the computational social sciences a field that would have a place in the sociology of markets analogous to that of computational imaging lesion studies do in neuropsychology \footnote{ \cite[cosma2008]} .
+
+The evidence based uncovered by “— traces of their communicative interactions as they work out their thoughts about matters of common concern” 
 
 
-Test of the Efficient Market Hypothesis by utilizing statistical arbitrage
-F Hårstad - 2014 - brage.bibsys.no
-
-Day, C. (2004). ‘Is There a Tulip in Your Future?: Ruminations on Tulip Mania and the Innovative Dutch Futures Markets’. Journal des Economistes et des Etudes Humaines, 14(2), 151-170. [Good background to the tulipmania]
-Garber, P. M. (1989). ‘Tulipmania’. Journal of Political Economy, 535-560. [Argues that tulipmania was not irrational in rare bulb trade—though confesses that the price changes to common bulbs does “defy explanation”] Claims this is only for one month? 
+Bubble forecasting in economics and finance has used features of the time series (TODO cites)
 
 
-Mackay, C. (2004) [1841] Extraordinary popular delusions and the madness of crowds. Barnes & Noble. [Mackay only devotes about 7 pages to the tulip mania—but his account informs most contemporary perceptions of the event]
-Thompson, E. A. (2007). “The tulipmania: Fact or artifact?” Public Choice, 130(1-2), 99-114. [A densely-written but precise account of what happened in tulip markets]
+crash of 87 http://www.iijournals.com/doi/abs/10.3905/jpm.1989.409242?journalCode=jpm “rapid rise of options” witht he rise of the thoery to price those options, in having currencies with zero entrie costs
+MacKenzie, Donald. "An Engine, Not a Camera."
+While states can create the demand required for a currency system to run by compelling tax payment in it (for a recent example), non state sponsored currencies must find some other wyas of creating demand.
+The initial market for which bitcoin has been used (prices denominated in it, transactions only in it) where drug sales. citation.
+New currencies have thus been floated with every single drug name posible. Many chains can claim to the same claim, so exchanges (since speculation is the only possible use of allmost all of them) become de-facto stablishers of who has a minimaly viable claim. 
 
 
-“We develop a theory of market crashes based on differences of opinion among investors. Because of short-sales constraints, bearish investors do not initially participate in the market and their information is not revealed in prices. However, if other previously bullish investors bail out of the market, the originally bearish group may become the marginal “support buyers,” and more will be learned about their signals. Thus accumulated hidden information comes out during market declines. The model explains a variety of stylized facts about crashes and also makes a distinctive new prediction—that returns will be more negatively skewed conditional on high trading volume.”
+"We develop a series of cross-sectional regression specifications to forecast skewness in the daily returns of individual stocks. Negative skewness is most pronounced in stocks that have experienced (1) an increase in trading volume relative to trend over the prior six months, consistent with the model of Hong and Stein (NBER Working Paper, 1999), and (2) positive returns over the prior 36 months, which fits with a number of theories, most notably Blanchard and Watson's (Crises in Economic and Financial Structure. Lexington Books, Lexington, MA, 1982, pp. 295–315) rendition of stock-price bubbles. Analogous results also obtain when we attempt to forecast the skewness of the aggregate stock market, though our statistical power in this case is limited."
 
 
-Network Diversity and Economic Development
-http://www.sciencemag.org/content/328/5981/1029.full
 
-Predicting Spending Behavior Using Socio-mobile Features:
-http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6693330&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6693330
-free version:
-https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ef1hJ8IAAAAJ&sortby=pubdate&citation_for_view=Ef1hJ8IAAAAJ:NaGl4SEjCO4C
 
-Money Walks: Implicit Mobility Behavior and Financial Well-Being:
-http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0136628
 
-Predicting personality using novel mobile phone-based metrics
-http://dl.acm.org/citation.cfm?id=2456492
-free version:
-https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CCEQFjAAahUKEwivqbnj0L3IAhWIcT4KHZtqCOg&url=http%3A%2F%2Frealitycommons.media.mit.edu%2Fdownload.php%3Ffile%3DdeMontjoye2013predicting-citation.pdf&usg=AFQjCNGDDMiemMv9vPQGBd_NNP30sEr6MQ&sig2=CQk3pVIzJ3EmXlV0lD8oKA
 
-IIRC Sandy also discusses predicting lots of things with networks in his recent book:
-https://scholar.google.com/citations?view_op=view_citation&hl=en&user=P4nfoKYAAAAJ&cstart=40&sortby=pubdate&citation_for_view=P4nfoKYAAAAJ:-38epGy1wY0C
+Data for the historical valuations of the coins was scrapped from coinmarketcap.com The bubble measure was constructed as the log of the ratio in the loss of value from the maximum notional valuation of the available currency supply to to the present value. 
+
+Our network measurement data consisted of discussions in Bitcoin and Altcoin online forums on bitcointalk.org from January 2010 until July 2014. 
+Bitcoin forum is mainly concerned with Bitcoin and related technological issues whereas Altcoin discussions are concerned about alternative cryptocurrencies. Each forum consists of hundreds of threads and each thread contains many posts.  Given the forum discussion data at the level of individual posts, we constructed the undirected graph of user discussions. In this network, nodes are the forum users and are connected by an edge if the corresponding users have ever interacted in any thread. The edge weights between two users are determined based on their interaction frequency. Furthermore, the weights are adjusted by size of the thread (i.e. an interaction in small threads counts more than an interaction in a large thread) and a decay factor (i.e. a recent interaction counts more than an old interaction). We constructed the network over time by replaying the posts and updating the discussion graph accordingly.  Whenever a new digital currency was introduced in the forum for the first time, a snapshot of the graph was taken and used for extracting various network measures corresponding to the coin. It is important to analyze the discussion graph before the coin is mentioned for the first time to avoid any possible confounding factors. The network measures we used were as followed: number of edges, number of nodes, density, diameter, clustering coefficient, average path length and average degree. We also computed the following network measures for the user who introduced the crypto coin for the first time: clustering coefficient, closeness centrality, betweenness centrality and laplacian centrality. As future work, we will construct the directed “Satoshi” network at time of the coin introduction where an edge exists from user a to user b, if user a has ever replied to user b. Relevant features of this network such as “Satoshi” distance of the coin introducer and her eigenvector centrality can be used in analysis of bubbles.
+A OLS fit of bubble severity to the network structure measures fails to provide statistically significant explanatory power. Inspection of the model fit reveals that the model does however successfully estimates high bubble values for the most severe bubbles, and there is never a severe bubble when it predicts low severity.
+
+
+Tâtonnement stability of infinite horizon models with saddle-point instability
+WP Heller - Econometrica: Journal of the Econometric Society, 1975 - JSTOR
+... horizon case. 5 As Samuelson [17, p. 981] notes, ". . . history tells us that all tulip
+manias have ended in finite time.... Every bubble is someday pricked." Knowing this,
+people start to sell when prices reach ridiculous heights. But at ...
+
+
+
+
+
