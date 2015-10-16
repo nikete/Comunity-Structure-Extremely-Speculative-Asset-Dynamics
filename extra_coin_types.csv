@@ -1,0 +1,680 @@
+symbol,coin_name,type,subcategory
+CPN,CompuCoin,t,proof of work
+CPC,Capricoin,nt,speed
+CREVA,CrevaCoin,nt,other
+XBS,BITCOINPLUS,nt,other
+NXTprivacy,NXTprivacy,nt,anonymity
+SIB,SIBCoin,nt,other
+YUM,CandyCoin,nt,other
+SKYNET,SkyNET,nt,smartblock
+NYC,NewYorkCoin,other,nt
+GAIA,GAIACOIN,nt,other
+AGS,Aegis,nt,other
+XBC,Bitcoin Plus,nt,other
+TAU,Agoras Tokens,nt,community
+DRKT,DarkTron,nt,anonymity
+MONA,MONACOIN,nt,other
+SPR,SPREADCOIN,t,other
+BLITZ,Blitz,nt,other
+VOL,VolumeCoin,nt,other
+$MINEW,InstaMineNuggets A,nt,other
+TAG,TAGCOIN,nt,other
+DRKC,DARKCASH,nt,other
+XMR,MONERO,nt,other
+SPA,SPAINCOIN,nt,nation
+SPC,SpikesPrivateCoin,nt,other
+TAK,TAKCOIN,nt,other
+PRIME,PrimeChain,t,pow
+XPH,Pharma,nt,other
+XPM,PRIMECOIN,t,Hashing algorithm
+GP,GOLDPIECES,nt,other
+BTCS,Bitcoin Scrypt,nt,other
+IXC,IXCOIN,nt,speed
+MTLMC3,Metal Music Coin,nt,community
+NOBL,NOBLECOIN,nt,other
+FIC,Full Integrity Coin,nt,other
+XPY,PayCoin,nt,other
+PIGGY,PIGGYCOIN,nt,other
+BGCAFFE,Buongiorno Caffe,nt,other
+FIMK,FIMKRYPTO,nt,other
+BYC,BYTECOIN,nt,other
+BTCD,BITCOINDARK,t,anonymity
+TRICK,TrickyCoin,nt,other
+ROS,ROSCOIN,nt,other
+MAX,MAXCOIN,nt,other
+LAB,Coinworkscoin,nt,other
+PLC2,Polcoin,nt,other
+MAD,SatoshiMadness,nt,other
+FFC,FireFlyCoin,nt,other
+GUA,GUARANY,nt,nation
+BEN,BENJAMINS,nt,other
+GUE,GUERILLACOIN ,nt,other
+DTC,Datacoin,nt,other
+007,007Coin,nt,anonymity
+GUN,GUNCOIN,t,Hashing algorithm
+M1,Supply Shock,nt,anonymity
+VERSA,Versa,t,storage
+YBC,YBCOIN,nt,specific use
+BET,,,
+LSD,LIGHTSPEED,nt,other
+HUC,HUNTERCOIN,nt,specific use
+HUN,Hundredcoin,nt,other
+KDC,KLONDIKECOIN,nt,other
+TTC,TITTIECOIN,nt,other
+NMB,Nimbus,nt,other
+GRT,Grantcoin,nt,charity
+GRS,GROESTLCOIN,nt,other
+BLU,BlueCoin,nt,pos
+SOLE,SOLECOIN,t,Hashing algorithm
+FLAX,Flaxscript,,
+GRF,Graffiti,nt,other
+FTC,FEATHERCOIN,nt,other
+GRE,GREENCOIN,nt,specific use
+GRC,GridCoin,nt,community
+BLK,BLACKCOIN,nt,other
+CRACK,CRACKCOIN,nt,other
+GRN,GraniteCoin,nt,other
+SPRTS,Sprouts,nt,other
+DSB,DarkShibe,nt,community
+BLC,BLAKECIN,t,Hashing algorithm
+COOL,COOLCOIN,nt,other
+HYPER,Hyper,nt,fun
+URC,Unrealcoin,nt,other
+MI,Xiaomicoin,nt,other
+NOC,Nocturna,nt,other
+EMC2,EINSTEINIUM,nt,other
+CBX,Crypto Bullion,nt,other
+HLC,HellasCoin,,
+OPAL,OPALCOIN,nt,other
+EKN,Elektron,,
+DON,,,
+SHADE,SHADE,nt,other
+FJC,FujiCoin,,
+CRYPT,CRYPTCOIN,nt,other
+GLC,GLOBALCOIN,nt,other
+GLD,GOLDCOIN,nt,other
+XSEED,BitSeeds,,
+POLY,Polybit,,
+CTM,ContinuumCoin,,
+CTO,Crypto,,
+SMC,SMARTCOIN,nt,other
+RED,REDCOIN,nt,other
+CLAM,Clams,,
+FCT,Factom,,
+XFC,Forevercoin,,
+ZOOM,Zoom,,
+TAM,Tamagucci,,
+FCN,FANTOMCOIN,nt,other
+BSC,BowsCoin,,
+ERM,Ermis,,
+FC2,FUELCOIN,nt,community
+AUM,Alexium,,
+LTC,LITECOIN,t,Hashing algorithm
+LTB,LITEBAR,nt,other
+UNITY,SuperNET,,
+AUR,AURORACOIN,nt,nation
+XTC,TILECOIN,nt,specific use
+VEC,Vector,,
+LTD,LimitedCoin,,
+BTQ,BITQUARK,nt,other
+CAT,CATCOIN,nt,other
+ALN,ALIENCOIN,nt,other
+BTS,BitShares,,
+ALF,AlphaCoin,,
+NTR,Neutrino,,
+SBC,STABLECOIN,nt,speed
+SC,SmartChips,,
+ORB,ORBITCOIN,nt,other
+MMC,MEMORYCOIN,t,Hashing algorithm
+GLYPH,GLYPHCOIN,nt,other
+I0C,i0COIN,nt,other
+BAT,BATCOIN,nt,other
+SSV,SSVCoin,,
+FUTC,FutCoin,,
+TOR,TORCOIN,t,specific use
+BITEUR,bitEUR,,
+TOP,TOPCOIN,nt,specific use
+CAP,CAPTCOIN,t,other
+RIPO,RipoffCoin,,
+BAY,,nt,other
+ERC,EuropeCoin,,
+HAL,HALCYON,nt,other
+BTE,Bytecoin,,
+BTG,BITGEM,nt,other
+CELL,SolarFarm,,
+Privatebet,Privatebet,,
+XPB,Pebblecoin,,
+BTA,Bata,,
+VPN,VPNCOIN,nt,anonimity
+ABC,Asset Backed Coin,,
+HUGE,BigCoin,,
+MACRO,Macro,,
+BANX,BanxShares,,
+NEOS,NEOSCOIN,nt,other
+ZRC,ZiftrCOIN,,
+RZR,RAZOR,t,anonimity
+STR,STARCOIN,nt,other
+CZC,CzechCrownCoin,,
+ABY,ArtByte,,
+EXCL,ExclusiveCoin,,
+CACH,CacheCoin,,
+CFN,CONFESSIONCOIN,nt,specific use
+ORO,OROBITS,nt,other
+HZT,HazMatCoin,,
+JINN,Jinn,,
+GENI,Geniuscoin,,
+PND,Pandacoin,,
+GB,GreenBacks,,
+XXX,XxXcoin,,
+XQN,QUOTIENT,nt,other
+MIN,Mineralscoin,,
+SF0,sharkfund0,,
+LIT,LIGHTCOIN,nt,energy efficient
+GHC,GHOSTCOIN,nt,other
+XUP,UPcoin,,
+ZNY,Bitzeny,,
+GAP,Gapcoin,,
+EGG,EggCoin,,
+AMBER,AMBERCOIN,nt,other
+DIBS,Dibbits,,
+PRC,PROSPERCOIN,nt,other
+MEOW,KITTEHCOIN,nt,other
+PRO,ProsperityCoin,,
+PRT,PARTICLE,nt,other
+CHA,CHARITYCOIN,nt,community
+CHC,ChainCoin,,
+MRY,MURRAYCOIN,nt,notorius person
+JAY,Jay,,
+MMNXT,MMNXT,,
+URO,UROCOIN,nt,other
+MRS,Marscoin,,
+020,020LondonCoin,,
+QBK,Qibuck,,
+DIGS,Diggits,,
+MRC,microCoin,,
+UTIL,UTILITYCOIN,nt,other
+VIA,VIACOIN,nt,other
+DBL,Doubloons,,
+MMBTCD,MMBTCD,,
+SFR,SAFFRONCOIN,nt,other
+8BIT,8Bit,,
+APC,APPLECOIN,nt,other
+NIRO,Nexus,,
+PYC,PAYCOIN,nt,other
+GREXIT,Grexit,,
+KORE,KORECOIN,nt,other
+FRDC,FreedomCoin,,
+XLB,LIBERTYCOIN,nt,other
+CAIx,CAIx,,
+IFC,INFINITECOIN,nt,other
+SILK,SILKCOIN,nt,other
+SLING,Sling,,
+PLNC,PLNCOIN,nt,nation
+PKB,ParkByte,,
+PSEUD,PSEUDOCASH,nt,other
+CAID,Coinaid,,
+NLG,Gulden,,
+TENNET,TenneT,,
+GCC,GuccioneCoin,,
+RMS,Resumeo Shares,,
+DOGED,DOGECOINDARK,nt,fun
+WOP,WorldPay,,
+CSC,CASINOCIN,nt,specific use
+GCN,GCoin,,
+SHA,SHACOIN,t,Hashing algorithm
+GCR,Global Currency Reserve,,
+MOTO,Motocoin,,
+SHF,Shift,,
+PHR,Phreak,,
+CAGE,CAGECOIN,nt,notorius person
+LEAF,LEAFCOIN,nt,specific use
+GSY,GenesysCoin,,
+XCE,Cerium,,
+XCH,VIACOIN,nt,other
+DOGE,DOGECOIN,nt,community
+XCN,CRYPTONITE,t,other
+BTX,BitcoinTX,,
+MOON,MOONCOIN,nt,other
+XCR,Crypti,,
+XCP,COUNTERPATY,nt,other
+MGW,MGW,,
+BTC,BITCOINDARK,t,other
+BTB,BITBAR,t,Hashing algorithm
+BTM,Bitmark,,
+SSD,SonicScrewdriver,,
+HEDG,HedgeCoin,,
+JBS,Jumbucks,,
+EMD,EMERALD,nt,other
+ISR,Isracoin,,
+KTK,Kryptkoin,,
+SWING,Swing,,
+CHAO,23 Skidoo,,
+SPHR,Sphere,,
+MUE,MONETARYUNIT,nt,other
+OCTO,Octo,,
+CURE,CURECOIN,t,specific use
+2BACCO,2BACCO,,
+ISL,IslaCoin,,
+DGB,DIGIBYTE,nt,other
+DGC,DIGITALCOIN,nt,other
+ECC,ECCOIN,nt,other
+CRT,CRTCoin,,
+LIQUID,LIQUID,,
+EBS,EBOLAShares,,
+BITB,BitBean,,
+ASC,ASICCOIN,nt,other
+BITZ,Bitz,,
+KUMA,KUMACOIN,nt,other
+QTL,QUATLOO,nt,other
+BITS,BITSTAR,nt,other
+ASN,Ascension,,
+JKC,JKC,nt,other
+VTA,VIRTACOIN,nt,other
+VTC,VERCOIN,t,anonimity
+FRK,FRANKO,nt,other
+XC,XCurrency,,
+DUB,Dubstep,,
+NBL,Nibble,,
+EUC,Eurocoin,,
+UNB,UNBREAKABLECOIN,nt,other
+UNC,,nt,other
+CARB,Carboncoin,,
+CLV,CleverCoin,,
+BBR,BOOLBERRY,t,Hashing algorithm
+YAC,YACOIN,t,Hashing algorithm
+UNO,UNOBTANIUM,nt,other
+OMC,OMNICOIN,nt,other
+ZED,ZEDCOIN,nt,other
+CRC,CraftCoin,,
+HVC,HEAVYCOIN,t,Hashing algorithm
+VMC,VirtualMiningCoin,,
+CRAVE,Crave,,
+ZET,ZETACOIN,nt,other
+INFX,Influxcoin,,
+BITCNY,bitCNY,,
+FRC,FREICOIN,nt,other
+SLFI,Selfiecoin,,
+RT2,ROTOCOIN,nt,specific use
+SDC,SHADOWCOIN,nt,other
+WBB,WildBeastBitcoin,,
+DUCK,DuckDuckCoin,,
+DT,DarkToken,,
+DP,DIGITALPRICE,nt,other
+OFF,Cthulhu Offerings,,
+CESC,CRYPTOESCUDO,nt,nation
+CYP,Cypher,,
+CYT,Cryptokenz,,
+POT,POTCOIN,nt,specific use
+MRKT,FreeMarket,,
+ULTC,Umbrella-LTC,,
+POP,POPULARCOIN,nt,other
+CYC,Conspiracycoin,,
+TGC,Tigercoin,,
+RPC,RONPAULCOIN,nt,notorius person
+TIPS,FEDORACOIN,t,anonimity
+NODE,Node,,
+BITGOLD,bitGold,,
+RBY,RUBYCOIN,nt,other
+BITBTC,bitBTC,,
+DOPE,DOPECOIN,nt,other
+RBT,Rimbit,,
+RBR,RibbitRewards,,
+SLR,SOLARCOIN,nt,community
+SLG,STERLINGCOIN,nt,other
+U,USABLECOIN,nt,other
+MCN,MonetaVerde,,
+DICE,NeoDICE,,
+NRB,NOIRBITS,nt,other
+WKC,WANKCOIN,nt,specific use
+LGD,LegendaryCoin,,
+QB,QUARKBAR,nt,other
+MCZ,MangoCoinz,,
+BDSM,BDSMCOIN,nt,specific use
+NRS,NOIRSHARES,nt,other
+XGR,GoldReserve,,
+AXR,AXRON,nt,energy efficient
+EXE,EXECOIN,nt,other
+EXC,Extremecoin,,
+CKC,CLOCKCOIN,nt,other
+SWARM,Swarm,,
+HBN,HOBONICKELS,nt,speed
+WS,Woodshares,,
+EXP,Expanse,,
+PAK,Pakcoin,,
+BSTY,GLOBALBOOST-Y,t,Hashing algorithm
+ELP,ElephantCoin,,
+IBITS,iBits,,
+TCO,TACOCOIN,nt,fun
+GLOBE,Global,,
+VNL,Vanillacoin,,
+RIN,RINGOCOIN,nt,other
+LTBC,LTBcoin,,
+CLR,,nt,other
+BITUSD,bitUSD,,
+DCR,DeltaCredits,,
+RIC,RIECOIN,t,Hashing algorithm
+COV,Coven,,
+FRAC,FRACTALCOIN,t,Hashing algorithm
+HAM,HAMRADIOCOIN,nt,community
+SONG,SongCoin,,
+BOST,BoostCoin,,
+NAN,NanoToken,,
+KNC,KhanCoin,,
+DASH,DASHCOIN,t,anonimity
+TRMB,TRMB,,
+EQM,Equilibrium,,
+BNB,BnB Coin,,
+THC,HEMPCOIN,nt,community
+CETI,Cetuscoin,,
+CINNI,CINNI,nt,other
+PHO,PHOTON,nt,other
+BURST,Burst,,
+ZEIT,ZEITCOIN,nt,other
+SWIFT,BITSWIFT,nt,other
+SYS,SYSCOIN,nt,other
+MEM,Memecoin,,
+LXC,LIBREXCOIN,t,anonimity
+MZC,MAZACOIN,nt,other
+PHS,Philosopher Stones,,
+STEPS,Steps,,
+ANAL,AnalCoin,,
+SPEC,SPEC,,
+INDEX,CoinoIndex,,
+DMD,DIAMOND,nt,other
+CRW,CrownCoin,,
+EMC,EmerCoin,,
+BELA,BELLACOIN,nt,other
+CRY,CRYcoin,,
+SYNC,Sync,,
+DRZ,Droidz,,
+CGN,KolschCoin,,
+SKC,Skeincoin,,
+FLAP,FLAPPYCOIN,nt,other
+PR,Prototanium,,
+SHIBE,SHIBECOIN,nt,other
+ACOIN,ACOIN,nt,random reward
+TTY,Trinity,,
+XDN,DigitalNote,,
+BUK,CryptoBuck,,
+BUN,BUNNYCOIN,nt,fun
+XDQ,DIRAC,nt,other
+XDP,DOGEPARTY,nt,specific use
+GEO,GeoCoin,,
+GEN,Genstake,,
+FIBRE,FIBRE,t,anonimity
+LIMX,LIMECOINX,nt,other
+KEY,KEYCOIN,t,anonimity
+TAGR,TAGRcoin,,
+OSC,OpenSourcecoin,,
+UNIC,UniCoin,,
+XRA,Ratecoin,,
+VGC,VEGASCOIN,nt,nation
+FUND,Cryptofund,,
+SHELL,ShellPay,,
+EFL,Electronic Gulden,,
+XRP,RIPPLECOIN,nt,other
+UNIT,Universal Currency,,
+LEA,LeaCoin,,
+SANDG,Save and Gain,,
+MARYJ,MaryJane,,
+ANC,ANONCOIN,t,Anonimity
+CBIT,CryptBit,,
+XEMP,EmpoCredits,,
+SJCX,Storjcoin X,,
+NVC,NOVACOIN,nt,other
+FRSH,FreshCoin,,
+JLH,jl777hodl,,
+BCN,Bytecoin,,
+DSH,Dashcoin,,
+GIVE,GiveCoin,,
+MYSTIC,Mysticoin,,
+CHIP,ChipCoin,,
+DVC,DEVCOIN,nt,specific use
+FST,FASTCOIN,nt,speed
+ICASH,iCash,,
+FIST,FistBump,,
+ETH,Ethereum,,
+COL,COLOSSUSCOIN,nt,other
+BCR,Bitcredits,,
+CON,CONCOIN,nt,specific use
+BCENT,BitCent,,
+GRM,Gridmaster,,
+CASH,Cashcoin,,
+SPT,SPOTCOIN,nt,other
+VRC,VERICOIN,nt,other
+FUNK,The Cypherfunks,,
+QORA,QORA,nt,other
+C2,Coin2.1,,
+ZS,ZIMSTAKE,nt,other
+GSM,GSMcoin,,
+SRC,SECURECOIN,nt,other
+FAIR,FAIRCOIN,nt,community
+DIME,DIMECOIN,nt,other
+CC,CyberCoin,,
+XMG,COINMAGI,t,Hashing algorithm
+HEX,HEISENBERGHEX,nt,other
+CF,Californium,,
+COMM,COMMUNITYCOIN,nt,other
+CS,CryptoSpots,,
+IEC,IvugeoCoin,,
+LDOGE,LiteDoge,,
+DRS,DENARIUS,nt,nation
+PLS,PLAY,,
+SNRG,Synergy,,
+UFO,UFO Coin,,
+CDN,Canada eCoin,,
+BILS,BilShares,,
+NMC,NAMECOIN,nt,specific use
+SAT2,Saturn2Coin,,
+LOG,Woodcoin,,
+MNTA,MONETA,nt,other
+DIG,DIGIT,nt,other
+ANI,Animecoin,,
+HYP,HYPERSTAKE,nt,other
+LOT,LOTTOCOIN,nt,specific use
+ARCH,ARCHCOIN,nt,other
+AXIOM,Axiom,,
+AIB,AIB,,
+PPC,PEERCOIN,t,Hashing algorithm
+$MINEZ,InstaMineNuggets B,,
+QRK,QUARK,nt,other
+SOL,SOLCOIN,nt,other
+QCN,QUAZARCOIN,nt,other
+NXTcoinsco,Tradebots,,
+GAM,Gambit,,
+NSR,NuShares,,
+UTC,ULTRACOIN,nt,other
+GOOD,GoodCoin,,
+MTR,MasterTraderCoin,,
+BRIT,BRITCOIN,nt,nation
+XVI,Vibranium,,
+XCASH,XCASH,nt,other
+HTML5,HTML5COIN,nt,other
+CNMT,Coinomat,,
+PINK,PINKCOIN,nt,other
+MAPC,MapCoin,,
+SDP,SydPak,,
+NXTTY,Nxttycoin,,
+CV2,Colossuscoin V2,,
+ARB,ARbit,,
+PURE,PurePOS,,
+ARG,ARGENTUM,nt,other
+ARI,ARICOIN,nt,other
+TRUST,TRUSTPLUS,nt,other
+NYAN,NYANCOIN,nt,media
+WDC,WORLDCOIN,nt,speed
+TIX,TICKETS,t,Hashing algorithm
+PARA,ParanoiaCoin,,
+EPY,Empyrean,,
+CANN,CANNABISCOIN,nt,specific use
+XJO,Joulecoin,,
+BOT,Botcoin,,
+SOON,SoonCoin,,
+DARK,DarkCoin,,
+NAS,NASCOIN,t,contract language
+CCN,C-Coin,nt,other
+NAV,NAVAJOCOIN,nt,other
+BOB,,,
+BOD,Bloodcoin,,
+SHLD,SHIELDCOIN,nt,other
+SXC,SEXCOIN,nt,specific use
+APEX,ApexCoin,,
+MYR,Myriadcoin,,
+CENT,Pennies,,
+UIS,Unitus,,
+LYC,LYCANCOIN,nt,other
+IOC,IOCOIN,,other
+BCF,BitcoinFast,,
+NXT,NXTCOIN,t,Hashing algorithm
+BQC,BBQCOIN,nt,other
+BOLI,Bolivarcoin,,
+XAU,Xaurum,,
+NXE,NXE,,
+XAI,Sapience AIFX,,
+P7C,P7Coin,,
+OK,OKCash,,
+CRAIG,CRAIGSCOIN,t,modified blockchain
+HNC,Helleniccoin,,
+OC,ORANGECOIN,nt,other
+BVC,BEAVERCOIN,nt,other
+MAID,MaidSafeCoin,,
+NTRN,Neutron,,
+FETISH,Fetish,,
+JUDGE,Judgecoin,,
+BCX,BATTLECOIN,nt,other
+BTCRY,BitCrystal,,
+BCY,Bitcrystals,,
+HZ,Horizon,,
+XST,STEALTHCOIN,t,anonimity
+SMBR,Sembro Token,,
+CLOAK,CLOAKCOIN,nt,other
+MWC,MultiWalletCoin,,
+DEM,Deutsche eMark,,
+FLO,FlorinCoin,,
+LKY,LUCKYCOIN,nt,random reward
+PANGEA,Pangea Poker,,
+XSI,STABILITYSHARE,nt,other
+VIOR,VIORCOIN,t,anonimity
+BLOCK,BLOCKCOIN,nt,other
+ICN,iCoin,,
+$MINE,InstaMineNuggets,,
+AMC,AmericanCoin,,
+PTC,PESETACOIN,nt,nation
+ROX,ROXCOIN,nt,other
+DOT,Dotcoin,,
+AMS,AmsterdamCoin,,
+MNC,MINCOIN,nt,other
+PTS,BITSHARES,t,Hashing algorithm
+MNE,MUNNE,nt,other
+TRI,TRIANGLE,nt,other
+TRK,TRUCKCOIN,nt,other
+TRL,TROLLCOIN,nt,other
+DETH,DarkEther,,
+CAPT,CAPTcoin,,
+AM,AeroMe,,
+TRC,TERRACOIN,nt,other
+USDT,Tether,,
+KOBO,Kobocoin,,
+VCN,Vcoin,,
+SAK,Sharkcoin,,
+USDe,Unitary Status Dollar eCoin,nt,other
+TIT,TITCOIN,nt,specific use
+VOOT,VOOTCOIN,nt,other
+MYST,MysteryCoin,,
+TNG,TuringCoin,,
+ENRG,ENERGYCOIN,nt,specific use
+NOXT,NobleNXT,,
+XCO,X-Coin,,
+LTCD,LitecoinDark,,
+LFO,Local Family Owned,,
+IVZ,InvisibleCoin,,
+PLANET,PlanetCoin,,
+XCPSCO,Scotcoin,,
+DEX,InstantDEX,,
+NXTI,NXTInspect,,
+NEC,NEOCOIN,nt,other
+XNC,XenCoin,,
+ACP,AnarchistsPrime,,
+NXTV,NXTventure,,
+NET,NETCOIN,nt,specific use
+NEU,NeuCoin,,
+FLDC,FoldingCoin,,
+TEK,TEKcoin,,
+PMP,PREMINEPLUS ,nt,other
+BITSILVER,bitSilver,,
+CGA,Cryptographic Anomaly,,
+GEMZ,GetGems,,
+GRAV,Graviton,,
+NBT,NuBits,,
+BIOS,Bios Crypto,,
+FSC2,FriendshipCoin 2,,
+BKS,BlockShares,,
+TES,TESLA,nt,other
+DEBUNE,DeBuNe,,
+CORG,COIRGICOIN,nt,fun
+GMC,GameCredits,,
+ELC,ELACOIN,nt,other
+RBBT,RABBITCOIN,nt,speed
+J,Joincoin,,
+IRL,IrishCoin,,
+SJW,SJWCoin,,
+GME,GameCoin,,
+FLT,FLUTTERCOIN,nt,other
+RDD,REDDCOIN,t,Hashing algorithm
+ADD,AdderalCoin,,
+ADC,AudioCoin,,
+DIEM,CARPEDIEMCOIN,nt,other
+ADN,Aiden,,
+VTR,vTorrent,,
+MINT,MINTCOIN,nt,other
+AEON,Aeon,,
+ELT,ELECTRON,nt,other
+MED,MEDITERRANEANCOIN,t,Hashing algorithm
+OZC,Ozziecoin,,
+MEC,MEGACOIN,nt,other
+HIRO,HIROCOIN,nt,other
+XEM,NEM,,
+NAUT,NAUTILUSCOIN,nt,other
+SMLY,SmileyCoin,,
+LEO,LEOcoin,,
+CIRC,CryptoCircuits,,
+GDC,GRANDCOIN,nt,clone
+FLY,Flycoin,,
+STHR,Stakerush,,
+BRC,Biebercoin,,
+FONZ,Fonziecoin,,
+QSLV,QUICKSILVER,nt,specific use
+VIRAL,Viral,,
+XWT,World Trade Funds,,
+COINO,CoinoUSD,,
+BRE,BREAKcoin,,
+MSC,MASONCOIN,nt,community
+XWC,WHITECOIN,nt,other
+KARM,KARMACOIN,nt,community
+TX,TransferCoin,,
+EAC,EARTHCOIN,nt,other
+42,42 Coin,,
+PXI,PRIMEXI,nt,other
+VDO,Vidio,,
+PXL,Phalanx,,
+PXC,PHOENIXCOIN,nt,other
+TB,TeleBET,,
+AC,ASIACOIN,nt,nation
+TRON,Positron,,
+SPACE,SpaceCoin,,
+ICB,ICEBERGCOIN,nt,other
+METAL,MetalCoin,,
+START,STARTCOIN,nt,specific use
+CND,CANNABISDARKCOIN,nt,other
+AU,AURUM COIN,nt,other
+CNC,CHNCoin,,
+CNO,Coin(O),,
+CNL,CONCEALCOIN,nt,other
+NKA,INCAKOIN,nt,other
+ZCC,ZCCOIN,nt,other
+NOTE,DNOTES,nt,other
+KGC,Krugercoin,,
+NKT,Nakas,,
+CHILD,X-CHILDREN,nt,community
+SUPER,SUPERCOIN,nt,other
+EZC,EZCoin,,
