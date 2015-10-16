@@ -14,86 +14,123 @@ We scraped two major price aggregators; coinmarketcap and coininfo.
 
 
 \subsection{Forum Discussions}
-TODO: EAMAN WILL WRITE THIS
+NOTE: EAMAN WROTE THIS
 
 In order to study the effect of communication network around cryptocoins on
 price variations, we collected all the posts from the most famous cryptocurrency
 online community, bitcointalk.  Our data consisted of all the posts that were
-made between January 2010 and July 2015 on the most acitve crypto-related forums:
+made between January 2010 and July 2015 on the most active crypto-related forums:
 \begin{enumerate}
-  \item{Bitcoin Discussion} This is the oldest forum on the website which mainly focuses
+  \item{Bitcoin Discussion:} This is the oldest forum on the website which mainly focuses
     on issues only related to Bitcoin. Interestingly, Satoshi Nakamoto, the alleged
     creator of Bitcoin made the first post on this forum in January 2010 and
     was active until January 2011. The presence of Satoshi in the data set enables us
     to study the position of various actors in the online community relative to Satoshi
     and its relation with the success or failure of cryptocoins they advocate or reject.
 
-  \item{Altcoin Discussion} This is the most active forum in the community
+  \item{Altcoin Discussion:} This is the most active forum in the community
     with more than 730000 posts as of July 2015, and dating back to June 2011.
     The discussions in this forum mainly evolve around alternative currencies
     other than Bitcoin. Users often discuss the merits or flaws of various
     altcoins or simply exchange technical information.
   
-  \item{Announcement (Altcoin)} Community announcements such as development of 
+  \item{Announcement (Altcoin):} Community announcements such as development of 
     exchange client or addition of new features are made here. This is an important forum
     in our study as the creation of new altcoins are announced here. Whenever a new
     altcoin is announced to the community, the announcement is tagged with string ANN.
     This enables us to detect announcement of new coins into the market and identify
     the users who introduced them for the first time.
 
-  \item{Mining (Altcoin)} Technical issues pertaining to mining (i.e. validating transactions)
+  \item{Mining (Altcoin):} Technical issues pertaining to mining (i.e. validating transactions)
     altcoins are discussed here.
-  \item{Marketplace (Altcoin)} This forum contains the discussions on a wide-range of 
+  \item{Marketplace (Altcoin):} This forum contains the discussions on a wide-range of 
     market-related issues, such as price or volume trends, possible pump and dump schemes
     and exchange tips.
 
 \end{enumerate}
-TODO: CHECK AVERAGE NUMBER OF POSTS PER THREAD, and other statistics
-Each forum consists of many subjects or threads initiated by different users. Each thread
-contains several posts or replies, with an average of 10 posts per thread. Each post has several fields
-which contain valuable information in our context.
+TODO: CHECK AVERAGE NUMBER OF POSTS PER THREAD, and other statistics Each forum
+consists of many subjects or threads initiated by different users. Each thread
+contains several posts or replies, with an average of 10 posts per thread.  The
+reply structure within each thread constitutes the basis of our forum network,
+discussed below.  Each post has several fields which contain valuable
+information in our context.
 \begin{enumerate}
-  \item{Subject}: Usually, the initiator of the thread chooses subject and all the
+  \item{Subject:} Usually, the initiator of the thread chooses subject and all the
     following posts inherit the same subject.
-  \item{Content}: The acutal text of the message.
-  \item{Author}
-  \item{Date}
+  \item{Content:} The actual text of the message.
   \item{Position in the thread}: The later posts in the thread might not be as important
     as earlier posts and could be about issues other than the original topic of the thread.
+  \item{Author}
+  \item{Date}
 \end{enumerate}
 
-The community had only 10000 unique users until early 2013, however the
-community size grew considerably faster after 2013 and reached 70000 by early
-2015. Neverthelss, there are only 10000 active users within any 30 day period on average.
+The community had only 10000 unique users until early 2013, however it grew
+considerably faster after 2013 and reached about 70000 by early
+2015. Nevertheless, there are only 10000 active users within any 30 day period on average.
 
 
 \section{Forum Interaction Network}
-TODO: EAMAN WILL WRITE THIS
-TODO: TALK ABOUT UNDIRECTED NETWORK WITHOUT RESULTS?
+NOTE: EAMAN WROTE THIS
 
-The reply structure within each thread constitutes the basis of our discussion network, discussed later.
+Given the forum discussion data at the level of individual posts, we can construct a
+network capturing the structure of user discussions.  In this network, nodes
+are the forum users and edges represent some form of interaction between the
+users.
 
-Given the forum discussion data at the level of individual posts, we
-constructed the undirected graph of user discussions. In this network, nodes
-are the forum users and are connected by an edge if the corresponding users
-have ever interacted in any thread. The edge weights between two users are
-determined based on their interaction frequency. Furthermore, the weights are
-adjusted by size of the thread (i.e. an interaction in small threads counts
+We experimented with different network construction methods, weight assignment
+schemes, and edge retention periods. For example, edges could be added based on
+co-appearance in each thread. However, this approach quickly leads to a very
+dense network revealing little information about discussion dynamics. Moreover,
+the network could be unweighted or weights could be assigned to each edge based
+on a frequency of interactions between the two endpoints. Weights could
+also adjusted by size of the thread (i.e. an interaction in small threads counts
 more than an interaction in a large thread) and a decay factor (i.e. a recent
 interaction counts more than an old interaction).
+Finally, the network could contain the interactions only within the past few
+days to capture short-term effect of information diffusion and influence
+dynamics. Alternatively, network construction could use all the interactions
+since the inception of the forums. The unlimited retention of interactions
+leads to a better view on long-term dynamics and more accurate identification
+of influential and senior users in the forum.
 
-We construct the network over time by replaying the posts and updating the
-discussion graph accordingly.  Whenever a new digital currency was introduced
-in the forum for the first time, a snapshot of the graph was taken and used for
-extracting various network measures corresponding to the coin. It is important
-to analyze the discussion graph before the coin is mentioned for the first time
-to avoid any possible confounding factors. The network measures we used were as
-followed: number of edges, number of nodes, density, diameter, clustering
-coefficient, average path length and average degree. We also computed the
-following network measures for the user who introduced the crypto coin for the
-first time: clustering coefficient, closeness centrality, betweenness
-centrality and laplacian centrality.
+In the following discussion, we only include the results from directed unlimited network.
+The network is directed since the \textit{edges point from posters within each thread to thread-initiators}. The omission
+of co-appearance edges leads to a sparser network which isolates the communication
+patterns around ``dialogue-shapers''. The network is unlimited since all such interactions
+from the inception of bitcointalk are included in its construction. The longer timespan
+of interactions captures relevant information on seniority and community influence 
+which are obtained through long-term and persistent presence in the forums.
+We edges on this network are weighted by the number of times a poster replies
+to a thread-initiator in unique threads. We chose the unlimited directed network
+since it proved to be the most informative and simplest to interpret.
 
+Prior to construction of the network, we merged posts from all forums into a
+single large large forum since the community base of all five forums mentioned
+above is made of the same users and we are mostly concerned about influence and
+aggregate information flow among users, rather than the exact topic of the discussion.
+The network construction involves replaying the posts over time sorted by their date and updating the
+discussion graph accordingly. Whenever a new altcoin was introduced
+in the forum for the first time, the user who introduced it and a snapshot of the graph was taken.
+The position of the first introducer in the network snapshot and its general structure 
+will be used for extracting various network measures corresponding to that coin. Our analysis
+uses these per-coin for evaluating the performance of each coin.
+
+TODO: NIKETE, in the following paragraph, please EXPLAIN BETTER WHY WE CHOSE THE FIRST INTRODUCTION TIME.
+In order to avoid any possible confounding factors, it is important to analyze
+the discussion network at the time of coin introduction to the community. The
+identification of true introductions of new altcoins is a difficult process
+prone to many false-positives. Fortunately, majority of such introductions are
+made in the \textit{Announcement} forum and are preceded with the ``ANN'' tag.
+Our identification strategy looked for mentions of a new altcoin only in the
+first post of a thread, as new coins are usually introduced to the community in
+the form of an announcement.  In particular, we look for the first mention of
+both the coin symbol \textbf{and} its descriptive name in the subject of a
+thread which also contains the announcement tag. The first mentions of either
+the coin symbol \textbf{or} the its name are used fall-back in case the more
+restrictive \textbf{and} requirement did not detect the coin.  Using this
+identification strategy, we were able to detect the first introduction of 554 altcoins
+out of 679. The forum user who initiated such a thread is assigned as the 
+introducer of the coin to the community.
 
 
 \section{Analysis Variables}
@@ -106,4 +143,25 @@ As a secondary outcome measure we consider the number of exchanges that list the
 
 \subsection{Network Structure}
 TODO: EAMAN WILL WRITE THIS
-TODO: ENUMERATE ALL MEASURES
+We computed the following network measures for the users who introduced the
+crypto coin for the first time to the forum:
+\begin{enumerate}
+  \item{num mentions}
+  \item{num posts}
+  \item{num subjects}
+  \item{days since first post}
+  \item{degree total}
+  \item{degree incoming}
+  \item{degree outgoing}
+  \item{clustering coefficient}
+  \item{closeness centrality unweighted}
+  \item{closeness centrality weighted}
+  \item{closeness centrality incoming unweighted}
+  \item{closeness centrality outgoing unweighted}
+  \item{closeness centrality incoming weighted}
+  \item{closeness centrality outgoing weighted}
+  \item{betweenness centrality weighted}
+  \item{satoshi distance}
+  \item{satoshi pagerank weighted}
+  \item{pagerank weighted}
+\end{enumerate}
