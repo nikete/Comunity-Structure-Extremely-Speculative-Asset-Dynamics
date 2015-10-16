@@ -13,3 +13,6 @@ We scraped two major price aggregators; coinmarketcap and coininfo.
 
 \subsection{Forum discussions}
 
+
+Our network measurement data consisted of discussions in Bitcoin and Altcoin online forums on bitcointalk.org from January 2010 until July 2014. 
+Bitcoin forum is mainly concerned with Bitcoin and related technological issues whereas Altcoin discussions are concerned about alternative cryptocurrencies. Each forum consists of hundreds of threads and each thread contains many posts.  Given the forum discussion data at the level of individual posts, we constructed the undirected graph of user discussions. In this network, nodes are the forum users and are connected by an edge if the corresponding users have ever interacted in any thread. The edge weights between two users are determined based on their interaction frequency. Furthermore, the weights are adjusted by size of the thread (i.e. an interaction in small threads counts more than an interaction in a large thread) and a decay factor (i.e. a recent interaction counts more than an old interaction).
