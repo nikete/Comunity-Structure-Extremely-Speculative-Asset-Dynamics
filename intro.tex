@@ -1,35 +1,22 @@
 \section{Introduction}
 
-Speculative bubbles , since at least the dutch tulip mania (Shiller 2005) periodically take over markets.
-While speculation during bubbles as a social process that has been theoretically studied \cite{abolafia1988enacting, earl2007decision, bakker2010social} data on the social network has not been used in such studies. 
-The public notoriety of Bitcoin and the massive price increases that it has seen relative to its starting prices a few eyars ago have lead to an explosion of attempts to create \''the next bitcoin\''.
-The attempts to introduce these new \''coins\'' largely take place in a forum called Bitcoin talk, we present a novel dataset constructed on this data that allows us to identify the introducers of each coin 
-
-https://books.google.com.au/books?id=0TsEM40mepQC&pg=PA144&lpg=PA144&dq=network+structure+and+bubbles&source=bl&ots=3F0pQ7LRPY&sig=JDO3QCEVqJX7KRN0h8Qltm7KgVQ&hl=en&sa=X&ved=0CCwQ6AEwAmoVChMIt_Tz1LHByAIVhqGUCh0x6AoA#v=onepage&q=network%20structure%20and%20bubbles&f=false
-
-The explosion of cryptocurrencies that follows, in their online comunities and 
-and the dynamics of the markets around it provide a chance to observe highly detailed data on a cross ection of comparable asset bubbles.
-We collect and make public a dataset of the bitcointalk discussion forum (posts, authors) and use to construct a graph of whcih users have engaged with whom in the forum. 
-We also collect a  set of prices and traded volumes accross the cryptocurrencies that are itnroduced in the disucssions on the forums.
-This allows us to evaluate the predictive power 
-
-A simple 
-
-Provide time separation argument
-
-Provide 
-
-
-We study the power of structural features of the social network around cryptocurrencies to understand the severity of bubbles that occur in them. 
-Our goal is to asses the predictive capacity of structural featres of derived from the social networks that completely preceed tradingin the asset.
-Bubble forecasting in economics and finance has used features of the time series
- All our measures are constructed using observations to contruct a network before the relevant cryptocurrency is ever traded. 
-
-
-
-“ it would have a place in the sociology of markets analogous to that of lesion studies in neuropsychology.” a window into the social life of the mind https://www.aaai.org/Papers/Symposia/Spring/2008/SS-08-06/SS08-06-017.pdf
+Speculative bubbles , since at least the dutch tulip mania (\cite{garber2001famous} pp 127-31 for references) periodically take over markets. %note quite what he says; fundamentals driven then morals story.
+The public notoriety of Bitcoin and the massive price increases that it has seen relative to its starting prices a few eyars ago have lead to an explosion of attempts to create \''the next bitcoin\'' often refered to as cryptocurrencies.
+While speculation during bubbles as a social process that has been theoretically studied \cite{abolafia1988enacting, earl2007decision, bakker2010social, harras2011grow}, data on a real social network underpinning it has not been used.
+The attempts to introduce these new \''coins\'' largely take place in a forum called Bitcoin talk.
+We present a novel dataset constructed based on this that allows us to identify the introducers of each coin and build measures of their position in the network based on whcih users have engaged with whom in the forum before the coin is announced or traded (TODO clarify on when which).
+By considering the comunity structure that exists in the forum before a coin is introduced we are able to sidestep problems of reverse causation that would plague a analisys that relied on in time variaiton between prices and network structure. 
+We also collect the set of prices and traded volumes accross the cryptocurrencies that are itnroduced in the disucssions on the forums, and construct measures of both the intensity (aka severity, for each dollar invested at the peak what could be recovered on average) and the magnitude (how many dollars or bitcoins where nominally traded in the asset).
+This allows us to evaluate the predictive power of the features of the node in our constructed network that corresponds to the user who first introduces the coin. 
+While the magnitude of the assets traded is small relative to most financial and commodity markets, it is much larger than even the most lavishly funded experimenter could hope for.
+Furthermore, the rich market structure that surrounds (some 45 exchanges appear on the dataset, raning in credibility from VC backed and registered int he US, to anonimous and mysteriously run) provides a rich source of institutional variaiton with extremely open data, a striking constrast to most financial or commodities market trade level data. 
+Our contribution aims to beging in the computational social sciences a field that would have a place in the sociology of markets analogous to that of computational imaging lesion studies do in neuropsychology \footnote{ \cite[cosma2008]} .
 
 The evidence based uncovered by “— traces of their communicative interactions as they work out their thoughts about matters of common concern” 
+
+
+Bubble forecasting in economics and finance has used features of the time series (TODO cites)
+
 
 crash of 87 http://www.iijournals.com/doi/abs/10.3905/jpm.1989.409242?journalCode=jpm “rapid rise of options” witht he rise of the thoery to price those options, in having currencies with zero entrie costs
 MacKenzie, Donald. "An Engine, Not a Camera."
