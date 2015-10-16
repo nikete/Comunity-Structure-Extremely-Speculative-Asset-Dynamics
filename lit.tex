@@ -1,21 +1,4 @@
-\section{Introduction}
-
-Speculative bubbles , since at least the dutch tulip mania (\cite{garber2001famous} pp 127-31 for references) periodically take over markets. %note quite what he says; fundamentals driven then morals story.
-The public notoriety of Bitcoin and the massive price increases that it has seen relative to its starting prices a few eyars ago have lead to an explosion of attempts to create \''the next bitcoin\'' often refered to as cryptocurrencies.
-While speculation during bubbles as a social process that has been theoretically studied \cite{abolafia1988enacting, earl2007decision, bakker2010social, harras2011grow}, data on a real social network underpinning it has not been used.
-The attempts to introduce these new \''coins\'' largely take place in a forum called Bitcoin talk.
-We present a novel dataset constructed based on this that allows us to identify the introducers of each coin and build measures of their position in the network based on whcih users have engaged with whom in the forum before the coin is announced or traded (TODO clarify on when which).
-By considering the comunity structure that exists in the forum before a coin is introduced we are able to sidestep problems of reverse causation that would plague a analisys that relied on in time variaiton between prices and network structure. 
-We also collect the set of prices and traded volumes accross the cryptocurrencies that are itnroduced in the disucssions on the forums, and construct measures of both the intensity (aka severity, for each dollar invested at the peak what could be recovered on average) and the magnitude (how many dollars or bitcoins where nominally traded in the asset).
-This allows us to evaluate the predictive power of the features of the node in our constructed network that corresponds to the user who first introduces the coin. 
-While the magnitude of the assets traded is small relative to most financial and commodity markets, it is much larger than even the most lavishly funded experimenter could hope for.
-Furthermore, the rich market structure that surrounds (some 45 exchanges appear on the dataset, raning in credibility from VC backed and registered int he US, to anonimous and mysteriously run) provides a rich source of institutional variaiton with extremely open data, a striking constrast to most financial or commodities market trade level data. 
-Our contribution aims to beging in the computational social sciences a field that would have a place in the sociology of markets analogous to that of computational imaging lesion studies do in neuropsychology \footnote{ \cite[cosma2008]} .
-
-The evidence based uncovered by “— traces of their communicative interactions as they work out their thoughts about matters of common concern” 
-
-
-Bubble forecasting in economics and finance has used features of the time series (TODO cites)
+\section{Lit}
 
 Agents structural strength within the disocurse surrounding cryotographic currencies is particularly important, as these are allmost entirely perofmrative; the initial marketplace adoption of bitcoin is 
 crash of  %87 http://www.iijournals.com/doi/abs/10.3905/jpm.1989.409242?journalCode=jpm 
@@ -32,5 +15,64 @@ New currencies have thus been floated with every single drug name posible. Many 
 
 
 
+
+Network Diversity and Economic Development
+http://www.sciencemag.org/content/328/5981/1029.full
+
+
+
+"Hence, highly clustered, or insular, social ties are predicted to limit access to social and economic prospects from outside the social group, whereas heterogeneous social ties may generate these opportunities from a range of diverse contacts (1, 2)."
+
+"Although both social and spatial network diversity scores were strongly correlated with IMD rank, we found a weaker positive correlation present using number of contacts and a negative correlation for communication volume."
+
+"For example, whereas inhabitants of Stoke-on-Trent, one of the least prosperous regions in the UK, averaged a higher monthly call volume than the national average, they have one of the lowest diversity scores in the country. Similarly prosperous Stratford-upon-Avon has inhabitants with extremely diverse networks, despite no more communication than the national average. "
+
+
+
+
+Predicting Spending Behavior Using Socio-mobile Features:
+http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6693330&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6693330
+free version:
+https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ef1hJ8IAAAAJ&sortby=pubdate&citation_for_view=Ef1hJ8IAAAAJ:NaGl4SEjCO4C
+
+Social behavior can be used to predict spending behavior in couples in regards to their prepensity to diversify the businesses they explore, become loyal customers and overspend. The results show that mobile phone social interaction patters can be more predictive than personality based features when predicting spending behavior. 
+
+"We find that social behavior measured via face-to-face interaction, call, and SMS logs, can be used to predict the spending behavior for couples in terms of their propensity to explore diverse businesses, become loyal customers, and overspend"
+
+"results show that mobile phone based social interaction patterns can provide more predictive power on spending behavior than personality based features. Interestingly, we find that more social couples also tend to overspend."
+
+
+
+
+Money Walks: Implicit Mobility Behavior and Financial Well-Being:
+http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0136628
+
+Spatiotemporal traits such as exploration, engagement and elasticity can be used to predict future finanical difficulties. 
+
+"Hence, in this work we study a large-scale cross-sectional dataset of human spending across space and time, and connect it to the biological phenomena of “foraging,” a basic pattern of animal movement to gather foods and resources."
+
+"we analyzed a corpus of hundreds of thousands of human economic transactions and found that financial outcomes for individuals are intricately linked with their spatiotemporal traits like exploration, engagement, and elasticity. Such features yield models that are 30\% to 49\% better at predicting future financial difficulties than the comparable demographic models."
+
+"As shown in Fig 2, individuals with lower levels of education (High School, Middle School, or Primary School) were found to be more likely to be late for their payments and get into financial trouble. Users with higher age were marginally less likely to overspend, miss payments, or get into financial trouble. Last, male customers and married customers were less likely to miss their payments."
+
+"The figure also shows that multiple mobility behavior features were statistically correlated with outcome variables, even after controlling for the effect of abovementioned demographic variables of age, gender, marital status, education, and work type."
+
+"the behavioral features were found to be more significantly associated (in terms of p-values) and contain higher predictive power (in terms of odds ratios being further away from 1.0 in either direction) as compared to the demographic features."
+
+"The evidence so far indicating that each of the spatio-temporal behavioral descriptors has significant association with different financial outcomes motivates their combination to predict the financial outcome"
+
+
+
+
+Predicting personality using novel mobile phone-based metrics
+http://dl.acm.org/citation.cfm?id=2456492
+free version:
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CCEQFjAAahUKEwivqbnj0L3IAhWIcT4KHZtqCOg&url=http%3A%2F%2Frealitycommons.media.mit.edu%2Fdownload.php%3Ffile%3DdeMontjoye2013predicting-citation.pdf&usg=AFQjCNGDDMiemMv9vPQGBd_NNP30sEr6MQ&sig2=CQk3pVIzJ3EmXlV0lD8oKA
+
+"Using a set of novel psychology-informed indicators that can be computed from data available to all carriers, we were able to predict users’ personality with a mean accuracy across traits of 42% better than random, reaching up to 61% accuracy on a three-class problem."
+
+"The goal of the present research is to show that users’ personalities can be reliably inferred from basic information accessible from all mobile phones and to all service providers."
+
+"The model predicted whether phone users were low, average, or high in neuroticism, extraversion, conscientiousness, agreeableness, and openness with an accuracy of 54%, 61%, 51%, 51%, and 49%, respectively."
 
 
