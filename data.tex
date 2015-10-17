@@ -47,7 +47,7 @@ made between January 2010 and July 2015 on the most active crypto-related forums
     and exchange tips.
 
 \end{enumerate}
-TODO: CHECK AVERAGE NUMBER OF POSTS PER THREAD, and other statistics
+\textcolor{red}{Do we want any other descriptive stats on the forum other than those mentioned here?}
 
 Each forum consists of many subjects or threads initiated by different users.
 Each thread contains several posts or replies, with an average of 10 posts per
@@ -57,7 +57,7 @@ valuable information in our context.
 \begin{enumerate}
   \item{Subject:} Usually, the initiator of the thread chooses subject and all the
     following posts inherit the same subject.
-  \item{Content:} The actual text of the message.
+  \item{Content:} The actual text of the post.
   \item{Position in the thread}: The later posts in the thread might not be as important
     as earlier posts and could be about issues other than the original topic of the thread.
   \item{Author}
@@ -70,8 +70,16 @@ Nevertheless, there are only 10000 active users within any 30 day period on aver
 
 \section{Forum Interaction Network}
 
-Given the forum discussion data at the level of individual posts, we  construct a network capturing the structure of user discussions.
-In this network, nodes are the forum users and directed edges represent 
+Given the forum discussion data at the level of individual posts, we  construct a network capturing the discussion patterns among users. The structural properties of this network form the basis of our analysis on a per-coin basis. In this network, nodes are the forum users and \textit{directed edges} point from posters within each thread to thread-initiators. The omission of edges based on simple co-appearance within a thread leads to a sparser network which isolates the communication patterns around ``dialogue-shapers''. The edges in the discussion network are weighted by the number of times a poster replies to a thread-initiator in different threads (i.e. multiple replies by the same user within the same thread count only as once).
+% Is this too big of a statement?
+In this context, edge weights capture the level of engagement thread initiators receive from the community and the amount of information a poster receives from thread initiators.
+
+Our network construction algorithm uses all the interactions since the inception of bitcointalk. The unlimited retention of any such (replier to thread initiator) interaction captures relevant information on seniority and community influence which are obtained through long-term and persistent presence in the forums. 
+
+ 
+
+
+
 
 % This paper did no such experimentation, maybe you did this alone and are welcome to put it in another paper.
 
@@ -81,19 +89,7 @@ In this network, nodes are the forum users and directed edges represent
 %Weights could also adjusted by size of the thread (i.e. an interaction in small threads counts
 %more than an interaction in a large thread) and a decay factor (i.e. a recent interaction counts more than an old %interaction).
 %Finally, the network could contain the interactions only within the past few days to capture short-term effect of information diffusion and influence dynamics.
-%Alternatively, network construction could use all the interactions since the inception of the forums. The unlimited retention of interactions leads to a better view on long-term dynamics and more accurate identification of influential and senior users in the forum.
-
-
-%In the following discussion, we only include the results from directed unlimited network.
-The network is directed since the \textit{edges point from posters within each thread to thread-initiators}. The omission
-of co-appearance edges leads to a sparser network which isolates the communication
-patterns around ``dialogue-shapers''. The network is unlimited since all such interactions
-from the inception of bitcointalk are included in its construction. The longer timespan
-of interactions captures relevant information on seniority and community influence 
-which are obtained through long-term and persistent presence in the forums.
-We edges on this network are weighted by the number of times a poster replies
-to a thread-initiator in unique threads. We chose the unlimited directed network
-since it proved to be the most informative and simplest to interpret.
+%Alternatively, 
 
 Prior to construction of the network, we merged posts from all forums into a
 single large large forum since the community base of all five forums mentioned
