@@ -8,22 +8,21 @@ As a secondary outcome measure we consider the number of exchanges that list the
 
 
 \subsection{Network Structure}
-TODO: EAMAN WILL WRITE THIS
-
-
-We computed the following network measures for the users who introduced the
-crypto coin for the first time to the forum:
+In this section, we discuss the various metrics extracted from discussion networks and used as independent variables in the regression analysis. As mentioned before, each coin is associated with a forum user and a discussion network which corresponds to the state of the forum at the time the user introduced the coin to the community. Below, we list the network variables included in the analysis. It's worth mentioning that all the user-specific variables are measured at the coin introduction time.
 \begin{enumerate}
-  \item{num mentions}
-  \item{num posts}
-  \item{num subjects}
-  \item{days since first post}
-  \item{degree total}
+  \item{Introducer number of posts:} The total number of posts (thread-initiations or simple replies) the coin introducer has made at the time she introduces the coin. It captures the user's level of activity in the community.
+  \item{Introducer number of threads:} The total number of threads the coin introducer has made. Users who start many threads are more likely to receive incoming edges and to shape the dialogue in the community.
+  \item{Seniority:} It is the number of days since the user's first post in the forums. We use this as a proxy for user's seniority in the community.
   \item{degree incoming}
   \item{degree outgoing}
+  \item{Total degree}
   \item{clustering coefficient}
   \item{closeness centrality unweighted}
   \item{closeness centrality weighted}
+  \item{closeness centrality incoming unweighted}
+  \item{closeness centrality outgoing unweighted}
+  \item{closeness centrality incoming weighted}
+  \item{closeness centrality outgoing weighted}
   \item{betweenness centrality weighted}
   \item{satoshi distance}
   \item{satoshi pagerank weighted}
