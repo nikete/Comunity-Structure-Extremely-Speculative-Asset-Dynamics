@@ -1,13 +1,10 @@
 
-\section{Methods & Model}
+\section{Methods }
 
-Initially we we start with a baseline model that considers only the user characteristics that are directly observable from their profile: the number of posts and of subjects subjects, and their seniority in the forum as measured since they first post.
-We then extend this model to one that uses properties that can be simply read of the relevant node in the directed graph described in section (TODO ref), the total number of edges, as well as the number of inbound and outbound.
-A further step is to compute network measures on the unweighted projection of the graph to a simply connected one, while alternatively one cold use the network weights (todo in ipython). 
+Initially we we start with a baseline model that considers only the user characteristics that are easily observable from their activity on the forum before the anouncement: the number of posts and of subjects,  the time since they first post, the number of users that they have responded to and received responses from. 
+These network measures are possible for any generic discussion, we introduce two further sets of variables to enrich our models that rely on domain knowledge of the underlying assets: satoshi network measures, and weather a given coin is embodied in new software or if it is simply a change in name and parameters of the codebase used by a different coin.
 
-These network measures are possible for any generic discussion, we introduce two further sets of variables to enrich our models that rely on domain knowledge of the underlying assets: satoshi network measures, and a classification of the literature surrounding a coin as presenting it as a potential technical advance.
-
-We estimate linear regularized least squares using a combination of L1 and L2 norm, with their parameters set by 5 fold cross validation. 
+We estimate linear regularized least squares (ElasticNet cite TODO) using a combination of L1 and L2 norm, with their parameters set by 5 fold cross validation. 
 We then estimate a OLS model of the support of the variables and calculate White robust standard errors, to allow for model introspection. 
 Disclaimer that the regularization might make them not match (TODO: add set with normal SE that is estimated with the regularization, in results compare the coefficients) 
 To evaluate nonlinearities and interactions  in the model we fit a gradient boosted machine on the full support, cross validating its hyper parameters; as well as on the OLS selected subset.  TODO add graphs showing interactions and nonlinearities; table with model comparisons.
