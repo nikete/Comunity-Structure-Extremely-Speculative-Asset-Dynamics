@@ -1,11 +1,4 @@
 
-\section{Analysis Variables}
-\subsection{Prices and Exchanges}
-Our main outcome measures are the severity of the inflation an asset price, and the magnitude of money transacted in it.
-We operationalize the intensity of a bubble as the proportion of a 1 dollar (TODO check currency base) that would be lost buying at the maximum price and selling after that proportionally to the volume of the market till the present, we call this severity.
-We define the volume as the sum of the contemporaneous dollar (todo check) volume of trade.
-As a secondary outcome measure we consider the number of exchanges that list the coin.
-
 
 \subsection{Network Structure}
 In this section, we discuss the various metrics extracted from discussion networks and used as independent variables in the regression analysis. Many of these variables are standard metrics in graph theory designed to capture node centrality is specific scenarios \cite{KleinbergNetworks}. As mentioned before, each coin is associated with a forum user and a discussion network which corresponds to the state of the forum at the time the user introduced the coin to the community. All of our node-level variables refer to the user introducing the coin. Below, we list the network variables included in the analysis. We used Python igraph implementation for computing the network-related metrics \cite{igraph}.
