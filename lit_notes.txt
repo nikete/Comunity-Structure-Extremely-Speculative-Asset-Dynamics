@@ -1,4 +1,117 @@
-\section{Literature}
+=======
+A large literature in finance empirically examines herding by financial analysts, \cite{jegadeesh2009analysts} is a recent example, of how analyst and markets can herd.
+A particular inter
+ \cite{clement2005financial} 	
+weather analysts are likely to disagree with their peersfor a prominent recent example classifies analysts' earnings forecasts as herding or bold and finds that (1) boldness likelihood increases with the analyst's prior accuracy, brokerage size, and experience and declines with the number of industries the analyst follows, consistent with theory linking boldness with career concerns and ability; (2) bold forecasts are more accurate than herding forecasts; and (3) herding forecast revisions are more strongly associated with analysts' earnings forecast errors (actual earningsâforecast) than are bold forecast revisions. Thus, bold forecasts incorporate analysts' private information more completely and provide more relevant information to investors than herding forecasts."
+>>>>>>> Stashed changes
+
+Being able to observe the direction of attention in the network is a key characteristic of our dataset, and provides us greater range of network measures that can be constructed.
+In particular since information differentials between nodes in a network are often systematic, the directionality of edges, of whom is paying attention to whom, matters.
+Analysts who cover stocks can be considered in an undirected weighted networks based on what proportion of stocks they cover in common, this is used by  \cite{zhao2014analysis} to build an indicator based on the average degree of nodes and the average weighted clustering coefficient. 
+They find herding across all industries in various degrees, and that there is industry level variation on wether it is informed herding in reaction to public news or uninformed speculation.
+
+\cite{green2014access} examine whether access to management at broker-hosted investor conferences leads to more informative research by analysts. We find analyst recommendation changes have larger immediate price impacts when the analyst×³s firm has a conference-hosting relation with the company. The effect increases with hosting frequency and is strongest in the days following the conference. Conference-hosting brokers also issue more informative, accurate, and timely earnings forecasts than non-hosts. Our findings suggest that access to management remains an important source of analysts×³ informational advantage in the post-Regulation Fair Disclosure world.
+
+
+\cite{abolafia1988enacting}
+This study shows how the emotional phases that accompany market crisis can be related to an underlying cycle of actions, attributions, and regulatory reactions among participants in the market environment. The action-attribution-regulation process is here called ÂenactmentÂ, in order to focus on how market participants create the environment which then impinges on their activity. This process is then illustrated with a case study of the 1980 crisis in the silver futures market, when prices soared from 10 per ounce to 50 per ounce and fell back to 10 per ounce in seven months. The traditional mania/distress/panic model of speculative bubbles is reframed as a cycle of organizing, focusing on the strategic actions of buyers, sellers, bankers, and government agencies. The paper shows how the crisis, enacted by market participants who created speculative opportunities, was resolved through the cooperation of powerful organizations that sought to protect the solvency of insiders and the integrity of the market. This view of market process suggests a cycle of action and institutional constraint which shapes the structure of market environments.
+
+\subsection{Prediction from networks}
+
+"The Structural Virality of Online Diffusion" (Management Science)
+
+
+
+
+"Here we propose a formal measure of what we label âstructural viralityâ that interpolates between two conceptual extremes: content that gains its popularity through a single, large broadcast, and that which grows through multiple generations with any one individual directly responsible for only a fraction of the total adoption"
+
+"We find that across all domains and all sizes of events, online diffusion is characterized by surprising structural diversity. Popular events, that is, regularly grow via both broadcast and viral mechanisms, as well as essentially all conceivable combinations of the two."
+
+"we find that the correlation between the size of an event and its structural virality is surprisingly low, meaning that knowing how popular a piece of content is tells one little about how it spread"
+
+"We find that while several of our empirical findings are consistent with such a model, it does not replicate the observed diversity of structural virality"
+
+
+
+
+
+
+
+
+
+
+
+Network Diversity and Economic Development
+%http://www.sciencemag.org/content/328/5981/1029.full
+REPORT
+Network Diversity and Economic Development
+Nathan Eagle
+
+Social networks form the backbone of social and economic life. Until recently, however, data have not been available to study the social impact of a national network structure. To that end, we combined the most complete record of a national communication network with national census data on the socioeconomic well-being of communities. These data make possible a population-level investigation of the relation between the structure of social networks and access to socioeconomic opportunity. We find that the diversity of individualsâ relationships is strongly correlated with the economic development of communities.
+
+
+
+"Hence, highly clustered, or insular, social ties are predicted to limit access to social and economic prospects from outside the social group, whereas heterogeneous social ties may generate these opportunities from a range of diverse contacts (1, 2)."
+
+"Although both social and spatial network diversity scores were strongly correlated with IMD rank, we found a weaker positive correlation present using number of contacts and a negative correlation for communication volume."
+
+"For example, whereas inhabitants of Stoke-on-Trent, one of the least prosperous regions in the UK, averaged a higher monthly call volume than the national average, they have one of the lowest diversity scores in the country. Similarly prosperous Stratford-upon-Avon has inhabitants with extremely diverse networks, despite no more communication than the national average. "
+
+
+
+
+Predicting Spending Behavior Using Socio-mobile Features:
+%http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6693330&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6693330
+free version:
+%https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ef1hJ8IAAAAJ&sortby=pubdate&citation_for_view=Ef1hJ8IAAAAJ:NaGl4SEjCO4C
+
+Social behavior can be used to predict spending behavior in couples in regards to their propensity to diversify the businesses they explore, become loyal customers and overspend. The results show that mobile phone social interaction patters can be more predictive than personality based features when predicting spending behavior. 
+
+"We find that social behavior measured via face-to-face interaction, call, and SMS logs, can be used to predict the spending behavior for couples in terms of their propensity to explore diverse businesses, become loyal customers, and overspend"
+
+"results show that mobile phone based social interaction patterns can provide more predictive power on spending behavior than personality based features. Interestingly, we find that more social couples also tend to overspend."
+
+
+
+
+Money Walks: Implicit Mobility Behavior and Financial Well-Being:
+%http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0136628
+
+Spatiotemporal traits such as exploration, engagement and elasticity can be used to predict future financial difficulties. 
+
+"Hence, in this work we study a large-scale cross-sectional dataset of human spending across space and time, and connect it to the biological phenomena of âforaging,â a basic pattern of animal movement to gather foods and resources."
+
+"we analyzed a corpus of hundreds of thousands of human economic transactions and found that financial outcomes for individuals are intricately linked with their spatiotemporal traits like exploration, engagement, and elasticity. Such features yield models that are 30\% to 49\% better at predicting future financial difficulties than the comparable demographic models."
+
+"As shown in Fig 2, individuals with lower levels of education (High School, Middle School, or Primary School) were found to be more likely to be late for their payments and get into financial trouble. Users with higher age were marginally less likely to overspend, miss payments, or get into financial trouble. Last, male customers and married customers were less likely to miss their payments."
+
+"The figure also shows that multiple mobility behavior features were statistically correlated with outcome variables, even after controlling for the effect of above mentioned demographic variables of age, gender, marital status, education, and work type."
+
+"the behavioral features were found to be more significantly associated (in terms of p-values) and contain higher predictive power (in terms of odds ratios being further away from 1.0 in either direction) as compared to the demographic features."
+
+"The evidence so far indicating that each of the spatio-temporal behavioral descriptors has significant association with different financial outcomes motivates their combination to predict the financial outcome"
+
+
+
+
+Predicting personality using novel mobile phone-based metrics
+%http://dl.acm.org/citation.cfm?id=2456492
+free version:
+%https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CCEQFjAAahUKEwivqbnj0L3IAhWIcT4KHZtqCOg&url=http%3A%2F%2Frealitycommons.media.mit.edu%2Fdownload.php%3Ffile%3DdeMontjoye2013predicting-citation.pdf&usg=AFQjCNGDDMiemMv9vPQGBd_NNP30sEr6MQ&sig2=CQk3pVIzJ3EmXlV0lD8oKA
+
+"Using a set of novel psychology-informed indicators that can be computed from data available to all carriers, we were able to predict usersâ personality with a mean accuracy across traits of 42% better than random, reaching up to 61% accuracy on a three-class problem."
+
+"The goal of the present research is to show that usersâ personalities can be reliably inferred from basic information accessible from all mobile phones and to all service providers."
+
+
+"The model predicted whether phone users were low, average, or high in neuroticism, extraversion, conscientiousness, agreeableness, and openness with an accuracy of 54%, 61%, 51%, 51%, and 49%, respectively."
+
+
+
+
+
+
+
 
 
 
