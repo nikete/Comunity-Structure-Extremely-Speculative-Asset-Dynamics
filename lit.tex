@@ -5,33 +5,42 @@ This work is at the intersection of three literatures: in economics and finance 
 
 \subsection{Bubbles}
 
-Perhaps the most striking line of research on bubbles in economics with respect to the cryptocurrency market is the study of those where the asset is worthless and this is common knowledge. 
-
-In \cite{moinas2013bubble} " a bubble game that involves sequential trading of an
-asset commonly known to be valueless. Because some traders do not
-know where they stand in the market sequence, the game allows for
-a bubble at the Nash equilibrium when there is no cap on the maximum
-price. We run experiments both with and without a price cap.
-Structural estimation of behavioral game theory models suggests that
-quantal responses, uncertainty regarding other traders’ rationality,
-and analogy-based expectations are important drivers of speculation. "
+Perhaps the most striking line of research on bubbles in economics with respect to cryptocurrencies is the study of markets where the asset is worthless and this is common knowledge. 
+Recently \cite{moinas2013bubble} studies both theoretically and experimentally in the laboratory such a bubble. 
+The driving force is that some traders ``do not know where they stand in the market sequence, the game allows for
+a bubble at the Nash equilibrium when there is no cap on the maximum price.''.
+In the context of cryptocurrencies the lack of knowledge around the sequence position maps to uncertainty about ones place in the technology adoption knowledge and adoption curve, while the dificulty in upper bounding the potential market value of cryptocurrencies provides the lack of cap on the maximum price. 
 
 
-Decision-rule cascades and the dynamics of speculative bubbles
-We combine Minsky’s Wnancial fragility analysis, behavioural analysis of decision rules and the
-evolutionary economics of rule trajectories to provide an empirically grounded and computationally
-tractable theory of the complex evolutionary dynamics of speculative Wnancial upswings. The behavioural
-dynamics of asset bubbles can be conceptualized as the joint consequence of the adoption and
-diVusion process of new investment decision rules coupled with the degradation of those rules as they
-pass from a few expert investors to larger population of amateurs. We illustrate this using data covering
-the recent Brisbane property market bubble (1999–2003) and show how it is consistent with the
-existence of such cascading decision rules. We then explain how multi-agent simulation methods can
-be used for modelling decision rule cascades.
-© 2006 Elsevier B.V. All rights reserved."
+A large literature in finance empirically examines herding by financial analysts, for a recent example
+@article{jegadeesh2009analysts,
+  title={Do analysts herd? An analysis of recommendations and market reactions},
+  author={Jegadeesh, Narasimhan and Kim, Woojin},
+  journal={Review of Financial Studies},
+  pages={hhp093},
+  year={2009},
+  publisher={Soc Financial Studies}
+}
+It also looks at the properties of analysts who disagre with their peers and of their forecasts
 
-In \cite{harras2011grow}
-We present a simple agent-based model to study the development of a bubble and the consequential crash and investigate how their proximate triggering factor might relate to their fundamental mechanism, and vice versa. Our agents invest according to their opinion on future price movements, which is based on three sources of information, (i) public information, i.e. news, (ii) information from their "friendship" network and (iii) private information. Our bounded rational agents continuously adapt their trading strategy to the current market regime by weighting each of these sources of information in their trading decision according to its recent predicting performance. We find that bubbles originate from a random lucky streak of positive news, which, due to a feedback mechanism of these news on the agents' strategies develop into a transient collective herding regime. After this self-amplified exuberance, the price has reached an unsustainable high value, being corrected by a crash, which brings the price even below its fundamental value. These ingredients provide a simple mechanism for the excess volatility documented in financial markets. Paradoxically, it is the attempt for investors to adapt to the current market regime which leads to a dramatic amplification of the price volatility. A positive feedback loop is created by the two dominating mechanisms (adaptation and imitation) which, by reinforcing each other, result in bubbles and crashes. The model offers a simple reconciliation of the two opposite (herding versus fundamental) proposals for the origin of crashes within a single framework and justifies the existence of two populations in the distribution of returns, exemplifying the concept that crashes are qualitatively different from the rest of the price moves.
+ \cite{clement2005financial} 
+weather analysts are likely to disagree with their peersfor a prominent recent example classifies analysts' earnings forecasts as herding or bold and finds that (1) boldness likelihood increases with the analyst's prior accuracy, brokerage size, and experience and declines with the number of industries the analyst follows, consistent with theory linking boldness with career concerns and ability; (2) bold forecasts are more accurate than herding forecasts; and (3) herding forecast revisions are more strongly associated with analysts' earnings forecast errors (actual earnings—forecast) than are bold forecast revisions. Thus, bold forecasts incorporate analysts' private information more completely and provide more relevant information to investors than herding forecasts."
 
+Being able to observe the direction of attention in the network is a key characteristic of our dataet, and provids us greater range of network measures that can be constructed.
+In particular since information differentials between nodes in a network are often systematic, the directionality of edges, of whom is paying attention to whom, matters.
+Analysts who cover stocks can be considered in anundirected weighted networks based on what proportion of stocks they cover in common, this is used by  \cite{zhao2014analysis} to build an indicator based on the average degree of nodes and the average weighted clustering coefficint. 
+They find herding accross all industries in various degrees, and that there is industry level variation on wether it is informed hearding in reaction to public news or uninformed speculation.
+
+\cite{green2014access} examine whether access to management at broker-hosted investor conferences leads to more informative research by analysts. We find analyst recommendation changes have larger immediate price impacts when the analyst׳s firm has a conference-hosting relation with the company. The effect increases with hosting frequency and is strongest in the days following the conference. Conference-hosting brokers also issue more informative, accurate, and timely earnings forecasts than non-hosts. Our findings suggest that access to management remains an important source of analysts׳ informational advantage in the post-Regulation Fair Disclosure world.
+
+
+\cite{abolafia1988enacting,
+  title={Enacting market crisis: The social construction of a speculative bubble},
+  author={Abolafia, Mitchel Y and Kilduff, Martin},
+Enacting Market Crisis: The Social Construction of a Speculative Bubble
+Administrative Science Quarterly, January 1988 
+Martin Kilduff and Mitchel Abolafia
+This study shows how the emotional phases that accompany market crisis can be related to an underlying cycle of actions, attributions, and regulatory reactions among participants in the market environment. The action-attribution-regulation process is here called enactment, in order to focus on how market participants create the environment which then impinges on their activity. This process is then illustrated with a case study of the 1980 crisis in the silver futures market, when prices soared from $10 per ounce to $50 per ounce and fell back to $ 10 per ounce in seven months. The traditional mania/distress/panic model of speculative bubbles is reframed as a cycle of organising, focusing on the strategic actions of buyers, sellers, bankers, and government agencies. The paper shows how the crisis, enacted by market participants who created speculative opportunities, was resolved through the cooperation of powerful organisations that sought to protect the solvency of insiders and the integrity of the market. This view of market process suggests a cycle of action and institutional constraint which shapes the structure of market environments.
 
 \subsection{Prediction from networks}
 
@@ -121,3 +130,25 @@ free version:
 
 \subsection{Bitcoin and Cryptocurrencies}
 
+
+fistful of bitcoins
+Bitcoin is a purely online virtual currency, unbacked by either physical commodities or sovereign obligation; instead, it relies on a combination of cryptographic protection and a peer-to-peer protocol for witnessing settlements. Consequently, Bitcoin has the unintuitive property that while the ownership of money is implicitly anonymous, its flow is globally visible. In this paper we explore this unique characteristic further, using heuristic clustering to group Bitcoin wallets based on evidence of shared authority, and then using re-identification attacks (i.e., empirical purchasing of goods and services) to classify the operators of those clusters. From this analysis, we characterize longitudinal changes in the Bitcoin market, the stresses these changes are placing on the system, and the challenges for those seeking to use Bitcoin for criminal or fraudulent purposes at scale.
+
+@inproceedings{soska2015measuring,
+  title={Measuring the longitudinal evolution of the online anonymous marketplace ecosystem},
+  author={Soska, Kyle and Christin, Nicolas},
+  booktitle={Proceedings of the 24th USENIX Conference on Security Symposium},
+  pages={33--48},
+  year={2015},
+  organization={USENIX Association}
+}
+
+
+@incollection{ron2014did,
+  title={How Did Dread Pirate Roberts Acquire and Protect His Bitcoin Wealth?},
+  author={Ron, Dorit and Shamir, Adi},
+  booktitle={Financial Cryptography and Data Security},
+  pages={3--15},
+  year={2014},
+  publisher={Springer}
+}
