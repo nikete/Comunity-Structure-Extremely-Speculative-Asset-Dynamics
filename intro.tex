@@ -24,9 +24,9 @@ While the magnitude of the assets traded is small relative to most financial and
 The largest bubble in our dataset, AuroraCoin, reaches a valuation of 1 billon USD on March , with reported daily trading volumes of 6.8M USD, and sheds 90\% of its values in a week, and 99\% of its value in well under a year.
 For context, this is equivalent to $1/4$ of Icelands entire foreigh exchange reserves in 2014, \footnote{4.1 Billon USD , The World Bank, Global Economic Monitor, accessed October 2015}, the population of which AuroraCoin promoters claimed they would distribute half of the coins to.
 
-\begin{figure*}
+\begin{figure}
 \includegraphics[width=\columnwidth]{AuroraCoin}
-\end{figure*}
+\end{figure}
 
 Using the price and volume data we construct measures of both  the magnitude (how many dollars worth of trading happened in the asset) and the severity of bubbles ( which we define as for each dollar invested at the peak what could be recovered if selling at the volume weighted average prices observed since).
 By considering the community structure that exists in the forum before a coin is introduced we are able to predict part of the variation in both the severity and magnitude of the resulting bubble: our best model explains 10\% of the variation in the severity and of the magnitudein our of sample using a penalized linear model and measuring performance out of sample using cross validation. 
@@ -35,10 +35,10 @@ Both the severity and the magnitude of bubbles increases with the centrality of 
 Interestingly this effect is concentrated in different ways depending on weather the coin software is more than a trivial modification: trivial coins have more severe bubbles the more central their introducers are, while volume is greater the more central the introducer of a nontrivial coin is.
 
 
-\begin{figure*}
+\begin{figure}
 \includegraphics[width=\columnwidth]{volume_centrality}
 \includegraphics[width=\columnwidth]{severity_centrality}
-\end{figure*}
+\end{figure}
 
 While states can create the demand required for a currency system to run by compelling tax payment in it (for a recent example), non state sponsored currencies must find some other ways of creating demand.
 The initial market for which bitcoin has been used (prices denominated in it, transactions only in it) was drug sales.\footnote{A overview of the different drug marketplaces and estimated transaction volumes can be found in \cite{soska2015measuring}. To the best of the authors knowledge no other sector beyond speculation has even remotely substantial volume at present; a very primitive form of unregulated gambling Satoshi Dice, did for a brief pointing the past)   }
