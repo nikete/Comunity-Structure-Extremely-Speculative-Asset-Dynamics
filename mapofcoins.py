@@ -29,18 +29,18 @@ processed_list = []
 processed_list_ann = []
 for coin in coinlist:
 	if coin['PoS'] == 'no':
-		pos = False
+		pos = 0
 	else:
-		pos = True
+		pos = 1
 	if coin['Premine'] == None or str(coin['Premine']).lower() == 'no':
-		premine = False
+		premine = 0
 	else:
-		premine = True
+		premine = 1
 	if 'PoW' in coin.keys():
 		pow_ = coin['PoW']
 	else:
 		pow_ = ''
-	technical = False
+	technical = 0
 	name = coin['name']
 	if 'children' in coin.keys():
 		children_amount = len(coin['children'])
@@ -56,11 +56,11 @@ for coin in coinlist:
 				if coin['ForkedFrom'] == c['name']:
 					if 'algo' in c.keys() and 'algo' in coin.keys():
 						if c['algo'] != coin['algo']:
-							technical = True
+							technical = 1
 					elif 'algo' in c.keys() or 'algo'in coin.keys():
-							technical = True
+							technical = 1
 		else:
-			technichal = True
+			technichal = 1
 	if 'ANN'in coin.keys():
 		ann = coin['ANN']
 	else:
