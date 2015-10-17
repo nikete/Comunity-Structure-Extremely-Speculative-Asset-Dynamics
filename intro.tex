@@ -17,19 +17,19 @@ We present a novel dataset that combines measures derived from the social networ
 In the forum we identify the introducers of each coin and build measures of their position in the network based on which users have engaged with them threads in the forum before the coin is announced.
 We dentify 376 coins that are announced by users of the forum and which can be mapped to price and volume data from exchanges.
 From the price and transaction volume data we build measures of the subsequent activity that results from trading in the coin. 
-We also asses if coins posibly embody technological inovation based on having more than trivial modifications to previously existing coins sourcecode.
+We also asses if coins possibly embody technological innovation based on having more than trivial modifications to previously existing coins source code.
 
-While the mechanisms that drive bubbles have been theoretically  \cite{abolafia1988enacting, earl2007decision, bakker2010social, harras2011grow} and experimentally \cite{moinas2013bubble} in the lab, an exaustive dataset on the social network of those promoting the asset has not been previously available.
+While the mechanisms that drive bubbles have been theoretically  \cite{abolafia1988enacting, earl2007decision, bakker2010social, harras2011grow} and experimentally \cite{moinas2013bubble} in the lab, an exhaustive dataset on the social network of those promoting the asset has not been previously available.
 While the magnitude of the assets traded is small relative to most financial and commodity markets, it is much larger than even the most lavishly funded experimenter could hope for.
 The largest bubble in our dataset, AuroraCoin, reaches a valuation of 1 billon USD on March , with reported daily trading volumes of 6.8M USD, and sheds 90\% of its values in a week, and 99\% of its value in well under a year.
-For context, this is equivalent to $1/4$ of Icelands entire foreigh exchange reserves in 2014, \footnote{4.1 Billon USD , The World Bank, Global Economic Monitor, accessed October 2015}, the population of which AuroraCoin promoters claimed they would distribute half of the coins to.
+For context, this is equivalent to $1/4$ of Icelands entire foreign exchange reserves in 2014, \footnote{4.1 Billon USD , The World Bank, Global Economic Monitor, accessed October 2015}, the population of which AuroraCoin promoters claimed they would distribute half of the coins to.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{AuroraCoin}
 \end{figure}
 
 Using the price and volume data we construct measures of both  the magnitude (how many dollars worth of trading happened in the asset) and the severity of bubbles ( which we define as for each dollar invested at the peak what could be recovered if selling at the volume weighted average prices observed since).
-By considering the community structure that exists in the forum before a coin is introduced we are able to predict part of the variation in both the severity and magnitude of the resulting bubble: our best model explains 10\% of the variation in the severity and of the magnitudein our of sample using a penalized linear model and measuring performance out of sample using cross validation. 
+By considering the community structure that exists in the forum before a coin is introduced we are able to predict part of the variation in both the severity and magnitude of the resulting bubble: our best model explains 10\% of the variation in the severity and of the magnitude in our of sample using a penalized linear model and measuring performance out of sample using cross validation. 
 The main driver of our explanatory power is the centrality of a user in the directed network derived from the forum.
 Both the severity and the magnitude of bubbles increases with the centrality of the user who introduces the coins in the forums.
 Interestingly this effect is concentrated in different ways depending on weather the coin software is more than a trivial modification: trivial coins have more severe bubbles the more central their introducers are, while volume is greater the more central the introducer of a nontrivial coin is.
