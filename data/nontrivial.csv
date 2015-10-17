@@ -1,4 +1,4 @@
-name,children_amount,algorithm,technical,premine,pos
+name,children_amount,algorithm,nontrivial,premine,pos
 BTC, 96, SHA-256d, False, False, False
 NMC, 0, SHA-256d, False, False, False
 IXC, 1, SHA-256d, False, True, False
