@@ -75,7 +75,7 @@ with open('technicality.csv','wb') as csvfile:
 	for coin in processed_list:
 		csvfile.write(str(', '.join(coin)+'\n'))
 
-with open('ann.csv','wb')as csvfile:
+with open('ann_mapofcoins.csv','wb')as csvfile:
 	csvfile.write(str(','.join(['symbol','ann'])+'\n'))
 	for coin in processed_list_ann:
 		csvfile.write(str(','.join(coin)+'\n'))
