@@ -5,23 +5,27 @@ The public notoriety of Bitcoin and the massive price increases and their associ
 The majority of these coins have no viable uses, and their markets would appear driven largely by speculation.
 Many of them appear to be nothing but attempts at turning a quick profit from inflating the implied valuation of a coin shortly after creating it.
 This is driven by the extremely low cost and effort required to create a new coin, with most being minimal changes to parameters and branding of a pre-existing codebase.
-Those who make and trade these coins communicate largely online, and much of their activity is concentrated on public forums, while price and volume data from their exchanges is freely available and widely aggregated.
-This makes cryptocoins and the comunity that surrounds them an almost ideal object to study the relation between social structure and speculative bubbles.
+Those who make and trade these coins communicate largely online, and much of their activity is concentrated on public forums, price and volume data from their exchanges is freely available and widely aggregated, and the source code to all coins is public.
+This makes cryptocoins and the comunity that surrounds them an almost ideal object to study the relation between social structure and speculative bubbles outside the laboratory.
+
 \begin{figure}[h]
 \includegraphics[width=\columnwidth]{volume_centrality}
 \includegraphics[width=\columnwidth]{severity_centrality}
 \end{figure}
 
+We present a novel dataset that combines measures derived from the social network in an online forum ( Bitcoin Talk ), market data from a range of cryptocurrency exchanges, and properties of the software in which the different coins are implemented.
+In the forum we identify the introducers of each coin and build measures of their position in the network based on which users have engaged with them threads in the forum before the coin is announced.
+We dentify 376 coins that are announced by users of the forum and which can be mapped to price and volume data from exchanges, as well as assesments of weather they may posibly embody technological inovation based on weather they do moe than trivial modifications to previously existing coins software.
+From the price and transaction volume data we build measures of the subsequent activity that results from trading in the coin. 
 
-We present a novel dataset based on the Bitcoin Talk forum that allows us to identify the introducers of each coin and build measures of their position in the network based on which users have engaged with their threads in the forum before the coin is announced.
+
 While the mechanisms that drive bubbles have been theoretically  \cite{abolafia1988enacting, earl2007decision, bakker2010social, harras2011grow} and experimentally \cite{moinas2013bubble} studied, an exaustive dataset on the social network underpinning them has not been previously available.
-Our most conservative dataset identifies 376 coins that are announced by users of the forum and which can be mapped to price and volume data from exchanges.
+
 Using the price and volume data we construct measures of both  the magnitude (how many dollars worth of trading happened in the asset) and the severity of bubbles ( which we define as for each dollar invested at the peak what could be recovered if selling at the volume weighted average prices observed since).
 By considering the community structure that exists in the forum before a coin is introduced we are able to predict part of the variation in both the severity and magnitude of the resulting bubble: our best model explains 10\% of the variation in the severity and around 2\% of the magnitude of the bubbles in our of sample cross validation. 
 The main driver of our explanatory power is the centrality of a user in the directed network derived from the forum.
 %TODO WRAP RESULTS SUMMARY
 
-The evidence based uncovered by “— traces of their communicative interactions as they work out their thoughts about matters of common concern” 
 
 \begin{quote}
 "Bitcoin is a purely online virtual currency, unbacked by either physical commodities or sovereign obligation; instead, it relies on a combination of cryptographic protection and a peer-to-peer protocol for witnessing settlements. Consequently, Bitcoin has the unintuitive property that while the ownership of money is implicitly anonymous, its flow is globally visible. In this paper we explore this unique characteristic further, using heuristic clustering to group Bitcoin wallets based on evidence of shared authority, and then using re-identification attacks (i.e., empirical purchasing of goods and services) to classify the operators of those clusters. From this analysis, we characterize longitudinal changes in the Bitcoin market, the stresses these changes are placing on the system, and the challenges for those seeking to use Bitcoin for criminal or fraudulent purposes at scale." 
