@@ -28,7 +28,8 @@ In this section, we discuss the various metrics extracted from discussion networ
     \item \textbf{Outgoing:} Only the directed paths starting from the focal user to all the other users are used. In other words, it measures closeness of the focal user to the whole network. Users who reply to many threads are likely to have higher outgoing closeness centrality.
     \item \textbf{Undirected:} The paths both from and to the focal users are used. Users who inititate and reply to many threads are likely to have higher undirected closeness centrality.
   \end{list}
-  \item \textbf{Weighted closeness centrality:}
+  \item \textbf{Weighted closeness centrality:} Similar to the unweighted closeness centrality above, we computed three different versions, with the exception that edges are weighted to indicate the distance or level of ineraction intensity between the two users. The edges weights in our discussion network are determined by the frequency of interactions between two users; and as two users interact more, they are deemed to be closer in their shortest path. Thus in the computation of weighted closeness centralities, we use the reciprocal of the weights as the distance between two users.
+  
   \item \textbf{betweenness centrality weighted:}
   \item \textbf{satoshi distance:}
   \item \textbf{satoshi pagerank weighted:}
