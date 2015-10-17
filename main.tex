@@ -24,30 +24,34 @@
 %
 % 1st. author
 \alignauthor
-Nicolas Della Penna \titlenote{is a first co-author of this paper.}\\
+Nicolas Della Penna \titlenote{is a first co-author of this paper. He conceived the study, methodology, and wrote the initial manuscript and the notebook with the data analysis.}\\
        \affaddr{ANU}\\
        \email{n@nikete.com}
 % 2nd. author
 \alignauthor
-Eaman Jahani\titlenote{is a first co-author of this paper.},  Peter Krafft \\
+Eaman Jahani\titlenote{is a first co-author of this paper. He wrote the forum scrapers and developed the weighting scheme on the network, and wrote up the relevant sections in data and variables.},  Peter Krafft\titlenote{helped with methodology and literature review} \\
        \affaddr{MIT}\\
         \email{eaman,pkrafft@mit.edu}
 % 3rd. author
-\alignauthor 
-Harper Reed\\
-%       \affaddr{Harper Rules LLC}\\
-       \email{harper@nata2.org}
-\and  % use '\and' if you need 'another row' of author names
-% 4th. author
-\alignauthor Octavio Bunge\\
+\alignauthor Octavio Bunge\titlenote{ wrote scrappers for coin prices, and the nontrivialness measure.}\\
        \affaddr{Universidad de Belgrano}\\
         \email{octavio.bunge@comunidad.ub.edu.ar}
+\and  % use '\and' if you need 'another row' of author names
+% 4th. author
+\alignauthor 
+Harper Reed\titlenote{helped with the writing and literature review}\\
+%       \affaddr{Harper Rules LLC}\\
+       \email{harper@nata2.org}
 % 5th. author
+<<<<<<< Updated upstream
 \alignauthor Alex (Sandy) Pentland\\
        \affaddr{MIT Media Lab}\\
        \email{sandy@media.mit.edu}
+=======
+\alignauthor Sandy Pentland\titlenote{helped with methodology and writting}       \email{sandy@media.mit.edu}
+>>>>>>> Stashed changes
 % 6th. author
-\alignauthor  Julian McAuley\\
+\alignauthor  Julian McAuley\titlenote{helped with methodology and writting}\\
        \affaddr{UC San Diego}\\
        \email{cpalmer@prl.com}
 }
@@ -71,15 +75,13 @@ We study the power of structural features of the social network around cryptocur
 \input{variables_eaman.tex}
 \input{method.tex}
 \input{results.tex}
+\input{tables/volume.tex}
+\input{tables/severity.tex}
 \input{limitations.tex}
 \input{conclusion.tex}
 
-\input{tables/volume.tex}
-\input{tables/severity.tex}
-
-
-%\input{tables/log_volume_models fied_symbol_and_name_in_subject_with_[ANN]_first_thread_post_introducers_metrics.tex}
-
+%\input{tables/volume.tex}
+%\input{tables/severity.tex}
 
 
 
@@ -102,7 +104,7 @@ We study the power of structural features of the social network around cryptocur
 %
 %APPENDICES are optional
 %\balancecolumns
-\appendix
+%\appendix
 %Appendix A
 %\section{Linear model coeficients}
 %\balancecolumns

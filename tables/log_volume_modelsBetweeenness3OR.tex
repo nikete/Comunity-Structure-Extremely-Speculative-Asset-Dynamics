@@ -1,0 +1,48 @@
+\begin{table}
+\caption{}
+\begin{center}
+\begin{tabular}{lccccccc}
+\hline
+                                               & Activity & Nontrivial & Satoshi &   Network   & Weighted & Network*Nontrivial &  All    \\
+\hline
+\hline
+\end{tabular}
+\begin{tabular}{llllllll}
+Intercept                                      & 0.00     & 0.08       & 0.06    & 0.03        & 0.08*    & 0.08               & 0.08*   \\
+                                               & (0.00)   & (0.05)     & (0.05)  & (0.05)      & (0.05)   & (0.05)             & (0.05)  \\
+nontrivial                                     &          & 0.13**     & 0.11**  & 0.06        & 0.10**   & 0.09*              & 0.10**  \\
+                                               &          & (0.05)     & (0.05)  & (0.05)      & (0.05)   & (0.05)             & (0.05)  \\
+user1 closeness centrality unweighted          &          &            &         & 0.30***     &          & 0.37***            & 0.05    \\
+                                               &          &            &         & (0.06)      &          & (0.06)             & (4.30)  \\
+user1 closeness centrality weighted            &          &            &         &             & 0.36***  &                    & 0.34    \\
+                                               &          &            &         &             & (0.06)   &                    & (4.29)  \\
+user1 closeness centrality weighted:nontrivial &          &            &         &             &          & 0.05               &         \\
+                                               &          &            &         &             &          & (0.04)             &         \\
+user1 clustering coefficient                   &          &            &         & -0.00       &          & -0.08              & -0.10*  \\
+                                               &          &            &         & (0.05)      &          & (0.05)             & (0.05)  \\
+user1 days since first post                    &          &            & 0.04    & 0.00        & 0.04     & 0.06               & 0.03    \\
+                                               &          &            & (0.07)  & (0.00)      & (0.06)   & (0.06)             & (0.07)  \\
+user1 degree incoming                          &          &            &         & 0.00        &          &                    &         \\
+                                               &          &            &         & (0.00)      &          &                    &         \\
+user1 degree outgoing                          &          &            &         & 0.00        & 0.00     & 0.00               & 0.00    \\
+                                               &          &            &         & (0.00)      & (0.00)   & (0.00)             & (0.00)  \\
+user1 degree total                             &          &            &         & 0.00        &          & -0.04              & -0.00   \\
+                                               &          &            &         & (0.00)      &          & (0.05)             & (0.09)  \\
+user1 num posts                                &          &            &         & 0.00        &          &                    & 0.00    \\
+                                               &          &            &         & (0.00)      &          &                    & (0.00)  \\
+user1 num subjects                             &          &            & 0.02    & 0.00        &          &                    &         \\
+                                               &          &            & (0.06)  & (0.00)      &          &                    &         \\
+user1 pagerank weighted                        &          &            &         &             & -0.04    &                    & -0.06   \\
+                                               &          &            &         &             & (0.05)   &                    & (0.08)  \\
+user1 satoshi distance                         &          &            &         &             &          &                    & -0.05   \\
+                                               &          &            &         &             &          &                    & (0.06)  \\
+R2                                             & -0.00    & 0.02       & 0.03    & 0.13        & 0.15     & 0.16               & 0.17    \\
+ElasticNet CV MSE:                             & 1.03     & 0.99       & 0.99    & 0.91        & 0.93     & 0.92               & 0.92    \\
+BIC                                            & 1575     & 1084       & 1094    & 1083        & 1056     & 1061               & 1078    \\
+N                                              & 553      & 376        & 376     & 376         & 376      & 376                & 376     \\
+Adjusted-R2                                    & -0.00    & 0.02       & 0.02    & 0.11        & 0.14     & 0.15               & 0.14    \\
+Condition Number                               & 1.00     & 1.00       & 1.37    & 98602116.65 & 2.74     & 3.26               & 224.54  \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
