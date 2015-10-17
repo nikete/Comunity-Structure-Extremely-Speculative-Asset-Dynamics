@@ -72,35 +72,18 @@ Nevertheless, there are only 10000 active users within any 30 day period on aver
 
 Given the forum discussion data at the level of individual posts, we  construct a network capturing the discussion patterns among users. The structural properties of this network form the basis of our analysis on a per-coin basis. In this network, nodes are the forum users and \textit{directed edges} point from posters within each thread to thread-initiators. The omission of edges based on simple co-appearance within a thread leads to a sparser network which isolates the communication patterns around ``dialogue-shapers''. The edges in the discussion network are weighted by the number of times a poster replies to a thread-initiator in different threads (i.e. multiple replies by the same user within the same thread count only as once).
 % Is this too big of a statement?
-In this context, edge weights capture the level of engagement thread initiators receive from the community and the amount of information a poster receives from thread initiators.
-
-Our network construction algorithm uses all the interactions since the inception of bitcointalk. The unlimited retention of any such (replier to thread initiator) interaction captures relevant information on seniority and community influence which are obtained through long-term and persistent presence in the forums. 
-
- 
-
-
-
-
-% This paper did no such experimentation, maybe you did this alone and are welcome to put it in another paper.
-
-%We experimented with different network construction methods, weight assignment schemes, and edge retention periods. For example, edges could be added based on co-appearance in each thread. 
-%However, this approach quickly leads to a very dense network revealing little information about discussion dynamics.
-%Moreover, the network could be unweighted or weights could be assigned to each edge based on a frequency of interactions between the two endpoints.
-%Weights could also adjusted by size of the thread (i.e. an interaction in small threads counts
-%more than an interaction in a large thread) and a decay factor (i.e. a recent interaction counts more than an old %interaction).
-%Finally, the network could contain the interactions only within the past few days to capture short-term effect of information diffusion and influence dynamics.
-%Alternatively, 
+In this context, edge weights capture the level of engagement thread initiators receive from the community and the amount of information a poster receives from thread initiators. Furthermore, our network construction method uses all the interactions since the inception of bitcointalk in creating new edges or updating their weights. The unlimited retention of any such (replier to thread initiator) interaction captures relevant information on seniority and community influence which are obtained through long-term and persistent presence in the forums. 
 
 Prior to construction of the network, we merged posts from all forums into a
-single large large forum since the community base of all five forums mentioned
+single large forum since the community base of all five forums mentioned
 above is made of the same users and we are mostly concerned about influence and
 aggregate information flow among users, rather than the exact topic of the discussion.
-The network construction involves replaying the posts over time sorted by their date and updating the
-discussion graph accordingly. Whenever a new altcoin was introduced
-in the forum for the first time, the user who introduced it and a snapshot of the graph was taken.
-The position of the first introducer in the network snapshot and its general structure 
+The network construction involves replaying all the posts over time sorted by their date and updating the
+discussion network accordingly. Whenever a new altcoin is introduced
+in the forum for the first time, the user who introduced it and a snapshot of the network is taken.
+The position of the first introducer in the network snapshot and the general structure of her neighborhood
 will be used for extracting various network measures corresponding to that coin. Our analysis
-uses these per-coin for evaluating the performance of each coin.
+uses these per-coin measures for evaluating the performance of each coin.
 
 
 In order to avoid confounding between a coins price moves and the attention this mkes the comunity in the forums pay to discusions of the coin , we analyze the discussion network up to the time of coin introduction to the community.
