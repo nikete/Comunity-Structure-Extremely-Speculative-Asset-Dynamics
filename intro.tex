@@ -9,33 +9,36 @@ Those who make and trade these coins communicate largely online, and much of the
 This makes cryptocoins an almost ideal window in the social life of a market mania \cite{cosma2008}.
 Such study can serve in the computational social sciences a role analogous to that of lesion studies do in neuropsychology.
 
-\begin{figure*}
-\includegraphics[width=\columnwidth]{volume_centrality}
-\includegraphics[width=\columnwidth]{severity_centrality}
-\end{figure*}
 
 %\begin{figure}[h!]
 %\end{figure}
 
-We present a novel dataset that combines measures derived from the social network in an online forum ( Bitcoin Talk ), market data from a range of cryptocurrency exchanges, and properties of the software in which the different coins are implemented.
+We present a novel dataset that combines measures derived from the social network in an online forum, market data aggregated over dozens of exchanges, and properties of software implementing hundreds of cryptocoins.
 In the forum we identify the introducers of each coin and build measures of their position in the network based on which users have engaged with them threads in the forum before the coin is announced.
-We dentify 376 coins that are announced by users of the forum and which can be mapped to price and volume data from exchanges, as well as assesments of weather they may posibly embody technological inovation based on weather they do moe than trivial modifications to previously existing coins software.
+We dentify 376 coins that are announced by users of the forum and which can be mapped to price and volume data from exchanges.
 From the price and transaction volume data we build measures of the subsequent activity that results from trading in the coin. 
+We also asses if coins posibly embody technological inovation based on having more than trivial modifications to previously existing coins sourcecode.
 
-
-While the mechanisms that drive bubbles have been theoretically  \cite{abolafia1988enacting, earl2007decision, bakker2010social, harras2011grow} and experimentally \cite{moinas2013bubble} studied, an exaustive dataset on the social network underpinning them has not been previously available.
-The changes in the valuations of the coins are very substantial: the largest bubble in our dataset, AuroraCoin, reaches a valuation of 1 billon USD on March , with reported daily trading volumes of 6.8M USD, and collapses to virtually zero in well under a year (one year after its peak on March 15 2015, .
-For context, this is equivalent to 1/4 of Icelands entire foreigh exchange reserves in 2014, \footnote{4.1 Billon USD , The World Bank, Global Economic Monitor, accessed October 2015}, the country that AUroraCoin promoters claimed they would distribute half of the coins to, 
+While the mechanisms that drive bubbles have been theoretically  \cite{abolafia1988enacting, earl2007decision, bakker2010social, harras2011grow} and experimentally \cite{moinas2013bubble} in the lab, an exaustive dataset on the social network of those promoting the asset has not been previously available.
+While the magnitude of the assets traded is small relative to most financial and commodity markets, it is much larger than even the most lavishly funded experimenter could hope for.
+The largest bubble in our dataset, AuroraCoin, reaches a valuation of 1 billon USD on March , with reported daily trading volumes of 6.8M USD, and sheds 90\% of its values in a week, and 99\% of its value in well under a year.
+For context, this is equivalent to $1/4$ of Icelands entire foreigh exchange reserves in 2014, \footnote{4.1 Billon USD , The World Bank, Global Economic Monitor, accessed October 2015}, the population of which AuroraCoin promoters claimed they would distribute half of the coins to.
 
 \begin{figure*}
 \includegraphics[width=\columnwidth]{AuroraCoin}
 \end{figure*}
 
 Using the price and volume data we construct measures of both  the magnitude (how many dollars worth of trading happened in the asset) and the severity of bubbles ( which we define as for each dollar invested at the peak what could be recovered if selling at the volume weighted average prices observed since).
-By considering the community structure that exists in the forum before a coin is introduced we are able to predict part of the variation in both the severity and magnitude of the resulting bubble: our best model explains 10\% of the variation in the severity and around 2\% of the magnitude of the bubbles in our of sample cross validation. 
+By considering the community structure that exists in the forum before a coin is introduced we are able to predict part of the variation in both the severity and magnitude of the resulting bubble: our best model explains 10\% of the variation in the severity and of the magnitudein our of sample using a penalized linear model and measuring performance out of sample using cross validation. 
 The main driver of our explanatory power is the centrality of a user in the directed network derived from the forum.
-%TODO WRAP RESULTS SUMMARY
+Both the severity and the magnitude of bubbles increases with the centrality of the user who introduces the coins in the forums.
+Interestingly this effect is concentrated in different ways depending on weather the coin software is more than a trivial modification: trivial coins have more severe bubbles the more central their introducers are, while volume is greater the more central the introducer of a nontrivial coin is.
 
+
+\begin{figure*}
+\includegraphics[width=\columnwidth]{volume_centrality}
+\includegraphics[width=\columnwidth]{severity_centrality}
+\end{figure*}
 
 While states can create the demand required for a currency system to run by compelling tax payment in it (for a recent example), non state sponsored currencies must find some other ways of creating demand.
 The initial market for which bitcoin has been used (prices denominated in it, transactions only in it) was drug sales.\footnote{A overview of the different drug marketplaces and estimated transaction volumes can be found in \cite{soska2015measuring}. To the best of the authors knowledge no other sector beyond speculation has even remotely substantial volume at present; a very primitive form of unregulated gambling Satoshi Dice, did for a brief pointing the past)   }
