@@ -8,13 +8,13 @@ As a secondary outcome measure we consider the number of exchanges that list the
 
 
 \subsection{Network Structure}
-In this section, we discuss the various metrics extracted from discussion networks and used as independent variables in the regression analysis. As mentioned before, each coin is associated with a forum user and a discussion network which corresponds to the state of the forum at the time the user introduced the coin to the community. Below, we list the network variables included in the analysis. It's worth mentioning that all the user-specific variables are measured at the coin introduction time.
+In this section, we discuss the various metrics extracted from discussion networks and used as independent variables in the regression analysis. Many of these variables are standard metrics in graph theory designed to capture node centrality is specific scenarios. As mentioned before, each coin is associated with a forum user and a discussion network which corresponds to the state of the forum at the time the user introduced the coin to the community. Below, we list the network variables included in the analysis. We used Python igraph implementation for computing the network-related metrics.
 \begin{enumerate}
   \item{Introducer number of posts:} The total number of posts (thread-initiations or simple replies) the coin introducer has made at the time she introduces the coin. It captures the user's level of activity in the community.
   \item{Introducer number of threads:} The total number of threads the coin introducer has made. Users who start many threads are more likely to receive incoming edges and to shape the dialogue in the community.
   \item{Seniority:} It is the number of days since the user's first post in the forums. We use this as a proxy for user's seniority in the community.
-  \item{degree incoming}
-  \item{degree outgoing}
+  \item{Incoming degree:} The (incoming) degree centrality captures the role of dialogue-shapers in the community as it is the number of unique users who have replied to any of the user's threads.
+  \item{Outgoing degree}
   \item{Total degree}
   \item{clustering coefficient}
   \item{closeness centrality unweighted}
