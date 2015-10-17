@@ -18,12 +18,17 @@ In this section, we discuss the various metrics extracted from discussion networ
   \item{Total degree:} The (undirected) degree centrality captures total level of user's involvement in the community in any of the two forms above.
   \item{Clustering Coefficient:} A measure embeddedness or triadic closure, it is the fraction of focal user's triads that are closed. It does not use the direction on the edges and measures how tightly knit the focal user is connected to the other users who have ever engaged with her either by replying to her thread or receiving a reply from her. The triadic closure is closely related to the the principle of balance which states that if two user pairs A-B and B-C are connected, the existence of a tie between A and C on the triad further strenghtens it and removes any potential strain that could exist between A-B and B-C relation. In general, ideas are more likely to be reinforced and persistent in a triad if it is closed. Such a positive effect of balance or triadic closure on tie qualities and their persistence is shown to exist in online social network such as Twitter \cite{KleinbergBalance}, and we believe the same argument applies to this scenario.
   TODO: DO WE NEED A BETTER INTERPRETATION HERE FOR TRIADIC CLOSURE?
-  \item{Unweighted closeness centrality:} While degree centrality measures the level of user engagement in the community, it only examines the local structure around the user. In other words, it's possible for the focal user to have a high degree centrality, but only in an isolated subcommunity. Closeness, while closely related to degree centrality, measures the level of user's engagement with the global network either directly or indirectly. It is the sum of distances from the focal user to all other users, where edges all are weighted with a distance of 1.
-  \item{closeness centrality weighted:}
-  \item{closeness centrality incoming unweighted:}
-  \item{closeness centrality outgoing unweighted:}
-  \item{closeness centrality incoming weighted:}
-  \item{closeness centrality outgoing weighted:}
+  \item{Unweighted closeness centrality:} While degree centrality measures the level of user engagement in the community, it only examines the local structure around the user. In other words, it's possible for the focal user to have a high degree centrality, but only in an isolated subcommunity. Closeness, while closely related to degree centrality, measures the level of user's engagement with the global network \textit{either directly or indirectly}. It is relevant in many scenarios, including the online discussions, as information spreads through the shortest paths. Closeness centrality for the i\super{th} user is defined as:
+  \begin{equation}
+    C_{i} = \sum_{j=1}^{N} \frac{1}{d(i,j)}
+  \end{equation}
+  It is the sum of distances from the focal user (i) to all other users (j), where edges all are weighted with a distance of 1. In our context, a user with high incoming closeness centrality has initiated many threads and recieved replies from a diverse set of users who themselves are close to a large set of diverse users. Similarly, a user with high outgoing closeness centrality has replied to a diverse set of thread-initiators who themselves are close to a large set of diverse users. Our analysis consisted of three versions of the unweighted closeness centrality:
+  \begin{list}
+    \item{Incoming:} Only the directed paths leading to the focal user are used. In other words, it measures closeness of the whole network to the focal user. Users who start many threads are likely to have higher incoming closeness centrality.
+    \item{Outgoing:} Only the directed paths starting from the focal user to all the other users are used. In other words, it measures closeness of the focal user to the whole network. Users who reply to many threads are likely to have higher outgoing closeness centrality.
+    \item{Undirected:} The paths both from and to the focal users are used. Users who inititate and reply to many threads are likely to have higher undirected closeness centrality.
+  \end{list}
+  \item{Weighted closeness centrality:}
   \item{betweenness centrality weighted:}
   \item{satoshi distance:}
   \item{satoshi pagerank weighted:}
