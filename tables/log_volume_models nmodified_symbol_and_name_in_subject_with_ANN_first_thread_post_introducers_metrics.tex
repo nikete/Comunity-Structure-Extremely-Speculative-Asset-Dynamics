@@ -1,33 +1,51 @@
 \begin{table}
 \caption{}
 \begin{center}
-\begin{tabular}{lcccccc}
+\begin{tabular}{lccccccc}
 \hline
-                                               & Activity &   Code  & Satoshi & Network & Weighted &    All     \\
+                                                 & Activity & Nontrivial & Satoshi & Network &   Weighted   & Network*Nontrivial &   All     \\
 \hline
 \hline
 \end{tabular}
-\begin{tabular}{lllllll}
-Intercept                                      & 0.00     & 0.18*** & 0.13**  & 0.12**  & 0.12**   & 0.12**     \\
-                                               & (0.00)   & (0.05)  & (0.05)  & (0.05)  & (0.05)   & (0.05)     \\
-nontrivial                                     &          & 0.08    & 0.03    & 0.03    & 0.03     & 0.03       \\
-                                               &          & (0.05)  & (0.05)  & (0.05)  & (0.05)   & (0.05)     \\
-user1_closeness_centrality_outgoing_unweighted &          &         &         & 0.24*** &          & 0.23       \\
-                                               &          &         &         & (0.06)  &          & (1227.15)  \\
-user1_closeness_centrality_outgoing_weighted   &          &         &         &         & 0.20***  & 0.01       \\
-                                               &          &         &         &         & (0.05)   & (1227.14)  \\
-user1_clustering_coefficient                   &          &         &         & -0.08   &          & -0.08      \\
-                                               &          &         &         & (0.06)  &          & (0.06)     \\
-user1_days_since_first_post                    &          &         & 0.01    & 0.03    & 0.02     & 0.03       \\
-                                               &          &         & (0.05)  & (0.05)  & (0.05)   & (0.05)     \\
-user1_num_subjects                             &          &         & 0.00    & -0.04   & -0.03    & -0.04      \\
-                                               &          &         & (0.00)  & (0.06)  & (0.06)   & (0.06)     \\
-R2                                             & 0.00     & 0.01    & 0.00    & 0.11    & 0.09     & 0.11       \\
-ElasticNet CV MSE:                             & 1.01     & 1.00    & 1.01    & 0.99    & 0.99     & 0.99       \\
-BIC                                            & 1071.97  & 773.88  & 788.32  & 766.92  & 767.70   & 772.58     \\
-N                                              & 376      & 288     & 288     & 288     & 288      & 288        \\
-Adjusted-R2                                    & 0.00     & 0.01    & -0.01   & 0.09    & 0.07     & 0.09       \\
-Condition Number                               & 1.00     & 1.00    & 1.56    & 1.92    & 1.65     & 56777.24   \\
+\begin{tabular}{llllllll}
+Intercept                                        & 0.00     & 0.00       & 0.00    & 0.00    & 0.00         & 0.00               & 0.00      \\
+                                                 & (0.00)   & (0.00)     & (0.00)  & (0.00)  & (0.00)       & (0.00)             & (0.00)    \\
+nontrivial                                       &          & 0.15***    & 0.13**  & 0.06    & 0.06         & 0.04               & 0.10**    \\
+                                                 &          & (0.05)     & (0.05)  & (0.05)  & (0.05)       & (0.05)             & (0.05)    \\
+user1_closeness_centrality_unweighted            &          &            &         & 0.24*** &              & 0.21***            & 0.00      \\
+                                                 &          &            &         & (0.06)  &              & (0.06)             & (0.00)    \\
+user1_closeness_centrality_unweighted:nontrivial &          &            &         &         &              & 0.06               &           \\
+                                                 &          &            &         &         &              & (0.04)             &           \\
+user1_closeness_centrality_weighted              &          &            &         &         & 0.22***      &                    & 0.39***   \\
+                                                 &          &            &         &         & (0.05)       &                    & (0.06)    \\
+user1_clustering_coefficient                     &          &            &         & -0.04   &              & -0.03              & -0.18***  \\
+                                                 &          &            &         & (0.06)  &              & (0.06)             & (0.06)    \\
+user1_days_since_first_post                      &          &            & 0.06    & 0.01    & 0.01         & 0.01               & 0.09      \\
+                                                 &          &            & (0.06)  & (0.05)  & (0.05)       & (0.05)             & (0.06)    \\
+user1_degree_incoming                            &          &            & 0.04    & 0.00    & 0.00         & 0.00               & 0.00      \\
+                                                 &          &            & (0.06)  & (0.00)  & (0.00)       & (0.00)             & (0.00)    \\
+user1_degree_outgoing                            &          &            &         & 0.00    & 0.00         & 0.00               & 0.07      \\
+                                                 &          &            &         & (0.00)  & (0.00)       & (0.00)             & (0.11)    \\
+user1_degree_total                               &          &            &         & 0.00    & 0.00         & 0.00               & 0.05      \\
+                                                 &          &            &         & (0.00)  & (0.00)       & (0.00)             & (0.10)    \\
+user1_num_posts                                  &          &            & -0.03   & 0.00    & 0.00         & 0.00               & -0.17     \\
+                                                 &          &            & (0.06)  & (0.00)  & (0.00)       & (0.00)             & (0.10)    \\
+user1_num_subjects                               &          &            &         & 0.00    & 0.00         & 0.00               & -0.05     \\
+                                                 &          &            &         & (0.00)  & (0.00)       & (0.00)             & (0.06)    \\
+user1_pagerank_weighted                          &          &            &         &         & 0.00         &                    & -0.17     \\
+                                                 &          &            &         &         & (0.00)       &                    & (0.19)    \\
+user1_satoshi_distance                           &          &            &         &         &              &                    & 0.00      \\
+                                                 &          &            &         &         &              &                    & (0.00)    \\
+user1_satoshi_distance_inf                       &          &            &         &         &              &                    & -0.04     \\
+                                                 &          &            &         &         &              &                    & (0.05)    \\
+user1_satoshi_pagerank_weighted                  &          &            &         &         &              &                    & 0.18      \\
+                                                 &          &            &         &         &              &                    & (0.19)    \\
+R2                                               & 0.00     & 0.02       & 0.04    & 0.10    & 0.10         & 0.11               & 0.16      \\
+ElasticNet CV MSE:                               & 1.01     & 0.99       & 0.99    & 0.94    & 0.95         & 0.94               & 0.94      \\
+BIC                                              & 1072     & 1069       & 1082    & 1078    & 1082         & 1080               & 1084      \\
+N                                                & 376      & 376        & 376     & 376     & 376          & 376                & 376       \\
+Adjusted-R2                                      & 0.00     & 0.02       & 0.03    & 0.09    & 0.08         & 0.09               & 0.13      \\
+Condition Number                                 & 1.00     & 1.00       & 2.05    & nan     & 147295588.13 & nan                & nan       \\
 \hline
 \end{tabular}
 \end{center}
