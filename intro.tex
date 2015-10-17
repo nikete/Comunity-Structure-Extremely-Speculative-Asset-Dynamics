@@ -11,12 +11,12 @@ Those who make and trade these coins communicate largely online, and much of the
 We present a novel dataset based on the Bitcoin Talk forum that allows us to identify the introducers of each coin and build measures of their position in the network based on which users have engaged with their threads in the forum before the coin is announced.
 While speculation during bubbles as a social process that has been theoretically studied \cite{abolafia1988enacting, earl2007decision, bakker2010social, harras2011grow}, an exaustive dataset on the social network underpinning them has not been previously available.
 Our most conservative dataset identifies 376 coins that are announced by users of the forum and which can be mapped to price and volume data from exchanges.
-By considering the community structure that exists in the forum before a coin is introduced we are able to predict part of the variation in both the severity and magnitude of the resulting bubble: our best model explains a quarter of the variation in the severity and around two percent of the magnitude of the bubbles in our of sample cross validation. 
+By considering the community structure that exists in the forum before a coin is introduced we are able to predict part of the variation in both the severity and magnitude of the resulting bubble: our best model explains 10\% of the variation in the severity and around 2\% of the magnitude of the bubbles in our of sample cross validation. 
 The main driver of our explanatory power is the centrality of a user in the directed network derived from 
 We also collect the set of prices and traded volumes across the cryptocurrencies that are introduced in the discussions on the forums, and construct measures of both the intensity (aka severity, for each dollar invested at the peak what could be recovered on average) and the magnitude (how many dollars worth of trading happened in the asset).
 
-\includegraphics[width=\textwidth]{volume1}
-\includegraphics[width=\textwidth]{severity1}
+\includegraphics[width=\textwidth]{volume_centrality}
+\includegraphics[width=\textwidth]{severity_centrality}
 
 While the magnitude of the assets traded is small relative to most financial and commodity markets, it is much larger than even the most lavishly funded experimenter could hope for.
 Furthermore, the rich market structure that surrounds (some 45 exchanges appear on the dataset, ranging in credibility from VC backed and registered in the US, to anonymous and mysteriously run) provides a rich source of institutional variation with extremely open data, a striking contrast to most financial or commodities market trade level data. 
