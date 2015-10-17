@@ -25,7 +25,7 @@ In this section, we discuss the various metrics extracted from discussion networ
   \end{list}
   \item \textbf{Weighted closeness centrality:} Similar to the unweighted closeness centrality above, we computed three different versions, with the exception that edges are weighted to indicate the distance or level of ineraction intensity between the two users. The edges weights in our discussion network are determined by the frequency of interactions between two users; and as two users interact more, they are deemed to be closer in their shortest path. Thus in the computation of weighted closeness centralities, we use the reciprocal of the weights as the distance between two users.
   \begin{equation}
-    C_{i} = \sum_{j=1}^{N} (N-1) \sum_{e \in S_{ij}} w_{e}
+    C_{i} = (N-1)\sum_{j=1}^{N}\sum_{e \in S_{ij}} w_{e}
   \end{equation}
   where $e$ denotes an edge in $S_{ij}$ the set of users on the shortest path from i to j. $w_e$ is the weight of edge $e$ determined by the number of interactions between the end points.
   
