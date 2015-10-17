@@ -1,20 +1,19 @@
 \section{Data Description}
 
+We analize the 
 
+\subsection{Prices, Exchanges, and Coin charactertistics}
 
-\subsection{Prices and Exchanges}
-TODO: NIKETE I did not remove this, I just moved it down to analysis vars. Wanted this subsection
-to only talk about the data and not how you make the bubble measure.
+Our main outcome measures are the severity of drop in the value of a unit of the asset, and the magnitude in USD of the transactions in them.
+To obtain data for them we scrape three market aggregators 
 
-Our main outcome measures are the severity of the inflation an asset price, and the magnitude of money transacted in it.
 We operationalize the intensity of a bubble as the proportion of a 1 dollar (TODO check currency base) that would be lost buying at the maximum price and selling after that proportionally to the volume of the market till the present, we call this severity.
 We define the volume as the sum of the contemporaneous dollar (todo check) volume of trade.
+
 As a secondary outcome measure we consider the number of exchanges that list the coin.
-We scraped two major price aggregators; coinmarketcap and coininfo.
 
 
 \subsection{Forum Discussions}
-NOTE: EAMAN WROTE THIS
 
 In order to study the effect of communication network around cryptocoins on
 price variations, we collected all the posts from the most popular cryptocurrency
@@ -65,36 +64,27 @@ valuable information in our context.
   \item{Date}
 \end{enumerate}
 
-The community had only 10000 unique users until early 2013, however it grew
-considerably faster after 2013 and reached about 70000 by early
-2015. Nevertheless, there are only 10000 active users within any 30 day period on average.
+The community had only 10000 unique users until early 2013, however it grew considerably faster after 2013 and reached about 70000 by early 2015.
+Nevertheless, there are only 10000 active users within any 30 day period on average.
 
 
 \section{Forum Interaction Network}
-NOTE: EAMAN WROTE THIS
 
-Given the forum discussion data at the level of individual posts, we can construct a
-network capturing the structure of user discussions.  In this network, nodes
-are the forum users and edges represent some form of interaction between the
-users.
+Given the forum discussion data at the level of individual posts, we  construct a network capturing the structure of user discussions.
+In this network, nodes are the forum users and directed edges represent 
 
-We experimented with different network construction methods, weight assignment
-schemes, and edge retention periods. For example, edges could be added based on
-co-appearance in each thread. However, this approach quickly leads to a very
-dense network revealing little information about discussion dynamics. Moreover,
-the network could be unweighted or weights could be assigned to each edge based
-on a frequency of interactions between the two endpoints. Weights could
-also adjusted by size of the thread (i.e. an interaction in small threads counts
-more than an interaction in a large thread) and a decay factor (i.e. a recent
-interaction counts more than an old interaction).
-Finally, the network could contain the interactions only within the past few
-days to capture short-term effect of information diffusion and influence
-dynamics. Alternatively, network construction could use all the interactions
-since the inception of the forums. The unlimited retention of interactions
-leads to a better view on long-term dynamics and more accurate identification
-of influential and senior users in the forum.
+% This paper did no such experimentation, maybe you did this alone and are welcome to put it in another paper.
 
-In the following discussion, we only include the results from directed unlimited network.
+%We experimented with different network construction methods, weight assignment schemes, and edge retention periods. For example, edges could be added based on co-appearance in each thread. 
+%However, this approach quickly leads to a very dense network revealing little information about discussion dynamics.
+%Moreover, the network could be unweighted or weights could be assigned to each edge based on a frequency of interactions between the two endpoints.
+%Weights could also adjusted by size of the thread (i.e. an interaction in small threads counts
+%more than an interaction in a large thread) and a decay factor (i.e. a recent interaction counts more than an old %interaction).
+%Finally, the network could contain the interactions only within the past few days to capture short-term effect of information diffusion and influence dynamics.
+%Alternatively, network construction could use all the interactions since the inception of the forums. The unlimited retention of interactions leads to a better view on long-term dynamics and more accurate identification of influential and senior users in the forum.
+
+
+%In the following discussion, we only include the results from directed unlimited network.
 The network is directed since the \textit{edges point from posters within each thread to thread-initiators}. The omission
 of co-appearance edges leads to a sparser network which isolates the communication
 patterns around ``dialogue-shapers''. The network is unlimited since all such interactions
@@ -116,56 +106,15 @@ The position of the first introducer in the network snapshot and its general str
 will be used for extracting various network measures corresponding to that coin. Our analysis
 uses these per-coin for evaluating the performance of each coin.
 
-TODO: NIKETE, in the following paragraph, please EXPLAIN BETTER WHY WE CHOSE THE FIRST INTRODUCTION TIME.
 
-In order to avoid any possible confounding factors, it is important to analyze
-the discussion network at the time of coin introduction to the community. The
-identification of true introductions of new altcoins is a difficult process
-prone to many false-positives. Fortunately, majority of such introductions are
-made in the \textit{Announcement} forum and are preceded with the ``ANN'' tag.
-Our identification strategy looked for mentions of a new altcoin only in the
-first post of a thread, as new coins are usually introduced to the community in
-the form of an announcement.  In particular, we look for the first mention of
-both the coin symbol \textbf{and} its descriptive name in the subject of a
-thread which also contains the announcement tag. The first mentions of either
-the coin symbol \textbf{or} the its name are used fall-back in case the more
-restrictive \textbf{and} requirement did not detect the coin.  Using this
-identification strategy, we were able to detect the first introduction of 554 altcoins
-out of 679. The forum user who initiated such a thread is assigned as the 
-introducer of the coin to the community.
+In order to avoid confounding between a coins price moves and the attention this mkes the comunity in the forums pay to discusions of the coin , we analyze the discussion network up to the time of coin introduction to the community.
+%TODO Do we use the date of the ANN or the date of the first trade?!?! NIKETE & EAMAN.
+%The identification of true introductions of new altcoins is a difficult process prone to many false-positives. 
+The  majority of such introductions are made in the \textit{Announcement} forum and are preceded with the ``ANN'' tag.
+%Our identification strategy <- this has a specific technical meaning in econ
+We look for the first mention of both the coin symbol \textbf{and} its descriptive name in the subject of a thread which contains the announcement tag. 
 
-
-\section{Analysis Variables}
-\subsection{Prices and Exchanges}
-Our main outcome measures are the severity of the inflation an asset price, and the magnitude of money transacted in it.
-We operationalize the intensity of a bubble as the proportion of a 1 dollar (TODO check currency base) that would be lost buying at the maximum price and selling after that proportionally to the volume of the market till the present, we call this severity.
-We define the volume as the sum of the contemporaneous dollar (todo check) volume of trade.
-As a secondary outcome measure we consider the number of exchanges that list the coin.
-
-
-\subsection{Network Structure}
-TODO: EAMAN WILL WRITE THIS
-
-
-We computed the following network measures for the users who introduced the
-crypto coin for the first time to the forum:
-\begin{enumerate}
-  \item{num mentions}
-  \item{num posts}
-  \item{num subjects}
-  \item{days since first post}
-  \item{degree total}
-  \item{degree incoming}
-  \item{degree outgoing}
-  \item{clustering coefficient}
-  \item{closeness centrality unweighted}
-  \item{closeness centrality weighted}
-  \item{closeness centrality incoming unweighted}
-  \item{closeness centrality outgoing unweighted}
-  \item{closeness centrality incoming weighted}
-  \item{closeness centrality outgoing weighted}
-  \item{betweenness centrality weighted}
-  \item{satoshi distance}
-  \item{satoshi pagerank weighted}
-  \item{pagerank weighted}
-\end{enumerate}
+The first mentions of either the coin symbol \textbf{or} the its name are used fall-back in case the more restrictive \textbf{and} requirement did not detect the coin. 
+Using this identification strategy, we were able to detect the first introduction of 554 altcoins out of 679.
+The forum user who initiated such a thread is assigned as the  introducer of the coin to the community.
+%TODO: add validation results table wrt mapofcoins data here
