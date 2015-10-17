@@ -71,7 +71,7 @@ for coin in coinlist:
 
 
 with open('technicality.csv','wb') as csvfile:
-	csvfile.write(str(','.join(['name', 'children_amount', 'algorithm', 'technical', 'premine', 'pos'])+'\n'))
+	csvfile.write(str(','.join(['symbol', 'children_amount', 'algorithm', 'technical', 'premine', 'pos'])+'\n'))
 	for coin in processed_list:
 		csvfile.write(str(', '.join(coin)+'\n'))
 
@@ -79,3 +79,5 @@ with open('ann_mapofcoins.csv','wb')as csvfile:
 	csvfile.write(str(','.join(['symbol','ann'])+'\n'))
 	for coin in processed_list_ann:
 		csvfile.write(str(','.join(coin)+'\n'))
+
+
