@@ -80,20 +80,15 @@ above is made of the same users and we are mostly concerned about influence and
 aggregate information flow among users, rather than the exact topic of the discussion.
 The network construction involves replaying all the posts over time sorted by their date and updating the
 discussion network accordingly. Whenever a new altcoin is introduced
-in the forum for the first time, the user who introduced it and a snapshot of the network is taken.
-The position of the first introducer in the network snapshot and the general structure of her neighborhood
-will be used for extracting various network measures corresponding to that coin. Our analysis
-uses these per-coin measures for evaluating the performance of each coin.
+in the forum for the first time, the user who introduced it and a snapshot of the network is taken. 
+We analyze the discussion network only up to the first time each coin is introduced to the community, in order to avoid any possible confounding between a coin's price movement and the extra attention it receives in the community due the same price changes. Our method uses the position of the first introducer in the network snapshot and the general structure of her neighborhood for extracting various network measures corresponding to that coin. Our final analysis examines these per-coin measures for evaluating the performance of each coin.
 
 
-In order to avoid confounding between a coins price moves and the attention this mkes the comunity in the forums pay to discusions of the coin , we analyze the discussion network up to the time of coin introduction to the community.
+
 %TODO Do we use the date of the ANN or the date of the first trade?!?! NIKETE & EAMAN.
+% E: Both of them are in the file, depends which one you are using. 
 %The identification of true introductions of new altcoins is a difficult process prone to many false-positives. 
-The  majority of such introductions are made in the \textit{Announcement} forum and are preceded with the ``ANN'' tag.
-%Our identification strategy <- this has a specific technical meaning in econ
-We look for the first mention of both the coin symbol \textbf{and} its descriptive name in the subject of a thread which contains the announcement tag. 
-
-The first mentions of either the coin symbol \textbf{or} the its name are used fall-back in case the more restrictive \textbf{and} requirement did not detect the coin. 
-Using this identification strategy, we were able to detect the first introduction of 554 altcoins out of 679.
-The forum user who initiated such a thread is assigned as the  introducer of the coin to the community.
+The  majority of such introductions are made in the \textit{Announcement} forum and are preceded with the ``ANN'' tag. We look for the first mention of both the coin symbol \textbf{and} its descriptive name in the subject of a thread which contains the announcement tag. The first mentions of either the coin symbol \textbf{or} the its name are used fall-back in case the more restrictive \textbf{and} requirement did not detect the coin. 
+Using this method, we were able to detect the first introduction of 554 altcoins out of 679.
+The forum user who initiated such a thread is assigned as the introducer of the coin to the community.
 %TODO: add validation results table wrt mapofcoins data here
