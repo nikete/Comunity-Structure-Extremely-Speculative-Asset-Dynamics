@@ -1,20 +1,28 @@
 \section{Introduction}
 
-Speculative bubbles, since at least the dutch tulip mania (\cite{garber2001famous} pp 127-31 for references) periodically take over markets. %not quite what he says; fundamentals driven then morals story.
-The public notoriety of Bitcoin and the massive price increases that it has seen relative to its starting prices a few years ago have lead to an explosion of attempts to create \''the next bitcoin\'' often referred to as cryptocurrencies or \''coins\''.
+Speculative bubbles, since at least the early 18th century South Sea Bubble are perceived \footnote{\cite{garber2001famous} pp 127-31 for references, a particularly is \cite{temin2004riding} a case study of a well-informed investor in the South Sea bubble that knew that a bubble was in progress and that it invested knowingly in the bubble, and found that it was profitable to ride the bubble. } to periodically take over markets. %not quite what he says; fundamentals driven then morals story.
+The public notoriety of Bitcoin and the massive price increases and their associated publicity  lead to an explosion of attempts to create ``the next bitcoin'' often referred to as ``cryptocurrencies'' or ``coins'', and a vibrant set of exchanges where these are traded, either for each other or money.
+The majority of these coins have no viable uses, and their markets would appear driven largely by speculation.
+Many of them appear to be nothing but attempts at turning a quick profit from inflating the implied valuation of a coin shortly after creating it.
+This is driven by the extremely low cost and effort required to create a new coin, with most being minimal changes to parameters and branding of a pre-existing codebase.
+Those who make and trade these coins communicate largely online, and much of their activity is concentrated on public forums, while price and volume data from their exchanges is freely available and widely aggregated.
 
-While speculation during bubbles as a social process that has been theoretically studied \cite{abolafia1988enacting, earl2007decision, bakker2010social, harras2011grow}, data on a real social network underpinning it has not been used.
-The attempts to introduce these new \''coins\'' largely take place in an online forum called Bitcoin talk.
 
-We present a novel dataset based on the Bitcoin Talk forum that allows us to identify the introducers of each coin and build measures of their position in the network based on which users have engaged with whom in the forum before the coin is announced or traded (TODO clarify on when which).
-By considering the community structure that exists in the forum before a coin is introduced we are able to sidestep problems of reverse causation that would plague a analysis that relied on in time variation between prices and network structure. 
+We present a novel dataset based on the Bitcoin Talk forum that allows us to identify the introducers of each coin and build measures of their position in the network based on which users have engaged with their threads in the forum before the coin is announced.
+While speculation during bubbles as a social process that has been theoretically studied \cite{abolafia1988enacting, earl2007decision, bakker2010social, harras2011grow}, an exaustive dataset on the social network underpinning them has not been previously available.
+Our most conservative dataset identifies 376 coins that are announced by users of the forum and which can be mapped to price and volume data from exchanges.
+By considering the community structure that exists in the forum before a coin is introduced we are able to predict part of the variation in both the severity and magnitude of the resulting bubble: our best model explains a quarter of the variation in the severity and around two percent of the magnitude of the bubbles in our of sample cross validation. 
+The main driver of our explanatory power is the centrality of a user in the directed network derived from 
 We also collect the set of prices and traded volumes across the cryptocurrencies that are introduced in the discussions on the forums, and construct measures of both the intensity (aka severity, for each dollar invested at the peak what could be recovered on average) and the magnitude (how many dollars or bitcoins where nominally traded in the asset).
+
+\includegraphics{volume1}
+
+\includegraphics{volume2}
 
 This allows us to evaluate the predictive power of the features of the node in our constructed network that corresponds to the user who first introduces the coin. 
 While the magnitude of the assets traded is small relative to most financial and commodity markets, it is much larger than even the most lavishly funded experimenter could hope for.
 Furthermore, the rich market structure that surrounds (some 45 exchanges appear on the dataset, ranging in credibility from VC backed and registered in the US, to anonymous and mysteriously run) provides a rich source of institutional variation with extremely open data, a striking contrast to most financial or commodities market trade level data. 
-Our contribution aims to begin in the computational social sciences a field that would have a place in the sociology of markets analogous to that of computational imaging lesion studies do in neuropsychology \footnote{ \cite[cosma2008]}.
-
+x
 The evidence based uncovered by “— traces of their communicative interactions as they work out their thoughts about matters of common concern” 
 
 \begin{quote}
