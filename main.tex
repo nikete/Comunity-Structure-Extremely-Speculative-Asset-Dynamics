@@ -1,11 +1,20 @@
-
-\documentclass{acm_proc_article_sp}
-\usepackage{graphicx}
+\documentclass{acm_proc_article-_p}% http://www.acm.org/sigs/publications/acm_proc_article-sp.cls/view
+\usepackage{etoolbox,lipsum}
+%\usepackage{graphicx}
 \graphicspath{ {images/} }
-\usepackage[section]{placeins}
+%\usepackage[section]{placeins}
 %\usepackage{pdflscape}
 
-\begin{document}
+\makeatletter
+\patchcmd\@maketitle\@author{\@author \\[\normalbaselineskip] \myfigure}{}{}
+%\includegraphics[width=\columnwidth]{}
+%\includegraphics[width=\columnwidth]{severity_centrality}
+\newcommand\myfigure{%
+  \makebox[0pt]{\includegraphics[width=\linewidth]{volume_centrality}} \\[\normalbaselineskip]
+  \refstepcounter{figure}\normalfont\textbf{Figure~\thefigure: Some stuff about the teaser}
+  \label{fig-teaser}
+}
+\makeatother
 \title{Forever Blowing Bitcoins: Social Structure and Speculative Bubbles in Cryptocurrencies}
 % alternative title: 
 \numberofauthors{5} 
@@ -54,21 +63,22 @@ Harper Reed \\
 % number that will appear in the \additionalauthors section.
 
 
+
+\begin{document}
 \maketitle
+
 \begin{abstract}
 
 We study the power of structural features of the social network around cryptocurrencies to understand the severity of bubbles that occur in them. Our goal is to see whether bubbles in cryptocurrency markets can be predicted purely from structural features derived from the social networks that preceed them. All our measures are constructed on the social network before the relevant cryptocurrency is ever traded. 
 
 \end{abstract}
 
-% A category with the (minimum) three required fields
-%\category{H.4}{Information Systems Applications}{Miscellaneous}
-%A category including the fourth, optional field follows...
-%\category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+\section{A section}
 
-\terms{Theory}
-
-\keywords{ACM proceedings, \LaTeX, text tagging} % NOT required for Proceedings
+\begin{figure}
+  \includegraphics[width=\linewidth,height=2\baselineskip]{volu}
+  \caption{A figure}
+\end{figure}
 
 
 \input{intro.tex}
