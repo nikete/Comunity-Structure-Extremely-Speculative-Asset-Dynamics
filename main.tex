@@ -1,20 +1,9 @@
 \documentclass{acm_proc_article_sp}% http://www.acm.org/sigs/publications/acm_proc_article-sp.cls/view
-\usepackage{etoolbox,lipsum}
 %\usepackage{graphicx}
 \graphicspath{ {images/} }
 %\usepackage[section]{placeins}
 %\usepackage{pdflscape}
 
-\makeatletter
-\patchcmd\@maketitle\@author{\@author \\[\normalbaselineskip] \myfigure}{}{}
-%\includegraphics[width=\columnwidth]{}
-%\includegraphics[width=\columnwidth]{severity_centrality}
-\newcommand\myfigure{%
-  \makebox[0pt]{\includegraphics[width=\linewidth]{volume_centrality}} \\[\normalbaselineskip]
-  \refstepcounter{figure}\normalfont\textbf{Figure~\thefigure: Some stuff about the teaser}
-  \label{fig-teaser}
-}
-\makeatother
 \title{Forever Blowing Bitcoins: Social Structure and Speculative Bubbles in Cryptocurrencies}
 % alternative title: 
 \numberofauthors{5} 
@@ -73,12 +62,6 @@ We study the power of structural features of the social network around cryptocur
 
 \end{abstract}
 
-\section{A section}
-
-\begin{figure}
-  \includegraphics[width=\linewidth,height=2\baselineskip]{volu}
-  \caption{A figure}
-\end{figure}
 
 
 \input{intro.tex}
