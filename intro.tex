@@ -4,12 +4,15 @@ Speculative bubbles are perceived to periodically take over markets \cite{garber
 Going back at least to the \emph{South Sea} bubble in the early 18$^{\text{th}}$ century, well-informed parties  have invested knowingly in bubbles, and found it profitable \cite{temin2004riding}.
 Today, the public notoriety of Bitcoin, together with its massive price increases and their associated publicity lead to an explosion of attempts to create ``the next Bitcoin''.
 Collectively, these currencies are often referred to as ``cryptocurrencies'' or simply ``coins'', and a vibrant set of exchanges have emerged where these are traded, either for each other or money.
-The majority of these coins have no possible valuable future in the long term, and their markets would appear to be driven largely by speculation.
+The majority of these coins have no possible future valuable in the long term, and their markets would appear to be driven largely by speculation.
 Many of them appear to be nothing but attempts at turning a quick profit from inflating the implied valuation of a coin shortly after creating it.
 This is driven by the extremely low cost and effort required to create a new coin, with most being minimal changes to parameters and branding of a pre-existing codebase.
+
 Those who make and trade these coins communicate largely online, and much of their activity is concentrated on public forums. 
-As such, price and volume data from these exchanges is freely available and widely aggregated\footnote{ these are however largely unregulated, often anonymous, and there is no way to account how much of reported volumes are manipulation attempts, the existence of attempts at arbitrage between them places some bounds on how blatantly the data can be manipulated for prices, but volumes are impossible to asses. }, and the source code to all of them being public is the norm%\footnote{cargo cult CS being derigour in the comunity}.
-This makes c
+As such, price and volume data from these exchanges is freely available and widely aggregated\footnote{ these are however largely unregulated, often anonymous, and there is no way to account how much of reported volumes are manipulation attempts, the existence of attempts at arbitrage between them places some bounds on how blatantly the data can be manipulated for prices, but volumes are impossible to assess. },
+%JULIAN: Whole footnote is one extra-long sentence!
+and the source code to all of them being public is the norm%\footnote{cargo cult CS being derigour in the comunity}.
+This makes cryptocoins
 %JULIAN: cryptocoins is a new work--maybe avoid mixing the terms
 an ideal lens through which to study the social life of a ``market mania'' \cite{cosma2008}.
 Such a study is valuable both as a means of understanding the dynamics of bubbles themselves, but also from a computational social science perspective, to understand the ecosystem and lifecycles of these online communities.
@@ -41,24 +44,30 @@ While the mechanisms that drive bubbles have been studied both theoretically
 and experimentally
 \cite{moinas2013bubble},
 % in the lab, 
-an exhaustive dataset and study of social network of those promoting the asset has not been previously previously possible.
+an exhaustive dataset and study of the social networks of those promoting the asset has not been previously previously possible.
 While the magnitude of the assets traded is certainly small relative to most financial and commodity markets, it is nevertheless much larger than
 %JULIAN: Found this sentence a bit funny, not that I could improve upon it
 even the most lavishly funded experimenter could hope for.
 For example, the largest bubble in our dataset, AuroraCoin, reaches a valuation of one billion USD in March 2014,
 with reported daily trading volumes of 6.8M USD, and sheds 90\% of its value in a week, and 99\% of its value in well under a year.
-For context, this is equivalent to one quarter of Iceland's entire foreign exchange reserves in 2014, \footnote{4.1 Billon USD, The World Bank, Global Economic Monitor, accessed October 2015}, the population of which AuroraCoin promoters claimed they would distribute half of the coins to.
+For context, this is equivalent to one quarter of Iceland's entire foreign exchange reserves in 2014,\footnote{4.1 Billon USD, The World Bank, Global Economic Monitor, accessed October 2015} the population of which AuroraCoin promoters claimed they would distribute half of the coins to.
 
 
-Using price and volume data we construct measures of both the magnitudeand the severity of bubbles
-These are defined formally in our variable section, but their intuition is that we say the magnitude of a coin is large when a high volume of trades happens measured in USD at the transacted prices, while we say a coin has a severe bubble investing a fixed amount leads on average to a large loss. 
-By considering the community structure that exists in the forum before a coin is introduced we are able to predict part of the variation in both the severity and magnitude of the resulting bubble.
-This is a challenging task, and models that rely on either simple activity or network metrics metrics show almost no predictive out of sample power, unable to explain even 1\% of the variation in either task.
-Our best model explains 10\% of the variation in the severity and of the magnitude of bubbles in our sample.
+Using price and volume data we construct measures of both the magnitude and the severity of bubbles.
+These are defined formally in our variable section,
+%JULIAN: Give a section ref?
+but their intuition is that we say the magnitude of a coin is large when a high volume of trades happens (measured in USD) 
+%JULIAN: Does it make a difference what it's measured in?
+at the transacted prices, while we say a coin has a severe bubble if investing a fixed amount leads on average to a large loss. 
+By considering the community structure that exists in the forum before a coin is introduced we are able to predict a substantial fraction of the variation in both the severity and magnitude of the resulting bubble.
+This is a challenging task, and models that rely on either simple activity or network metrics metrics show almost no predictive out-of-sample power, unable to explain even 1\% of the variation in either task.
+Our best model explains 10\% of the variation in the severity and magnitude of bubbles in our sample.
 %JULIAN: R^2 of 0.1 (if I interpret correctly) doesn't sound impressive until you've argued the fundamental difficulty of the problem, you might wait to mention such numbers.
-The main driver of our explanatory power is the centrality of a user in the directed network derived from the forum, and it's effect appears to be mediated by wether a coin involves a nontrivial technological change, the direction of the interaction reversing depending on weather it relates to magnitude or severity. 
-Both the severity and the magnitude of bubbles increases with the centrality of the user who introduces the coins in the forums.	
-Interestingly this effect is concentrated in different ways depending on weather the coin software is more than a trivial modification: trivial coins have more severe bubbles the more central their introducers are, while volume is greater the more central the introducer of a nontrivial coin is.
+%JULIAN: Would sound more impressive if you just said "it performs an order of magnitude better"
+The main driver of our explanatory power is the centrality of a user in the directed network derived from the forum, and its effect appears to be mediated by whether a coin involves a nontrivial technological change, the direction of the interaction reversing depending on whether it relates to magnitude or severity.
+%JULIAN: Above sentence is tough to parse, but kind of an important one.
+Both the severity and the magnitude of bubbles increases with the centrality of the user who introduces the coins in the forums.  
+Interestingly this effect is concentrated in different ways depending on whether the coin software is more than a trivial modification: trivial coins have more severe bubbles the more central their introducers are, while volume is greater the more central the introducer of a nontrivial coin is.
 
 
 

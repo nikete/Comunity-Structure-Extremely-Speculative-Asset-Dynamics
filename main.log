@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 OCT 2015 18:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 OCT 2015 18:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -301,20 +301,20 @@ Underfull \vbox (badness 1205) has occurred while \output is active []
 File: images/AuroraCoin.png Graphic file (type png)
 
 <use images/AuroraCoin.png>
-Package pdftex.def Info: images/AuroraCoin.png used on input line 36.
+Package pdftex.def Info: images/AuroraCoin.png used on input line 21.
 (pdftex.def)             Requested size: 240.0pt x 128.94101pt.
  [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
-<images/volume_centrality.png, id=15, 346.29375pt x 265.74281pt>
+ <./images/AuroraCoin.png>]
+<images/volume_centrality.png, id=16, 346.29375pt x 265.74281pt>
 File: images/volume_centrality.png Graphic file (type png)
 
 <use images/volume_centrality.png>
 Package pdftex.def Info: images/volume_centrality.png used on input line 70.
 (pdftex.def)             Requested size: 240.0pt x 184.17776pt.
 
-<images/severity_centrality.png, id=16, 346.29375pt x 265.74281pt>
+<images/severity_centrality.png, id=17, 346.29375pt x 265.74281pt>
 File: images/severity_centrality.png Graphic file (type png)
 
 <use images/severity_centrality.png>
@@ -325,8 +325,7 @@ Package pdftex.def Info: images/severity_centrality.png used on input line 71.
 LaTeX Warning: Citation `princeton10' on page \thepage  undefined on input line
  10.
 
-[2 <./images/AuroraCoin.png> <./images/volume_centrality.png> <./images/severit
-y_centrality.png>]
+[2 <./images/volume_centrality.png> <./images/severity_centrality.png>]
 
 LaTeX Warning: Citation `jegadeesh2009analysts' on page \thepage  undefined on 
 input line 22.
@@ -350,12 +349,8 @@ Overfull \hbox (5.5245pt too wide) in paragraph at lines 3--7
 und
  []
 
-[4]) (./data_otto.tex) (./variables_nikete.tex) (./variables_eaman.tex
-Overfull \hbox (7.31541pt too wide) in paragraph at lines 14--16
-\T1/aer/m/n/9 cen-tral-ity has ini-ti-ated many threads and re-ceived replies
- []
-
-[5]) (./method.tex) (./results.tex
+[4]) (./data_otto.tex) (./variables_nikete.tex) (./variables_eaman.tex [5])
+(./method.tex) (./results.tex
 <images/centrality_volume_severity.png, id=35, 362.85562pt x 268.00125pt>
 File: images/centrality_volume_severity.png Graphic file (type png)
 
@@ -403,11 +398,11 @@ Overfull \hbox (1.3238pt too wide) in paragraph at lines 5--47
 
 ) (./limitations.tex [6 <./images/centrality_volume_severity.png> <./images/cen
 trality_volume_severity_nontrivial.png>] [7] [8]) (./conclusion.tex)
-(./main.bbl
+(./main.bbl)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9 <./images/cluster_closeness_volume.png> <./images/cluster_closeness_severit
-y.png>])
+y.png>]
 (./tables/log_volume_forumAND.tex
 Overfull \hbox (8.04645pt too wide) in paragraph at lines 5--55
  [] 
@@ -424,7 +419,7 @@ Overfull \hbox (4.96858pt too wide) in paragraph at lines 5--53
 Here is how much of TeX's memory you used:
  3173 strings out of 493117
  42710 string characters out of 6135433
- 133861 words of memory out of 5000000
+ 132861 words of memory out of 5000000
  6507 multiletter control sequences out of 15000+600000
  50959 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -443,7 +438,7 @@ r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/
 local/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/t
 exlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-Output written on main.pdf (12 pages, 494228 bytes).
+Output written on main.pdf (12 pages, 493990 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream

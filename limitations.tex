@@ -1,11 +1,11 @@
-\subsection{Limitations \& Future Work}
+\subsection{Future Work}
 
-The results suggest that bubble dynamics may be strongly influenced by a founder effects, traditional network measures based on their position the aggregate discussion graph do not provide a tight characterization of this core group.
- We are looking at coarse (positive/negative, detailed/cursory) semantic analysis of the discussion, and evidence of prior cooperation between pairs of participants in other altcoin markets, in order to attempt this more accurate characterization of core participants and their actions.
+Our results suggest that bubble dynamics may be strongly influenced by founder effects, but that traditional network measures based on their position in the aggregate discussion graph do not provide a tight characterization of this effect.
+As future work we are looking at coarse (positive/negative, detailed/cursory) semantic analysis of the discussion, and evidence of prior cooperation between pairs of participants in other altcoin markets, in order to attempt a more accurate characterization of core participants and their actions.
 
-The features of the node in the graph we use as well as the construction of the graph, while informed by the pre-existing literature and theory, could be substantially improved.
-In particular we could attempt to learn the features from a more raw version of the forums, or at least learn the parametrization of our constructor, or some larger space of weighted, or potentially labeled edges with the language used.
-The cross sectional design with time separation does not allow us to take advantage of intra-coin variation.
-Beyond the forums the code repositories could be exploited in future work as a rich source of variation beyond the binary feature of wether a coin is a trivial fork or not.
-
-
+The features of the node as well as the construction of the graph are informed by a the pre-existing literature which does not allow for much complexity on the edges of the graphs beyond weight and direction.
+A promising avenue for future work is to explore richer models for edges, in particular allowing them to exist in latent spaces, where he influence or attnetion that is payed by responding to a user is colored by the wording of the response. 
+Two different avenues to learn such model suggest themselves: either using higher resolution time dynamics of the prices to learn to learn a space that captures the expectations implicitly forecasted by different language, or using NLP to attempt to parse these using other external corporate to know the multidimensional valence of the words.
+%JULIAN: Seems a little too vague above
+The cross-sectional design with time separation does not allow us to take advantage of intra-coin variation.
+Beyond using data from forums, code repositories could also be exploited in future work as a rich source of variation beyond the binary feature of whether a coin is a trivial fork or not.
