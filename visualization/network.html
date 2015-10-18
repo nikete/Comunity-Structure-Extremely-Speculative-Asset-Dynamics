@@ -1,0 +1,169 @@
+<!-- This js script creates the interaction networks by date. First you need to start up a
+an webserve using the following command:
+python -m SimpleHTTPServer
+-->
+
+<!doctype html>
+<html>
+ 
+<head>
+  <meta charset="utf-8">
+  <title>Networks with D3plus</title>
+  <link rel="stylesheet" href="js/d3.slider.css" /> 
+  
+  <!-- load D3js -->
+  <script type="text/javascript" src="http://d3plus.org/js/d3.js"></script>
+ 
+  <!-- load D3plus after D3js -->
+  <script src="http://d3plus.org/js/d3plus.js"></script>
+  <script src="/js/d3.slider.js"></script>
+</head>
+ 
+<body>
+  <div id="viz"></div>
+  <h2>Date of network: <span id="slider3text">0</span></h2>
+  <div id="slider3"></div>
+  
+  <script>
+  // Maximum number of days in the slider
+  max_num_days = 120;
+  //start_date = new Date('2010-09-01');
+  //full_layout_date = new Date('2011-01-01');
+  // The starting date of the slider
+  start_date = new Date('2009-11-22');
+  // the last day of the slider. full layout is also derived from the full interaction
+  // network on this date.
+  full_layout_date = new Date('2010-05-01');
+  // Should we remove nodes that don't have any edge when we render the network for each
+  // day
+  only_nodes_with_edges = true;
+  
+  update_slider(null, 0)
+  d3.slider().axis(true).min(2000).max(2100).step(5)
+  d3.select('#slider3').call(d3.slider().axis(true).min(0).max(max_num_days).step(1)
+      .on("slide", update_slider))
+  
+  function addDays(date, days) {
+    return new Date(date.getTime() + days*24*60*60*1000);
+  }
+
+  function date_tostring(date) {
+    // add one extra day, because days are zero padded in date_tostring
+    // for some stupid reason.
+    date = addDays(date, 1);
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+
+    month_str = month;
+    if (month < 10) {
+      month_str = '0' + month;
+    }
+    
+    day_str = day;
+    if (day < 10) {
+      day_str = '0' + day;
+    }
+    var date_str = year + "-" + month_str + "-" + day_str;
+    return date_str;
+  }
+
+  function update_slider(evt, num_additional_days) {
+    var new_date = addDays(start_date, parseInt(num_additional_days));
+    var new_date_str = date_tostring(new_date);
+
+    d3.select('#slider3text').text(new_date_str);
+    draw_network(new_date_str)
+  }
+
+
+  function fileExists(url)
+  {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+  }
+
+  function extract_node_subset_from_edges(edges, nodes) {
+    var node_names_subset = Object.create(null);   // create an object with no properties
+    // First extract nodes names in edge list
+    for (var i = 0; i < edges.length; i++) {
+      source = edges[i]["source"]
+      target = edges[i]["target"]
+      node_names_subset[source] = true; // add source to list of nodes already added
+      node_names_subset[target] = true; // add target to list of nodes already added
+    }
+
+
+    // Now extract the full node info
+    var nodes_subset = [];
+    for (var i = 0; i < nodes.length; i++) {
+      node = nodes[i];
+      if (node["name"] in node_names_subset) {
+        copy = {};
+        for (var attr in node) {
+          copy[attr] = node[attr];
+        }
+        nodes_subset.push(copy);
+      }
+    }
+    return nodes_subset;
+  }
+
+
+  function draw_network(new_date_str) {
+    var edges_file = "/sample_data/timed_networks/" + new_date_str;
+    if (!fileExists(edges_file)) {
+      return;
+    }
+    var full_layout_date_str = date_tostring(full_layout_date);
+    d3.csv("/sample_data/timed_networks/" + new_date_str, function(edges_data){
+        d3.csv("/sample_data/full_network_nodes_" + full_layout_date_str + ".csv",
+               function(nodes_data){
+
+          // get the subset of nodes that appear in the edges
+          //nodes_subset = extract_node_subset_from_edges(edges_data, nodes_data);
+          // Uncomment the next line if you want all the nodes appear on the graph. this
+          // would limit nodes to the ones existing in this edge set.
+          //nodes_data = nodes_subset;
+        
+          // cast our x, y coords to numbers
+          for (var i = 0; i < nodes_data.length; i++) {
+            node = nodes_data[i];
+            node["x"] = parseFloat(node["x"]);
+            node["y"] = parseFloat(node["y"]);
+            node["size"] = 0.01;
+            for (var j = 0; j < edges_data.length; j++) {
+              if (edges_data[j]["target"] == node["name"]) {
+                node["size"] += parseFloat(edges_data[j]["weight"]);
+              }
+            }
+          }
+          
+          if (only_nodes_with_edges) {
+            nodes_data = extract_node_subset_from_edges(edges_data, nodes_data);
+          }
+
+          var network_data = [];
+          for (var i = 0; i < nodes_data.length; i++) {
+            node = nodes_data[i];
+            network_data.push({"name": node["name"], "size": node["size"]});
+          }
+
+          var visualization = d3plus.viz()
+            .container("#viz")  // container DIV to hold the visualization
+            .type("network")    // visualization type
+            .id("name")
+            .data(network_data)
+            .nodes(nodes_data)
+            .size("size")
+            .edges(edges_data)       // the edges we'll use to create our network
+            .edges({"arrows": true, "size": "weight"})
+            .draw();
+      })
+     })
+  }
+  </script>
+
+</body>

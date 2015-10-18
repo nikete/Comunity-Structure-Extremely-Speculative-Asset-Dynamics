@@ -1,0 +1,13 @@
+# delete " coin" from the coin symbol
+sed -e "s/ coin//g" -i file
+
+# To read an igraph graph in pickle format and print it
+>>> import igraph
+>>> g=igraph.Graph.Read_Pickle('./tmp/BBC')
+>>> print g
+
+# How to join coin-labels/coin-name in one file with coin-name/coin-measures in another file
+cd processed-data
+LC_COLLATE=C sort -k 1 bubble_measures.csv -t "," > ./bubble_measures.csv.sorted # then remove line containing header from the sorted output
+LC_COLLATE=C sort -f -k 2 -t "," coin-names.csv > coin-names.csv.sorted
+join -i -t "," -1 2 -2 1 ./coin-names.csv.sorted ./bubble_measures.csv.sorted > ./tmp

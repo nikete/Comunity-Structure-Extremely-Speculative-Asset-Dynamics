@@ -1,0 +1,5 @@
+coin,num_vertices,num_edges,unweighted_density,weighted_density,unweighted_diameter,weighted_diameter,average_path_length,clustering_coefficient,average_degree,earliest_trade_date,network_date,user1,user1_num_mentions,user1_num_posts,user1_num_subjects,user1_days_since_first_post,user1_clustering_coefficient,user1_closeness_centrality,user1_laplacian_centrality,user1_pagerank
+BRG,6,13,0.6190476,1.533333,2,3.0,1.133333,0.8666667,4.333333,2009-11-28,2009-11-28,irene,2,6,1,3,0.8,1.0,90.0,0.1919296
+BCN,5,8,0.5333333,1.0,2,2.0,1.2,0.7894737,3.2,2009-11-26,2009-11-26,irene,1,2,0,1,0.6666667,1.0,30.0,0.2456973
+GLM,5,8,0.5333333,1.0,2,2.0,1.2,0.7894737,3.2,2009-11-26,2009-11-26,jayran,1,1,1,1,1.0,0.6666667,6.0,0.1127471
+KON,6,12,0.5714286,1.266667,2,3.0,1.2,0.7894737,4.0,2009-11-27,2009-11-27,jayran,1,3,2,2,0.8333333,0.8333333,56.0,0.1822179
