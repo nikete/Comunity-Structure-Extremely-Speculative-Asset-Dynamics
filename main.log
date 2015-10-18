@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 OCT 2015 18:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 OCT 2015 18:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -294,19 +294,6 @@ Overfull \hbox (62.05785pt too wide) in paragraph at lines 54--54
  []
 
 (./intro.tex
-
-LaTeX Warning: Citation `garber2001famous' on page \thepage  undefined on input
- line 3.
-
-
-LaTeX Warning: Citation `temin2004riding' on page \thepage  undefined on input 
-line 4.
-
-
-LaTeX Warning: Citation `cosma2008' on page \thepage  undefined on input line 1
-4.
-
-
 Underfull \vbox (badness 1205) has occurred while \output is active []
 
 
@@ -316,39 +303,18 @@ File: images/AuroraCoin.png Graphic file (type png)
 <use images/AuroraCoin.png>
 Package pdftex.def Info: images/AuroraCoin.png used on input line 36.
 (pdftex.def)             Requested size: 240.0pt x 128.94101pt.
-
-
-LaTeX Warning: Citation `abolafia1988enacting' on page \thepage  undefined on i
-nput line 40.
-
-
-LaTeX Warning: Citation `earl2007decision' on page \thepage  undefined on input
- line 40.
-
-
-LaTeX Warning: Citation `bakker2010social' on page \thepage  undefined on input
- line 40.
-
-
-LaTeX Warning: Citation `harras2011grow' on page \thepage  undefined on input l
-ine 40.
-
-
-LaTeX Warning: Citation `moinas2013bubble' on page \thepage  undefined on input
- line 42.
-
-[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-<images/volume_centrality.png, id=16, 346.29375pt x 265.74281pt>
+<images/volume_centrality.png, id=15, 346.29375pt x 265.74281pt>
 File: images/volume_centrality.png Graphic file (type png)
 
 <use images/volume_centrality.png>
 Package pdftex.def Info: images/volume_centrality.png used on input line 70.
 (pdftex.def)             Requested size: 240.0pt x 184.17776pt.
 
-<images/severity_centrality.png, id=17, 346.29375pt x 265.74281pt>
+<images/severity_centrality.png, id=16, 346.29375pt x 265.74281pt>
 File: images/severity_centrality.png Graphic file (type png)
 
 <use images/severity_centrality.png>
@@ -356,49 +322,23 @@ Package pdftex.def Info: images/severity_centrality.png used on input line 71.
 (pdftex.def)             Requested size: 240.0pt x 184.17776pt.
 ) (./lit.tex
 
-LaTeX Warning: Citation `soska2015measuring' on page \thepage  undefined on inp
-ut line 9.
-
-
 LaTeX Warning: Citation `princeton10' on page \thepage  undefined on input line
  10.
 
 [2 <./images/AuroraCoin.png> <./images/volume_centrality.png> <./images/severit
 y_centrality.png>]
 
-LaTeX Warning: Citation `moinas2013bubble' on page \thepage  undefined on input
- line 16.
-
-
 LaTeX Warning: Citation `jegadeesh2009analysts' on page \thepage  undefined on 
 input line 22.
 
 
-LaTeX Warning: Citation `clement2005financial' on page \thepage  undefined on i
-nput line 26.
-
-
-LaTeX Warning: Citation `bonneau2014mixcoin' on page \thepage  undefined on inp
-ut line 32.
-
-
-LaTeX Warning: Citation `ron2014did' on page \thepage  undefined on input line 
-32.
-
-
-LaTeX Warning: Citation `meiklejohn2013fistful' on page \thepage  undefined on 
-input line 37.
-
-
-LaTeX Warning: Citation `soska2015measuring' on page \thepage  undefined on inp
-ut line 41.
-
-
-LaTeX Warning: Citation `ron2014did' on page \thepage  undefined on input line 
-44.
+Overfull \hbox (2.28412pt too wide) in paragraph at lines 41--43
+[]\T1/aer/m/n/9 [16] Mea-sur-ing the lon-gi-tu-di-nal evo-lu-tion of the on-lin
+e anony-
+ []
 
 ) (./data_nikete.tex
-<images/severity_volume.png, id=24, 313.9228pt x 319.94531pt>
+<images/severity_volume.png, id=23, 313.9228pt x 319.94531pt>
 File: images/severity_volume.png Graphic file (type png)
 
 <use images/severity_volume.png>
@@ -411,39 +351,11 @@ und
  []
 
 [4]) (./data_otto.tex) (./variables_nikete.tex) (./variables_eaman.tex
-
-LaTeX Warning: Citation `KleinbergNetworks' on page \thepage  undefined on inpu
-t line 2.
-
-
-LaTeX Warning: Citation `igraph' on page \thepage  undefined on input line 2.
-
-
-LaTeX Warning: Citation `KleinbergBalance' on page \thepage  undefined on input
- line 10.
-
-
 Overfull \hbox (7.31541pt too wide) in paragraph at lines 14--16
 \T1/aer/m/n/9 cen-tral-ity has ini-ti-ated many threads and re-ceived replies
  []
 
-
-./variables_eaman.tex:19: LaTeX Error: \begin{enumerate} on input line 15 ended
- by \end{list}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19   \end{list}
-                 
-? 
-[5]) (./method.tex
-
-LaTeX Warning: Citation `scikit-learn' on page \thepage  undefined on input lin
-e 7.
-
-) (./results.tex
+[5]) (./method.tex) (./results.tex
 <images/centrality_volume_severity.png, id=35, 362.85562pt x 268.00125pt>
 File: images/centrality_volume_severity.png Graphic file (type png)
 
@@ -491,7 +403,11 @@ Overfull \hbox (1.3238pt too wide) in paragraph at lines 5--47
 
 ) (./limitations.tex [6 <./images/centrality_volume_severity.png> <./images/cen
 trality_volume_severity_nontrivial.png>] [7] [8]) (./conclusion.tex)
-No file main.bbl.
+(./main.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./images/cluster_closeness_volume.png> <./images/cluster_closeness_severit
+y.png>])
 (./tables/log_volume_forumAND.tex
 Overfull \hbox (8.04645pt too wide) in paragraph at lines 5--55
  [] 
@@ -502,36 +418,35 @@ Overfull \hbox (4.96858pt too wide) in paragraph at lines 5--53
  [] 
  []
 
-) [9
+) [10
 
- <./images/cluster_closeness_volume.png> <./images/cluster_closeness_severity.p
-ng>] [10] [11] (./main.aux) ) 
+] [11] [12] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3169 strings out of 493117
- 42659 string characters out of 6135433
- 132802 words of memory out of 5000000
- 6505 multiletter control sequences out of 15000+600000
+ 3173 strings out of 493117
+ 42710 string characters out of 6135433
+ 133861 words of memory out of 5000000
+ 6507 multiletter control sequences out of 15000+600000
  50959 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,28p,969b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvip
-s/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cme
-xtra/cmex9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
-fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
-></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-Output written on main.pdf (11 pages, 481780 bytes).
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/b
+ase/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cmextr
+a/cmex9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
+fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+Output written on main.pdf (12 pages, 494228 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 113 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

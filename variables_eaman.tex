@@ -16,7 +16,7 @@ In this section, we discuss the various metrics extracted from discussion networ
     \item \textbf{Incoming:} Only the directed paths leading to the focal user are used. It measures closeness of the whole network to the focal user. Users who start many threads are likely to have higher incoming closeness centrality.
     \item \textbf{Outgoing:} Only the directed paths starting from the focal user to all the other users are used. It measures closeness of the focal user to the whole network. Users who reply to many threads are likely to have higher outgoing closeness centrality.
     \item \textbf{Undirected:} The paths both from and to the focal users are used. Users who initiate and reply to many threads are likely to have higher undirected closeness centrality.
-  \end{list} 
+  \end{enumerate} 
   All measures are normalized by the number of users present in the network at the time of coin introduction, so that the comparison between the closeness centrality of various users (who introduce the coins) at different times  is valid. 
   \item \textbf{Weighted closeness centrality:} Similar to the unweighted closeness centrality above, we computed three different versions, with the exception that edges are weighted to indicate the intensity or level of interaction between the two users. The edge weights in our discussion network are determined by the frequency of interactions between two users; and as two users interact more, they are deemed to be closer in their shortest path. Thus in the computation of weighted closeness centralities, we use the reciprocal of the weights as the distance between two users.
   \begin{equation}
