@@ -35,9 +35,9 @@ Next, from price and transaction volume data we build measures of the subsequent
 We also assess if coins possibly embody technological innovation based on having more than trivial modifications to previously existing coins' source code.
 
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{AuroraCoin}
-\end{figure}
+%\begin{figure}
+%\includegraphics[width=\columnwidth]{AuroraCoin}
+%\end{figure}
 
 While the mechanisms that drive bubbles have been studied both theoretically 
 \cite{abolafia1988enacting, earl2007decision, bakker2010social, harras2011grow}
@@ -52,6 +52,9 @@ For example, the largest bubble in our dataset, AuroraCoin, reaches a valuation 
 with reported daily trading volumes of 6.8M USD, and sheds 90\% of its value in a week, and 99\% of its value in well under a year.
 For context, this is equivalent to one quarter of Iceland's entire foreign exchange reserves in 2014,\footnote{4.1 Billon USD, The World Bank, Global Economic Monitor, accessed October 2015} the population of which AuroraCoin promoters claimed they would distribute half of the coins to.
 
+\begin{figure}
+\includegraphics[width=\columnwidth]{severity_centrality}
+\end{figure}
 
 Using price and volume data we construct measures of both the magnitude and the severity of bubbles.
 These are defined formally in our variable section,
@@ -78,7 +81,6 @@ Interestingly this effect is concentrated in different ways depending on whether
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{volume_centrality}
-\includegraphics[width=\columnwidth]{severity_centrality}
 \end{figure}
 
 %Methodologically the free parameters in the way we do the weights on the weighted graph  is horrible, a million free parameters get introduced. follow up work for another paper: do some unsupervised feature learning over the dam forums threads to build the network; use some internal validity metric . Find political way of saying this in future work.
