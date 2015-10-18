@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 OCT 2015 17:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 OCT 2015 18:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -310,92 +310,92 @@ LaTeX Warning: Citation `cosma2008' on page \thepage  undefined on input line 1
 Underfull \vbox (badness 1205) has occurred while \output is active []
 
 
+<images/AuroraCoin.png, id=1, 1171.37625pt x 629.35126pt>
+File: images/AuroraCoin.png Graphic file (type png)
+
+<use images/AuroraCoin.png>
+Package pdftex.def Info: images/AuroraCoin.png used on input line 36.
+(pdftex.def)             Requested size: 240.0pt x 128.94101pt.
+
 
 LaTeX Warning: Citation `abolafia1988enacting' on page \thepage  undefined on i
-nput line 35.
+nput line 40.
 
 
 LaTeX Warning: Citation `earl2007decision' on page \thepage  undefined on input
- line 35.
+ line 40.
 
 
 LaTeX Warning: Citation `bakker2010social' on page \thepage  undefined on input
- line 35.
+ line 40.
 
 
 LaTeX Warning: Citation `harras2011grow' on page \thepage  undefined on input l
-ine 35.
+ine 40.
 
 
 LaTeX Warning: Citation `moinas2013bubble' on page \thepage  undefined on input
- line 37.
+ line 42.
 
 [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-<images/AuroraCoin.png, id=14, 1171.37625pt x 629.35126pt>
-File: images/AuroraCoin.png Graphic file (type png)
-
-<use images/AuroraCoin.png>
-Package pdftex.def Info: images/AuroraCoin.png used on input line 49.
-(pdftex.def)             Requested size: 240.0pt x 128.94101pt.
-
 <images/volume_centrality.png, id=16, 346.29375pt x 265.74281pt>
 File: images/volume_centrality.png Graphic file (type png)
 
 <use images/volume_centrality.png>
-Package pdftex.def Info: images/volume_centrality.png used on input line 63.
+Package pdftex.def Info: images/volume_centrality.png used on input line 70.
 (pdftex.def)             Requested size: 240.0pt x 184.17776pt.
 
 <images/severity_centrality.png, id=17, 346.29375pt x 265.74281pt>
 File: images/severity_centrality.png Graphic file (type png)
 
 <use images/severity_centrality.png>
-Package pdftex.def Info: images/severity_centrality.png used on input line 64.
+Package pdftex.def Info: images/severity_centrality.png used on input line 71.
 (pdftex.def)             Requested size: 240.0pt x 184.17776pt.
-
+) (./lit.tex
 
 LaTeX Warning: Citation `soska2015measuring' on page \thepage  undefined on inp
-ut line 70.
+ut line 9.
 
 
 LaTeX Warning: Citation `princeton10' on page \thepage  undefined on input line
- 71.
+ 10.
 
-) (./lit.tex [2 <./images/AuroraCoin.png> <./images/volume_centrality.png> <./i
-mages/severity_centrality.png>]
+[2 <./images/AuroraCoin.png> <./images/volume_centrality.png> <./images/severit
+y_centrality.png>]
 
 LaTeX Warning: Citation `moinas2013bubble' on page \thepage  undefined on input
- line 9.
+ line 16.
 
 
 LaTeX Warning: Citation `jegadeesh2009analysts' on page \thepage  undefined on 
-input line 15.
+input line 22.
 
 
 LaTeX Warning: Citation `clement2005financial' on page \thepage  undefined on i
-nput line 19.
+nput line 26.
 
 
 LaTeX Warning: Citation `bonneau2014mixcoin' on page \thepage  undefined on inp
-ut line 25.
+ut line 32.
 
 
 LaTeX Warning: Citation `ron2014did' on page \thepage  undefined on input line 
-25.
+32.
 
 
 LaTeX Warning: Citation `meiklejohn2013fistful' on page \thepage  undefined on 
-input line 30.
+input line 37.
 
 
 LaTeX Warning: Citation `soska2015measuring' on page \thepage  undefined on inp
-ut line 34.
+ut line 41.
 
 
 LaTeX Warning: Citation `ron2014did' on page \thepage  undefined on input line 
-37.
+44.
 
 ) (./data_nikete.tex
 <images/severity_volume.png, id=24, 313.9228pt x 319.94531pt>
@@ -404,17 +404,13 @@ File: images/severity_volume.png Graphic file (type png)
 <use images/severity_volume.png>
 Package pdftex.def Info: images/severity_volume.png used on input line 7.
 (pdftex.def)             Requested size: 240.0pt x 244.60114pt.
-) (./data_eaman.tex
+) (./data_eaman.tex [3 <./images/severity_volume.png>]
 Overfull \hbox (5.5245pt too wide) in paragraph at lines 3--7
 \T1/aer/m/n/9 In or-der to study the ef-fect of com-mu-ni-ca-tion net-works aro
 und
  []
 
-[3 <./images/severity_volume.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
-(./data_otto.tex [4]) (./variables_nikete.tex) (./variables_eaman.tex
+[4]) (./data_otto.tex) (./variables_nikete.tex) (./variables_eaman.tex
 
 LaTeX Warning: Citation `KleinbergNetworks' on page \thepage  undefined on inpu
 t line 2.
@@ -484,12 +480,12 @@ ne 15.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./tables/log_severity_forumOR.tex
-Overfull \hbox (76.83276pt too wide) in paragraph at lines 4--56
+Overfull \hbox (41.62509pt too wide) in paragraph at lines 5--57
  [] 
  []
 
 ) (./tables/log_volume_forumOR.tex
-Overfull \hbox (36.53148pt too wide) in paragraph at lines 4--46
+Overfull \hbox (1.3238pt too wide) in paragraph at lines 5--47
  [] 
  []
 
@@ -497,12 +493,12 @@ Overfull \hbox (36.53148pt too wide) in paragraph at lines 4--46
 trality_volume_severity_nontrivial.png>] [7] [8]) (./conclusion.tex)
 No file main.bbl.
 (./tables/log_volume_forumAND.tex
-Overfull \hbox (43.25412pt too wide) in paragraph at lines 4--54
+Overfull \hbox (8.04645pt too wide) in paragraph at lines 5--55
  [] 
  []
 
 ) (./tables/log_severity_forumAND.tex
-Overfull \hbox (40.17636pt too wide) in paragraph at lines 4--52
+Overfull \hbox (4.96858pt too wide) in paragraph at lines 5--53
  [] 
  []
 
@@ -532,7 +528,7 @@ fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 sr/local/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-Output written on main.pdf (11 pages, 480372 bytes).
+Output written on main.pdf (11 pages, 481780 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  67 compressed objects within 1 object stream
