@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 OCT 2015 20:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 OCT 2015 20:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -367,11 +367,9 @@ File: images/centrality_volume_severity_nontrivial.png Graphic file (type png)
 Package pdftex.def Info: images/centrality_volume_severity_nontrivial.png used 
 on input line 21.
 (pdftex.def)             Requested size: 240.0pt x 122.53362pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/cluster_closeness_volume.png, id=42, 362.10281pt x 268.00125pt>
+ [6 <./images/centrality_volume_severity.png> <./images/centrality_volume_sever
+ity_nontrivial.png>] <images/cluster_closeness_volume.png, id=47, 362.10281pt x
+ 268.00125pt>
 File: images/cluster_closeness_volume.png Graphic file (type png)
 
 <use images/cluster_closeness_volume.png>
@@ -379,27 +377,21 @@ Package pdftex.def Info: images/cluster_closeness_volume.png used on input line
  38.
 (pdftex.def)             Requested size: 240.0pt x 177.6338pt.
 
-<images/cluster_closeness_severity.png, id=43, 362.10281pt x 268.00125pt>
+<images/cluster_closeness_severity.png, id=48, 362.10281pt x 268.00125pt>
 File: images/cluster_closeness_severity.png Graphic file (type png)
 
 <use images/cluster_closeness_severity.png>
 Package pdftex.def Info: images/cluster_closeness_severity.png used on input li
 ne 39.
 (pdftex.def)             Requested size: 240.0pt x 177.6338pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 ) (./tables/log_severity_forumOR.tex
 Overfull \hbox (40.07709pt too wide) in paragraph at lines 5--57
  [] 
  []
 
-) (./tables/log_volume_forumOR.tex) (./limitations.tex [6] [7] [8])
-(./conclusion.tex) (./main.bbl [9 <./images/centrality_volume_severity.png> <./
-images/centrality_volume_severity_nontrivial.png> <./images/cluster_closeness_v
-olume.png> <./images/cluster_closeness_severity.png>])
-(./tables/log_volume_forumAND.tex
+) (./tables/log_volume_forumOR.tex) (./limitations.tex) (./conclusion.tex)
+(./main.bbl [7 <./images/cluster_closeness_volume.png> <./images/cluster_closen
+ess_severity.png>] [8] [9]) (./tables/log_volume_forumAND.tex
 Overfull \hbox (6.49844pt too wide) in paragraph at lines 5--55
  [] 
  []
@@ -415,7 +407,7 @@ Overfull \hbox (3.42058pt too wide) in paragraph at lines 5--53
 Here is how much of TeX's memory you used:
  3170 strings out of 493117
  42652 string characters out of 6135433
- 134861 words of memory out of 5000000
+ 131861 words of memory out of 5000000
  6507 multiletter control sequences out of 15000+600000
  50959 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -434,7 +426,7 @@ r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/
 local/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/t
 exlive/2014/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-Output written on main.pdf (12 pages, 494653 bytes).
+Output written on main.pdf (12 pages, 494163 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream
