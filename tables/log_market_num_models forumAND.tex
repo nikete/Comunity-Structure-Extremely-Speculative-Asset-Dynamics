@@ -1,0 +1,42 @@
+\begin{table}
+\caption{}
+\begin{center}
+\begin{tabular}{lccccccc}
+\hline
+                                               & Activity & Nontrivial & Satoshi & Network & Weighted & Network*Nontrivial &   All    \\
+\hline
+\hline
+\end{tabular}
+\begin{tabular}{llllllll}
+Intercept                                      & 0.00     & 0.00       & 0.00    & 0.00    & 0.00     & 0.00               & 0.00     \\
+                                               & (0.00)   & (0.00)     & (0.00)  & (0.00)  & (0.00)   & (0.00)             & (0.00)   \\
+nontrivial                                     &          & 0.22***    & 0.20*** & 0.11**  & 0.15***  & 0.08*              & 0.13***  \\
+                                               &          & (0.05)     & (0.05)  & (0.05)  & (0.05)   & (0.05)             & (0.05)   \\
+user1_closeness_centrality_unweighted          &          &            &         & 0.15*** &          & 0.11**             & 0.00     \\
+                                               &          &            &         & (0.05)  &          & (0.05)             & (0.00)   \\
+user1_closeness_centrality_weighted            &          &            &         &         & 0.19***  &                    & 0.17***  \\
+                                               &          &            &         &         & (0.05)   &                    & (0.05)   \\
+user1_closeness_centrality_weighted:nontrivial &          &            &         &         &          & 0.18***            &          \\
+                                               &          &            &         &         &          & (0.04)             &          \\
+user1_clustering_coefficient                   &          &            &         & 0.00    &          &                    &          \\
+                                               &          &            &         & (0.00)  &          &                    &          \\
+user1_days_since_first_post                    &          &            & 0.05    & 0.00    & 0.03     & 0.02               & 0.00     \\
+                                               &          &            & (0.05)  & (0.00)  & (0.05)   & (0.05)             & (0.05)   \\
+user1_num_posts                                &          &            &         &         & 0.00     &                    &          \\
+                                               &          &            &         &         & (0.00)   &                    &          \\
+user1_num_subjects                             &          &            & 0.01    &         &          &                    &          \\
+                                               &          &            & (0.05)  &         &          &                    &          \\
+user1_pagerank_weighted                        &          &            &         &         & 0.00     &                    &          \\
+                                               &          &            &         &         & (0.00)   &                    &          \\
+user1_satoshi_pagerank_weighted                &          &            &         &         &          &                    & 0.01     \\
+                                               &          &            &         &         &          &                    & (0.06)   \\
+R2                                             & 0.00     & 0.05       & 0.06    & 0.09    & 0.11     & 0.17               & 0.10     \\
+ElasticNet CV MSE:                             & 1.01     & 0.97       & 0.98    & 0.96    & 0.96     & 0.94               & 0.97     \\
+BIC                                            & 1072     & 1059       & 1068    & 1061    & 1060     & 1026               & 1063     \\
+N                                              & 376      & 376        & 376     & 376     & 376      & 376                & 376      \\
+Adjusted-R2                                    & 0.00     & 0.05       & 0.05    & 0.08    & 0.09     & 0.16               & 0.09     \\
+Condition Number                               & 1.00     & 1.00       & 1.50    & 1.77    & 2.06     & 1.56               & 226.11   \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
