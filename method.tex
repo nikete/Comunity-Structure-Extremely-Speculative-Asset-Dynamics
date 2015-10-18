@@ -4,11 +4,10 @@
 Initially we we start with a baseline model that considers only the user characteristics that are easily observable from their activity on the forum before the announcement: the number of posts and of subjects,  the time since they first post, the number of users that they have responded to and received responses from. 
 These network measures are possible for any generic discussion, we introduce two further sets of variables to enrich our models that rely on domain knowledge of the underlying assets: Satoshi network measures, and weather a given coin is embodied in new software or if it is simply a change in name and parameters of the codebase used by a different coin.
 
-We estimate linear regularized least squares (ElasticNet cite TODO) using a combination of L1 and L2 norm, with their parameters set by 5 fold cross validation. 
-We then estimate a OLS model of the support of the variables and calculate White robust standard errors, to allow for model introspection. 
+We estimate the support of our model by regularized least squares using a combination of L1 and L2 norm, with their parameters set by 5 fold cross validation  (ElasticNet implementation in \cite{scikit-learn}) . 
+We then estimate a OLS model over the support of the variables and calculate White robust standard errors, to allow us to examine the model coefficients and their standard errors.. 
 Disclaimer that the regularization might make them not match (TODO: add set with normal SE that is estimated with the regularization, in results compare the coefficients) 
-To evaluate nonlinearities and interactions  in the model we fit a gradient boosted machine on the full support, cross validating its hyper parameters; as well as on the OLS selected subset.  TODO add graphs showing interactions and nonlinearities; table with model comparisons.
+To evaluate nonlinearities and interactions  in the model we fit a gradient boosted machine on the full support, cross validating its hyper parameters; as well as on the OLS selected subset. 
 
-
-The initial analysis pipeline and debugging, hyperparameter setting was done using only th initial 270 of the eventual 560 in the sample. The full set of samples used for these estimates was only estimated before writing the results section. The method will not be revised beyond this point.
-
+The initial analysis pipeline and debugging, hyper-parameter setting was done using only th initial 270 of the eventual 560 in the sample.
+The full set of samples used for these estimates was only estimated before writing the results section, and no adjustments where made to hyper-parameters or methods after this point.
