@@ -1,7 +1,21 @@
-\section{Analysis Variables}
-\subsection{Prices and Exchanges}
-Our main outcome measures are the severity of the inflation of an asset's price, and the magnitude of money transacted in it.
-We operationalize the intensity of a bubble as the proportion of a 1 dollar (TODO check currency base) that would be lost buying at the maximum price and selling after that proportionally to the volume of the market till the present, we call this severity.
-%JULIAN: Wasn't this defined previously? Needs an equation!
-We define the volume as the sum of the contemporaneous dollar (todo check) volume of trade.
-As a secondary outcome measure we consider the number of exchanges that list the coin.
+\section{Variables}
+
+\subsection{Magnitude and Severity}
+Our main outcome measures are the severity of the inflation of a coin price, and the magnitude of money transacted in it.
+We operationalize the intensity of a bubble as the proportion of a 1 dollar that would be lost buying at the maximum price and selling after that proportionally to the volume of the market till the present.
+More formally, for each coin let $P_t,V_t$ be two vectors of length $T$ each indexed by days since the coin has traded.
+Let $v_t$ be the number of coins traded across all exchanges in a coin $t$ days after it is introduced. 
+Let $p_t$ be the representative price for the day for that coin.\footnote{ Several ways that this can be defined reasonably, for the markets organized as continuous double auctions the price of the first or last transaction of the day,  the average price transacted during a day, the average best bid ask at midnight or noon, would all be reasonable. Exchange price aggregators and exchanges own historical data do not provide enough precision to be able to pin this down, it is entirely possible that the aggregators are using inconsistent definitions for the underlying exchanges.   }. 
+
+We can the define our magnitude measure simply as
+
+\begin{equation}
+volume_{coin} = \sum_{t=1}^{T} v_t  p_t
+\end{equation}
+
+Let $t_{max}$ as the date at which the coin has its maximum price.  
+We can define the severity of the bubble in a coin as:
+
+\begin{equation}
+severity_{coin} = \frac{ p_{\t_{max}} {  \frac{\sum_{t=t_{max}}}^{T}  \frac{v_t p_t}{\sum_{t=t_max}^{T} v_t}  } }
+\end{equation}

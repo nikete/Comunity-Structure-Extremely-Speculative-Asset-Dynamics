@@ -9,7 +9,7 @@ Many of them appear to be nothing but attempts at turning a quick profit from in
 This is driven by the extremely low cost and effort required to create a new coin, with most being minimal changes to parameters and branding of a pre-existing codebase.
 
 Those who make and trade these coins communicate largely online, and much of their activity is concentrated on public forums. 
-As such, price and volume data from these exchanges is freely available and widely aggregated\footnote{ these are however largely unregulated, often anonymous, and there is no way to account how much of reported volumes are manipulation attempts, the existence of attempts at arbitrage between them places some bounds on how blatantly the data can be manipulated for prices, but volumes are impossible to assess. },
+As such, price and volume data from these exchanges is freely available and widely aggregated\footnote{ these are however largely unregulated, often anonymous, and there is no way to account how much of reported volumes are manipulation attempts. The existence of attempts at arbitrage between them places some bounds on how blatantly the data can be manipulated for prices, but volumes are impossible to assess. },
 %JULIAN: Whole footnote is one extra-long sentence!
 and the source code to all of them being public is the norm%\footnote{cargo cult CS being derigour in the comunity}.
 This makes cryptocoins
@@ -56,15 +56,16 @@ For context, this is equivalent to one quarter of Iceland's entire foreign excha
 Using price and volume data we construct measures of both the magnitude and the severity of bubbles.
 These are defined formally in our variable section,
 %JULIAN: Give a section ref?
-but their intuition is that we say the magnitude of a coin is large when a high volume of trades happens (measured in USD) 
+but their intuition is that we say the magnitude of a coin is large when a high volume in dollars of trades happens,
 %JULIAN: Does it make a difference what it's measured in?
-at the transacted prices, while we say a coin has a severe bubble if investing a fixed amount leads on average to a large loss. 
+while we say a coin has a severe bubble if investing a fixed amount leads to loosing a large proportion. 
 By considering the community structure that exists in the forum before a coin is introduced we are able to predict a substantial fraction of the variation in both the severity and magnitude of the resulting bubble.
-This is a challenging task, and models that rely on either simple activity or network metrics metrics show almost no predictive out-of-sample power, unable to explain even 1\% of the variation in either task.
-Our best model explains 10\% of the variation in the severity and magnitude of bubbles in our sample.
+This is a challenging task, and models that rely on either simple activity or network metrics metrics show almost no predictive out-of-sample power, unable to explain even 1\% of the variation in either task,
+our best models perform an order of magnitude better in both tasks.
 %JULIAN: R^2 of 0.1 (if I interpret correctly) doesn't sound impressive until you've argued the fundamental difficulty of the problem, you might wait to mention such numbers.
 %JULIAN: Would sound more impressive if you just said "it performs an order of magnitude better"
-The main driver of our explanatory power is the centrality of a user in the directed network derived from the forum, and its effect appears to be mediated by whether a coin involves a nontrivial technological change, the direction of the interaction reversing depending on whether it relates to magnitude or severity.
+The main driver of our explanatory power is the centrality of a user in the directed network derived from the forum. 
+This effect appears to be mediated by whether a coin involves a nontrivial technological change, the direction of the interaction reversing depending on whether it relates to magnitude or severity.
 %JULIAN: Above sentence is tough to parse, but kind of an important one.
 Both the severity and the magnitude of bubbles increases with the centrality of the user who introduces the coins in the forums.  
 Interestingly this effect is concentrated in different ways depending on whether the coin software is more than a trivial modification: trivial coins have more severe bubbles the more central their introducers are, while volume is greater the more central the introducer of a nontrivial coin is.
