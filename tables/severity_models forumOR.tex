@@ -1,0 +1,38 @@
+\begin{table}
+\caption{}
+\begin{center}
+\begin{tabular}{lccccccc}
+\hline
+                                               & Activity & Nontrivial & Satoshi & Network & Weighted & Interaction &  All    \\
+\hline
+\hline
+\end{tabular}
+\begin{tabular}{llllllll}
+Intercept                                      & 0.00     & 0.00       & 0.00    & 0.00    & 0.00     & 0.00        & 0.00    \\
+                                               & (0.00)   & (0.00)     & (0.00)  & (0.00)  & (0.00)   & (0.00)      & (0.00)  \\
+nontrivial                                     &          & 0.04       &         &         &          &             &         \\
+                                               &          & (0.04)     &         &         &          &             &         \\
+user1_closeness_centrality_unweighted          &          &            &         & 0.11*** &          &             & 0.00    \\
+                                               &          &            &         & (0.04)  &          &             & (0.00)  \\
+user1_closeness_centrality_weighted            &          &            &         &         & 0.05     & 0.06        & 0.00    \\
+                                               &          &            &         &         & (0.04)   & (0.04)      & (0.00)  \\
+user1_closeness_centrality_weighted:nontrivial &          &            &         &         &          & 0.00        & 0.00    \\
+                                               &          &            &         &         &          & (0.00)      & (0.00)  \\
+user1_clustering_coefficient                   &          &            &         &         &          &             & 0.00    \\
+                                               &          &            &         &         &          &             & (0.00)  \\
+user1_degree_incoming                          &          &            &         & 0.01    &          &             &         \\
+                                               &          &            &         & (0.04)  &          &             &         \\
+user1_pagerank_weighted                        &          &            &         &         & 0.05     & 0.07        & 0.00    \\
+                                               &          &            &         &         & (0.04)   & (0.04)      & (0.00)  \\
+user1_satoshi_distance                         &          &            &         &         &          &             & 0.00    \\
+                                               &          &            &         &         &          &             & (0.00)  \\
+R2                                             & 0.00     & 0.00       & 0.00    & 0.03    & 0.03     & 0.03        & 0.00    \\
+ElasticNet CV MSE:                             & 1.02     & 1.00       & 1.01    & 1.00    & 1.00     & 1.02        & 1.01    \\
+BIC                                            & 1572     & 1577       & 1572    & 1570    & 1570     & 1573        & 1610    \\
+N                                              & 552      & 552        & 552     & 552     & 552      & 552         & 552     \\
+Adjusted-R2                                    & 0.00     & 0.00       & 0.00    & 0.02    & 0.02     & 0.03        & -0.01   \\
+Condition Number                               & 1.00     & 1.00       & 1.00    & 1.09    & 1.41     & 1.55        & 197.76  \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
