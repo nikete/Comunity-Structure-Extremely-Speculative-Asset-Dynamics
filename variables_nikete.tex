@@ -1,14 +1,13 @@
-Our main outcome measures are the severity of the inflation of a coin price, and the magnitude of money transacted in it.
-We operationalize the intensity of a bubble as the proportion of a 1 dollar that would be lost buying at the maximum price and selling after that proportionally to the volume of the market till the present.
-More formally, for each coin let $P_t,V_t$ be two vectors of length $T$ each indexed by days since the coin has traded.
-Let $v_t$ be the number of coins traded across all exchanges in a coin $t$ days after it is introduced. 
-Let $p_t$ be the representative price for the day for that coin.\footnote{ Several ways that this can be defined reasonably, for the markets organized as continuous double auctions the price of the first or last transaction of the day,  the average price transacted during a day, the average best bid ask at midnight or noon, would all be reasonable. Exchange price aggregators and exchanges own historical data do not provide enough precision to be able to pin this down, it is entirely possible that the aggregators are using inconsistent definitions for the underlying exchanges.   }. 
-
-We can the define our magnitude measure simply as
-
+Our main outcome measures are the severity of the largest drop in the price of each cryptocoin, and the magnitude (volume) of the transactions made with the cryptocoin measured in USD.
+We operationalize the intensity of a bubble as the proportion of a 1 dollar that would be lost buying at the maximum price \textcolor{red}{and selling after that proportionally to the volume of the market till the present.}
+More formally for each coin $c$, let $P_c,V_c$ be two vectors of length $T$ each indexed by days since the coin $c$ started trading.
+Let $v_{c,t}$, the $t^{th}$ element of $V_c$ be the number of $c$ coins traded across all exchanges $t$ days after $c$'s introduction to the market. 
+Similarly, let $p_t$ be the representative price of coin $c$ on day $t$ \textcolor{red}{measured in USD}. \footnote{There are several ways that this can be defined reasonably. For the markets organized as continuous double auctions the price of the first or last transaction of the day,  the average price transacted during a day, the average best asking bid at midnight or noon, would all be reasonable choices. Exchange price aggregators and exchanges own historical data do not provide enough precision to pin this down, as it is entirely possible that the aggregators are using inconsistent definitions for the underlying exchanges.}. Then, we simply define our magnitude measure for coin $c$ as
 \begin{equation}
-volume_{coin} = \sum_{t=1}^{T} v_t  p_t
+magnitude_{c} = \sum_{t=1}^{T} v_t  p_t
 \end{equation}
+where T is the number of days since the introduction of coin $c$ to the market until present. \textcolor{red}{Shouldn't the magnitude be normalized by $T$?}
+
 
 Let $t_{max}$ as the date at which the coin has its maximum price.  
 We can define the severity of the bubble in a coin as: \textcolor{red}{Need to fix the severity equation}
@@ -16,7 +15,6 @@ We can define the severity of the bubble in a coin as: \textcolor{red}{Need to f
 %severity_{coin} = \frac{ p_{\t_{max}} {  \frac{\sum_{t=t_{max}}}^{T}  \frac{v_t p_t}{\sum_{t=t_max}^{T} v_t}  } }
 %\end{equation}
 
-Our main outcome measures are the severity of the largest drop in the price of each asset (cryptocoin), and the magnitude (volume) of the transactions made with the cryptocoin measured in USD.
 We scrape daily price and volume data from coinmarketcap.com \footnote{\textcolor{red}{For robustness analysis smaller subsets of the coins where available from coin}}.
 %JULIAN: Didn't follow the above footnote
 We operationalize the severity of a bubble as the inverse of 1 dollar that would be lost buying at the maximum price and selling after that proportionally to the volume of the market until the present; we call this severity.
