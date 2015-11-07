@@ -15,8 +15,15 @@ Our All model contains all previous mentioned variables, there is extreme collin
 
 
 \begin{figure}[h]
-\includegraphics[width=\columnwidth]{centrality_volume_severity}
-\includegraphics[width=\columnwidth]{centrality_volume_severity_nontrivial}
+\centering
+\begin{subfigure}
+{\includegraphics[width=\columnwidth]{centrality_volume_severity.pdf}}
+\end{subfigure}
+\begin{subfigure}
+{\includegraphics[width=\columnwidth]{centrality_volume_severity_nontrivial}}
+\end{subfigure}
+\caption{Interaction of Severity and Magnitude metrics with introducer closeness centrality (top), segmented by nontrivial classification (below). \textcolor{red}{colorbar label needs to change to introducer closeness centrality, switch bottm plot to pdf version. But for some reason left subplot contours don't show up.}}
+\label{centrality_volume_severity}
 \end{figure}
 
 The main driver of our explanatory power is the centrality of a user in the directed network derived from the forum. 
@@ -33,7 +40,15 @@ Interestingly this effect is concentrated in different ways depending on whether
 
 
 \begin{figure}[h]
-\includegraphics[width=\columnwidth]{cluster_closeness_volume}
-\includegraphics[width=\columnwidth]{cluster_closeness_severity}
+\centering
+\begin{subfigure}
+{\includegraphics[width=\columnwidth]{cluster_closeness_volume.pdf}}
+\vspace{-2\baselineskip}
+\end{subfigure}
+\begin{subfigure}
+{\includegraphics[width=\columnwidth]{cluster_closeness_severity.pdf}}
+\end{subfigure}
+\caption{Interaction of introducer closeness centrality and clustering coefficient with bubble Magnitude (top) and Severity (bottom). \textcolor{red}{colorbar label needs to change to Magnitude and Severity.}}
+\label{cluster_closeness_volume}
 \end{figure}
 
