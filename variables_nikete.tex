@@ -14,7 +14,7 @@ Let $t_{max}$ be the date in which the coin realized its maximum price. Thus, th
 \bar{p}_{(t_{max},T)} = \frac{\sum_{t=t_{max}}^{T} v_t p_t} {\sum_{t=t_{max}}^{T} v_t}
 \end{equation}
 
-We define the severity of the bubble in a coin as: \textcolor{red}{Need to checkthe severity equation}
+We define the severity of the bubble experienced by the coin $c$ as the fraction of the maximum price lost relative to average price since $t_{max}$ until present as defined above: \textcolor{red}{Need to check the severity equation}
 \begin{equation}
-severity_{coin} = \frac{ p_{t_{max}}} {\frac{\sum_{t=t_{max}}^{T} v_t p_t} {\sum_{t=t_{max}}^{T} v_t} }
+severity_{c} = \frac{ p_{t_{max}}} {\bar{p}_{(t_{max},T)} }
 \end{equation}
