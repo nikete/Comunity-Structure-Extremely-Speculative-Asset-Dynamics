@@ -1,5 +1,7 @@
-Many of the coins available in the exchanges are trivial modifications of another coin in that they only change parameters such as the name, the number of total mineable coins, or the transaction time between blocks.
-These coins' production cost is virtually zero\footnote{ there is a cottage industry that offers the creation of binaries and provisioning of mining and bandwidth as a bundled service that require no technical skill to create form the user, examples are Coingen or Coincreator}.
-
-To attempt to capture this we analyze data from mapofcoins.com which includes a genealogy of coins and data from the github page of coins not available on mapofcoins.com.
-If the coin to be analyzed has a parent and the algorithm it uses differs from the parent or if it has no parent, it is labeled as nontrivial, meaning that the coin implemented something that did not previously exist, and is not just a fork with only parameters changed, such as total mineable coins, transaction speed, etc.
+Many of the coins available in the exchanges are trivial modifications of an already existing coin in that they only differ in parameters such as the name, the number of total mineable coins, or the transaction time between blocks.
+The production cost of these coins is virtually zero\footnote{There is a cottage industry that offers the creation of binaries and provisioning of mining and bandwidth as a bundled service that requires no technical skill from the user. Coingen or Coincreator are two examples of such services.}. To capture this effortless replication, we analyze two data sources:
+\begin{enumerate}[topsep=0pt,itemsep=-0.5ex,partopsep=1ex,parsep=1ex]
+ \item  \url{http://mapofcoins.com} which includes a genealogy of coins.
+ \item Raw data from the github page of the coins not available in \url{http://mapofcoins.com}.
+\end{enumerate}
+If the coin to be analyzed has a parent and its algorithm differs from its parent or if it has no parent, it is labeled as nontrivial, indicating that the coin possesses legitimate technological innovation.

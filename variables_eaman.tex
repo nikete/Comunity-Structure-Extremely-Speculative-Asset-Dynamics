@@ -11,7 +11,7 @@ In this section, we discuss the various metrics extracted from discussion networ
   \item \textbf{Unweighted closeness centrality:} While degree centrality measures the level of user engagement in the community, it only examines the local structure around the user.  In contrast, closeness centrality measures the level of the user's engagement with the global network \textit{either directly or indirectly}. It is relevant in many scenarios, including in online discussions, as information spreads via shortest paths. 
   
   In our context, a user with high closeness centrality has interacted with a diverse set of users who themselves are close to a large set of diverse users.  Our analysis consisted of three versions of the unweighted closeness centrality:
-  \begin{enumerate}
+  \begin{enumerate}[topsep=0pt,itemsep=-0.5ex,partopsep=1ex,parsep=1ex]
     \item \textbf{Incoming:} Only the directed paths leading to the focal user are used. It measures closeness of the whole network to the focal user. Users who start many threads are likely to have higher incoming closeness centrality.
     \item \textbf{Outgoing:} Only the directed paths starting from the focal user to all the other users are used. It measures closeness of the focal user to the whole network. Users who reply to many threads are likely to have higher outgoing closeness centrality.
     \item \textbf{Undirected:} The paths both from and to the focal users are used. Users who initiate and reply to many threads are likely to have higher undirected closeness centrality.

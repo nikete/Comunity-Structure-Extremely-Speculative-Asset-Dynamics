@@ -7,7 +7,7 @@ In this context, edge weights capture the level of engagement thread initiators 
 %single large forum since the community base of all five forums mentioned
 %above is made of the same users and we are mostly concerned about influence and
 %aggregate information flow among users, rather than the exact topic of the discussion.
-To build our network, we first combine the posts fro all forums. We do this because the community base of all five forums mentioned above is made of the same users, and because we are mostly concerned about influence and aggregate information flow among users, rather than the exact topic of the discussion.
+To build our network, we first combine the posts from all forums. We do this because the community base of all five forums mentioned above is made of the same users, and because we are mostly concerned about influence and aggregate information flow among users, rather than the exact topic of the discussion.
 The network construction involves replaying all the posts over time sorted by their date and updating the
 discussion network accordingly. Whenever a new altcoin is introduced
 in the forum for the first time, the user who introduced it and a snapshot of the network is taken. 
@@ -18,9 +18,11 @@ We analyze the discussion network only up to the first time each coin is introdu
 %TODO Do we use the date of the ANN or the date of the first trade?!?! NIKETE & EAMAN.
 % E: Both of them are in the file, depends which one you are using. 
 %The identification of true introductions of new altcoins is a difficult process prone to many false-positives. 
-The  majority of such introductions are made in the \textit{Announcement} forum and are preceded with the ``ANN'' tag. We look for the first mention of both the coin symbol \textbf{and} its descriptive name in the subject of a thread which contains the announcement tag. The first mentions of either the coin symbol \textbf{or} its name are used as a fall-back in case the more restrictive \textbf{and} requirement did not detect the coin. 
+The  majority of such introductions are made in the \textit{Announcement} forum and are preceded with the ``ANN'' tag. We look for the first mention of both the coin symbol \textbf{and} its descriptive name in the subject of a thread which contains the announcement tag. \textcolor{red}{The first mentions of either the coin symbol \textbf{or} its name are used as a fall-back in case the more restrictive \textbf{and} requirement did not detect the first introduction of the coin.}
 %JULIAN: The above seems like a long winded way of saying that you just used "or". i.e., the above sentence parses to "(a and b) or (a or b)". Didn't want to overwrite in case I misunderstood.
-Using this method, we were able to detect the first introduction of 554 altcoins out of 679.
+% EAMAN: remove the text on OR requirement, if you did not or do not plan on falling back on OR mentions.
+Using the more restrictive matching requiring both the coin name \textbf{and} symbol be present in the subject, we are able to detect the first introduction of 376 altcoins out of 679. \textcolor{red}{We can detect an extra 176 altcoins by falling back on the \textbf{or} requirement.}
+% Eaman: remove text in red if not falling back on OR.
 The forum user who initiated such a thread is assigned as the introducer of the coin to the community.
 
 %TODO(NIKETE): add validation results table wrt mapofcoins data here
