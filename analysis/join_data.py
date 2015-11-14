@@ -22,14 +22,22 @@ parser.add_argument('network_metric_files', nargs='+',
                     help='The location of CSV file containing network metrics.')
 parser.add_argument('output_file',
                     help='Location of joined output csv file.')
+parser.add_argument("-d", "--max_days_btwn_trade_introduction",
+                    dest="max_days_btwn_trade_introduction", type=int, default = 356,
+                    help="The max number of days that can exist between coin "
+                    "introduction in the forum and its earliest trade date. Any coin "
+                    "whose introduction and trade are farther than this many days is "
+                    "most probably is a false positive detection and is discarded.")
+                    
 args = parser.parse_args()
 
 if __name__ == '__main__':
-  price_metrics = pandas.read_csv(args.price_metric_file, sep = ',')
+  price_metrics = pandas.read_csv(args.price_metric_file, sep = ',', parse_dates = [21])
   trivialness = pandas.read_csv(args.trivialness_file, sep = ',')
   all_network_metrics = list()
   for network_file in args.network_metric_files:
-    all_network_metrics.append(pandas.read_csv(network_file, sep = ','))
+    network_metrics = pandas.read_csv(network_file, sep = ',', parse_dates = [1,2])
+    all_network_metrics.append(network_metrics)
 
   price_joined_networks = None
   for network_metrics in all_network_metrics:
@@ -61,6 +69,17 @@ if __name__ == '__main__':
     print 'There were ' + str(len(network_coins)) + ' coin in network file'
     print 'Joined ' + str(len(joined_coins)) + ' coins'
     print ''
+
+  price_joined_networks['diff'] = (price_joined_networks['earliest_trade_date'] -
+                                   price_joined_networks['network_date'])
+  num_original_coins = len(price_joined_networks.index)
+  price_joined_networks = price_joined_networks[price_joined_networks['diff'] <
+                                                datetime.timedelta(days=args.max_days_btwn_trade_introduction)]
+  num_verified_coins = len(price_joined_networks.index)
+  print ('Removed ' + str(num_original_coins - num_verified_coins) + ' coins which had '
+         'more than ' + str(args.max_days_btwn_trade_introduction) + ' between '
+         'introduction and earliest trade date.')
+  
 
   price_columns = list(price_metrics.columns.values)
   network_columns = list(all_network_metrics[0].columns.values)
