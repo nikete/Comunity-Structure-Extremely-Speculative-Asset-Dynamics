@@ -1,30 +1,66 @@
+library(car)
 #setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
 setwd(dir = "data/")
+data = read.csv(file = "joined_with_fallback.csv", header = TRUE, sep = ",")
 data = read.csv(file = "joined_with_fallback_d200.csv", header = TRUE, sep = ",")
-#data$network_date = as.Date(data$network_date, format = "%d-%m-%Y")
-#data$earliest_trade_date = as.character(data$earliest_trade_date, format = "%Y-%m-%d")
+data = read.csv(file = "joined_with_fallback_d100.csv", header = TRUE, sep = ",")
 data$network_date = as.character(data$network_date, format = "%Y-%m-%d")
 data$earliest_trade_date = as.character(data$earliest_trade_date, format = "%Y-%m-%d")
 
-dates = sort(data$earliest_trade_date)
+train_data = data[data$earliest_trade_date < "2015-01-01",]
+test_data = data[data$earliest_trade_date >= "2015-01-01",]
 
-lmfit = lm(data$severity_to_average_after_max_volume_weighted ~
-           data$user1_num_mentions + data$user1_num_posts + data$user1_num_subjects + data$user1_days_since_first_post +
-           data$user1_degree_total +
-           data$user1_degree_incoming +
-           data$user1_degree_outgoing +
-           data$user1_clustering_coefficient +
-           data$user1_closeness_centrality_unweighted + 
-           data$user1_closeness_centrality_weighted + 
-           data$user1_closeness_centrality_incoming_unweighted + 
-           data$user1_closeness_centrality_outgoing_unweighted + 
-           data$user1_closeness_centrality_incoming_weighted + 
-           data$user1_closeness_centrality_outgoing_weighted +
-           data$user1_betweenness_centrality_weighted +
-           #data$user1_satoshi_distance +
-           data$user1_satoshi_pagerank_unweighted +
-           data$user1_satoshi_pagerank_weighted +
-           data$user1_pagerank_unweighted +
-           data$user1_pagerank_weighted,
-           data)
+lmfit = lm(severity_to_average_after_max_volume_weighted ~
+           #user1_num_mentions +
+           user1_num_posts +
+           user1_num_subjects +
+           user1_days_since_first_post +
+           user1_degree_total +
+           user1_degree_incoming +
+           #user1_degree_outgoing +
+           user1_clustering_coefficient +
+           #user1_closeness_centrality_unweighted + 
+           user1_closeness_centrality_weighted + 
+           #user1_closeness_centrality_incoming_unweighted + 
+           #user1_closeness_centrality_outgoing_unweighted + 
+           #user1_closeness_centrality_incoming_weighted + 
+           #user1_closeness_centrality_outgoing_weighted +
+           user1_betweenness_centrality_weighted +
+           #user1_satoshi_distance +
+           #user1_satoshi_pagerank_unweighted +
+           user1_satoshi_pagerank_weighted +
+           #user1_pagerank_unweighted +
+           user1_pagerank_weighted +
+           nontrivial +
+           nontrivial*user1_closeness_centrality_weighted,
+           train_data_trivial)
 summary(lmfit)
+
+which(cooks.distance(lmfit) > 50/nrow(train_data))
+plot(cooks.distance(lmfit))
+influencePlot(lmfit)
+
+# influential points when regresstig on d100
+remove = -c(26,143,173,255,272)
+train_data = train_data[remove,]
+train_data_trivial = train_data[train_data$nontrivial==FALSE,]
+train_data_nontrivial = train_data[train_data$nontrivial==TRUE,]
+
+
+# influential points when regresstig on d200
+remove = -c(158,191,278,298)
+train_data = train_data[remove,]
+train_data_trivial = train_data[train_data$nontrivial==FALSE,]
+train_data_nontrivial = train_data[train_data$nontrivial==TRUE,]
+
+
+# influential points when regresstig on normal
+remove = -c(169,204,297,310,324)
+train_data = train_data[remove,]
+train_data_trivial = train_data[train_data$nontrivial==FALSE,]
+train_data_nontrivial = train_data[train_data$nontrivial==TRUE,]
+
+
+
+predictions = predict.lm(lmfit, test_data)
+plot(predictions, test_data$severity_to_average_after_max_volume_weighted, xlim=c(0,5), ylim=c(0,5))
