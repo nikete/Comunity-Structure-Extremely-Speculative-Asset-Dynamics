@@ -1,16 +1,24 @@
 library(car)
-#setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
+setwd(dir = "~/Desktop/bitcoin-paper/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
 setwd(dir = "data/")
 data = read.csv(file = "joined_with_fallback.csv", header = TRUE, sep = ",")
 data = read.csv(file = "joined_with_fallback_d200.csv", header = TRUE, sep = ",")
 data = read.csv(file = "joined_with_fallback_d100.csv", header = TRUE, sep = ",")
 data$network_date = as.character(data$network_date, format = "%Y-%m-%d")
 data$earliest_trade_date = as.character(data$earliest_trade_date, format = "%Y-%m-%d")
+data$log_severity_to_average_after_max_volume_weighted = log(data$severity_to_average_after_max_volume_weighted)
 
-train_data = data[data$earliest_trade_date < "2015-01-01",]
-test_data = data[data$earliest_trade_date >= "2015-01-01",]
+data_size = nrow(data)
+# 70% train
+train_size = floor(0.70 * data_size)
+# reporoducible partition?
+set.seed(19870209)
+train_indices = sample(seq(data_size), size = train_size)
 
-lmfit = lm(severity_to_average_after_max_volume_weighted ~
+train_data = data[train_indices, ]
+test_data = data[-train_indices, ]
+
+lmfit = lm(log_severity_to_average_after_max_volume_weighted ~
            #user1_num_mentions +
            user1_num_posts +
            user1_num_subjects +
@@ -33,8 +41,13 @@ lmfit = lm(severity_to_average_after_max_volume_weighted ~
            user1_pagerank_weighted +
            nontrivial +
            nontrivial*user1_closeness_centrality_weighted,
-           train_data_trivial)
+           train_data)
 summary(lmfit)
+plot.lm(lmfit, which=1, ask=F)
+plot.lm(lmfit, which=2, ask=F)
+plot.lm(lmfit, which=3, ask=F)
+plot.lm(lmfit, which=4, ask=F)
+plot.lm(lmfit, which=5, ask=F)
 
 which(cooks.distance(lmfit) > 50/nrow(train_data))
 plot(cooks.distance(lmfit))
