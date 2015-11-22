@@ -73,9 +73,7 @@ cross_validate_alphas = function(x, y, alphas) {
   
   #step 3: find the overall optimum
   optimum_index = which.min(optimum_per_alpha["cv",])
-  optimum_per_alpha
-  optimum_index
-  (c(lambda=optimum_per_alpha[["lambda", optimum_index]],
+  return(c(lambda=optimum_per_alpha[["lambda", optimum_index]],
            alpha=optimum_per_alpha[["alpha",optimum_index]],
            non_zero_coefs=optimum_per_alpha[["non_zero_coefs",optimum_index]],
            cv_low=optimum_per_alpha[["cv_low",optimum_index]],
