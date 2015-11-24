@@ -1,6 +1,5 @@
 library(car)
-setwd(dir = "~/Desktop/bitcoin-paper/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
-setwd(dir = "data/")
+setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/data")
 data = read.csv(file = "joined_with_fallback.csv", header = TRUE, sep = ",")
 data = read.csv(file = "joined_with_fallback_d200.csv", header = TRUE, sep = ",")
 data = read.csv(file = "joined_with_fallback_d100.csv", header = TRUE, sep = ",")
@@ -43,37 +42,23 @@ lmfit = lm(log_severity_to_average_after_max_volume_weighted ~
            nontrivial*user1_closeness_centrality_weighted,
            train_data)
 summary(lmfit)
-plot.lm(lmfit, which=1, ask=F)
-plot.lm(lmfit, which=2, ask=F)
-plot.lm(lmfit, which=3, ask=F)
-plot.lm(lmfit, which=4, ask=F)
-plot.lm(lmfit, which=5, ask=F)
+plot(lmfit, which=1, ask=F)
+plot(lmfit, which=2, ask=F)
+plot(lmfit, which=3, ask=F)
+plot(lmfit, which=4, ask=F)
+plot(lmfit, which=5, ask=F)
 
 which(cooks.distance(lmfit) > 50/nrow(train_data))
 plot(cooks.distance(lmfit))
 influencePlot(lmfit)
 
-# influential points when regresstig on d100
-remove = -c(26,143,173,255,272)
-train_data = train_data[remove,]
-train_data_trivial = train_data[train_data$nontrivial==FALSE,]
-train_data_nontrivial = train_data[train_data$nontrivial==TRUE,]
-
-
-# influential points when regresstig on d200
-remove = -c(158,191,278,298)
-train_data = train_data[remove,]
-train_data_trivial = train_data[train_data$nontrivial==FALSE,]
-train_data_nontrivial = train_data[train_data$nontrivial==TRUE,]
-
-
-# influential points when regresstig on normal
-remove = -c(169,204,297,310,324)
-train_data = train_data[remove,]
-train_data_trivial = train_data[train_data$nontrivial==FALSE,]
-train_data_nontrivial = train_data[train_data$nontrivial==TRUE,]
-
-
-
 predictions = predict.lm(lmfit, test_data)
 plot(predictions, test_data$severity_to_average_after_max_volume_weighted, xlim=c(0,5), ylim=c(0,5))
+
+# remove highly influential points
+remove = -c(158,191,278,298)
+train_data = train_data[remove,]
+
+# divide data to trivial and nontrivial
+train_data_trivial = train_data[train_data$nontrivial==FALSE,]
+train_data_nontrivial = train_data[train_data$nontrivial==TRUE,]
