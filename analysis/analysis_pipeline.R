@@ -23,21 +23,20 @@ all_independent_vars =  c("user1_num_mentions",
                           "user1_num_posts",
                           "user1_num_subjects",
                           "user1_days_since_first_post",
-                          "user1_degree_total",
                           "user1_degree_incoming",
                           "user1_degree_outgoing",
                           "user1_clustering_coefficient",
-                          "user1_closeness_centrality_unweighted",
+                          #"user1_closeness_centrality_unweighted",
                           "user1_closeness_centrality_weighted",
-                          "user1_closeness_centrality_incoming_unweighted",
-                          "user1_closeness_centrality_outgoing_unweighted",
-                          "user1_closeness_centrality_incoming_weighted",
-                          "user1_closeness_centrality_outgoing_weighted",
+                          #"user1_closeness_centrality_incoming_unweighted",
+                          #"user1_closeness_centrality_outgoing_unweighted",
+                          #"user1_closeness_centrality_incoming_weighted",
+                          #"user1_closeness_centrality_outgoing_weighted",
                           "user1_betweenness_centrality_weighted",
                           #"user1_satoshi_distance",
-                          "user1_satoshi_pagerank_unweighted",
+                          #"user1_satoshi_pagerank_unweighted",
                           "user1_satoshi_pagerank_weighted",
-                          "user1_pagerank_unweighted",
+                          #"user1_pagerank_unweighted",
                           "user1_pagerank_weighted",
                           "nontrivial")
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
@@ -46,12 +45,17 @@ x = data.matrix(train_data[,all_independent_vars])
 y = train_data[,dependent_var]
 
 # find the best elastic net model config
-best_model = cross_validate_alphas(x, y, alphas = seq(0,1,by=0.01))
+alphas=c(0.4,1,by=0.05)
+best_model = cross_validate_alphas(x, y, alphas)
 best_alpha = best_model[2]
 nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
 
+lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
+lmfit = lm(as.formula(lm_formula), train_data)
+summary(lmfit)
+
 # get nonzero coefficients on best alpha 
-#cvfit = cv.glmnet(x, y, nfolds=5, type.measure="mse", standardize=T, alpha=best_alpha)
-#plot(cvfit)
-#cvfit$lambda.min
-#coef(cvfit, s="lambda.min")
+cvfit = cv.glmnet(x, y, nfolds=5, type.measure="mse", standardize=T, alpha=best_alpha)
+plot(cvfit)
+cvfit$lambda.min
+coef(cvfit, s="lambda.min")
