@@ -19,7 +19,7 @@ train_indices = sample(seq(data_size), size = train_size)
 train_data = data[train_indices, ]
 test_data = data[-train_indices, ]
 
-all_independent_vars =  c("user1_num_mentions",
+all_independent_vars =  c(#"user1_num_mentions",
                           "user1_num_posts",
                           "user1_num_subjects",
                           "user1_days_since_first_post",
@@ -40,12 +40,12 @@ all_independent_vars =  c("user1_num_mentions",
                           "user1_pagerank_weighted",
                           "nontrivial")
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
-
+cor(train_data[,all_independent_vars])
 x = data.matrix(train_data[,all_independent_vars])
 y = train_data[,dependent_var]
 
 # find the best elastic net model config
-alphas=c(0.4,1,by=0.05)
+alphas=seq(1,1,by=0.05)
 best_model = cross_validate_alphas(x, y, alphas)
 best_alpha = best_model[2]
 nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
