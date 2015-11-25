@@ -8,8 +8,8 @@ data$earliest_trade_date = as.character(data$earliest_trade_date, format = "%Y-%
 data$log_severity_to_average_after_max_volume_weighted = log(data$severity_to_average_after_max_volume_weighted)
 
 data_size = nrow(data)
-# 70% train
-train_size = floor(0.70 * data_size)
+# 60% train
+train_size = floor(0.60 * data_size)
 # reporoducible partition?
 set.seed(19870209)
 train_indices = sample(seq(data_size), size = train_size)
@@ -48,6 +48,27 @@ plot(lmfit, which=3, ask=F)
 plot(lmfit, which=4, ask=F)
 plot(lmfit, which=5, ask=F)
 
+vars =  c("log_severity_to_average_after_max_volume_weighted",
+          "user1_num_posts",
+          "user1_num_subjects",
+          "user1_days_since_first_post",
+          "user1_degree_incoming",
+          "user1_degree_outgoing",
+          "user1_clustering_coefficient",
+          "user1_closeness_centrality_unweighted",
+          "user1_closeness_centrality_weighted",
+          "user1_closeness_centrality_incoming_unweighted",
+          "user1_closeness_centrality_outgoing_unweighted",
+          "user1_closeness_centrality_incoming_weighted",
+          "user1_closeness_centrality_outgoing_weighted",
+          "user1_betweenness_centrality_weighted",
+          "user1_satoshi_distance",
+          "user1_satoshi_pagerank_unweighted",
+          "user1_satoshi_pagerank_weighted",
+          "user1_pagerank_unweighted",
+          "user1_pagerank_weighted",
+          "nontrivial")
+train_data[which(cooks.distance(lmfit) > 50/nrow(train_data)), vars]
 which(cooks.distance(lmfit) > 50/nrow(train_data))
 plot(cooks.distance(lmfit))
 influencePlot(lmfit)
