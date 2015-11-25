@@ -1,5 +1,7 @@
 library(glmnet)
 library(MASS)
+library(sandwich)
+library(lmtest)
 setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
 source("analysis/elastic_net.R")
 setwd(dir = "data")
@@ -78,6 +80,11 @@ plot(cvfit)
 cvfit$lambda.min
 coef(cvfit, s="lambda.min")
 
+# get robust standard errors
+robust_se = diag(vcovHC(lmfit, type="HC"))^0.5
+coeftest(lmfit, vcov=vcovHC(lmfit, "HC0"))
+coeftest(lmfit, vcov=vcovHC(lmfit, "HC2"))
+coeftest(lmfit, vcov=vcovHC(lmfit, "HC3"))
 
 # run robust regression using iterated re-weighted least square
 rlmfit = rlm(as.formula(lm_formula), train_data)
