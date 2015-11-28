@@ -1,4 +1,5 @@
 library(car)
+library(lmtest)
 setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/data")
 data = read.csv(file = "joined_with_fallback.csv", header = TRUE, sep = ",")
 data = read.csv(file = "joined_with_fallback_d200.csv", header = TRUE, sep = ",")
@@ -68,18 +69,22 @@ vars =  c("log_severity_to_average_after_max_volume_weighted",
           "user1_pagerank_unweighted",
           "user1_pagerank_weighted",
           "nontrivial")
+
+# get outlier points
 train_data[which(cooks.distance(lmfit) > 50/nrow(train_data)), vars]
 which(cooks.distance(lmfit) > 50/nrow(train_data))
 plot(cooks.distance(lmfit))
 influencePlot(lmfit)
 
-predictions = predict.lm(lmfit, test_data)
-plot(predictions, test_data$severity_to_average_after_max_volume_weighted, xlim=c(0,5), ylim=c(0,5))
+# test for heteroskedasticity
+bptest(lmfit)
 
 # remove highly influential points
-remove = -c(158,191,278,298)
+remove = -c(44,115)
+train_data = train_data[remove,]
+remove = -c(135)
 train_data = train_data[remove,]
 
-# divide data to trivial and nontrivial
-train_data_trivial = train_data[train_data$nontrivial==FALSE,]
-train_data_nontrivial = train_data[train_data$nontrivial==TRUE,]
+# test
+predictions = predict.lm(lmfit, test_data)
+plot(predictions, test_data$severity_to_average_after_max_volume_weighted, xlim=c(0,5), ylim=c(0,5))

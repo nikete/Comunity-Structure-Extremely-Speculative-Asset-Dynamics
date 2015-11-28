@@ -87,7 +87,7 @@ coeftest(lmfit, vcov=vcovHC(lmfit, "HC2"))
 coeftest(lmfit, vcov=vcovHC(lmfit, "HC3"))
 
 # run robust regression using iterated re-weighted least square
-rlmfit = rlm(as.formula(lm_formula), train_data)
+rlmfit = rlm(as.formula(lm_formula), train_data, psi="psi.huber", method="M")
 summary = summary(rlmfit)
 dd = data.frame(summary$coefficients)
 dd$p.value = 2*pt(abs(dd$t.value), summary$df[2], lower.tail=FALSE)
