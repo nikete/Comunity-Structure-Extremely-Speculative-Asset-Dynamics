@@ -8,7 +8,7 @@ from os import path
 import sys
 import ast
 ###ccc = cryto coin charts
-
+###cmc = coin market cap
 def get_prices_cmc(basecoin):
 	print 'Getting cmc prices for', basecoin
 	priceurl = 'http://coinmarketcap.com/datapoints/'+basecoin+'/price_btc/'
@@ -117,7 +117,7 @@ try:
 except:
 	parameter = 0
 
-if parameter == 1 or parameter == 4:
+if parameter == 1 or parameter == 5:
 	ccc_coins = scrape_coins_ccc()
 	cmc_coins = scrape_coins_cmc()
 	with open('ccc_coins.json','wb') as js:
@@ -133,7 +133,7 @@ if parameter == 1 or parameter == 4:
 		for coin in cmc_coins:
 			csvfile.write(str(cmc_coins[coin]['coin_name']+', '+ coin +'\n'))
 
-if parameter == 2 or parameter == 4:
+if parameter == 2 or parameter == 5:
 	with open('ccc_coins.json','rb') as ccc_coins:
 		ccc_coins = json.load(ccc_coins)
 		for coin in ccc_coins:
@@ -144,7 +144,7 @@ if parameter == 2 or parameter == 4:
 					with open(str('prices/ccc/'+'-'.join([split[4], split[5], split[6]])+'.json'),'wb') as price_file:
 						json.dump(prices, price_file)
 
-if parameter == 3 or parameter == 4:
+if parameter == 3 or parameter == 5:
 	with open('cmc_coins.json', 'rb') as cmc_coins:
 		cmc_coins = json.load(cmc_coins)
 		for coin in cmc_coins:
@@ -152,5 +152,37 @@ if parameter == 3 or parameter == 4:
 			with open(str('prices/cmc/'+cmc_coins[coin]['slug']+'-btc.json'),'wb') as price_file:
 				json.dump(prices, price_file)
 
-if parameter > 4 or parameter < 1:
-	print 'Options are:\n\t1 for generating coin json files\n\t2 for getting ccc prices (requires coin json file to be generated first)\n\t3 for getting cmc prices (requires coin json file to be generated first) \n\t4 for running both'
+if parameter == 4 or parameter == 5:
+	ccc_jsons = ['prices/ccc/' + x for x in os.listdir('prices/ccc')]
+	cmc_jsons = ['prices/cmc/' + x for x in os.listdir('prices/cmc')]
+	with open('cmc_coins.json', 'rb') as cmc_coins:
+		cmc_coins = json.load(cmc_coins)
+	with open('prices/coinsymbol-cmc.csv','wb') as csvfile:
+		csvfile.write('name, symbol, first_price_date\n')
+		for i, coin in enumerate(cmc_coins):
+			print '\r', 'Processing',str(int(i+1)) , 'of', len(cmc_coins),
+			with open(str('prices/cmc/'+cmc_coins[coin]['slug']+'-btc.json'),'rb') as price_file:
+				price_list = json.load(price_file)
+			try:
+				first_price_date = str(int(min(price_list, key=lambda x: x[0])[0])/1000)
+			except ValueError:
+				first_price_date = 'NaN'
+			csvfile.write(str(cmc_coins[coin]['coin_name'] + ', '+ coin+ ', ' + first_price_date +'\n'))
+	with open('prices/coinsymbol-ccc.csv','wb') as csvfile:
+		csvfile.write('name, symbol, first_price_date\n')
+		with open('ccc_coins.json', 'rb') as json_file:
+			ccc_coins = json.load(json_file)
+		for i, coin in enumerate(ccc_coins):
+			print '\r', 'Processing',str(int(i+1)) , 'of', len(ccc_coins),
+			for row in ccc_coins[coin]['markets']:
+				first_price_list = []
+				if row['link'] is not '':
+					split = row['link'].split('/')
+					with open(str('prices/ccc/'+'-'.join([split[4], split[5], split[6]])+'.json'),'rb') as price_file:
+						try:
+							first_price_list.append(json.load(price_file)[0]['date'].replace('\"', ''))
+						except KeyError, AttributeError:
+							first_price_list.append('NaN')
+			csvfile.write(str(ccc_coins[coin]['name']+', '+ coin + ', ' + ', '.join(first_price_list) +'\n'))
+if parameter > 5 or parameter < 1:
+	print 'Options are:\n\t1 for generating coin json files\n\t2 for getting ccc prices (requires coin json file to be generated first)\n\t3 for getting cmc prices (requires coin json file to be generated first)\n\t4 for adding first_price_date to CSVs (requires fetched prices)\n\t5 for running everything'
