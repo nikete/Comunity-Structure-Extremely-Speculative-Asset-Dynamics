@@ -2,6 +2,7 @@ library(glmnet)
 library(MASS)
 library(sandwich)
 library(lmtest)
+library(stargazer)
 setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
 source("analysis/elastic_net.R")
 setwd(dir = "data")
@@ -421,3 +422,16 @@ dd
 # the results are similar nevertheless.
 model7_wlmfit = lm(as.formula(lm_formula), train_data, weights=model7_rlmfit$w)
 summary(model7_wlmfit)
+
+
+
+# Create the table
+stargazer(model1_wlmfit,
+          model2_wlmfit,
+          model3_wlmfit,
+          model4_wlmfit,
+          model5_wlmfit,
+          model6_wlmfit,
+          model7_wlmfit,
+          dep.var.labels=c("Model1","Model2"),
+          title="Results", align=TRUE)
