@@ -1,0 +1,39 @@
+% Great explanation on R-squared in weighted least square:
+% http://stats.stackexchange.com/questions/83826/is-a-weighted-r2-in-robust-linear-model-meaningful-for-goodness-of-fit-analys
+
+\subsection{Models} \label{models}
+We consider seven models each consisting of a different set of explanatory variables corresponding to different levels of available information.
+\begin{enumerate}[topsep=0pt,itemsep=-0.5ex,partopsep=1ex,parsep=1ex]
+ \item The baseline model incorporates simple user characteristics that are easily observable from her activity on the forum before the introduction of the coin: the number of posts made, the number of threads initiated, the time since first post on the forums (seniority), the number of unique users responded to (out-degree) and the number of unique users from whom a response is received (in-degree).
+ \item The nontrivial model includes a single binary variable which indicates whether the source code of the coin contains actual technological innovation and is not simply a trivial change on current existing coins.
+ \item The Satoshi model evaluates the possibility of any founder effect and uses information regarding user's position in the discussion network relative to Satoshi, namely Satoshi distance and Satoshi pagerank.
+ \item The network model includes network explanatory variables: user's clustering coefficient, closeness and betweenness centrality and her pagerank. Unlike baseline model, these incorporate network-wide information and require access to the full discussion network.
+ \item The interaction model investigates the possibility of interaction between user structural features in the network and coin's nontrivialness. In particular it includes 7 interaction terms between clustering coefficient, closeness centrality, betweenness centrality, pagerank, Satoshi pagerank, incoming degree, outgoing degree and nontrivialness variable.
+ \item The user model incorporates all the information that's available about the user either from the whole network structure or through her activity in isolation. In other words, it includes all the variables from baseline, Satoshi and network models above.
+ \item The final model (All) includes all the variables (18 total) mentioned in all the models above.
+\end{enumerate}
+
+
+\subsection{Model Fitting}
+Before attempting to explore the data or fit any of the models, we set aside 40\% of the data points (\textcolor{red}{222}) as test set to evaluate out final model out-of-sample test error. Initial analysis, parameter tuning and model fitting and selection were conducted using the remaining 60\% of the data points (\textcolor{red}{331}). The coefficients and their significance are derived using the train data.
+
+We employed the following procedure for fitting any of the models mentioned in section \ref{models}. First, we perform feature selection by regularized least squares using a combination of L1 and L2 penalties (Elastic net \cite{ElasticNet}), with the parameters set through 5-fold cross validation. Then, we fit a robust M-estimator with Huber weights and objective function. We use the Huber M-estimation since the errors exhibit a non-normal heavy tailed distribution with several outliers. \textcolor{red}{perhaps robust standard errors is enough since our sample size is large enough for the inference to be valid. They are just more inefficient and make inference more difficult}
+% http://stats.stackexchange.com/questions/29731/regression-when-the-ols-residuals-are-not-normally-distributed (read first comment)
+
+Among all pairs of variables, the following pairs exhibit correlation above 0.9. Unless one of them is excluded from the model either explicitly or through feature selection, their standard errors should be interpreted with caution.
+\begin{itemize} [topsep=0pt,itemsep=-0.5ex,partopsep=1ex,parsep=1ex]
+ \item Number of posts and Betweenness centrality
+ \item Outgoing degree and Betweenness centrality
+ \item Satoshi pagerank and normal non-personalized pagerank
+ \item Satoshi pagerank interaction terms and normal non-personalized pagerank interaction term
+\end{itemize}
+
+
+
+
+
+%ORIGINAL NIKETE WRITE UP:
+%We estimate the support of our model by regularized least squares using a combination of L1 and L2 norm, with their parameters set by 5-fold cross validation  (ElasticNet implementation in \cite{scikit-learn}) . 
+%We then estimate an OLS model over the support of the variables and calculate White robust standard errors, which allow us to examine the model coefficients and their standard errors. 
+%Disclaimer that the regularization might make them not match (TODO: add set with normal SE that is estimated with the regularization, in results compare the coefficients) 
+%To evaluate nonlinearities and interactions in the model, we fit a gradient boosted machine and cross validate its hyper parameters, both on the full support and the OLS selected subset. 
