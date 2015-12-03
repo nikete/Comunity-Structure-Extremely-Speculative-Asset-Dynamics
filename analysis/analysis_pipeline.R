@@ -18,6 +18,8 @@ data$user1_closeness_centrality_weighted_nontrivial = data$user1_closeness_centr
 data$user1_betweenness_centrality_weighted_nontrivial = data$user1_betweenness_centrality_weighted * data$nontrivial
 data$user1_satoshi_pagerank_weighted_nontrivial = data$user1_satoshi_pagerank_weighted * data$nontrivial
 data$user1_pagerank_weighted_nontrivial = data$user1_pagerank_weighted * data$nontrivial
+data$user1_degree_incoming_nontrivial = data$user1_degree_incoming * data$nontrivial
+data$user1_degree_outgoing_nontrivial = data$user1_degree_outgoing * data$nontrivial
 # fix infinite satoshi distance
 data$user1_satoshi_distance_inf = data$user1_satoshi_distance>7
 data$user1_satoshi_distance[data$user1_satoshi_distance_inf] = 7
@@ -55,21 +57,23 @@ all_independent_vars =  c("user1_num_posts",
 cor(train_data[,all_independent_vars])
 cor(train_data[,all_independent_vars])>0.95
 good_independent_vars =  c("user1_num_posts",
-                          "user1_num_subjects",
-                          "user1_days_since_first_post",
-                          "user1_degree_incoming",
-                          "user1_degree_outgoing",
-                          "user1_clustering_coefficient",
-                          "user1_clustering_coefficient_nontrivial",
-                          "user1_closeness_centrality_weighted",
-                          "user1_closeness_centrality_weighted_nontrivial",
-                          "user1_betweenness_centrality_weighted",
-                          "user1_betweenness_centrality_weighted_nontrivial",
-                          "user1_satoshi_pagerank_weighted",
-                          "user1_satoshi_pagerank_weighted_nontrivial",
-                          "user1_pagerank_weighted",
-                          "user1_pagerank_weighted_nontrivial",
-                          "nontrivial")
+                           "user1_num_subjects",
+                           "user1_days_since_first_post",
+                           "user1_degree_incoming",
+                           "user1_degree_incoming_nontrivial",
+                           "user1_degree_outgoing",
+                           "user1_degree_outgoing_nontrivial",
+                           "user1_clustering_coefficient",
+                           "user1_clustering_coefficient_nontrivial",
+                           "user1_closeness_centrality_weighted",
+                           "user1_closeness_centrality_weighted_nontrivial",
+                           "user1_betweenness_centrality_weighted",
+                           "user1_betweenness_centrality_weighted_nontrivial",
+                           "user1_satoshi_pagerank_weighted",
+                           "user1_satoshi_pagerank_weighted_nontrivial",
+                           "user1_pagerank_weighted",
+                           "user1_pagerank_weighted_nontrivial",
+                           "nontrivial")
 cor(train_data[,good_independent_vars])>0.9
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
@@ -144,13 +148,19 @@ nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
 model1_lmfit = lm(as.formula(lm_formula), train_data)
-summary(model1_lmfit)
+model1_lm_sum = summary(model1_lmfit)
+model1_lm_sum
 
 # investigate the assumption of ols
 oldpar = par(mfrow = c(2,2))
 plot(model1_lmfit, las=1)
 par(oldpar)
-train_data[which(cooks.distance(lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+train_data[which(cooks.distance(model1_lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+
+# Get summary with robust standard errors
+model1_rlm_sum = model1_lm_sum
+model1_rlm_sum$coefficients = unclass(coeftest(model1_lmfit, vcov=vcovHC(model1_lmfit, "HC0")))
+model1_rlm_sum
 
 # run robust regression using iterated re-weighted least square
 model1_rlmfit = rlm(as.formula(lm_formula), train_data, psi="psi.huber", method="M", model=T)
@@ -177,13 +187,19 @@ nonzero_coefs = good_independent_vars
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
 model2_lmfit = lm(as.formula(lm_formula), train_data)
-summary(model2_lmfit)
+model2_lm_sum = summary(model2_lmfit)
+model2_lm_sum
 
 # investigate the assumption of ols
 oldpar = par(mfrow = c(2,2))
 plot(model2_lmfit, las=1)
 par(oldpar)
-train_data[which(cooks.distance(lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+train_data[which(cooks.distance(model2_lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+
+# Get summary with robust standard errors
+model2_rlm_sum = model2_lm_sum
+model2_rlm_sum$coefficients = unclass(coeftest(model2_lmfit, vcov=vcovHC(model2_lmfit, "HC0")))
+model2_rlm_sum
 
 # run robust regression using iterated re-weighted least square
 model2_rlmfit = rlm(as.formula(lm_formula), train_data, psi="psi.huber", method="M", model=T)
@@ -216,13 +232,19 @@ nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
 model3_lmfit = lm(as.formula(lm_formula), train_data)
-summary(model3_lmfit)
+model3_lm_sum = summary(model3_lmfit)
+model3_lm_sum
 
 # investigate the assumption of ols
 oldpar = par(mfrow = c(2,2))
 plot(model3_lmfit, las=1)
 par(oldpar)
-train_data[which(cooks.distance(lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+train_data[which(cooks.distance(model3_lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+
+# Get summary with robust standard errors
+model3_rlm_sum = model3_lm_sum
+model3_rlm_sum$coefficients = unclass(coeftest(model3_lmfit, vcov=vcovHC(model3_lmfit, "HC0")))
+model3_rlm_sum
 
 # run robust regression using iterated re-weighted least square
 model3_rlmfit = rlm(as.formula(lm_formula), train_data, psi="psi.huber", method="M", model=T)
@@ -257,13 +279,19 @@ nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
 model4_lmfit = lm(as.formula(lm_formula), train_data)
-summary(model4_lmfit)
+model4_lm_sum = summary(model4_lmfit)
+model4_lm_sum
 
 # investigate the assumption of ols
 oldpar = par(mfrow = c(2,2))
 plot(model4_lmfit, las=1)
 par(oldpar)
-train_data[which(cooks.distance(lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+train_data[which(cooks.distance(model4_lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+
+# Get summary with robust standard errors
+model4_rlm_sum = model4_lm_sum
+model4_rlm_sum$coefficients = unclass(coeftest(model4_lmfit, vcov=vcovHC(model4_lmfit, "HC0")))
+model4_rlm_sum
 
 # run robust regression using iterated re-weighted least square
 model4_rlmfit = rlm(as.formula(lm_formula), train_data, psi="psi.huber", method="M", model=T)
@@ -281,16 +309,13 @@ summary(model4_wlmfit)
 
 #####################################
 # Model 5: Use network measures, satoshi measures with nontrivial interaction term
-good_independent_vars =  c("user1_clustering_coefficient",
-                           "user1_clustering_coefficient_nontrivial",
-                           "user1_closeness_centrality_weighted",
+good_independent_vars =  c("user1_clustering_coefficient_nontrivial",
                            "user1_closeness_centrality_weighted_nontrivial",
-                           "user1_betweenness_centrality_weighted",
                            "user1_betweenness_centrality_weighted_nontrivial",
-                           "user1_satoshi_pagerank_weighted",
                            "user1_satoshi_pagerank_weighted_nontrivial",
-                           "user1_pagerank_weighted",
-                           "user1_pagerank_weighted_nontrivial")
+                           "user1_pagerank_weighted_nontrivial",
+                           "user1_degree_incoming_nontrivial",
+                           "user1_degree_outgoing_nontrivial")
 cor(train_data[,good_independent_vars])>0.9
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
@@ -305,13 +330,19 @@ nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
 model5_lmfit = lm(as.formula(lm_formula), train_data)
-summary(model5_lmfit)
+model5_lm_sum = summary(model5_lmfit)
+model5_lm_sum
 
 # investigate the assumption of ols
 oldpar = par(mfrow = c(2,2))
 plot(model5_lmfit, las=1)
 par(oldpar)
-train_data[which(cooks.distance(lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+train_data[which(cooks.distance(model5_lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+
+# Get summary with robust standard errors
+model5_rlm_sum = model5_lm_sum
+model5_rlm_sum$coefficients = unclass(coeftest(model5_lmfit, vcov=vcovHC(model5_lmfit, "HC0")))
+model5_rlm_sum
 
 # run robust regression using iterated re-weighted least square
 model5_rlmfit = rlm(as.formula(lm_formula), train_data, psi="psi.huber", method="M", model=T)
@@ -328,15 +359,15 @@ summary(model5_wlmfit)
 #####################################
 # Model 6: Use network measures, satoshi measures and user simple stats without any nontrivial measure
 good_independent_vars =  c("user1_num_posts",
-                          "user1_num_subjects",
-                          "user1_days_since_first_post",
-                          "user1_degree_incoming",
-                          "user1_degree_outgoing",
-                          "user1_clustering_coefficient",
-                          "user1_closeness_centrality_weighted",
-                          "user1_betweenness_centrality_weighted",
-                          "user1_satoshi_pagerank_weighted",
-                          "user1_pagerank_weighted")
+                           "user1_num_subjects",
+                           "user1_days_since_first_post",
+                           "user1_degree_incoming",
+                           "user1_degree_outgoing",
+                           "user1_clustering_coefficient",
+                           "user1_closeness_centrality_weighted",
+                           "user1_betweenness_centrality_weighted",
+                           "user1_satoshi_pagerank_weighted",
+                           "user1_pagerank_weighted")
 cor(train_data[,good_independent_vars])>0.9
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
@@ -351,13 +382,19 @@ nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
 model6_lmfit = lm(as.formula(lm_formula), train_data)
-summary(model6_lmfit)
+model6_lm_sum = summary(model7_lmfit)
+model6_lm_sum
 
 # investigate the assumption of ols
 oldpar = par(mfrow = c(2,2))
 plot(model6_lmfit, las=1)
 par(oldpar)
-train_data[which(cooks.distance(lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+train_data[which(cooks.distance(model6_lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+
+# Get summary with robust standard errors
+model6_rlm_sum = model6_lm_sum
+model6_rlm_sum$coefficients = unclass(coeftest(model6_lmfit, vcov=vcovHC(model6_lmfit, "HC0")))
+model6_rlm_sum
 
 # run robust regression using iterated re-weighted least square
 model6_rlmfit = rlm(as.formula(lm_formula), train_data, psi="psi.huber", method="M", model=T)
@@ -375,21 +412,23 @@ summary(model6_wlmfit)
 #####################################
 # Model 7: Use all metrics
 good_independent_vars =  c("user1_num_posts",
-                          "user1_num_subjects",
-                          "user1_days_since_first_post",
-                          "user1_degree_incoming",
-                          "user1_degree_outgoing",
-                          "user1_clustering_coefficient",
-                          "user1_clustering_coefficient_nontrivial",
-                          "user1_closeness_centrality_weighted",
-                          "user1_closeness_centrality_weighted_nontrivial",
-                          "user1_betweenness_centrality_weighted",
-                          "user1_betweenness_centrality_weighted_nontrivial",
-                          "user1_satoshi_pagerank_weighted",
-                          "user1_satoshi_pagerank_weighted_nontrivial",
-                          "user1_pagerank_weighted",
-                          "user1_pagerank_weighted_nontrivial",
-                          "nontrivial")
+                           "user1_num_subjects",
+                           "user1_days_since_first_post",
+                           "user1_degree_incoming",
+                           "user1_degree_incoming_nontrivial",
+                           "user1_degree_outgoing",
+                           "user1_degree_outgoing_nontrivial",
+                           "user1_clustering_coefficient",
+                           "user1_clustering_coefficient_nontrivial",
+                           "user1_closeness_centrality_weighted",
+                           "user1_closeness_centrality_weighted_nontrivial",
+                           "user1_betweenness_centrality_weighted",
+                           "user1_betweenness_centrality_weighted_nontrivial",
+                           "user1_satoshi_pagerank_weighted",
+                           "user1_satoshi_pagerank_weighted_nontrivial",
+                           "user1_pagerank_weighted",
+                           "user1_pagerank_weighted_nontrivial",
+                           "nontrivial")
 cor(train_data[,good_independent_vars])>0.9
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
@@ -404,13 +443,19 @@ nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
 model7_lmfit = lm(as.formula(lm_formula), train_data)
-summary(model7_lmfit)
+model7_lm_sum = summary(model7_lmfit)
+model7_lm_sum
 
 # investigate the assumption of ols
 oldpar = par(mfrow = c(2,2))
 plot(model7_lmfit, las=1)
 par(oldpar)
-train_data[which(cooks.distance(lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+train_data[which(cooks.distance(model7_lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+
+# Get summary with robust standard errors
+model7_rlm_sum = model7_lm_sum
+model7_rlm_sum$coefficients = unclass(coeftest(model7_lmfit, vcov=vcovHC(model7_lmfit, "HC0")))
+model7_rlm_sum
 
 # run robust regression using iterated re-weighted least square
 model7_rlmfit = rlm(as.formula(lm_formula), train_data, psi="psi.huber", method="M", model=T)
