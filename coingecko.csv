@@ -1,0 +1,1945 @@
+Coin,Coin-href,Name,hashing_algorithm,genesis_date,market_capitalization,hashrate,block_time,available/total_supply,repo_stars/forks/watches,bing_results,alexa_ranking
+"Bitcoin","https://www.coingecko.com/en/coins/bitcoin","Bitcoin","SHA-256","January  3, 2009 (almost 7 years)","$5,350,373,990.50","673 PH/s","10.0 Minute","14.9 Million
+                      /
+                      21 Million","","",""
+"OKCash","https://www.coingecko.com/en/coins/okcash","OKCash","Scrypt","November 24, 2014 (about 1 year)","$32,807.94","N/A","null","60.9 Million
+                      /
+                      105 Million","","",""
+"MaryJane","https://www.coingecko.com/en/coins/maryjane","MaryJane","X15","September 28, 2014 (about 1 year)","$29,863.32","N/A","null","15.4 Million
+                      /
+                      15.3 Million","","",""
+"Nxttycoin","https://www.coingecko.com/en/coins/nxttycoin","Nxttycoin","null","August 12, 2014 (over 1 year)","$48,000.00","N/A","null","1 Billion
+                      /
+                      1000 Million","","",""
+"Gems","https://www.coingecko.com/en/coins/gems","Gems","null","November  7, 2014 (about 1 year)","$951,454.77","N/A","null","88.1 Million
+                      /
+                      100 Million","","",""
+"Rubycoin","https://www.coingecko.com/en/coins/rubycoin","Rubycoin","Proof of Stake","February 24, 2014 (almost 2 years)","$3,901,128.72","N/A","null","null","","",""
+"Bottlecaps","https://www.coingecko.com/en/coins/bottlecaps","Bottlecaps","Scrypt","June 23, 2013 (over 2 years)","$72,548.78","N/A","1.0 Minute","33.6 Million
+                      /
+                      47.4 Million","","",""
+"Rubycoin","https://www.coingecko.com/en/coins/rubycoin","Rubycoin","Proof of Stake","February 24, 2014 (almost 2 years)","$3,901,128.72","N/A","null","null","","",""
+"GlowShares","https://www.coingecko.com/en/coins/glowshares","GlowShares","Proof of Stake","November 18, 2014 (about 1 year)","","N/A","1.0 Minute","null","","",""
+"Fedoracoin","https://www.coingecko.com/en/coins/fedoracoin","Fedoracoin","Scrypt","null","$280,846.32","N/A","null","null","","",""
+"Unbreakablecoin","https://www.coingecko.com/en/coins/unbreakablecoin","Unbreakablecoin","SHA-256","March 19, 2014 (over 1 year)","$12,252.94","N/A","5.0 Minute","2.27 Million
+                      /
+                      80 Million","","",""
+"KhanCoin","https://www.coingecko.com/en/coins/khancoin","KhanCoin","Proof of Stake","August 18, 2015 (4 months)","$3,111.22","N/A","null","70.6 Thousand
+                      /
+                      7.88 Billion","","",""
+"Blocknet","https://www.coingecko.com/en/coins/blocknet","Blocknet","Proof of Stake","October 21, 2014 (about 1 year)","$566,040.52","N/A","1.5 Minute","3.91 Million
+                      /
+                      3.9 Million","","",""
+"Goldcoin","https://www.coingecko.com/en/coins/goldcoin","Goldcoin","Scrypt","May 15, 2013 (over 2 years)","$107,541.73","1.16 GH/s","2.0 Minute","34.8 Million
+                      /
+                      123 Million","","",""
+"SonicScrewdriver","https://www.coingecko.com/en/coins/sonicscrewdriver","SonicScrewdriver","Proof of Stake","August  8, 2014 (over 1 year)","$14,981.00","N/A","1.0 Minute","22.3 Million
+                      /
+                      23 Million","","",""
+"LTBcoin","https://www.coingecko.com/en/coins/ltbcoin","LTBcoin","null","March 12, 2014 (over 1 year)","$26,259.15","N/A","null","null","","",""
+"EmerCoin","https://www.coingecko.com/en/coins/emercoin","EmerCoin","SHA-256","December 11, 2013 (almost 2 years)","$1,694,812.65","N/A","null","36.6 Million
+                      /
+                      1 Billion","","",""
+"Startcoin","https://www.coingecko.com/en/coins/startcoin","Startcoin","X11","July 19, 2014 (over 1 year)","$886,905.59","18.6 GH/s","1.0 Minute","35 Million
+                      /
+                      84 Million","","",""
+"Groupcoin","https://www.coingecko.com/en/coins/groupcoin","null","null","null","null","null","null","null","","",""
+"GlowShares","https://www.coingecko.com/en/coins/glowshares","GlowShares","Proof of Stake","November 18, 2014 (about 1 year)","","N/A","1.0 Minute","null","","",""
+"BitSwift","https://www.coingecko.com/en/coins/bitswift","BitSwift","Proof of Stake","September 29, 2014 (about 1 year)","$135,270.22","N/A","null","4.04 Million
+                      /
+                      4 Million","","",""
+"Quark","https://www.coingecko.com/en/coins/quark","Quark","Quark","July 21, 2013 (over 2 years)","$444,103.39","243 MH/s","0.5 Minute","250 Million
+                      /
+                      247 Million","","",""
+"Piggycoin","https://www.coingecko.com/en/coins/piggycoin","Piggycoin","X11","June 10, 2014 (over 1 year)","$18,883.69","N/A","1.0 Minute","478 Million
+                      /
+                      473 Million","","",""
+"Dogecoin","https://www.coingecko.com/en/coins/dogecoin","Dogecoin","Scrypt","December  8, 2013 (almost 2 years)","$13,167,673.45","1.64 TH/s","1.0 Minute","102 Billion
+                      /
+                      100 Billion","","",""
+"Gems","https://www.coingecko.com/en/coins/gems","Gems","null","November  7, 2014 (about 1 year)","$951,454.77","N/A","null","88.1 Million
+                      /
+                      100 Million","","",""
+"Mazacoin","https://www.coingecko.com/en/coins/mazacoin","Mazacoin","SHA-256","February  7, 2014 (almost 2 years)","$47,302.37","24.7 TH/s","2.0 Minute","851 Million
+                      /
+                      2.42 Billion","","",""
+"UtilityCoin","https://www.coingecko.com/en/coins/utilitycoin","UtilityCoin","X13","September 26, 2014 (about 1 year)","$1,010.77","N/A","1.0 Minute","3.74 Million
+                      /
+                      4.5 Million","","",""
+"Uro","https://www.coingecko.com/en/coins/uro","Uro","X11","May 11, 2014 (over 1 year)","$15,686.27","N/A","3.0 Minute","1.11 Million
+                      /
+                      1 Million","","",""
+"Terracoin","https://www.coingecko.com/en/coins/terracoin","Terracoin","SHA-256","October 26, 2012 (about 3 years)","$44,581.75","N/A","2.0 Minute","13.3 Million
+                      /
+                      42 Million","","",""
+"Myriadcoin","https://www.coingecko.com/en/coins/myriadcoin","Myriadcoin","null","February 23, 2014 (almost 2 years)","$36,023.67","N/A","0.5 Minute","1.11 Billion
+                      /
+                      2 Billion","","",""
+"Quatloo","https://www.coingecko.com/en/coins/quatloo","Quatloo","Scrypt","June 27, 2014 (over 1 year)","$21,571.65","537 MH/s","2.25 Minute","5.06 Million
+                      /
+                      100 Million","","",""
+"Cryptonite","https://www.coingecko.com/en/coins/cryptonite","Cryptonite","M7","July 28, 2014 (over 1 year)","$33,429.06","N/A","1.0 Minute","164 Million
+                      /
+                      1.84 Billion","","",""
+"Full Integrity Coin","https://www.coingecko.com/en/coins/full-integrity-coin","Full Integrity Coin","null","October 23, 2014 (about 1 year)","$575.40","N/A","null","336 Million
+                      /
+                      4.2 Billion","","",""
+"Magi","https://www.coingecko.com/en/coins/magi","Magi","null","September 15, 2014 (about 1 year)","$32,183.93","N/A","3.0 Minute","3.44 Million
+                      /
+                      25 Million","","",""
+"LiteDoge","https://www.coingecko.com/en/coins/litedoge","LiteDoge","Scrypt","March 16, 2015 (9 months)","","N/A","1.067 Minute","9.98 Billion
+                      /
+                      35 Billion","","",""
+"Viacoin","https://www.coingecko.com/en/coins/viacoin","Viacoin","Scrypt","July 17, 2014 (over 1 year)","$96,899.81","720 GH/s","2.0 Minute","19 Million
+                      /
+                      92 Million","","",""
+"Groestlcoin","https://www.coingecko.com/en/coins/groestlcoin","Groestlcoin","Groestl","March 22, 2014 (over 1 year)","$54,297.27","879 MH/s","1.0 Minute","61.2 Million
+                      /
+                      105 Million","","",""
+"Orbitcoin","https://www.coingecko.com/en/coins/orbitcoin","Orbitcoin","NeoScrypt","July 28, 2013 (over 2 years)","$41,114.44","12.9 MH/s","1.0 Minute","2.32 Million
+                      /
+                      3.77 Million","","",""
+"FuelCoin","https://www.coingecko.com/en/coins/fuelcoin","FuelCoin","X11","null","$575,709.83","N/A","null","100 Million
+                      /
+                      336 Million","","",""
+"Phoenixcoin","https://www.coingecko.com/en/coins/phoenixcoin","Phoenixcoin","NeoScrypt","May  8, 2013 (over 2 years)","$5,463.28","2.94 MH/s","1.5 Minute","41.1 Million
+                      /
+                      98 Million","","",""
+"Piggycoin","https://www.coingecko.com/en/coins/piggycoin","Piggycoin","X11","June 10, 2014 (over 1 year)","$18,883.69","N/A","1.0 Minute","478 Million
+                      /
+                      473 Million","","",""
+"Unbreakablecoin","https://www.coingecko.com/en/coins/unbreakablecoin","Unbreakablecoin","SHA-256","March 19, 2014 (over 1 year)","$12,252.94","N/A","5.0 Minute","2.27 Million
+                      /
+                      80 Million","","",""
+"Quatloo","https://www.coingecko.com/en/coins/quatloo","Quatloo","Scrypt","June 27, 2014 (over 1 year)","$21,571.65","537 MH/s","2.25 Minute","5.06 Million
+                      /
+                      100 Million","","",""
+"Cannacoin","https://www.coingecko.com/en/coins/cannacoin","Uh Oh! We're sorry, but something went wrong.","null","null","null","null","null","null","","",""
+"Curecoin","https://www.coingecko.com/en/coins/curecoin","Curecoin","null","null","$284,590.30","N/A","null","null","","",""
+"Rubycoin","https://www.coingecko.com/en/coins/rubycoin","Rubycoin","Proof of Stake","February 24, 2014 (almost 2 years)","$3,901,128.72","N/A","null","null","","",""
+"Dirac","https://www.coingecko.com/en/coins/dirac","Dirac","Blake-256","May 19, 2014 (over 1 year)","$1,478.21","N/A","3.0 Minute","452 Thousand
+                      /
+                      2.27 Million","","",""
+"MonetaryUnit","https://www.coingecko.com/en/coins/monetaryunit","MonetaryUnit","Quark","July 26, 2014 (over 1 year)","$10,690.01","244 MH/s","0.67 Minute","76.9 Million
+                      /
+                      1 Quadrillion","","",""
+"Cloakcoin","https://www.coingecko.com/en/coins/cloakcoin","Cloakcoin","X13","June  3, 2014 (over 1 year)","$197,170.11","N/A","1.0 Minute","4.6 Million
+                      /
+                      4.5 Million","","",""
+"Bitz","https://www.coingecko.com/en/coins/bitz","Bitz","X11","March  1, 2015 (9 months)","$4,620.96","N/A","1.0 Minute","1.97 Million
+                      /
+                      2 Million","","",""
+"Marinecoin","https://www.coingecko.com/en/coins/marinecoin","Marinecoin","null","January 14, 2014 (almost 2 years)","","N/A","null","","","",""
+"APEXcoin","https://www.coingecko.com/en/coins/apexcoin","APEXcoin","X13","July 11, 2014 (over 1 year)","$13,899.11","N/A","1.0 Minute","6.13 Million
+                      /
+                      6 Million","","",""
+"ShadowCash","https://www.coingecko.com/en/coins/shadowcash","ShadowCash","Proof of Stake","July 19, 2014 (over 1 year)","$543,687.88","N/A","1.0 Minute","6.5 Million
+                      /
+                      1.3 Billion","","",""
+"Hobonickels","https://www.coingecko.com/en/coins/hobonickels","Hobonickels","Scrypt","July 24, 2013 (over 2 years)","$99,714.73","N/A","0.5 Minute","16.6 Million
+                      /
+                      120 Million","","",""
+"Sync","https://www.coingecko.com/en/coins/sync","Sync","Proof of Stake","May 17, 2014 (over 1 year)","$45,407.42","N/A","1.0 Minute","1.18 Thousand
+                      /
+                      1 Thousand","","",""
+"Pandacoin","https://www.coingecko.com/en/coins/pandacoin","Pandacoin","Scrypt","February 15, 2014 (almost 2 years)","$59,041.06","N/A","1.0 Minute","32.5 Billion
+                      /
+                      32 Billion","","",""
+"Zeitcoin","https://www.coingecko.com/en/coins/zeitcoin","Zeitcoin","Proof of Stake","February 28, 2014 (almost 2 years)","$99,550.84","N/A","0.5 Minute","33.2 Billion
+                      /
+                      99 Billion","","",""
+"Earthcoin","https://www.coingecko.com/en/coins/earthcoin","Earthcoin","Scrypt","December 21, 2013 (almost 2 years)","$775,514.33","10 GH/s","1.0 Minute","9.01 Billion
+                      /
+                      13.5 Billion","","",""
+"QuazarCoin","https://www.coingecko.com/en/coins/quazarcoin","QuazarCoin","Cryptonight","May  8, 2014 (over 1 year)","$4,526.78","N/A","2.0 Minute","3.15 Million
+                      /
+                      18.4 Million","","",""
+"Horizon","https://www.coingecko.com/en/coins/horizon","Horizon","Proof of Stake","null","$219,388.81","N/A","2.0 Minute","988 Million
+                      /
+                      1 Billion","","",""
+"BitZeny","https://www.coingecko.com/en/coins/bitzeny","BitZeny","null","November  8, 2014 (about 1 year)","$7,334.61","N/A","1.5 Minute","75.6 Million
+                      /
+                      250 Million","","",""
+"NXTventure","https://www.coingecko.com/en/coins/nxtventure","NXTventure","null","null","$152,718.00","N/A","null","null","","",""
+"XCurrency","https://www.coingecko.com/en/coins/xcurrency","XCurrency","Proof of Stake","May  7, 2014 (over 1 year)","$73,665.44","N/A","90.0 Minute","5.64 Million
+                      /
+                      ?","","",""
+"LitecoinDark","https://www.coingecko.com/en/coins/litecoindark","LitecoinDark","Scrypt","August 29, 2014 (over 1 year)","$9,645.33","15.3 MH/s","1.0 Minute","78.9 Million
+                      /
+                      82 Million","","",""
+"Crypto Bullion","https://www.coingecko.com/en/coins/cryptobullion","Crypto Bullion","Scrypt","June 27, 2013 (over 2 years)","$121,784.89","N/A","1.0 Minute","968 Thousand
+                      /
+                      1 Million","","",""
+"Bata","https://www.coingecko.com/en/coins/bata","Bata","Scrypt","May  8, 2015 (7 months)","$17,982.90","1.14 GH/s","1.5 Minute","3.59 Million
+                      /
+                      5 Million","","",""
+"Stellar","https://www.coingecko.com/en/coins/stellar","Stellar","null","null","$7,949,690.56","N/A","null","4.84 Billion
+                      /
+                      227 Million","","",""
+"Bitcoin","https://www.coingecko.com/en/coins/bitcoin","Bitcoin","SHA-256","January  3, 2009 (almost 7 years)","$5,350,373,990.50","673 PH/s","10.0 Minute","14.9 Million
+                      /
+                      21 Million","","",""
+"DNotes","https://www.coingecko.com/en/coins/dnotes","DNotes","Scrypt","February 16, 2014 (almost 2 years)","$733,864.97","7.63 GH/s","1.0 Minute","106 Million
+                      /
+                      500 Million","","",""
+"MasterTraderCoin","https://www.coingecko.com/en/coins/mastertradercoin","MasterTraderCoin","X11","January 21, 2015 (11 months)","$5,202.73","N/A","1.0 Minute","223 Thousand
+                      /
+                      10.1 Million","","",""
+"Nyancoin","https://www.coingecko.com/en/coins/nyancoin","Nyancoin","Scrypt","January  6, 2014 (almost 2 years)","$15,985.98","370 MH/s","1.0 Minute","251 Million
+                      /
+                      337 Million","","",""
+"Boolberry","https://www.coingecko.com/en/coins/boolberry","Boolberry","Keccak","May 17, 2014 (over 1 year)","$55,336.22","N/A","2.0 Minute","5.82 Million
+                      /
+                      18.5 Million","","",""
+"UFO Coin","https://www.coingecko.com/en/coins/ufocoin","UFO Coin","NeoScrypt","January  3, 2014 (almost 2 years)","$24,956.32","22.6 MH/s","1.5 Minute","2.31 Billion
+                      /
+                      4 Billion","","",""
+"jl777hodl","https://www.coingecko.com/en/coins/jl777hodl","jl777hodl","null","null","$119,560.00","N/A","null","null","","",""
+"Myriadcoin","https://www.coingecko.com/en/coins/myriadcoin","Myriadcoin","null","February 23, 2014 (almost 2 years)","$36,023.67","N/A","0.5 Minute","1.11 Billion
+                      /
+                      2 Billion","","",""
+"Anoncoin","https://www.coingecko.com/en/coins/anoncoin","Anoncoin","Scrypt","June  2, 2013 (over 2 years)","$176,524.64","2.3 GH/s","3.0 Minute","1.94 Million
+                      /
+                      3.1 Million","","",""
+"Elektron","https://www.coingecko.com/en/coins/elektron","Elektron","X13","April  7, 2015 (8 months)","$691.49","N/A","1.0 Minute","2.64 Million
+                      /
+                      3 Million","","",""
+"Opal","https://www.coingecko.com/en/coins/opal","Opal","X13","August  3, 2014 (over 1 year)","$20,806.25","N/A","1.5 Minute","15 Million
+                      /
+                      15 Million","","",""
+"DigitalNote","https://www.coingecko.com/en/coins/digitalnote","DigitalNote","Cryptonight","May 30, 2014 (over 1 year)","$452,372.09","N/A","4.0 Minute","6.85 Billion
+                      /
+                      8.59 Billion","","",""
+"Solarcoin","https://www.coingecko.com/en/coins/solarcoin","Solarcoin","Scrypt","December 21, 2013 (almost 2 years)","$400,154.09","N/A","1.0 Minute","34.2 Million
+                      /
+                      98.1 Billion","","",""
+"Heavycoin","https://www.coingecko.com/en/coins/heavycoin","Heavycoin","null","null","$5,712.85","N/A","2.0 Minute","88.3 Million
+                      /
+                      116 Million","","",""
+"Shibecoin","https://www.coingecko.com/en/coins/shibecoin","Shibecoin","Proof of Stake","October 14, 2014 (about 1 year)","","N/A","1.0 Minute","","","",""
+"Bluecoin","https://www.coingecko.com/en/coins/bluecoin","Bluecoin","X11","April 23, 2014 (over 1 year)","$16,341.68","N/A","1.0 Minute","570 Million
+                      /
+                      500 Million","","",""
+"Transfercoin","https://www.coingecko.com/en/coins/transfercoin","Transfercoin","Proof of Stake","August 11, 2015 (4 months)","$13,320.05","N/A","1.0 Minute","null","","",""
+"CryptCoin","https://www.coingecko.com/en/coins/cryptcoin","CryptCoin","X11","null","$18,349.53","N/A","1.5 Minute","6.03 Million
+                      /
+                      11 Million","","",""
+"Qora","https://www.coingecko.com/en/coins/qora","Qora","Proof of Stake","May 16, 2014 (over 1 year)","$140,000.00","N/A","null","10 Billion
+                      /
+                      10 Billion","","",""
+"Infinitecoin","https://www.coingecko.com/en/coins/infinitecoin","Infinitecoin","Scrypt","June  5, 2013 (over 2 years)","$428,103.57","176 KH/s","0.5 Minute","90.6 Billion
+                      /
+                      90.6 Billion","","",""
+"PhilosopherStone","https://www.coingecko.com/en/coins/philosopherstone","PhilosopherStone","Scrypt","July 28, 2013 (over 2 years)","$14,190.17","N/A","null","2.43 Million
+                      /
+                      8.89 Million","","",""
+"LTBcoin","https://www.coingecko.com/en/coins/ltbcoin","LTBcoin","null","March 12, 2014 (over 1 year)","$26,259.15","N/A","null","null","","",""
+"Potcoin","https://www.coingecko.com/en/coins/potcoin","Potcoin","Scrypt","January 15, 2014 (almost 2 years)","$104,628.60","N/A","0.67 Minute","212 Million
+                      /
+                      420 Million","","",""
+"RibbitRewards","https://www.coingecko.com/en/coins/ribbitrewards","RibbitRewards","SHA-256","January 20, 2015 (11 months)","$24,463.11","N/A","1.0 Minute","400 Million
+                      /
+                      1 Billion","","",""
+"xCash","https://www.coingecko.com/en/coins/xcash","xCash","Proof of Stake","September  2, 2014 (over 1 year)","$1,289.79","N/A","1.0 Minute","2.46 Million
+                      /
+                      2.4 Million","","",""
+"Myriadcoin","https://www.coingecko.com/en/coins/myriadcoin","Myriadcoin","null","February 23, 2014 (almost 2 years)","$36,023.67","N/A","0.5 Minute","1.11 Billion
+                      /
+                      2 Billion","","",""
+"Bitz","https://www.coingecko.com/en/coins/bitz","Bitz","X11","March  1, 2015 (9 months)","$4,620.96","N/A","1.0 Minute","1.97 Million
+                      /
+                      2 Million","","",""
+"Maxcoin","https://www.coingecko.com/en/coins/maxcoin","Maxcoin","Keccak","February  6, 2014 (almost 2 years)","$171,000.28","171 GH/s","1.0 Minute","41.5 Million
+                      /
+                      100 Million","","",""
+"CryptoEscudo","https://www.coingecko.com/en/coins/cryptoescudo","CryptoEscudo","Scrypt","March 25, 2014 (over 1 year)","$27,524.07","N/A","2.0 Minute","144 Million
+                      /
+                      1 Billion","","",""
+"ArtByte","https://www.coingecko.com/en/coins/artbyte","ArtByte","Scrypt","May  1, 2014 (over 1 year)","$48,226.15","N/A","2.0 Minute","583 Million
+                      /
+                      1 Billion","","",""
+"Mincoin","https://www.coingecko.com/en/coins/mincoin","Mincoin","Scrypt","April  3, 2013 (over 2 years)","$2,827.83","96.5 MH/s","1.0 Minute","1.72 Million
+                      /
+                      10 Million","","",""
+"Coinomat","https://www.coingecko.com/en/coins/coinomat","Coinomat","null","July 23, 2014 (over 1 year)","$70,852.33","N/A","null","3 Million
+                      /
+                      3 Million","","",""
+"MapCoin","https://www.coingecko.com/en/coins/mapcoin","MapCoin","Proof of Stake","September  6, 2015 (3 months)","$4,994.79","N/A","null","3 Million
+                      /
+                      3 Million","","",""
+"Ripple","https://www.coingecko.com/en/coins/ripple","Ripple","null","null","$140,085,886.60","N/A","null","33.5 Billion
+                      /
+                      100 Billion","","",""
+"Worldcoin","https://www.coingecko.com/en/coins/worldcoin","Worldcoin","Scrypt","May 14, 2013 (over 2 years)","$596,211.90","9.43 GH/s","0.5 Minute","93.7 Million
+                      /
+                      265 Million","","",""
+"X-Coin","https://www.coingecko.com/en/coins/xcoin","X-Coin","SHA-256","February 27, 2015 (9 months)","$2,624.92","N/A","1.0 Minute","null","","",""
+"FuelCoin","https://www.coingecko.com/en/coins/fuelcoin","FuelCoin","X11","null","$575,709.83","N/A","null","100 Million
+                      /
+                      336 Million","","",""
+"Librexcoin","https://www.coingecko.com/en/coins/librexcoin","Librexcoin","X11","July 30, 2014 (over 1 year)","$46,645.01","N/A","1.0 Minute","9.78 Million
+                      /
+                      10 Million","","",""
+"Auroracoin","https://www.coingecko.com/en/coins/auroracoin","Auroracoin","Scrypt","January 24, 2014 (almost 2 years)","$291,724.59","4.5 GH/s","5.0 Minute","7.49 Million
+                      /
+                      21 Million","","",""
+"Curecoin","https://www.coingecko.com/en/coins/curecoin","Curecoin","null","null","$284,590.30","N/A","null","null","","",""
+"PhilosopherStone","https://www.coingecko.com/en/coins/philosopherstone","PhilosopherStone","Scrypt","July 28, 2013 (over 2 years)","$14,190.17","N/A","null","2.43 Million
+                      /
+                      8.89 Million","","",""
+"Gulden","https://www.coingecko.com/en/coins/gulden","Gulden","Scrypt","March 29, 2014 (over 1 year)","$426,314.82","1.17 GH/s","2.5 Minute","285 Million
+                      /
+                      1.68 Billion","","",""
+"Bitmark","https://www.coingecko.com/en/coins/bitmark","Bitmark","Scrypt","July 14, 2014 (over 1 year)","$32,191.27","298 MH/s","2.0 Minute","1.03 Million
+                      /
+                      27.6 Million","","",""
+"Unobtanium","https://www.coingecko.com/en/coins/unobtanium","Unobtanium","SHA-256","October 18, 2013 (about 2 years)","$273,896.04","1.26 PH/s","3.0 Minute","196 Thousand
+                      /
+                      250 Thousand","","",""
+"Techcoin","https://www.coingecko.com/en/coins/techcoin","Techcoin","X13","June 24, 2014 (over 1 year)","","N/A","5.0 Minute","null","","",""
+"IOCoin","https://www.coingecko.com/en/coins/iocoin","IOCoin","Proof of Stake","July 24, 2014 (over 1 year)","$195,120.43","N/A","1.0 Minute","16.2 Million
+                      /
+                      16 Million","","",""
+"Sterlingcoin","https://www.coingecko.com/en/coins/sterlingcoin","Sterlingcoin","X13","September 21, 2014 (about 1 year)","$32,196.45","N/A","2.0 Minute","3.88 Million
+                      /
+                      4 Million","","",""
+"BitcoinDark","https://www.coingecko.com/en/coins/bitcoindark","BitcoinDark","null","null","$900,462.20","N/A","1.0 Minute","1.24 Million
+                      /
+                      22 Million","","",""
+"Curecoin","https://www.coingecko.com/en/coins/curecoin","Curecoin","null","null","$284,590.30","N/A","null","null","","",""
+"Bytecoin","https://www.coingecko.com/en/coins/bytecoin","Bytecoin","Cryptonight","July  4, 2012 (over 3 years)","$4,206,711.00","N/A","2.0 Minute","178 Billion
+                      /
+                      184 Billion","","",""
+"Megacoin","https://www.coingecko.com/en/coins/megacoin","Megacoin","Scrypt","June  1, 2013 (over 2 years)","$557,188.77","7.33 GH/s","2.5 Minute","31.3 Million
+                      /
+                      42 Million","","",""
+"Dirac","https://www.coingecko.com/en/coins/dirac","Dirac","Blake-256","May 19, 2014 (over 1 year)","$1,478.21","N/A","3.0 Minute","452 Thousand
+                      /
+                      2.27 Million","","",""
+"QuazarCoin","https://www.coingecko.com/en/coins/quazarcoin","QuazarCoin","Cryptonight","May  8, 2014 (over 1 year)","$4,526.78","N/A","2.0 Minute","3.15 Million
+                      /
+                      18.4 Million","","",""
+"MonaCoin","https://www.coingecko.com/en/coins/monacoin","MonaCoin","Scrypt","January  1, 2014 (almost 2 years)","$1,634,945.95","N/A","1.5 Minute","25.5 Million
+                      /
+                      105 Million","","",""
+"FIMKrypto","https://www.coingecko.com/en/coins/fimkrypto","FIMKrypto","Proof of Stake","July  1, 2014 (over 1 year)","$120,392.47","N/A","0.5 Minute","454 Million
+                      /
+                      666 Million","","",""
+"NXT","https://www.coingecko.com/en/coins/nxt","NXT","Proof of Stake","November 24, 2013 (about 2 years)","$5,882,272.63","N/A","1.0 Minute","1000 Million
+                      /
+                      1 Billion","","",""
+"BlackCoin","https://www.coingecko.com/en/coins/blackcoin","BlackCoin","Proof of Stake","February 24, 2014 (almost 2 years)","$1,807,271.83","N/A","1.067 Minute","75.1 Million
+                      /
+                      100 Million","","",""
+"Digitalcoin","https://www.coingecko.com/en/coins/digitalcoin","Digitalcoin","Multiple Algorithms","May 20, 2013 (over 2 years)","$282,801.49","N/A","0.67 Minute","28.3 Million
+                      /
+                      48.2 Million","","",""
+"Mastercoin (Omni)","https://www.coingecko.com/en/coins/mastercoin","Mastercoin (Omni)","SHA-256","August 31, 2013 (over 2 years)","$1,109,680.94","N/A","10.0 Minute","549 Thousand
+                      /
+                      563 Thousand","","",""
+"HellasCoin","https://www.coingecko.com/en/coins/hellascoin","HellasCoin","null","July  1, 2014 (over 1 year)","","N/A","null","null","","",""
+"Nautiluscoin","https://www.coingecko.com/en/coins/nautiluscoin","Nautiluscoin","Scrypt","May  1, 2014 (over 1 year)","$664,283.24","406 MH/s","1.0 Minute","5.82 Million
+                      /
+                      16.2 Million","","",""
+"NEM","https://www.coingecko.com/en/coins/nem","NEM","Proof of Importance","March 31, 2015 (8 months)","$905,071.47","N/A","1.0 Minute","9 Billion
+                      /
+                      9 Billion","","",""
+"Rimbit","https://www.coingecko.com/en/coins/rimbit","null","null","null","null","null","null","null","","",""
+"Cloakcoin","https://www.coingecko.com/en/coins/cloakcoin","Cloakcoin","X13","June  3, 2014 (over 1 year)","$197,170.11","N/A","1.0 Minute","4.6 Million
+                      /
+                      4.5 Million","","",""
+"BitBay","https://www.coingecko.com/en/coins/bitbay","BitBay","Proof of Stake","November 10, 2014 (about 1 year)","$187,922.99","N/A","1.067 Minute","null","","",""
+"Faircoin","https://www.coingecko.com/en/coins/faircoin","Faircoin","Proof of Stake","March  4, 2014 (almost 2 years)","$280,649.73","N/A","3.3 Minute","null","","",""
+"Crypto","https://www.coingecko.com/en/coins/crypto","Crypto","Lyra2RE","April 30, 2015 (7 months)","$314.42","N/A","0.5 Minute","2.91 Million
+                      /
+                      65.8 Million","","",""
+"FIMKrypto","https://www.coingecko.com/en/coins/fimkrypto","FIMKrypto","Proof of Stake","July  1, 2014 (over 1 year)","$120,392.47","N/A","0.5 Minute","454 Million
+                      /
+                      666 Million","","",""
+"Counterparty","https://www.coingecko.com/en/coins/counterparty","Counterparty","SHA-256","January  2, 2014 (almost 2 years)","$1,790,035.47","N/A","10.0 Minute","2.63 Million
+                      /
+                      2.65 Million","","",""
+"Virtacoin","https://www.coingecko.com/en/coins/virtacoin","Virtacoin","Scrypt","May 30, 2014 (over 1 year)","$162,333.38","N/A","1.0 Minute","11.6 Billion
+                      /
+                      21 Billion","","",""
+"Karma","https://www.coingecko.com/en/coins/karma","Karma","Scrypt","February  4, 2014 (almost 2 years)","$19,402.15","N/A","1.0 Minute","69.3 Billion
+                      /
+                      92 Billion","","",""
+"GlowShares","https://www.coingecko.com/en/coins/glowshares","GlowShares","Proof of Stake","November 18, 2014 (about 1 year)","","N/A","1.0 Minute","null","","",""
+"Diamond","https://www.coingecko.com/en/coins/diamond","Diamond","Groestl","July 13, 2013 (over 2 years)","$355,619.94","3.11 GH/s","1.0 Minute","1.4 Million
+                      /
+                      4.38 Million","","",""
+"Clams","https://www.coingecko.com/en/coins/clams","Clams","Proof of Stake","May 15, 2014 (over 1 year)","$633,995.57","N/A","1.0 Minute","1.08 Million
+                      /
+                      15 Million","","",""
+"Einsteinium","https://www.coingecko.com/en/coins/einsteinium","Einsteinium","Scrypt","March  1, 2014 (almost 2 years)","$14,838.36","47.8 MH/s","1.0 Minute","176 Million
+                      /
+                      300 Million","","",""
+"Titcoin","https://www.coingecko.com/en/coins/titcoin","Titcoin","SHA-256","June 21, 2014 (over 1 year)","$18,352.83","N/A","1.0 Minute","38.2 Million
+                      /
+                      69 Million","","",""
+"Bytecoin","https://www.coingecko.com/en/coins/bytecoin","Bytecoin","Cryptonight","July  4, 2012 (over 3 years)","$4,206,711.00","N/A","2.0 Minute","178 Billion
+                      /
+                      184 Billion","","",""
+"Startcoin","https://www.coingecko.com/en/coins/startcoin","Startcoin","X11","July 19, 2014 (over 1 year)","$886,905.59","18.6 GH/s","1.0 Minute","35 Million
+                      /
+                      84 Million","","",""
+"Trollcoin","https://www.coingecko.com/en/coins/trollcoin","Trollcoin","Scrypt","February 11, 2014 (almost 2 years)","$36,380.56","N/A","2.0 Minute","5.03 Billion
+                      /
+                      9 Billion","","",""
+"Communitycoin","https://www.coingecko.com/en/coins/communitycoin","Communitycoin","Proof of Stake","March 25, 2014 (over 1 year)","$15,213.21","N/A","1.0 Minute","1.06 Billion
+                      /
+                      9 Million","","",""
+"HamRadioCoin","https://www.coingecko.com/en/coins/hamradiocoin","HamRadioCoin","SHA-256","July  1, 2014 (over 1 year)","$32,797.73","23.7 TH/s","null","4.7 Million
+                      /
+                      21 Million","","",""
+"QuazarCoin","https://www.coingecko.com/en/coins/quazarcoin","QuazarCoin","Cryptonight","May  8, 2014 (over 1 year)","$4,526.78","N/A","2.0 Minute","3.15 Million
+                      /
+                      18.4 Million","","",""
+"BitSwift","https://www.coingecko.com/en/coins/bitswift","BitSwift","Proof of Stake","September 29, 2014 (about 1 year)","$135,270.22","N/A","null","4.04 Million
+                      /
+                      4 Million","","",""
+"Fedoracoin","https://www.coingecko.com/en/coins/fedoracoin","Fedoracoin","Scrypt","null","$280,846.32","N/A","null","null","","",""
+"Ybcoin","https://www.coingecko.com/en/coins/ybcoin","Ybcoin","Proof of Stake","June 28, 2013 (over 2 years)","$2,160,980.02","N/A","null","3.01 Million
+                      /
+                      3 Million","","",""
+"SuperCoin","https://www.coingecko.com/en/coins/supercoin","SuperCoin","X11","May 24, 2014 (over 1 year)","$9,090.53","N/A","1.5 Minute","34.6 Million
+                      /
+                      45 Million","","",""
+"Einsteinium","https://www.coingecko.com/en/coins/einsteinium","Einsteinium","Scrypt","March  1, 2014 (almost 2 years)","$14,838.36","47.8 MH/s","1.0 Minute","176 Million
+                      /
+                      300 Million","","",""
+"Bytecoin","https://www.coingecko.com/en/coins/bytecoin","Bytecoin","Cryptonight","July  4, 2012 (over 3 years)","$4,206,711.00","N/A","2.0 Minute","178 Billion
+                      /
+                      184 Billion","","",""
+"Ixcoin","https://www.coingecko.com/en/coins/ixcoin","Ixcoin","SHA-256","May  7, 2011 (over 4 years)","$419,038.85","N/A","10.0 Minute","21 Million
+                      /
+                      21 Million","","",""
+"Netcoin","https://www.coingecko.com/en/coins/netcoin","Netcoin","Scrypt","September  2, 2013 (over 2 years)","$198,190.93","N/A","1.0 Minute","557 Million
+                      /
+                      321 Million","","",""
+"Influxcoin","https://www.coingecko.com/en/coins/influxcoin","Influxcoin","X11","August 26, 2015 (3 months)","$3,255.87","N/A","4.0 Minute","840 Thousand
+                      /
+                      12 Million","","",""
+"Gulden","https://www.coingecko.com/en/coins/gulden","Gulden","Scrypt","March 29, 2014 (over 1 year)","$426,314.82","1.17 GH/s","2.5 Minute","285 Million
+                      /
+                      1.68 Billion","","",""
+"Litecoin","https://www.coingecko.com/en/coins/litecoin","Litecoin","Scrypt","October  8, 2011 (about 4 years)","$144,684,176.77","1.66 TH/s","2.5 Minute","43.4 Million
+                      /
+                      84 Million","","",""
+"Potcoin","https://www.coingecko.com/en/coins/potcoin","Potcoin","Scrypt","January 15, 2014 (almost 2 years)","$104,628.60","N/A","0.67 Minute","212 Million
+                      /
+                      420 Million","","",""
+"Bitmark","https://www.coingecko.com/en/coins/bitmark","Bitmark","Scrypt","July 14, 2014 (over 1 year)","$32,191.27","298 MH/s","2.0 Minute","1.03 Million
+                      /
+                      27.6 Million","","",""
+"Megacoin","https://www.coingecko.com/en/coins/megacoin","Megacoin","Scrypt","June  1, 2013 (over 2 years)","$557,188.77","7.33 GH/s","2.5 Minute","31.3 Million
+                      /
+                      42 Million","","",""
+"Cerium","https://www.coingecko.com/en/coins/cerium","Cerium","SHA-256","June  6, 2015 (6 months)","","N/A","1.5 Minute","null","","",""
+"Rimbit","https://www.coingecko.com/en/coins/rimbit","null","null","null","null","null","null","null","","",""
+"Qibuck","https://www.coingecko.com/en/coins/qibuck","Qibuck","X13","August  7, 2014 (over 1 year)","$46,443.86","N/A","null","517 Thousand
+                      /
+                      2 Million","","",""
+"Mineralscoin","https://www.coingecko.com/en/coins/mineralscoin","Mineralscoin","X11","null","$16,740.26","N/A","0.5 Minute","27.4 Million
+                      /
+                      30 Million","","",""
+"MaryJane","https://www.coingecko.com/en/coins/maryjane","MaryJane","X15","September 28, 2014 (about 1 year)","$29,863.32","N/A","null","15.4 Million
+                      /
+                      15.3 Million","","",""
+"MonaCoin","https://www.coingecko.com/en/coins/monacoin","MonaCoin","Scrypt","January  1, 2014 (almost 2 years)","$1,634,945.95","N/A","1.5 Minute","25.5 Million
+                      /
+                      105 Million","","",""
+"TrustPlus","https://www.coingecko.com/en/coins/trustplus","TrustPlus","X11","July  4, 2014 (over 1 year)","$103,808.67","N/A","0.75 Minute","null","","",""
+"SuperNET","https://www.coingecko.com/en/coins/supernet","SuperNET","null","null","$610,643.01","N/A","null","null","","",""
+"BitUSD","https://www.coingecko.com/en/coins/bitusd","BitUSD","null","null","$113,752.00","N/A","null","null","","",""
+"Hexx","https://www.coingecko.com/en/coins/hexx","Hexx","Scrypt","June 24, 2015 (5 months)","","N/A","1.0 Minute","null","","",""
+"Luckycoin","https://www.coingecko.com/en/coins/luckycoin","Luckycoin","Scrypt","May 24, 2013 (over 2 years)","$6,461.00","275 MH/s","1.0 Minute","19.3 Million
+                      /
+                      20 Million","","",""
+"Counterparty","https://www.coingecko.com/en/coins/counterparty","Counterparty","SHA-256","January  2, 2014 (almost 2 years)","$1,790,035.47","N/A","10.0 Minute","2.63 Million
+                      /
+                      2.65 Million","","",""
+"VeriCoin","https://www.coingecko.com/en/coins/vericoin","VeriCoin","Proof of Stake","May 10, 2014 (over 1 year)","$603,457.70","N/A","null","null","","",""
+"Fractalcoin","https://www.coingecko.com/en/coins/fractalcoin","Fractalcoin","X11","null","$11,111.55","N/A","1.0 Minute","1 Million
+                      /
+                      1 Million","","",""
+"Nautiluscoin","https://www.coingecko.com/en/coins/nautiluscoin","Nautiluscoin","Scrypt","May  1, 2014 (over 1 year)","$664,283.24","406 MH/s","1.0 Minute","5.82 Million
+                      /
+                      16.2 Million","","",""
+"Steps","https://www.coingecko.com/en/coins/steps","Steps","Proof of Stake","September 16, 2015 (3 months)","$40,431.15","N/A","5.0 Minute","10.2 Million
+                      /
+                      9.24 Million","","",""
+"Jumbucks","https://www.coingecko.com/en/coins/jumbucks","Jumbucks","Scrypt","September  2, 2014 (over 1 year)","$87,565.28","N/A","1.0 Minute","3.48 Million
+                      /
+                      3.29 Million","","",""
+"Monocle","https://www.coingecko.com/en/coins/monocle","Monocle","Scrypt-N","May  2, 2014 (over 1 year)","","N/A","2.0 Minute","","","",""
+"Feathercoin","https://www.coingecko.com/en/coins/feathercoin","Feathercoin","NeoScrypt","April 16, 2013 (over 2 years)","$377,920.73","259 MH/s","1.0 Minute","104 Million
+                      /
+                      336 Million","","",""
+"DeBuNe","https://www.coingecko.com/en/coins/debune","DeBuNe","null","January 26, 2015 (10 months)","$28,501.52","N/A","null","232 Thousand
+                      /
+                      1 Million","","",""
+"HamRadioCoin","https://www.coingecko.com/en/coins/hamradiocoin","HamRadioCoin","SHA-256","July  1, 2014 (over 1 year)","$32,797.73","23.7 TH/s","null","4.7 Million
+                      /
+                      21 Million","","",""
+"Vertcoin","https://www.coingecko.com/en/coins/vertcoin","Vertcoin","Lyra2RE","January 10, 2014 (almost 2 years)","$411,043.12","11.8 GH/s","2.5 Minute","20.7 Million
+                      /
+                      84 Million","","",""
+"KhanCoin","https://www.coingecko.com/en/coins/khancoin","KhanCoin","Proof of Stake","August 18, 2015 (4 months)","$3,111.22","N/A","null","70.6 Thousand
+                      /
+                      7.88 Billion","","",""
+"AidBit","https://www.coingecko.com/en/coins/aidbit","AidBit","Groestl","July 18, 2014 (over 1 year)","","N/A","1.0 Minute","null","","",""
+"Horizon","https://www.coingecko.com/en/coins/horizon","Horizon","Proof of Stake","null","$219,388.81","N/A","2.0 Minute","988 Million
+                      /
+                      1 Billion","","",""
+"FIMKrypto","https://www.coingecko.com/en/coins/fimkrypto","FIMKrypto","Proof of Stake","July  1, 2014 (over 1 year)","$120,392.47","N/A","0.5 Minute","454 Million
+                      /
+                      666 Million","","",""
+"Fantomcoin","https://www.coingecko.com/en/coins/fantomcoin","Fantomcoin","Cryptonight","May  6, 2014 (over 1 year)","$9,476.44","N/A","1.0 Minute","3.3 Million
+                      /
+                      18.4 Million","","",""
+"HTMLcoin","https://www.coingecko.com/en/coins/htmlcoin","HTMLcoin","X15","September 12, 2014 (about 1 year)","$17,483.38","N/A","1.0 Minute","40.7 Billion
+                      /
+                      90 Billion","","",""
+"Novacoin","https://www.coingecko.com/en/coins/novacoin","Novacoin","Scrypt","February  9, 2013 (almost 3 years)","$1,088,649.42","10.6 GH/s","10.0 Minute","null","","",""
+"DopeCoin","https://www.coingecko.com/en/coins/dopecoin","DopeCoin","Scrypt","February 14, 2014 (almost 2 years)","$20,638.53","N/A","null","140 Million
+                      /
+                      200 Million","","",""
+"Nxttycoin","https://www.coingecko.com/en/coins/nxttycoin","Nxttycoin","null","August 12, 2014 (over 1 year)","$48,000.00","N/A","null","1 Billion
+                      /
+                      1000 Million","","",""
+"HellasCoin","https://www.coingecko.com/en/coins/hellascoin","HellasCoin","null","July  1, 2014 (over 1 year)","","N/A","null","null","","",""
+"Judgecoin","https://www.coingecko.com/en/coins/judgecoin","Judgecoin","X13","July  5, 2014 (over 1 year)","$2,154.70","N/A","1.0 Minute","11.8 Million
+                      /
+                      11.5 Million","","",""
+"Maxcoin","https://www.coingecko.com/en/coins/maxcoin","Maxcoin","Keccak","February  6, 2014 (almost 2 years)","$171,000.28","171 GH/s","1.0 Minute","41.5 Million
+                      /
+                      100 Million","","",""
+"Magi","https://www.coingecko.com/en/coins/magi","Magi","null","September 15, 2014 (about 1 year)","$32,183.93","N/A","3.0 Minute","3.44 Million
+                      /
+                      25 Million","","",""
+"Boolberry","https://www.coingecko.com/en/coins/boolberry","Boolberry","Keccak","May 17, 2014 (over 1 year)","$55,336.22","N/A","2.0 Minute","5.82 Million
+                      /
+                      18.5 Million","","",""
+"NobleCoin","https://www.coingecko.com/en/coins/noblecoin","NobleCoin","Scrypt","January  6, 2014 (almost 2 years)","$40,415.97","N/A","1.0 Minute","null","","",""
+"Acoin","https://www.coingecko.com/en/coins/acoin","Acoin","SHA-256","September  1, 2014 (over 1 year)","$3,819.86","3.51 TH/s","null","null","","",""
+"XCurrency","https://www.coingecko.com/en/coins/xcurrency","XCurrency","Proof of Stake","May  7, 2014 (over 1 year)","$73,665.44","N/A","90.0 Minute","5.64 Million
+                      /
+                      ?","","",""
+"Ripple","https://www.coingecko.com/en/coins/ripple","Ripple","null","null","$140,085,886.60","N/A","null","33.5 Billion
+                      /
+                      100 Billion","","",""
+"LiteDoge","https://www.coingecko.com/en/coins/litedoge","LiteDoge","Scrypt","March 16, 2015 (9 months)","","N/A","1.067 Minute","9.98 Billion
+                      /
+                      35 Billion","","",""
+"Xiaomicoin","https://www.coingecko.com/en/coins/xiaomicoin","Xiaomicoin","Scrypt","June 15, 2015 (6 months)","$42,004.72","N/A","1.0 Minute","null","","",""
+"Sterlingcoin","https://www.coingecko.com/en/coins/sterlingcoin","Sterlingcoin","X13","September 21, 2014 (about 1 year)","$32,196.45","N/A","2.0 Minute","3.88 Million
+                      /
+                      4 Million","","",""
+"Storjcoin X","https://www.coingecko.com/en/coins/storjcoinx","Storjcoin X","null","July 18, 2014 (over 1 year)","$592,107.86","N/A","null","44.6 Million
+                      /
+                      500 Million","","",""
+"Blakecoin","https://www.coingecko.com/en/coins/blakecoin","Blakecoin","Blake-256","October  6, 2013 (about 2 years)","$10,210.74","228 GH/s","3.0 Minute","8.66 Million
+                      /
+                      7 Billion","","",""
+"Ethercoin","https://www.coingecko.com/en/coins/ethercoin","null","null","null","null","null","null","null","","",""
+"MonaCoin","https://www.coingecko.com/en/coins/monacoin","MonaCoin","Scrypt","January  1, 2014 (almost 2 years)","$1,634,945.95","N/A","1.5 Minute","25.5 Million
+                      /
+                      105 Million","","",""
+"Full Integrity Coin","https://www.coingecko.com/en/coins/full-integrity-coin","Full Integrity Coin","null","October 23, 2014 (about 1 year)","$575.40","N/A","null","336 Million
+                      /
+                      4.2 Billion","","",""
+"BitZeny","https://www.coingecko.com/en/coins/bitzeny","BitZeny","null","November  8, 2014 (about 1 year)","$7,334.61","N/A","1.5 Minute","75.6 Million
+                      /
+                      250 Million","","",""
+"NuBits","https://www.coingecko.com/en/coins/nubits","NuBits","null","August  3, 2014 (over 1 year)","$990,897.51","N/A","null","null","","",""
+"Factom","https://www.coingecko.com/en/coins/factom","Factom","null","September  1, 2015 (3 months)","$770,203.76","N/A","null","null","","",""
+"Stellar","https://www.coingecko.com/en/coins/stellar","Stellar","null","null","$7,949,690.56","N/A","null","4.84 Billion
+                      /
+                      227 Million","","",""
+"Fibre","https://www.coingecko.com/en/coins/fibre","Fibre","Proof of Stake","August 16, 2014 (over 1 year)","$21,222.30","N/A","1.0 Minute","637 Thousand
+                      /
+                      625 Thousand","","",""
+"Sync","https://www.coingecko.com/en/coins/sync","Sync","Proof of Stake","May 17, 2014 (over 1 year)","$45,407.42","N/A","1.0 Minute","1.18 Thousand
+                      /
+                      1 Thousand","","",""
+"Cloakcoin","https://www.coingecko.com/en/coins/cloakcoin","Cloakcoin","X13","June  3, 2014 (over 1 year)","$197,170.11","N/A","1.0 Minute","4.6 Million
+                      /
+                      4.5 Million","","",""
+"Huntercoin","https://www.coingecko.com/en/coins/huntercoin","Huntercoin","null","January 27, 2014 (almost 2 years)","$7,315.11","N/A","1.0 Minute","4.17 Million
+                      /
+                      42 Million","","",""
+"GSMcoin","https://www.coingecko.com/en/coins/gsmcoin","GSMcoin","X11","February 22, 2015 (9 months)","","N/A","1.0 Minute","","","",""
+"Marinecoin","https://www.coingecko.com/en/coins/marinecoin","Marinecoin","null","January 14, 2014 (almost 2 years)","","N/A","null","","","",""
+"Netcoin","https://www.coingecko.com/en/coins/netcoin","Netcoin","Scrypt","September  2, 2013 (over 2 years)","$198,190.93","N/A","1.0 Minute","557 Million
+                      /
+                      321 Million","","",""
+"Banx Shares","https://www.coingecko.com/en/coins/banxshares","Banx Shares","null","August 13, 2014 (over 1 year)","","N/A","null","null","","",""
+"Stealthcoin","https://www.coingecko.com/en/coins/stealthcoin","Stealthcoin","X13","July  4, 2014 (over 1 year)","$47,662.90","N/A","1.0 Minute","22.6 Million
+                      /
+                      20.7 Million","","",""
+"Vertcoin","https://www.coingecko.com/en/coins/vertcoin","Vertcoin","Lyra2RE","January 10, 2014 (almost 2 years)","$411,043.12","11.8 GH/s","2.5 Minute","20.7 Million
+                      /
+                      84 Million","","",""
+"Teslacoin","https://www.coingecko.com/en/coins/teslacoin","Teslacoin","Proof of Stake","January 17, 2014 (almost 2 years)","$16,844.45","N/A","0.5 Minute","65.3 Million
+                      /
+                      60.8 Million","","",""
+"Monocle","https://www.coingecko.com/en/coins/monocle","Monocle","Scrypt-N","May  2, 2014 (over 1 year)","","N/A","2.0 Minute","","","",""
+"Dash","https://www.coingecko.com/en/coins/dash","Dash","X11","January 19, 2014 (almost 2 years)","$13,245,825.89","109 GH/s","2.5 Minute","6.03 Million
+                      /
+                      22 Million","","",""
+"CannabisCoin","https://www.coingecko.com/en/coins/cannabiscoin","CannabisCoin","X11","April 20, 2014 (over 1 year)","$193,460.69","116 MH/s","0.7 Minute","77.2 Million
+                      /
+                      106 Million","","",""
+"Viacoin","https://www.coingecko.com/en/coins/viacoin","Viacoin","Scrypt","July 17, 2014 (over 1 year)","$96,899.81","720 GH/s","2.0 Minute","19 Million
+                      /
+                      92 Million","","",""
+"Hexx","https://www.coingecko.com/en/coins/hexx","Hexx","Scrypt","June 24, 2015 (5 months)","","N/A","1.0 Minute","null","","",""
+"Bitbean","https://www.coingecko.com/en/coins/bitbean","Bitbean","Proof of Stake","February 14, 2015 (10 months)","$55,155.09","N/A","1.0 Minute","1.06 Billion
+                      /
+                      50 Billion","","",""
+"VeriCoin","https://www.coingecko.com/en/coins/vericoin","VeriCoin","Proof of Stake","May 10, 2014 (over 1 year)","$603,457.70","N/A","null","null","","",""
+"Fractalcoin","https://www.coingecko.com/en/coins/fractalcoin","Fractalcoin","X11","null","$11,111.55","N/A","1.0 Minute","1 Million
+                      /
+                      1 Million","","",""
+"Ultracoin","https://www.coingecko.com/en/coins/ultracoin","Ultracoin","Scrypt-Chacha","January 31, 2014 (almost 2 years)","$42,446.51","N/A","0.5 Minute","32.3 Million
+                      /
+                      100 Million","","",""
+"Aiden","https://www.coingecko.com/en/coins/aiden","Aiden","null","April  5, 2014 (over 1 year)","$5,211.63","N/A","0.5 Minute","14.6 Million
+                      /
+                      84 Million","","",""
+"Cinni","https://www.coingecko.com/en/coins/cinni","Cinni","Proof of Stake","null","$95,688.87","N/A","null","null","","",""
+"Cannacoin","https://www.coingecko.com/en/coins/cannacoin","Uh Oh! We're sorry, but something went wrong.","null","null","null","null","null","null","","",""
+"SonicScrewdriver","https://www.coingecko.com/en/coins/sonicscrewdriver","SonicScrewdriver","Proof of Stake","August  8, 2014 (over 1 year)","$14,981.00","N/A","1.0 Minute","22.3 Million
+                      /
+                      23 Million","","",""
+"Electronic Gulden","https://www.coingecko.com/en/coins/electronicgulden","Electronic Gulden","Scrypt","March 19, 2014 (over 1 year)","$294,349.03","N/A","2.0 Minute","13.7 Million
+                      /
+                      21 Million","","",""
+"ShadowCash","https://www.coingecko.com/en/coins/shadowcash","ShadowCash","Proof of Stake","July 19, 2014 (over 1 year)","$543,687.88","N/A","1.0 Minute","6.5 Million
+                      /
+                      1.3 Billion","","",""
+"OKCash","https://www.coingecko.com/en/coins/okcash","OKCash","Scrypt","November 24, 2014 (about 1 year)","$32,807.94","N/A","null","60.9 Million
+                      /
+                      105 Million","","",""
+"Mazacoin","https://www.coingecko.com/en/coins/mazacoin","Mazacoin","SHA-256","February  7, 2014 (almost 2 years)","$47,302.37","24.7 TH/s","2.0 Minute","851 Million
+                      /
+                      2.42 Billion","","",""
+"APEXcoin","https://www.coingecko.com/en/coins/apexcoin","APEXcoin","X13","July 11, 2014 (over 1 year)","$13,899.11","N/A","1.0 Minute","6.13 Million
+                      /
+                      6 Million","","",""
+"Ucoin","https://www.coingecko.com/en/coins/ucoin","Ucoin","X11","January 30, 2015 (10 months)","$4,627.82","N/A","1.0 Minute","2.68 Million
+                      /
+                      20 Million","","",""
+"Ultracoin","https://www.coingecko.com/en/coins/ultracoin","Ultracoin","Scrypt-Chacha","January 31, 2014 (almost 2 years)","$42,446.51","N/A","0.5 Minute","32.3 Million
+                      /
+                      100 Million","","",""
+"Positron","https://www.coingecko.com/en/coins/positron","Positron","SHA-256","April 11, 2015 (8 months)","$4,703.24","N/A","1.5 Minute","null","","",""
+"Gulden","https://www.coingecko.com/en/coins/gulden","Gulden","Scrypt","March 29, 2014 (over 1 year)","$426,314.82","1.17 GH/s","2.5 Minute","285 Million
+                      /
+                      1.68 Billion","","",""
+"Metal Music Coin","https://www.coingecko.com/en/coins/metal-music-coin","Metal Music Coin","Scrypt","null","$836.08","N/A","1.0 Minute","59.7 Million
+                      /
+                      2.5 Billion","","",""
+"Zeitcoin","https://www.coingecko.com/en/coins/zeitcoin","Zeitcoin","Proof of Stake","February 28, 2014 (almost 2 years)","$99,550.84","N/A","0.5 Minute","33.2 Billion
+                      /
+                      99 Billion","","",""
+"Dashcoin","https://www.coingecko.com/en/coins/dashcoin","Dashcoin","Cryptonight","July  5, 2014 (over 1 year)","$13,438.09","N/A","2.0 Minute","12.1 Million
+                      /
+                      184 Billion","","",""
+"TileCoin","https://www.coingecko.com/en/coins/tilecoin","TileCoin","null","September  8, 2014 (about 1 year)","$181,400.00","N/A","null","100 Million
+                      /
+                      100 Million","","",""
+"Pinkcoin","https://www.coingecko.com/en/coins/pinkcoin","Pinkcoin","X11","May  2, 2014 (over 1 year)","$60,170.83","N/A","0.5 Minute","365 Million
+                      /
+                      380 Million","","",""
+"Cerium","https://www.coingecko.com/en/coins/cerium","Cerium","SHA-256","June  6, 2015 (6 months)","","N/A","1.5 Minute","null","","",""
+"Florincoin","https://www.coingecko.com/en/coins/florincoin","Florincoin","Scrypt","June 17, 2013 (over 2 years)","$74,973.52","986 MH/s","0.67 Minute","102 Million
+                      /
+                      160 Million","","",""
+"Nyancoin","https://www.coingecko.com/en/coins/nyancoin","Nyancoin","Scrypt","January  6, 2014 (almost 2 years)","$15,985.98","370 MH/s","1.0 Minute","251 Million
+                      /
+                      337 Million","","",""
+"Saffroncoin","https://www.coingecko.com/en/coins/saffroncoin","Saffroncoin","null","null","$8,720.61","N/A","7.5 Minute","20.4 Million
+                      /
+                      111 Million","","",""
+"Monero","https://www.coingecko.com/en/coins/monero","Monero","Cryptonight","April 18, 2014 (over 1 year)","$3,794,119.97","N/A","1.0 Minute","10.2 Million
+                      /
+                      18.4 Million","","",""
+"Digibyte","https://www.coingecko.com/en/coins/digibyte","Digibyte","null","January 10, 2014 (almost 2 years)","$1,062,529.84","N/A","0.5 Minute","null","","",""
+"SuperCoin","https://www.coingecko.com/en/coins/supercoin","SuperCoin","X11","May 24, 2014 (over 1 year)","$9,090.53","N/A","1.5 Minute","34.6 Million
+                      /
+                      45 Million","","",""
+"Titcoin","https://www.coingecko.com/en/coins/titcoin","Titcoin","SHA-256","June 21, 2014 (over 1 year)","$18,352.83","N/A","1.0 Minute","38.2 Million
+                      /
+                      69 Million","","",""
+"Ethercoin","https://www.coingecko.com/en/coins/ethercoin","null","null","null","null","null","null","null","","",""
+"Swing","https://www.coingecko.com/en/coins/swing","Swing","Proof of Stake","August 30, 2015 (3 months)","$1,359.19","N/A","null","492 Thousand
+                      /
+                      40 Million","","",""
+"Fastcoin","https://www.coingecko.com/en/coins/fastcoin","Fastcoin","Scrypt","May 28, 2013 (over 2 years)","$17,739.40","166 MH/s","0.2 Minute","127 Million
+                      /
+                      166 Million","","",""
+"Deutsche eMark","https://www.coingecko.com/en/coins/deutsche-emark","Deutsche eMark","SHA-256","October 11, 2013 (about 2 years)","$30,625.10","N/A","2.0 Minute","17.7 Million
+                      /
+                      500 Million","","",""
+"Node","https://www.coingecko.com/en/coins/node","Node","null","July 18, 2014 (over 1 year)","$25,000.00","N/A","1.0 Minute","1 Billion
+                      /
+                      1 Billion","","",""
+"Ixcoin","https://www.coingecko.com/en/coins/ixcoin","Ixcoin","SHA-256","May  7, 2011 (over 4 years)","$419,038.85","N/A","10.0 Minute","21 Million
+                      /
+                      21 Million","","",""
+"Bitleu","https://www.coingecko.com/en/coins/bitleu","Bitleu","Scrypt Jane","March 11, 2014 (over 1 year)","","N/A","1.0 Minute","","","",""
+"Quark","https://www.coingecko.com/en/coins/quark","Quark","Quark","July 21, 2013 (over 2 years)","$444,103.39","243 MH/s","0.5 Minute","250 Million
+                      /
+                      247 Million","","",""
+"CryptCoin","https://www.coingecko.com/en/coins/cryptcoin","CryptCoin","X11","null","$18,349.53","N/A","1.5 Minute","6.03 Million
+                      /
+                      11 Million","","",""
+"Vanillacoin","https://www.coingecko.com/en/coins/vanillacoin","Vanillacoin","Proof of Stake","December 23, 2014 (11 months)","$682,956.63","N/A","null","12.1 Million
+                      /
+                      30.7 Million","","",""
+"Bitstar","https://www.coingecko.com/en/coins/bitstar","Bitstar","Proof of Stake","null","$40,130.63","N/A","0.5 Minute","18.8 Million
+                      /
+                      54.3 Million","","",""
+"Sexcoin","https://www.coingecko.com/en/coins/sexcoin","Sexcoin","Scrypt","May 28, 2013 (over 2 years)","$70,219.89","650 MH/s","1.0 Minute","107 Million
+                      /
+                      250 Million","","",""
+"Swarm","https://www.coingecko.com/en/coins/swarm","Swarm","null","May 28, 2014 (over 1 year)","$213,051.76","N/A","null","99.9 Million
+                      /
+                      100 Million","","",""
+"MangoCoinz","https://www.coingecko.com/en/coins/mangocoinz","MangoCoinz","null","null","$12,465.26","N/A","null","null","","",""
+"MaidSafeCoin","https://www.coingecko.com/en/coins/maidsafecoin","MaidSafeCoin","null","April 22, 2014 (over 1 year)","$5,578,613.58","N/A","null","453 Million
+                      /
+                      453 Million","","",""
+"Freicoin","https://www.coingecko.com/en/coins/freicoin","Freicoin","SHA-256","December 21, 2012 (almost 3 years)","$31,392.48","N/A","10.0 Minute","46 Million
+                      /
+                      100 Million","","",""
+"Bitleu","https://www.coingecko.com/en/coins/bitleu","Bitleu","Scrypt Jane","March 11, 2014 (over 1 year)","","N/A","1.0 Minute","","","",""
+"Freicoin","https://www.coingecko.com/en/coins/freicoin","Freicoin","SHA-256","December 21, 2012 (almost 3 years)","$31,392.48","N/A","10.0 Minute","46 Million
+                      /
+                      100 Million","","",""
+"DeBuNe","https://www.coingecko.com/en/coins/debune","DeBuNe","null","January 26, 2015 (10 months)","$28,501.52","N/A","null","232 Thousand
+                      /
+                      1 Million","","",""
+"Viacoin","https://www.coingecko.com/en/coins/viacoin","Viacoin","Scrypt","July 17, 2014 (over 1 year)","$96,899.81","720 GH/s","2.0 Minute","19 Million
+                      /
+                      92 Million","","",""
+"BitSwift","https://www.coingecko.com/en/coins/bitswift","BitSwift","Proof of Stake","September 29, 2014 (about 1 year)","$135,270.22","N/A","null","4.04 Million
+                      /
+                      4 Million","","",""
+"BlackCoin","https://www.coingecko.com/en/coins/blackcoin","BlackCoin","Proof of Stake","February 24, 2014 (almost 2 years)","$1,807,271.83","N/A","1.067 Minute","75.1 Million
+                      /
+                      100 Million","","",""
+"HyperStake","https://www.coingecko.com/en/coins/hyperstake","HyperStake","Proof of Stake","May 30, 2014 (over 1 year)","$125,100.38","N/A","1.5 Minute","383 Million
+                      /
+                      2","","",""
+"Asiacoin","https://www.coingecko.com/en/coins/asiacoin","Asiacoin","Scrypt","April 16, 2014 (over 1 year)","$313,154.65","N/A","1.0 Minute","null","","",""
+"DopeCoin","https://www.coingecko.com/en/coins/dopecoin","DopeCoin","Scrypt","February 14, 2014 (almost 2 years)","$20,638.53","N/A","null","140 Million
+                      /
+                      200 Million","","",""
+"Peercoin","https://www.coingecko.com/en/coins/peercoin","Peercoin","SHA-256","August 20, 2012 (over 3 years)","$9,187,614.10","N/A","10.0 Minute","22.8 Million
+                      /
+                      ?","","",""
+"Piggycoin","https://www.coingecko.com/en/coins/piggycoin","Piggycoin","X11","June 10, 2014 (over 1 year)","$18,883.69","N/A","1.0 Minute","478 Million
+                      /
+                      473 Million","","",""
+"Augur","https://www.coingecko.com/en/coins/augur","Augur","null","null","$0.00","N/A","null","?
+                      /
+                      11 Million","","",""
+"Bitbean","https://www.coingecko.com/en/coins/bitbean","Bitbean","Proof of Stake","February 14, 2015 (10 months)","$55,155.09","N/A","1.0 Minute","1.06 Billion
+                      /
+                      50 Billion","","",""
+"Pandacoin","https://www.coingecko.com/en/coins/pandacoin","Pandacoin","Scrypt","February 15, 2014 (almost 2 years)","$59,041.06","N/A","1.0 Minute","32.5 Billion
+                      /
+                      32 Billion","","",""
+"Node","https://www.coingecko.com/en/coins/node","Node","null","July 18, 2014 (over 1 year)","$25,000.00","N/A","1.0 Minute","1 Billion
+                      /
+                      1 Billion","","",""
+"Navajo","https://www.coingecko.com/en/coins/navajo","Navajo","X13","June  2, 2014 (over 1 year)","$103,300.55","N/A","0.5 Minute","59.5 Million
+                      /
+                      57 Million","","",""
+"Terracoin","https://www.coingecko.com/en/coins/terracoin","Terracoin","SHA-256","October 26, 2012 (about 3 years)","$44,581.75","N/A","2.0 Minute","13.3 Million
+                      /
+                      42 Million","","",""
+"Cannacoin","https://www.coingecko.com/en/coins/cannacoin","Uh Oh! We're sorry, but something went wrong.","null","null","null","null","null","null","","",""
+"GAIA","https://www.coingecko.com/en/coins/gaia","GAIA","Proof of Stake","October 28, 2014 (about 1 year)","$8,941.61","N/A","1.0 Minute","24.1 Million
+                      /
+                      24 Million","","",""
+"Cryptokenz","https://www.coingecko.com/en/coins/cryptokenz","Cryptokenz","Proof of Stake","September  9, 2015 (3 months)","$15,082.75","N/A","2.0 Minute","null","","",""
+"VeriCoin","https://www.coingecko.com/en/coins/vericoin","VeriCoin","Proof of Stake","May 10, 2014 (over 1 year)","$603,457.70","N/A","null","null","","",""
+"Razor","https://www.coingecko.com/en/coins/razor","Razor","Scrypt","June 14, 2014 (over 1 year)","$6,470.19","N/A","1.25 Minute","2 Million
+                      /
+                      2 Million","","",""
+"NEM","https://www.coingecko.com/en/coins/nem","NEM","Proof of Importance","March 31, 2015 (8 months)","$905,071.47","N/A","1.0 Minute","9 Billion
+                      /
+                      9 Billion","","",""
+"Razor","https://www.coingecko.com/en/coins/razor","Razor","Scrypt","June 14, 2014 (over 1 year)","$6,470.19","N/A","1.25 Minute","2 Million
+                      /
+                      2 Million","","",""
+"Bitcoin","https://www.coingecko.com/en/coins/bitcoin","Bitcoin","SHA-256","January  3, 2009 (almost 7 years)","$5,350,373,990.50","673 PH/s","10.0 Minute","14.9 Million
+                      /
+                      21 Million","","",""
+"Acoin","https://www.coingecko.com/en/coins/acoin","Acoin","SHA-256","September  1, 2014 (over 1 year)","$3,819.86","3.51 TH/s","null","null","","",""
+"Bata","https://www.coingecko.com/en/coins/bata","Bata","Scrypt","May  8, 2015 (7 months)","$17,982.90","1.14 GH/s","1.5 Minute","3.59 Million
+                      /
+                      5 Million","","",""
+"BitBay","https://www.coingecko.com/en/coins/bitbay","BitBay","Proof of Stake","November 10, 2014 (about 1 year)","$187,922.99","N/A","1.067 Minute","null","","",""
+"SuperCoin","https://www.coingecko.com/en/coins/supercoin","SuperCoin","X11","May 24, 2014 (over 1 year)","$9,090.53","N/A","1.5 Minute","34.6 Million
+                      /
+                      45 Million","","",""
+"Guarany","https://www.coingecko.com/en/coins/guarany","Guarany","Scrypt","November 14, 2014 (about 1 year)","$1,272.37","N/A","2.5 Minute","272 Thousand
+                      /
+                      10 Million","","",""
+"Bytecent","https://www.coingecko.com/en/coins/bytecent","Bytecent","null","November  9, 2014 (about 1 year)","$80,744.72","N/A","1.0 Minute","792 Thousand
+                      /
+                      33 Million","","",""
+"Wankcoin","https://www.coingecko.com/en/coins/wankcoin","Wankcoin","SHA-256","January 10, 2014 (almost 2 years)","","N/A","10.0 Minute","","","",""
+"Influxcoin","https://www.coingecko.com/en/coins/influxcoin","Influxcoin","X11","August 26, 2015 (3 months)","$3,255.87","N/A","4.0 Minute","840 Thousand
+                      /
+                      12 Million","","",""
+"Dogecoin","https://www.coingecko.com/en/coins/dogecoin","Dogecoin","Scrypt","December  8, 2013 (almost 2 years)","$13,167,673.45","1.64 TH/s","1.0 Minute","102 Billion
+                      /
+                      100 Billion","","",""
+"Unobtanium","https://www.coingecko.com/en/coins/unobtanium","Unobtanium","SHA-256","October 18, 2013 (about 2 years)","$273,896.04","1.26 PH/s","3.0 Minute","196 Thousand
+                      /
+                      250 Thousand","","",""
+"xCash","https://www.coingecko.com/en/coins/xcash","xCash","Proof of Stake","September  2, 2014 (over 1 year)","$1,289.79","N/A","1.0 Minute","2.46 Million
+                      /
+                      2.4 Million","","",""
+"GameCredits","https://www.coingecko.com/en/coins/gamecredits","GameCredits","Scrypt","February 18, 2014 (almost 2 years)","$845,234.10","6.46 GH/s","1.5 Minute","51 Million
+                      /
+                      84 Million","","",""
+"NuShares","https://www.coingecko.com/en/coins/nushares","NuShares","Proof of Stake","null","$4,767,645.40","N/A","1.0 Minute","825 Million
+                      /
+                      1 Billion","","",""
+"GSMcoin","https://www.coingecko.com/en/coins/gsmcoin","GSMcoin","X11","February 22, 2015 (9 months)","","N/A","1.0 Minute","","","",""
+"Monero","https://www.coingecko.com/en/coins/monero","Monero","Cryptonight","April 18, 2014 (over 1 year)","$3,794,119.97","N/A","1.0 Minute","10.2 Million
+                      /
+                      18.4 Million","","",""
+"SocialxBot","https://www.coingecko.com/en/coins/socialxbot","null","null","null","null","null","null","null","","",""
+"GAIA","https://www.coingecko.com/en/coins/gaia","GAIA","Proof of Stake","October 28, 2014 (about 1 year)","$8,941.61","N/A","1.0 Minute","24.1 Million
+                      /
+                      24 Million","","",""
+"Auroracoin","https://www.coingecko.com/en/coins/auroracoin","Auroracoin","Scrypt","January 24, 2014 (almost 2 years)","$291,724.59","4.5 GH/s","5.0 Minute","7.49 Million
+                      /
+                      21 Million","","",""
+"BitUSD","https://www.coingecko.com/en/coins/bitusd","BitUSD","null","null","$113,752.00","N/A","null","null","","",""
+"RibbitRewards","https://www.coingecko.com/en/coins/ribbitrewards","RibbitRewards","SHA-256","January 20, 2015 (11 months)","$24,463.11","N/A","1.0 Minute","400 Million
+                      /
+                      1 Billion","","",""
+"Pinkcoin","https://www.coingecko.com/en/coins/pinkcoin","Pinkcoin","X11","May  2, 2014 (over 1 year)","$60,170.83","N/A","0.5 Minute","365 Million
+                      /
+                      380 Million","","",""
+"Qora","https://www.coingecko.com/en/coins/qora","Qora","Proof of Stake","May 16, 2014 (over 1 year)","$140,000.00","N/A","null","10 Billion
+                      /
+                      10 Billion","","",""
+"Aiden","https://www.coingecko.com/en/coins/aiden","Aiden","null","April  5, 2014 (over 1 year)","$5,211.63","N/A","0.5 Minute","14.6 Million
+                      /
+                      84 Million","","",""
+"Gridcoin","https://www.coingecko.com/en/coins/gridcoin-research","Gridcoin","Proof of Research","null","$4,411,390.00","N/A","1.5 Minute","370 Million
+                      /
+                      341 Million","","",""
+"Crypti","https://www.coingecko.com/en/coins/crypti","Crypti","Proof of Stake","June 16, 2014 (over 1 year)","$173,795.44","N/A","1.0 Minute","100 Million
+                      /
+                      100 Million","","",""
+"NobleCoin","https://www.coingecko.com/en/coins/noblecoin","NobleCoin","Scrypt","January  6, 2014 (almost 2 years)","$40,415.97","N/A","1.0 Minute","null","","",""
+"Qibuck","https://www.coingecko.com/en/coins/qibuck","Qibuck","X13","August  7, 2014 (over 1 year)","$46,443.86","N/A","null","517 Thousand
+                      /
+                      2 Million","","",""
+"Communitycoin","https://www.coingecko.com/en/coins/communitycoin","Communitycoin","Proof of Stake","March 25, 2014 (over 1 year)","$15,213.21","N/A","1.0 Minute","1.06 Billion
+                      /
+                      9 Million","","",""
+"LiteDoge","https://www.coingecko.com/en/coins/litedoge","LiteDoge","Scrypt","March 16, 2015 (9 months)","","N/A","1.067 Minute","9.98 Billion
+                      /
+                      35 Billion","","",""
+"MasterTraderCoin","https://www.coingecko.com/en/coins/mastertradercoin","MasterTraderCoin","X11","January 21, 2015 (11 months)","$5,202.73","N/A","1.0 Minute","223 Thousand
+                      /
+                      10.1 Million","","",""
+"USDe","https://www.coingecko.com/en/coins/usde","USDe","Scrypt","January 12, 2014 (almost 2 years)","$32,670.82","N/A","1.0 Minute","1.13 Billion
+                      /
+                      1.6 Billion","","",""
+"Jumbucks","https://www.coingecko.com/en/coins/jumbucks","Jumbucks","Scrypt","September  2, 2014 (over 1 year)","$87,565.28","N/A","1.0 Minute","3.48 Million
+                      /
+                      3.29 Million","","",""
+"Full Integrity Coin","https://www.coingecko.com/en/coins/full-integrity-coin","Full Integrity Coin","null","October 23, 2014 (about 1 year)","$575.40","N/A","null","336 Million
+                      /
+                      4.2 Billion","","",""
+"Xiaomicoin","https://www.coingecko.com/en/coins/xiaomicoin","Xiaomicoin","Scrypt","June 15, 2015 (6 months)","$42,004.72","N/A","1.0 Minute","null","","",""
+"Cryptonite","https://www.coingecko.com/en/coins/cryptonite","Cryptonite","M7","July 28, 2014 (over 1 year)","$33,429.06","N/A","1.0 Minute","164 Million
+                      /
+                      1.84 Billion","","",""
+"Fastcoin","https://www.coingecko.com/en/coins/fastcoin","Fastcoin","Scrypt","May 28, 2013 (over 2 years)","$17,739.40","166 MH/s","0.2 Minute","127 Million
+                      /
+                      166 Million","","",""
+"LibertyCoin","https://www.coingecko.com/en/coins/libertycoin","LibertyCoin","Proof of Stake","null","$3,977.00","N/A","null","null","","",""
+"Devcoin","https://www.coingecko.com/en/coins/devcoin","Devcoin","SHA-256","July 20, 2011 (over 4 years)","$107,369.69","N/A","10.0 Minute","null","","",""
+"RibbitRewards","https://www.coingecko.com/en/coins/ribbitrewards","RibbitRewards","SHA-256","January 20, 2015 (11 months)","$24,463.11","N/A","1.0 Minute","400 Million
+                      /
+                      1 Billion","","",""
+"Ethereum","https://www.coingecko.com/en/coins/ethereum","Ethereum","Ethash","July 30, 2015 (4 months)","$61,844,779.03","N/A","0.2 Minute","null","","",""
+"DigitalNote","https://www.coingecko.com/en/coins/digitalnote","DigitalNote","Cryptonight","May 30, 2014 (over 1 year)","$452,372.09","N/A","4.0 Minute","6.85 Billion
+                      /
+                      8.59 Billion","","",""
+"Pangea Poker","https://www.coingecko.com/en/coins/pangea-poker","Pangea Poker","null","null","$135,035.44","N/A","null","null","","",""
+"CzechCrownCoin","https://www.coingecko.com/en/coins/czechcrowncoin","CzechCrownCoin","Scrypt","June 29, 2014 (over 1 year)","$120,733.90","N/A","2.5 Minute","4.11 Million
+                      /
+                      100 Million","","",""
+"Ripple","https://www.coingecko.com/en/coins/ripple","Ripple","null","null","$140,085,886.60","N/A","null","33.5 Billion
+                      /
+                      100 Billion","","",""
+"Bitz","https://www.coingecko.com/en/coins/bitz","Bitz","X11","March  1, 2015 (9 months)","$4,620.96","N/A","1.0 Minute","1.97 Million
+                      /
+                      2 Million","","",""
+"Storjcoin X","https://www.coingecko.com/en/coins/storjcoinx","Storjcoin X","null","July 18, 2014 (over 1 year)","$592,107.86","N/A","null","44.6 Million
+                      /
+                      500 Million","","",""
+"Zetacoin","https://www.coingecko.com/en/coins/zetacoin","Zetacoin","SHA-256","August  3, 2013 (over 2 years)","$263,255.79","12 TH/s","0.5 Minute","163 Million
+                      /
+                      160 Million","","",""
+"Cerium","https://www.coingecko.com/en/coins/cerium","Cerium","SHA-256","June  6, 2015 (6 months)","","N/A","1.5 Minute","null","","",""
+"Devcoin","https://www.coingecko.com/en/coins/devcoin","Devcoin","SHA-256","July 20, 2011 (over 4 years)","$107,369.69","N/A","10.0 Minute","null","","",""
+"Karma","https://www.coingecko.com/en/coins/karma","Karma","Scrypt","February  4, 2014 (almost 2 years)","$19,402.15","N/A","1.0 Minute","69.3 Billion
+                      /
+                      92 Billion","","",""
+"ARCHcoin","https://www.coingecko.com/en/coins/archcoin","ARCHcoin","Scrypt","October  4, 2014 (about 1 year)","$298,748.72","N/A","1.0 Minute","16.5 Million
+                      /
+                      16.2 Million","","",""
+"Primecoin","https://www.coingecko.com/en/coins/primecoin","Primecoin","null","July  7, 2013 (over 2 years)","$883,230.30","N/A","1.0 Minute","12.5 Million
+                      /
+                      ?","","",""
+"Zeitcoin","https://www.coingecko.com/en/coins/zeitcoin","Zeitcoin","Proof of Stake","February 28, 2014 (almost 2 years)","$99,550.84","N/A","0.5 Minute","33.2 Billion
+                      /
+                      99 Billion","","",""
+"Ixcoin","https://www.coingecko.com/en/coins/ixcoin","Ixcoin","SHA-256","May  7, 2011 (over 4 years)","$419,038.85","N/A","10.0 Minute","21 Million
+                      /
+                      21 Million","","",""
+"ARCHcoin","https://www.coingecko.com/en/coins/archcoin","ARCHcoin","Scrypt","October  4, 2014 (about 1 year)","$298,748.72","N/A","1.0 Minute","16.5 Million
+                      /
+                      16.2 Million","","",""
+"Fibre","https://www.coingecko.com/en/coins/fibre","Fibre","Proof of Stake","August 16, 2014 (over 1 year)","$21,222.30","N/A","1.0 Minute","637 Thousand
+                      /
+                      625 Thousand","","",""
+"Earthcoin","https://www.coingecko.com/en/coins/earthcoin","Earthcoin","Scrypt","December 21, 2013 (almost 2 years)","$775,514.33","10 GH/s","1.0 Minute","9.01 Billion
+                      /
+                      13.5 Billion","","",""
+"Digitalcoin","https://www.coingecko.com/en/coins/digitalcoin","Digitalcoin","Multiple Algorithms","May 20, 2013 (over 2 years)","$282,801.49","N/A","0.67 Minute","28.3 Million
+                      /
+                      48.2 Million","","",""
+"Dogeparty","https://www.coingecko.com/en/coins/dogeparty","Dogeparty","Scrypt","August 13, 2014 (over 1 year)","$48,281.29","N/A","1.0 Minute","null","","",""
+"Anoncoin","https://www.coingecko.com/en/coins/anoncoin","Anoncoin","Scrypt","June  2, 2013 (over 2 years)","$176,524.64","2.3 GH/s","3.0 Minute","1.94 Million
+                      /
+                      3.1 Million","","",""
+"Omnicoin","https://www.coingecko.com/en/coins/omnicoin","Omnicoin","Scrypt","April  5, 2014 (over 1 year)","$516.50","9.71 MH/s","3.0 Minute","11.1 Million
+                      /
+                      13.4 Million","","",""
+"VPNCoin","https://www.coingecko.com/en/coins/vpncoin","VPNCoin","Proof of Stake","September  4, 2014 (about 1 year)","$443,248.13","N/A","1.0 Minute","400 Million
+                      /
+                      400 Million","","",""
+"Litecoin","https://www.coingecko.com/en/coins/litecoin","Litecoin","Scrypt","October  8, 2011 (about 4 years)","$144,684,176.77","1.66 TH/s","2.5 Minute","43.4 Million
+                      /
+                      84 Million","","",""
+"SuperNET","https://www.coingecko.com/en/coins/supernet","SuperNET","null","null","$610,643.01","N/A","null","null","","",""
+"Orbitcoin","https://www.coingecko.com/en/coins/orbitcoin","Orbitcoin","NeoScrypt","July 28, 2013 (over 2 years)","$41,114.44","12.9 MH/s","1.0 Minute","2.32 Million
+                      /
+                      3.77 Million","","",""
+"USDe","https://www.coingecko.com/en/coins/usde","USDe","Scrypt","January 12, 2014 (almost 2 years)","$32,670.82","N/A","1.0 Minute","1.13 Billion
+                      /
+                      1.6 Billion","","",""
+"Mintcoin","https://www.coingecko.com/en/coins/mintcoin","Mintcoin","Proof of Stake","February  6, 2014 (almost 2 years)","$563,280.13","N/A","0.5 Minute","null","","",""
+"TileCoin","https://www.coingecko.com/en/coins/tilecoin","TileCoin","null","September  8, 2014 (about 1 year)","$181,400.00","N/A","null","100 Million
+                      /
+                      100 Million","","",""
+"Swing","https://www.coingecko.com/en/coins/swing","Swing","Proof of Stake","August 30, 2015 (3 months)","$1,359.19","N/A","null","492 Thousand
+                      /
+                      40 Million","","",""
+"Luckycoin","https://www.coingecko.com/en/coins/luckycoin","Luckycoin","Scrypt","May 24, 2013 (over 2 years)","$6,461.00","275 MH/s","1.0 Minute","19.3 Million
+                      /
+                      20 Million","","",""
+"Bitmark","https://www.coingecko.com/en/coins/bitmark","Bitmark","Scrypt","July 14, 2014 (over 1 year)","$32,191.27","298 MH/s","2.0 Minute","1.03 Million
+                      /
+                      27.6 Million","","",""
+"IOCoin","https://www.coingecko.com/en/coins/iocoin","IOCoin","Proof of Stake","July 24, 2014 (over 1 year)","$195,120.43","N/A","1.0 Minute","16.2 Million
+                      /
+                      16 Million","","",""
+"BitShares","https://www.coingecko.com/en/coins/bitshares","BitShares","null","July 19, 2014 (over 1 year)","$7,823,059.06","N/A","0.167 Minute","2.53 Billion
+                      /
+                      2 Billion","","",""
+"Mincoin","https://www.coingecko.com/en/coins/mincoin","Mincoin","Scrypt","April  3, 2013 (over 2 years)","$2,827.83","96.5 MH/s","1.0 Minute","1.72 Million
+                      /
+                      10 Million","","",""
+"Asiacoin","https://www.coingecko.com/en/coins/asiacoin","Asiacoin","Scrypt","April 16, 2014 (over 1 year)","$313,154.65","N/A","1.0 Minute","null","","",""
+"Cryptokenz","https://www.coingecko.com/en/coins/cryptokenz","Cryptokenz","Proof of Stake","September  9, 2015 (3 months)","$15,082.75","N/A","2.0 Minute","null","","",""
+"Quark","https://www.coingecko.com/en/coins/quark","Quark","Quark","July 21, 2013 (over 2 years)","$444,103.39","243 MH/s","0.5 Minute","250 Million
+                      /
+                      247 Million","","",""
+"UFO Coin","https://www.coingecko.com/en/coins/ufocoin","UFO Coin","NeoScrypt","January  3, 2014 (almost 2 years)","$24,956.32","22.6 MH/s","1.5 Minute","2.31 Billion
+                      /
+                      4 Billion","","",""
+"Paycoin","https://www.coingecko.com/en/coins/paycoin","Paycoin","SHA-256","December 12, 2014 (12 months)","$417,485.39","N/A","1.0 Minute","16.4 Million
+                      /
+                      12.5 Million","","",""
+"Omnicoin","https://www.coingecko.com/en/coins/omnicoin","Omnicoin","Scrypt","April  5, 2014 (over 1 year)","$516.50","9.71 MH/s","3.0 Minute","11.1 Million
+                      /
+                      13.4 Million","","",""
+"NEM","https://www.coingecko.com/en/coins/nem","NEM","Proof of Importance","March 31, 2015 (8 months)","$905,071.47","N/A","1.0 Minute","9 Billion
+                      /
+                      9 Billion","","",""
+"Pangea Poker","https://www.coingecko.com/en/coins/pangea-poker","Pangea Poker","null","null","$135,035.44","N/A","null","null","","",""
+"PhilosopherStone","https://www.coingecko.com/en/coins/philosopherstone","PhilosopherStone","Scrypt","July 28, 2013 (over 2 years)","$14,190.17","N/A","null","2.43 Million
+                      /
+                      8.89 Million","","",""
+"Qora","https://www.coingecko.com/en/coins/qora","Qora","Proof of Stake","May 16, 2014 (over 1 year)","$140,000.00","N/A","null","10 Billion
+                      /
+                      10 Billion","","",""
+"TrustPlus","https://www.coingecko.com/en/coins/trustplus","TrustPlus","X11","July  4, 2014 (over 1 year)","$103,808.67","N/A","0.75 Minute","null","","",""
+"Tacocoin","https://www.coingecko.com/en/coins/tacocoin","Tacocoin","Scrypt","null","$97.70","N/A","1.0 Minute","48.9 Million
+                      /
+                      50 Million","","",""
+"Nxttycoin","https://www.coingecko.com/en/coins/nxttycoin","Nxttycoin","null","August 12, 2014 (over 1 year)","$48,000.00","N/A","null","1 Billion
+                      /
+                      1000 Million","","",""
+"BlackCoin","https://www.coingecko.com/en/coins/blackcoin","BlackCoin","Proof of Stake","February 24, 2014 (almost 2 years)","$1,807,271.83","N/A","1.067 Minute","75.1 Million
+                      /
+                      100 Million","","",""
+"Orbitcoin","https://www.coingecko.com/en/coins/orbitcoin","Orbitcoin","NeoScrypt","July 28, 2013 (over 2 years)","$41,114.44","12.9 MH/s","1.0 Minute","2.32 Million
+                      /
+                      3.77 Million","","",""
+"Gridcoin","https://www.coingecko.com/en/coins/gridcoin-research","Gridcoin","Proof of Research","null","$4,411,390.00","N/A","1.5 Minute","370 Million
+                      /
+                      341 Million","","",""
+"LitecoinDark","https://www.coingecko.com/en/coins/litecoindark","LitecoinDark","Scrypt","August 29, 2014 (over 1 year)","$9,645.33","15.3 MH/s","1.0 Minute","78.9 Million
+                      /
+                      82 Million","","",""
+"Franko","https://www.coingecko.com/en/coins/franko","Uh Oh! We're sorry, but something went wrong.","null","null","null","null","null","null","","",""
+"TittieCoin","https://www.coingecko.com/en/coins/tittiecoin","TittieCoin","Scrypt","January 27, 2014 (almost 2 years)","$13,463.51","N/A","null","1.25 Billion
+                      /
+                      1.12 Billion","","",""
+"Reddcoin","https://www.coingecko.com/en/coins/reddcoin","Reddcoin","Proof of Stake Velocity","January 26, 2014 (almost 2 years)","$390,304.27","N/A","1.0 Minute","27.9 Billion
+                      /
+                      27 Billion","","",""
+"XCurrency","https://www.coingecko.com/en/coins/xcurrency","XCurrency","Proof of Stake","May  7, 2014 (over 1 year)","$73,665.44","N/A","90.0 Minute","5.64 Million
+                      /
+                      ?","","",""
+"SpreadCoin","https://www.coingecko.com/en/coins/spreadcoin","SpreadCoin","X11","July 29, 2014 (over 1 year)","$37,114.43","N/A","1.0 Minute","4.3 Million
+                      /
+                      20 Million","","",""
+"Luckycoin","https://www.coingecko.com/en/coins/luckycoin","Luckycoin","Scrypt","May 24, 2013 (over 2 years)","$6,461.00","275 MH/s","1.0 Minute","19.3 Million
+                      /
+                      20 Million","","",""
+"Fluttercoin","https://www.coingecko.com/en/coins/fluttercoin","Fluttercoin","Scrypt","March  4, 2014 (almost 2 years)","$30,576.86","N/A","2.0 Minute","null","","",""
+"BitUSD","https://www.coingecko.com/en/coins/bitusd","BitUSD","null","null","$113,752.00","N/A","null","null","","",""
+"NeuCoin","https://www.coingecko.com/en/coins/neucoin","NeuCoin","Proof of Stake","September 23, 2015 (2 months)","$1,337,442.50","N/A","1.0 Minute","160 Million
+                      /
+                      3 Billion","","",""
+"Factom","https://www.coingecko.com/en/coins/factom","Factom","null","September  1, 2015 (3 months)","$770,203.76","N/A","null","null","","",""
+"Infinitecoin","https://www.coingecko.com/en/coins/infinitecoin","Infinitecoin","Scrypt","June  5, 2013 (over 2 years)","$428,103.57","176 KH/s","0.5 Minute","90.6 Billion
+                      /
+                      90.6 Billion","","",""
+"Bata","https://www.coingecko.com/en/coins/bata","Bata","Scrypt","May  8, 2015 (7 months)","$17,982.90","1.14 GH/s","1.5 Minute","3.59 Million
+                      /
+                      5 Million","","",""
+"Stellar","https://www.coingecko.com/en/coins/stellar","Stellar","null","null","$7,949,690.56","N/A","null","4.84 Billion
+                      /
+                      227 Million","","",""
+"Bluecoin","https://www.coingecko.com/en/coins/bluecoin","Bluecoin","X11","April 23, 2014 (over 1 year)","$16,341.68","N/A","1.0 Minute","570 Million
+                      /
+                      500 Million","","",""
+"Storjcoin X","https://www.coingecko.com/en/coins/storjcoinx","Storjcoin X","null","July 18, 2014 (over 1 year)","$592,107.86","N/A","null","44.6 Million
+                      /
+                      500 Million","","",""
+"Judgecoin","https://www.coingecko.com/en/coins/judgecoin","Judgecoin","X13","July  5, 2014 (over 1 year)","$2,154.70","N/A","1.0 Minute","11.8 Million
+                      /
+                      11.5 Million","","",""
+"Techcoin","https://www.coingecko.com/en/coins/techcoin","Techcoin","X13","June 24, 2014 (over 1 year)","","N/A","5.0 Minute","null","","",""
+"SpreadCoin","https://www.coingecko.com/en/coins/spreadcoin","SpreadCoin","X11","July 29, 2014 (over 1 year)","$37,114.43","N/A","1.0 Minute","4.3 Million
+                      /
+                      20 Million","","",""
+"X-Coin","https://www.coingecko.com/en/coins/xcoin","X-Coin","SHA-256","February 27, 2015 (9 months)","$2,624.92","N/A","1.0 Minute","null","","",""
+"Siacoin","https://www.coingecko.com/en/coins/siacoin","Siacoin","Blake2b","June  6, 2015 (6 months)","$136,783.01","N/A","10.0 Minute","null","","",""
+"Metal Music Coin","https://www.coingecko.com/en/coins/metal-music-coin","Metal Music Coin","Scrypt","null","$836.08","N/A","1.0 Minute","59.7 Million
+                      /
+                      2.5 Billion","","",""
+"Mooncoin","https://www.coingecko.com/en/coins/mooncoin","Mooncoin","Scrypt","December 30, 2013 (almost 2 years)","$63,236.71","N/A","1.5 Minute","208 Billion
+                      /
+                      384 Billion","","",""
+"Swing","https://www.coingecko.com/en/coins/swing","Swing","Proof of Stake","August 30, 2015 (3 months)","$1,359.19","N/A","null","492 Thousand
+                      /
+                      40 Million","","",""
+"Primecoin","https://www.coingecko.com/en/coins/primecoin","Primecoin","null","July  7, 2013 (over 2 years)","$883,230.30","N/A","1.0 Minute","12.5 Million
+                      /
+                      ?","","",""
+"Augur","https://www.coingecko.com/en/coins/augur","Augur","null","null","$0.00","N/A","null","?
+                      /
+                      11 Million","","",""
+"SonicScrewdriver","https://www.coingecko.com/en/coins/sonicscrewdriver","SonicScrewdriver","Proof of Stake","August  8, 2014 (over 1 year)","$14,981.00","N/A","1.0 Minute","22.3 Million
+                      /
+                      23 Million","","",""
+"AidBit","https://www.coingecko.com/en/coins/aidbit","AidBit","Groestl","July 18, 2014 (over 1 year)","","N/A","1.0 Minute","null","","",""
+"Hyper","https://www.coingecko.com/en/coins/hyper","Hyper","Proof of Stake","May 25, 2014 (over 1 year)","$219,032.04","N/A","0.5 Minute","null","","",""
+"Siacoin","https://www.coingecko.com/en/coins/siacoin","Siacoin","Blake2b","June  6, 2015 (6 months)","$136,783.01","N/A","10.0 Minute","null","","",""
+"Groestlcoin","https://www.coingecko.com/en/coins/groestlcoin","Groestlcoin","Groestl","March 22, 2014 (over 1 year)","$54,297.27","879 MH/s","1.0 Minute","61.2 Million
+                      /
+                      105 Million","","",""
+"CzechCrownCoin","https://www.coingecko.com/en/coins/czechcrowncoin","CzechCrownCoin","Scrypt","June 29, 2014 (over 1 year)","$120,733.90","N/A","2.5 Minute","4.11 Million
+                      /
+                      100 Million","","",""
+"Unobtanium","https://www.coingecko.com/en/coins/unobtanium","Unobtanium","SHA-256","October 18, 2013 (about 2 years)","$273,896.04","1.26 PH/s","3.0 Minute","196 Thousand
+                      /
+                      250 Thousand","","",""
+"Quatloo","https://www.coingecko.com/en/coins/quatloo","Quatloo","Scrypt","June 27, 2014 (over 1 year)","$21,571.65","537 MH/s","2.25 Minute","5.06 Million
+                      /
+                      100 Million","","",""
+"Shibecoin","https://www.coingecko.com/en/coins/shibecoin","Shibecoin","Proof of Stake","October 14, 2014 (about 1 year)","","N/A","1.0 Minute","","","",""
+"Worldcoin","https://www.coingecko.com/en/coins/worldcoin","Worldcoin","Scrypt","May 14, 2013 (over 2 years)","$596,211.90","9.43 GH/s","0.5 Minute","93.7 Million
+                      /
+                      265 Million","","",""
+"MonetaryUnit","https://www.coingecko.com/en/coins/monetaryunit","MonetaryUnit","Quark","July 26, 2014 (over 1 year)","$10,690.01","244 MH/s","0.67 Minute","76.9 Million
+                      /
+                      1 Quadrillion","","",""
+"Deutsche eMark","https://www.coingecko.com/en/coins/deutsche-emark","Deutsche eMark","SHA-256","October 11, 2013 (about 2 years)","$30,625.10","N/A","2.0 Minute","17.7 Million
+                      /
+                      500 Million","","",""
+"Litecoin","https://www.coingecko.com/en/coins/litecoin","Litecoin","Scrypt","October  8, 2011 (about 4 years)","$144,684,176.77","1.66 TH/s","2.5 Minute","43.4 Million
+                      /
+                      84 Million","","",""
+"NeuCoin","https://www.coingecko.com/en/coins/neucoin","NeuCoin","Proof of Stake","September 23, 2015 (2 months)","$1,337,442.50","N/A","1.0 Minute","160 Million
+                      /
+                      3 Billion","","",""
+"Megacoin","https://www.coingecko.com/en/coins/megacoin","Megacoin","Scrypt","June  1, 2013 (over 2 years)","$557,188.77","7.33 GH/s","2.5 Minute","31.3 Million
+                      /
+                      42 Million","","",""
+"Omnicoin","https://www.coingecko.com/en/coins/omnicoin","Omnicoin","Scrypt","April  5, 2014 (over 1 year)","$516.50","9.71 MH/s","3.0 Minute","11.1 Million
+                      /
+                      13.4 Million","","",""
+"Vanillacoin","https://www.coingecko.com/en/coins/vanillacoin","Vanillacoin","Proof of Stake","December 23, 2014 (11 months)","$682,956.63","N/A","null","12.1 Million
+                      /
+                      30.7 Million","","",""
+"Node","https://www.coingecko.com/en/coins/node","Node","null","July 18, 2014 (over 1 year)","$25,000.00","N/A","1.0 Minute","1 Billion
+                      /
+                      1 Billion","","",""
+"Xiaomicoin","https://www.coingecko.com/en/coins/xiaomicoin","Xiaomicoin","Scrypt","June 15, 2015 (6 months)","$42,004.72","N/A","1.0 Minute","null","","",""
+"Dashcoin","https://www.coingecko.com/en/coins/dashcoin","Dashcoin","Cryptonight","July  5, 2014 (over 1 year)","$13,438.09","N/A","2.0 Minute","12.1 Million
+                      /
+                      184 Billion","","",""
+"Saffroncoin","https://www.coingecko.com/en/coins/saffroncoin","Saffroncoin","null","null","$8,720.61","N/A","7.5 Minute","20.4 Million
+                      /
+                      111 Million","","",""
+"Rimbit","https://www.coingecko.com/en/coins/rimbit","null","null","null","null","null","null","null","","",""
+"Trollcoin","https://www.coingecko.com/en/coins/trollcoin","Trollcoin","Scrypt","February 11, 2014 (almost 2 years)","$36,380.56","N/A","2.0 Minute","5.03 Billion
+                      /
+                      9 Billion","","",""
+"Hexx","https://www.coingecko.com/en/coins/hexx","Hexx","Scrypt","June 24, 2015 (5 months)","","N/A","1.0 Minute","null","","",""
+"Titcoin","https://www.coingecko.com/en/coins/titcoin","Titcoin","SHA-256","June 21, 2014 (over 1 year)","$18,352.83","N/A","1.0 Minute","38.2 Million
+                      /
+                      69 Million","","",""
+"Huntercoin","https://www.coingecko.com/en/coins/huntercoin","Huntercoin","null","January 27, 2014 (almost 2 years)","$7,315.11","N/A","1.0 Minute","4.17 Million
+                      /
+                      42 Million","","",""
+"Vertcoin","https://www.coingecko.com/en/coins/vertcoin","Vertcoin","Lyra2RE","January 10, 2014 (almost 2 years)","$411,043.12","11.8 GH/s","2.5 Minute","20.7 Million
+                      /
+                      84 Million","","",""
+"GlobalBoost","https://www.coingecko.com/en/coins/globalboost","GlobalBoost","Scrypt","April 27, 2014 (over 1 year)","$178,245.77","N/A","0.5 Minute","448 Thousand
+                      /
+                      1 Billion","","",""
+"Gems","https://www.coingecko.com/en/coins/gems","Gems","null","November  7, 2014 (about 1 year)","$951,454.77","N/A","null","88.1 Million
+                      /
+                      100 Million","","",""
+"Bitcoin Scrypt","https://www.coingecko.com/en/coins/bitcoin-scrypt","Bitcoin Scrypt","Scrypt","September  8, 2013 (about 2 years)","$7,036.12","N/A","2.0 Minute","12.8 Million
+                      /
+                      21 Million","","",""
+"Ethereum","https://www.coingecko.com/en/coins/ethereum","Ethereum","Ethash","July 30, 2015 (4 months)","$61,844,779.03","N/A","0.2 Minute","null","","",""
+"BitStake","https://www.coingecko.com/en/coins/bitstake","BitStake","X11","January 11, 2015 (11 months)","$1,459.31","N/A","1.0 Minute","1.31 Million
+                      /
+                      1.3 Million","","",""
+"UFO Coin","https://www.coingecko.com/en/coins/ufocoin","UFO Coin","NeoScrypt","January  3, 2014 (almost 2 years)","$24,956.32","22.6 MH/s","1.5 Minute","2.31 Billion
+                      /
+                      4 Billion","","",""
+"GSMcoin","https://www.coingecko.com/en/coins/gsmcoin","GSMcoin","X11","February 22, 2015 (9 months)","","N/A","1.0 Minute","","","",""
+"Devcoin","https://www.coingecko.com/en/coins/devcoin","Devcoin","SHA-256","July 20, 2011 (over 4 years)","$107,369.69","N/A","10.0 Minute","null","","",""
+"DogeCoinDark","https://www.coingecko.com/en/coins/dogecoindark","DogeCoinDark","Scrypt","October  9, 2014 (about 1 year)","$164,289.73","281 MH/s","0.5 Minute","9.27 Billion
+                      /
+                      13 Billion","","",""
+"Reddcoin","https://www.coingecko.com/en/coins/reddcoin","Reddcoin","Proof of Stake Velocity","January 26, 2014 (almost 2 years)","$390,304.27","N/A","1.0 Minute","27.9 Billion
+                      /
+                      27 Billion","","",""
+"Hyper","https://www.coingecko.com/en/coins/hyper","Hyper","Proof of Stake","May 25, 2014 (over 1 year)","$219,032.04","N/A","0.5 Minute","null","","",""
+"Mincoin","https://www.coingecko.com/en/coins/mincoin","Mincoin","Scrypt","April  3, 2013 (over 2 years)","$2,827.83","96.5 MH/s","1.0 Minute","1.72 Million
+                      /
+                      10 Million","","",""
+"VPNCoin","https://www.coingecko.com/en/coins/vpncoin","VPNCoin","Proof of Stake","September  4, 2014 (about 1 year)","$443,248.13","N/A","1.0 Minute","400 Million
+                      /
+                      400 Million","","",""
+"Fantomcoin","https://www.coingecko.com/en/coins/fantomcoin","Fantomcoin","Cryptonight","May  6, 2014 (over 1 year)","$9,476.44","N/A","1.0 Minute","3.3 Million
+                      /
+                      18.4 Million","","",""
+"Whitecoin","https://www.coingecko.com/en/coins/whitecoin","Whitecoin","Proof of Stake","April 14, 2014 (over 1 year)","$45,185.70","N/A","1.5 Minute","307 Million
+                      /
+                      300 Million","","",""
+"FuelCoin","https://www.coingecko.com/en/coins/fuelcoin","FuelCoin","X11","null","$575,709.83","N/A","null","100 Million
+                      /
+                      336 Million","","",""
+"BitcoinDark","https://www.coingecko.com/en/coins/bitcoindark","BitcoinDark","null","null","$900,462.20","N/A","1.0 Minute","1.24 Million
+                      /
+                      22 Million","","",""
+"USDe","https://www.coingecko.com/en/coins/usde","USDe","Scrypt","January 12, 2014 (almost 2 years)","$32,670.82","N/A","1.0 Minute","1.13 Billion
+                      /
+                      1.6 Billion","","",""
+"Marinecoin","https://www.coingecko.com/en/coins/marinecoin","Marinecoin","null","January 14, 2014 (almost 2 years)","","N/A","null","","","",""
+"Augur","https://www.coingecko.com/en/coins/augur","Augur","null","null","$0.00","N/A","null","?
+                      /
+                      11 Million","","",""
+"Potcoin","https://www.coingecko.com/en/coins/potcoin","Potcoin","Scrypt","January 15, 2014 (almost 2 years)","$104,628.60","N/A","0.67 Minute","212 Million
+                      /
+                      420 Million","","",""
+"BitcoinDark","https://www.coingecko.com/en/coins/bitcoindark","BitcoinDark","null","null","$900,462.20","N/A","1.0 Minute","1.24 Million
+                      /
+                      22 Million","","",""
+"ziftrCOIN","https://www.coingecko.com/en/coins/ziftrcoin","ziftrCOIN","ZR5","March  1, 2015 (9 months)","$0.00","N/A","1.0 Minute","?
+                      /
+                      10 Billion","","",""
+"Banx Shares","https://www.coingecko.com/en/coins/banxshares","Banx Shares","null","August 13, 2014 (over 1 year)","","N/A","null","null","","",""
+"NuShares","https://www.coingecko.com/en/coins/nushares","NuShares","Proof of Stake","null","$4,767,645.40","N/A","1.0 Minute","825 Million
+                      /
+                      1 Billion","","",""
+"Bitbar","https://www.coingecko.com/en/coins/bitbar","Bitbar","Scrypt","May  2, 2013 (over 2 years)","$29,394.25","N/A","10.0 Minute","21.8 Thousand
+                      /
+                      9.7 Thousand","","",""
+"Syscoin","https://www.coingecko.com/en/coins/syscoin","Syscoin","Scrypt","null","$211,890.26","1.03 TH/s","null","429 Million
+                      /
+                      2 Billion","","",""
+"Bytecent","https://www.coingecko.com/en/coins/bytecent","Bytecent","null","November  9, 2014 (about 1 year)","$80,744.72","N/A","1.0 Minute","792 Thousand
+                      /
+                      33 Million","","",""
+"CannabisCoin","https://www.coingecko.com/en/coins/cannabiscoin","CannabisCoin","X11","April 20, 2014 (over 1 year)","$193,460.69","116 MH/s","0.7 Minute","77.2 Million
+                      /
+                      106 Million","","",""
+"Feathercoin","https://www.coingecko.com/en/coins/feathercoin","Feathercoin","NeoScrypt","April 16, 2013 (over 2 years)","$377,920.73","259 MH/s","1.0 Minute","104 Million
+                      /
+                      336 Million","","",""
+"NobleCoin","https://www.coingecko.com/en/coins/noblecoin","NobleCoin","Scrypt","January  6, 2014 (almost 2 years)","$40,415.97","N/A","1.0 Minute","null","","",""
+"Ybcoin","https://www.coingecko.com/en/coins/ybcoin","Ybcoin","Proof of Stake","June 28, 2013 (over 2 years)","$2,160,980.02","N/A","null","3.01 Million
+                      /
+                      3 Million","","",""
+"DigitalNote","https://www.coingecko.com/en/coins/digitalnote","DigitalNote","Cryptonight","May 30, 2014 (over 1 year)","$452,372.09","N/A","4.0 Minute","6.85 Billion
+                      /
+                      8.59 Billion","","",""
+"Dash","https://www.coingecko.com/en/coins/dash","Dash","X11","January 19, 2014 (almost 2 years)","$13,245,825.89","109 GH/s","2.5 Minute","6.03 Million
+                      /
+                      22 Million","","",""
+"Digibyte","https://www.coingecko.com/en/coins/digibyte","Digibyte","null","January 10, 2014 (almost 2 years)","$1,062,529.84","N/A","0.5 Minute","null","","",""
+"Primecoin","https://www.coingecko.com/en/coins/primecoin","Primecoin","null","July  7, 2013 (over 2 years)","$883,230.30","N/A","1.0 Minute","12.5 Million
+                      /
+                      ?","","",""
+"Ratecoin","https://www.coingecko.com/en/coins/ratecoin","Ratecoin","Proof of Stake","June 20, 2015 (6 months)","$33,112.77","N/A","0.5 Minute","80.4 Million
+                      /
+                      75 Million","","",""
+"MangoCoinz","https://www.coingecko.com/en/coins/mangocoinz","MangoCoinz","null","null","$12,465.26","N/A","null","null","","",""
+"Navajo","https://www.coingecko.com/en/coins/navajo","Navajo","X13","June  2, 2014 (over 1 year)","$103,300.55","N/A","0.5 Minute","59.5 Million
+                      /
+                      57 Million","","",""
+"Crave","https://www.coingecko.com/en/coins/crave","Crave","Proof of Stake","March 20, 2015 (9 months)","$5,681.91","N/A","1.0 Minute","776 Thousand
+                      /
+                      2.08 Million","","",""
+"KhanCoin","https://www.coingecko.com/en/coins/khancoin","KhanCoin","Proof of Stake","August 18, 2015 (4 months)","$3,111.22","N/A","null","70.6 Thousand
+                      /
+                      7.88 Billion","","",""
+"Trollcoin","https://www.coingecko.com/en/coins/trollcoin","Trollcoin","Scrypt","February 11, 2014 (almost 2 years)","$36,380.56","N/A","2.0 Minute","5.03 Billion
+                      /
+                      9 Billion","","",""
+"AidBit","https://www.coingecko.com/en/coins/aidbit","AidBit","Groestl","July 18, 2014 (over 1 year)","","N/A","1.0 Minute","null","","",""
+"SpreadCoin","https://www.coingecko.com/en/coins/spreadcoin","SpreadCoin","X11","July 29, 2014 (over 1 year)","$37,114.43","N/A","1.0 Minute","4.3 Million
+                      /
+                      20 Million","","",""
+"Execoin","https://www.coingecko.com/en/coins/execoin","Execoin","Scrypt-N","February 27, 2014 (almost 2 years)","$3,278.17","567 KH/s","0.75 Minute","17.9 Million
+                      /
+                      26.1 Million","","",""
+"NXTventure","https://www.coingecko.com/en/coins/nxtventure","NXTventure","null","null","$152,718.00","N/A","null","null","","",""
+"Crypto Bullion","https://www.coingecko.com/en/coins/cryptobullion","Crypto Bullion","Scrypt","June 27, 2013 (over 2 years)","$121,784.89","N/A","1.0 Minute","968 Thousand
+                      /
+                      1 Million","","",""
+"HTMLcoin","https://www.coingecko.com/en/coins/htmlcoin","HTMLcoin","X15","September 12, 2014 (about 1 year)","$17,483.38","N/A","1.0 Minute","40.7 Billion
+                      /
+                      90 Billion","","",""
+"Faircoin","https://www.coingecko.com/en/coins/faircoin","Faircoin","Proof of Stake","March  4, 2014 (almost 2 years)","$280,649.73","N/A","3.3 Minute","null","","",""
+"Bitcoin Scrypt","https://www.coingecko.com/en/coins/bitcoin-scrypt","Bitcoin Scrypt","Scrypt","September  8, 2013 (about 2 years)","$7,036.12","N/A","2.0 Minute","12.8 Million
+                      /
+                      21 Million","","",""
+"Saffroncoin","https://www.coingecko.com/en/coins/saffroncoin","Saffroncoin","null","null","$8,720.61","N/A","7.5 Minute","20.4 Million
+                      /
+                      111 Million","","",""
+"Execoin","https://www.coingecko.com/en/coins/execoin","Execoin","Scrypt-N","February 27, 2014 (almost 2 years)","$3,278.17","567 KH/s","0.75 Minute","17.9 Million
+                      /
+                      26.1 Million","","",""
+"Solarcoin","https://www.coingecko.com/en/coins/solarcoin","Solarcoin","Scrypt","December 21, 2013 (almost 2 years)","$400,154.09","N/A","1.0 Minute","34.2 Million
+                      /
+                      98.1 Billion","","",""
+"NXT","https://www.coingecko.com/en/coins/nxt","NXT","Proof of Stake","November 24, 2013 (about 2 years)","$5,882,272.63","N/A","1.0 Minute","1000 Million
+                      /
+                      1 Billion","","",""
+"Ratecoin","https://www.coingecko.com/en/coins/ratecoin","Ratecoin","Proof of Stake","June 20, 2015 (6 months)","$33,112.77","N/A","0.5 Minute","80.4 Million
+                      /
+                      75 Million","","",""
+"Franko","https://www.coingecko.com/en/coins/franko","Uh Oh! We're sorry, but something went wrong.","null","null","null","null","null","null","","",""
+"Sterlingcoin","https://www.coingecko.com/en/coins/sterlingcoin","Sterlingcoin","X13","September 21, 2014 (about 1 year)","$32,196.45","N/A","2.0 Minute","3.88 Million
+                      /
+                      4 Million","","",""
+"Fedoracoin","https://www.coingecko.com/en/coins/fedoracoin","Fedoracoin","Scrypt","null","$280,846.32","N/A","null","null","","",""
+"DeBuNe","https://www.coingecko.com/en/coins/debune","DeBuNe","null","January 26, 2015 (10 months)","$28,501.52","N/A","null","232 Thousand
+                      /
+                      1 Million","","",""
+"Peercoin","https://www.coingecko.com/en/coins/peercoin","Peercoin","SHA-256","August 20, 2012 (over 3 years)","$9,187,614.10","N/A","10.0 Minute","22.8 Million
+                      /
+                      ?","","",""
+"Clams","https://www.coingecko.com/en/coins/clams","Clams","Proof of Stake","May 15, 2014 (over 1 year)","$633,995.57","N/A","1.0 Minute","1.08 Million
+                      /
+                      15 Million","","",""
+"Mastercoin (Omni)","https://www.coingecko.com/en/coins/mastercoin","Mastercoin (Omni)","SHA-256","August 31, 2013 (over 2 years)","$1,109,680.94","N/A","10.0 Minute","549 Thousand
+                      /
+                      563 Thousand","","",""
+"xCash","https://www.coingecko.com/en/coins/xcash","xCash","Proof of Stake","September  2, 2014 (over 1 year)","$1,289.79","N/A","1.0 Minute","2.46 Million
+                      /
+                      2.4 Million","","",""
+"Dirac","https://www.coingecko.com/en/coins/dirac","Dirac","Blake-256","May 19, 2014 (over 1 year)","$1,478.21","N/A","3.0 Minute","452 Thousand
+                      /
+                      2.27 Million","","",""
+"Dogecoin","https://www.coingecko.com/en/coins/dogecoin","Dogecoin","Scrypt","December  8, 2013 (almost 2 years)","$13,167,673.45","1.64 TH/s","1.0 Minute","102 Billion
+                      /
+                      100 Billion","","",""
+"Fluttercoin","https://www.coingecko.com/en/coins/fluttercoin","Fluttercoin","Scrypt","March  4, 2014 (almost 2 years)","$30,576.86","N/A","2.0 Minute","null","","",""
+"Mintcoin","https://www.coingecko.com/en/coins/mintcoin","Mintcoin","Proof of Stake","February  6, 2014 (almost 2 years)","$563,280.13","N/A","0.5 Minute","null","","",""
+"Groupcoin","https://www.coingecko.com/en/coins/groupcoin","null","null","null","null","null","null","null","","",""
+"Stealthcoin","https://www.coingecko.com/en/coins/stealthcoin","Stealthcoin","X13","July  4, 2014 (over 1 year)","$47,662.90","N/A","1.0 Minute","22.6 Million
+                      /
+                      20.7 Million","","",""
+"Siacoin","https://www.coingecko.com/en/coins/siacoin","Siacoin","Blake2b","June  6, 2015 (6 months)","$136,783.01","N/A","10.0 Minute","null","","",""
+"Uro","https://www.coingecko.com/en/coins/uro","Uro","X11","May 11, 2014 (over 1 year)","$15,686.27","N/A","3.0 Minute","1.11 Million
+                      /
+                      1 Million","","",""
+"Heavycoin","https://www.coingecko.com/en/coins/heavycoin","Heavycoin","null","null","$5,712.85","N/A","2.0 Minute","88.3 Million
+                      /
+                      116 Million","","",""
+"CannabisCoin","https://www.coingecko.com/en/coins/cannabiscoin","CannabisCoin","X11","April 20, 2014 (over 1 year)","$193,460.69","116 MH/s","0.7 Minute","77.2 Million
+                      /
+                      106 Million","","",""
+"Paycoin","https://www.coingecko.com/en/coins/paycoin","Paycoin","SHA-256","December 12, 2014 (12 months)","$417,485.39","N/A","1.0 Minute","16.4 Million
+                      /
+                      12.5 Million","","",""
+"Bitstar","https://www.coingecko.com/en/coins/bitstar","Bitstar","Proof of Stake","null","$40,130.63","N/A","0.5 Minute","18.8 Million
+                      /
+                      54.3 Million","","",""
+"Cinni","https://www.coingecko.com/en/coins/cinni","Cinni","Proof of Stake","null","$95,688.87","N/A","null","null","","",""
+"Zetacoin","https://www.coingecko.com/en/coins/zetacoin","Zetacoin","SHA-256","August  3, 2013 (over 2 years)","$263,255.79","12 TH/s","0.5 Minute","163 Million
+                      /
+                      160 Million","","",""
+"NuShares","https://www.coingecko.com/en/coins/nushares","NuShares","Proof of Stake","null","$4,767,645.40","N/A","1.0 Minute","825 Million
+                      /
+                      1 Billion","","",""
+"Groestlcoin","https://www.coingecko.com/en/coins/groestlcoin","Groestlcoin","Groestl","March 22, 2014 (over 1 year)","$54,297.27","879 MH/s","1.0 Minute","61.2 Million
+                      /
+                      105 Million","","",""
+"HyperStake","https://www.coingecko.com/en/coins/hyperstake","HyperStake","Proof of Stake","May 30, 2014 (over 1 year)","$125,100.38","N/A","1.5 Minute","383 Million
+                      /
+                      2","","",""
+"VPNCoin","https://www.coingecko.com/en/coins/vpncoin","VPNCoin","Proof of Stake","September  4, 2014 (about 1 year)","$443,248.13","N/A","1.0 Minute","400 Million
+                      /
+                      400 Million","","",""
+"Fibre","https://www.coingecko.com/en/coins/fibre","Fibre","Proof of Stake","August 16, 2014 (over 1 year)","$21,222.30","N/A","1.0 Minute","637 Thousand
+                      /
+                      625 Thousand","","",""
+"UtilityCoin","https://www.coingecko.com/en/coins/utilitycoin","UtilityCoin","X13","September 26, 2014 (about 1 year)","$1,010.77","N/A","1.0 Minute","3.74 Million
+                      /
+                      4.5 Million","","",""
+"Shibecoin","https://www.coingecko.com/en/coins/shibecoin","Shibecoin","Proof of Stake","October 14, 2014 (about 1 year)","","N/A","1.0 Minute","","","",""
+"Florincoin","https://www.coingecko.com/en/coins/florincoin","Florincoin","Scrypt","June 17, 2013 (over 2 years)","$74,973.52","986 MH/s","0.67 Minute","102 Million
+                      /
+                      160 Million","","",""
+"NuBits","https://www.coingecko.com/en/coins/nubits","NuBits","null","August  3, 2014 (over 1 year)","$990,897.51","N/A","null","null","","",""
+"Influxcoin","https://www.coingecko.com/en/coins/influxcoin","Influxcoin","X11","August 26, 2015 (3 months)","$3,255.87","N/A","4.0 Minute","840 Thousand
+                      /
+                      12 Million","","",""
+"Steps","https://www.coingecko.com/en/coins/steps","Steps","Proof of Stake","September 16, 2015 (3 months)","$40,431.15","N/A","5.0 Minute","10.2 Million
+                      /
+                      9.24 Million","","",""
+"X-Coin","https://www.coingecko.com/en/coins/xcoin","X-Coin","SHA-256","February 27, 2015 (9 months)","$2,624.92","N/A","1.0 Minute","null","","",""
+"Namecoin","https://www.coingecko.com/en/coins/namecoin","Namecoin","SHA-256","April 19, 2011 (over 4 years)","$5,566,847.65","N/A","10.0 Minute","13 Million
+                      /
+                      21 Million","","",""
+"DNotes","https://www.coingecko.com/en/coins/dnotes","DNotes","Scrypt","February 16, 2014 (almost 2 years)","$733,864.97","7.63 GH/s","1.0 Minute","106 Million
+                      /
+                      500 Million","","",""
+"UtilityCoin","https://www.coingecko.com/en/coins/utilitycoin","UtilityCoin","X13","September 26, 2014 (about 1 year)","$1,010.77","N/A","1.0 Minute","3.74 Million
+                      /
+                      4.5 Million","","",""
+"Burst","https://www.coingecko.com/en/coins/burst","Burst","null","null","$61,207.15","N/A","4.0 Minute","1.11 Billion
+                      /
+                      2.16 Billion","","",""
+"Neoscoin","https://www.coingecko.com/en/coins/neoscoin","Neoscoin","SHA-256","August 19, 2014 (over 1 year)","$7,938.44","N/A","5.0 Minute","7.97 Million
+                      /
+                      21 Million","","",""
+"Transfercoin","https://www.coingecko.com/en/coins/transfercoin","Transfercoin","Proof of Stake","August 11, 2015 (4 months)","$13,320.05","N/A","1.0 Minute","null","","",""
+"DNotes","https://www.coingecko.com/en/coins/dnotes","DNotes","Scrypt","February 16, 2014 (almost 2 years)","$733,864.97","7.63 GH/s","1.0 Minute","106 Million
+                      /
+                      500 Million","","",""
+"Freshcoin","https://www.coingecko.com/en/coins/freshcoin","Freshcoin","null","null","$5,065.78","N/A","null","6.58 Million
+                      /
+                      10 Million","","",""
+"Bitbar","https://www.coingecko.com/en/coins/bitbar","Bitbar","Scrypt","May  2, 2013 (over 2 years)","$29,394.25","N/A","10.0 Minute","21.8 Thousand
+                      /
+                      9.7 Thousand","","",""
+"Swarm","https://www.coingecko.com/en/coins/swarm","Swarm","null","May 28, 2014 (over 1 year)","$213,051.76","N/A","null","99.9 Million
+                      /
+                      100 Million","","",""
+"Crave","https://www.coingecko.com/en/coins/crave","Crave","Proof of Stake","March 20, 2015 (9 months)","$5,681.91","N/A","1.0 Minute","776 Thousand
+                      /
+                      2.08 Million","","",""
+"Heavycoin","https://www.coingecko.com/en/coins/heavycoin","Heavycoin","null","null","$5,712.85","N/A","2.0 Minute","88.3 Million
+                      /
+                      116 Million","","",""
+"Paycoin","https://www.coingecko.com/en/coins/paycoin","Paycoin","SHA-256","December 12, 2014 (12 months)","$417,485.39","N/A","1.0 Minute","16.4 Million
+                      /
+                      12.5 Million","","",""
+"Pinkcoin","https://www.coingecko.com/en/coins/pinkcoin","Pinkcoin","X11","May  2, 2014 (over 1 year)","$60,170.83","N/A","0.5 Minute","365 Million
+                      /
+                      380 Million","","",""
+"Electronic Gulden","https://www.coingecko.com/en/coins/electronicgulden","Electronic Gulden","Scrypt","March 19, 2014 (over 1 year)","$294,349.03","N/A","2.0 Minute","13.7 Million
+                      /
+                      21 Million","","",""
+"CryptoEscudo","https://www.coingecko.com/en/coins/cryptoescudo","CryptoEscudo","Scrypt","March 25, 2014 (over 1 year)","$27,524.07","N/A","2.0 Minute","144 Million
+                      /
+                      1 Billion","","",""
+"LTBcoin","https://www.coingecko.com/en/coins/ltbcoin","LTBcoin","null","March 12, 2014 (over 1 year)","$26,259.15","N/A","null","null","","",""
+"Monocle","https://www.coingecko.com/en/coins/monocle","Monocle","Scrypt-N","May  2, 2014 (over 1 year)","","N/A","2.0 Minute","","","",""
+"HamRadioCoin","https://www.coingecko.com/en/coins/hamradiocoin","HamRadioCoin","SHA-256","July  1, 2014 (over 1 year)","$32,797.73","23.7 TH/s","null","4.7 Million
+                      /
+                      21 Million","","",""
+"Dogeparty","https://www.coingecko.com/en/coins/dogeparty","Dogeparty","Scrypt","August 13, 2014 (over 1 year)","$48,281.29","N/A","1.0 Minute","null","","",""
+"Factom","https://www.coingecko.com/en/coins/factom","Factom","null","September  1, 2015 (3 months)","$770,203.76","N/A","null","null","","",""
+"Tacocoin","https://www.coingecko.com/en/coins/tacocoin","Tacocoin","Scrypt","null","$97.70","N/A","1.0 Minute","48.9 Million
+                      /
+                      50 Million","","",""
+"CryptCoin","https://www.coingecko.com/en/coins/cryptcoin","CryptCoin","X11","null","$18,349.53","N/A","1.5 Minute","6.03 Million
+                      /
+                      11 Million","","",""
+"EmerCoin","https://www.coingecko.com/en/coins/emercoin","EmerCoin","SHA-256","December 11, 2013 (almost 2 years)","$1,694,812.65","N/A","null","36.6 Million
+                      /
+                      1 Billion","","",""
+"Ucoin","https://www.coingecko.com/en/coins/ucoin","Ucoin","X11","January 30, 2015 (10 months)","$4,627.82","N/A","1.0 Minute","2.68 Million
+                      /
+                      20 Million","","",""
+"BitBay","https://www.coingecko.com/en/coins/bitbay","BitBay","Proof of Stake","November 10, 2014 (about 1 year)","$187,922.99","N/A","1.067 Minute","null","","",""
+"ARCHcoin","https://www.coingecko.com/en/coins/archcoin","ARCHcoin","Scrypt","October  4, 2014 (about 1 year)","$298,748.72","N/A","1.0 Minute","16.5 Million
+                      /
+                      16.2 Million","","",""
+"Novacoin","https://www.coingecko.com/en/coins/novacoin","Novacoin","Scrypt","February  9, 2013 (almost 3 years)","$1,088,649.42","10.6 GH/s","10.0 Minute","null","","",""
+"Ethercoin","https://www.coingecko.com/en/coins/ethercoin","null","null","null","null","null","null","null","","",""
+"Syscoin","https://www.coingecko.com/en/coins/syscoin","Syscoin","Scrypt","null","$211,890.26","1.03 TH/s","null","429 Million
+                      /
+                      2 Billion","","",""
+"GlobalBoost","https://www.coingecko.com/en/coins/globalboost","GlobalBoost","Scrypt","April 27, 2014 (over 1 year)","$178,245.77","N/A","0.5 Minute","448 Thousand
+                      /
+                      1 Billion","","",""
+"Pandacoin","https://www.coingecko.com/en/coins/pandacoin","Pandacoin","Scrypt","February 15, 2014 (almost 2 years)","$59,041.06","N/A","1.0 Minute","32.5 Billion
+                      /
+                      32 Billion","","",""
+"SocialxBot","https://www.coingecko.com/en/coins/socialxbot","null","null","null","null","null","null","null","","",""
+"Pangea Poker","https://www.coingecko.com/en/coins/pangea-poker","Pangea Poker","null","null","$135,035.44","N/A","null","null","","",""
+"Burst","https://www.coingecko.com/en/coins/burst","Burst","null","null","$61,207.15","N/A","4.0 Minute","1.11 Billion
+                      /
+                      2.16 Billion","","",""
+"SuperNET","https://www.coingecko.com/en/coins/supernet","SuperNET","null","null","$610,643.01","N/A","null","null","","",""
+"GlobalBoost","https://www.coingecko.com/en/coins/globalboost","GlobalBoost","Scrypt","April 27, 2014 (over 1 year)","$178,245.77","N/A","0.5 Minute","448 Thousand
+                      /
+                      1 Billion","","",""
+"Burst","https://www.coingecko.com/en/coins/burst","Burst","null","null","$61,207.15","N/A","4.0 Minute","1.11 Billion
+                      /
+                      2.16 Billion","","",""
+"NXTventure","https://www.coingecko.com/en/coins/nxtventure","NXTventure","null","null","$152,718.00","N/A","null","null","","",""
+"Novacoin","https://www.coingecko.com/en/coins/novacoin","Novacoin","Scrypt","February  9, 2013 (almost 3 years)","$1,088,649.42","10.6 GH/s","10.0 Minute","null","","",""
+"Deutsche eMark","https://www.coingecko.com/en/coins/deutsche-emark","Deutsche eMark","SHA-256","October 11, 2013 (about 2 years)","$30,625.10","N/A","2.0 Minute","17.7 Million
+                      /
+                      500 Million","","",""
+"Elektron","https://www.coingecko.com/en/coins/elektron","Elektron","X13","April  7, 2015 (8 months)","$691.49","N/A","1.0 Minute","2.64 Million
+                      /
+                      3 Million","","",""
+"ShadowCash","https://www.coingecko.com/en/coins/shadowcash","ShadowCash","Proof of Stake","July 19, 2014 (over 1 year)","$543,687.88","N/A","1.0 Minute","6.5 Million
+                      /
+                      1.3 Billion","","",""
+"Crypto Bullion","https://www.coingecko.com/en/coins/cryptobullion","Crypto Bullion","Scrypt","June 27, 2013 (over 2 years)","$121,784.89","N/A","1.0 Minute","968 Thousand
+                      /
+                      1 Million","","",""
+"Terracoin","https://www.coingecko.com/en/coins/terracoin","Terracoin","SHA-256","October 26, 2012 (about 3 years)","$44,581.75","N/A","2.0 Minute","13.3 Million
+                      /
+                      42 Million","","",""
+"Solarcoin","https://www.coingecko.com/en/coins/solarcoin","Solarcoin","Scrypt","December 21, 2013 (almost 2 years)","$400,154.09","N/A","1.0 Minute","34.2 Million
+                      /
+                      98.1 Billion","","",""
+"Acoin","https://www.coingecko.com/en/coins/acoin","Acoin","SHA-256","September  1, 2014 (over 1 year)","$3,819.86","3.51 TH/s","null","null","","",""
+"HyperStake","https://www.coingecko.com/en/coins/hyperstake","HyperStake","Proof of Stake","May 30, 2014 (over 1 year)","$125,100.38","N/A","1.5 Minute","383 Million
+                      /
+                      2","","",""
+"Nautiluscoin","https://www.coingecko.com/en/coins/nautiluscoin","Nautiluscoin","Scrypt","May  1, 2014 (over 1 year)","$664,283.24","406 MH/s","1.0 Minute","5.82 Million
+                      /
+                      16.2 Million","","",""
+"NXT","https://www.coingecko.com/en/coins/nxt","NXT","Proof of Stake","November 24, 2013 (about 2 years)","$5,882,272.63","N/A","1.0 Minute","1000 Million
+                      /
+                      1 Billion","","",""
+"Faircoin","https://www.coingecko.com/en/coins/faircoin","Faircoin","Proof of Stake","March  4, 2014 (almost 2 years)","$280,649.73","N/A","3.3 Minute","null","","",""
+"CzechCrownCoin","https://www.coingecko.com/en/coins/czechcrowncoin","CzechCrownCoin","Scrypt","June 29, 2014 (over 1 year)","$120,733.90","N/A","2.5 Minute","4.11 Million
+                      /
+                      100 Million","","",""
+"Mazacoin","https://www.coingecko.com/en/coins/mazacoin","Mazacoin","SHA-256","February  7, 2014 (almost 2 years)","$47,302.37","24.7 TH/s","2.0 Minute","851 Million
+                      /
+                      2.42 Billion","","",""
+"OKCash","https://www.coingecko.com/en/coins/okcash","OKCash","Scrypt","November 24, 2014 (about 1 year)","$32,807.94","N/A","null","60.9 Million
+                      /
+                      105 Million","","",""
+"Blocknet","https://www.coingecko.com/en/coins/blocknet","Blocknet","Proof of Stake","October 21, 2014 (about 1 year)","$566,040.52","N/A","1.5 Minute","3.91 Million
+                      /
+                      3.9 Million","","",""
+"Bitleu","https://www.coingecko.com/en/coins/bitleu","Bitleu","Scrypt Jane","March 11, 2014 (over 1 year)","","N/A","1.0 Minute","","","",""
+"Mooncoin","https://www.coingecko.com/en/coins/mooncoin","Mooncoin","Scrypt","December 30, 2013 (almost 2 years)","$63,236.71","N/A","1.5 Minute","208 Billion
+                      /
+                      384 Billion","","",""
+"Ucoin","https://www.coingecko.com/en/coins/ucoin","Ucoin","X11","January 30, 2015 (10 months)","$4,627.82","N/A","1.0 Minute","2.68 Million
+                      /
+                      20 Million","","",""
+"Bluecoin","https://www.coingecko.com/en/coins/bluecoin","Bluecoin","X11","April 23, 2014 (over 1 year)","$16,341.68","N/A","1.0 Minute","570 Million
+                      /
+                      500 Million","","",""
+"Anoncoin","https://www.coingecko.com/en/coins/anoncoin","Anoncoin","Scrypt","June  2, 2013 (over 2 years)","$176,524.64","2.3 GH/s","3.0 Minute","1.94 Million
+                      /
+                      3.1 Million","","",""
+"Hobonickels","https://www.coingecko.com/en/coins/hobonickels","Hobonickels","Scrypt","July 24, 2013 (over 2 years)","$99,714.73","N/A","0.5 Minute","16.6 Million
+                      /
+                      120 Million","","",""
+"Diamond","https://www.coingecko.com/en/coins/diamond","Diamond","Groestl","July 13, 2013 (over 2 years)","$355,619.94","3.11 GH/s","1.0 Minute","1.4 Million
+                      /
+                      4.38 Million","","",""
+"Wankcoin","https://www.coingecko.com/en/coins/wankcoin","Wankcoin","SHA-256","January 10, 2014 (almost 2 years)","","N/A","10.0 Minute","","","",""
+"Freshcoin","https://www.coingecko.com/en/coins/freshcoin","Freshcoin","null","null","$5,065.78","N/A","null","6.58 Million
+                      /
+                      10 Million","","",""
+"Crypti","https://www.coingecko.com/en/coins/crypti","Crypti","Proof of Stake","June 16, 2014 (over 1 year)","$173,795.44","N/A","1.0 Minute","100 Million
+                      /
+                      100 Million","","",""
+"ziftrCOIN","https://www.coingecko.com/en/coins/ziftrcoin","ziftrCOIN","ZR5","March  1, 2015 (9 months)","$0.00","N/A","1.0 Minute","?
+                      /
+                      10 Billion","","",""
+"MaidSafeCoin","https://www.coingecko.com/en/coins/maidsafecoin","MaidSafeCoin","null","April 22, 2014 (over 1 year)","$5,578,613.58","N/A","null","453 Million
+                      /
+                      453 Million","","",""
+"Communitycoin","https://www.coingecko.com/en/coins/communitycoin","Communitycoin","Proof of Stake","March 25, 2014 (over 1 year)","$15,213.21","N/A","1.0 Minute","1.06 Billion
+                      /
+                      9 Million","","",""
+"ArtByte","https://www.coingecko.com/en/coins/artbyte","ArtByte","Scrypt","May  1, 2014 (over 1 year)","$48,226.15","N/A","2.0 Minute","583 Million
+                      /
+                      1 Billion","","",""
+"SocialxBot","https://www.coingecko.com/en/coins/socialxbot","null","null","null","null","null","null","null","","",""
+"Namecoin","https://www.coingecko.com/en/coins/namecoin","Namecoin","SHA-256","April 19, 2011 (over 4 years)","$5,566,847.65","N/A","10.0 Minute","13 Million
+                      /
+                      21 Million","","",""
+"Fluttercoin","https://www.coingecko.com/en/coins/fluttercoin","Fluttercoin","Scrypt","March  4, 2014 (almost 2 years)","$30,576.86","N/A","2.0 Minute","null","","",""
+"Asiacoin","https://www.coingecko.com/en/coins/asiacoin","Asiacoin","Scrypt","April 16, 2014 (over 1 year)","$313,154.65","N/A","1.0 Minute","null","","",""
+"LitecoinDark","https://www.coingecko.com/en/coins/litecoindark","LitecoinDark","Scrypt","August 29, 2014 (over 1 year)","$9,645.33","15.3 MH/s","1.0 Minute","78.9 Million
+                      /
+                      82 Million","","",""
+"jl777hodl","https://www.coingecko.com/en/coins/jl777hodl","jl777hodl","null","null","$119,560.00","N/A","null","null","","",""
+"Librexcoin","https://www.coingecko.com/en/coins/librexcoin","Librexcoin","X11","July 30, 2014 (over 1 year)","$46,645.01","N/A","1.0 Minute","9.78 Million
+                      /
+                      10 Million","","",""
+"Fractalcoin","https://www.coingecko.com/en/coins/fractalcoin","Fractalcoin","X11","null","$11,111.55","N/A","1.0 Minute","1 Million
+                      /
+                      1 Million","","",""
+"TittieCoin","https://www.coingecko.com/en/coins/tittiecoin","TittieCoin","Scrypt","January 27, 2014 (almost 2 years)","$13,463.51","N/A","null","1.25 Billion
+                      /
+                      1.12 Billion","","",""
+"Neoscoin","https://www.coingecko.com/en/coins/neoscoin","Neoscoin","SHA-256","August 19, 2014 (over 1 year)","$7,938.44","N/A","5.0 Minute","7.97 Million
+                      /
+                      21 Million","","",""
+"GAIA","https://www.coingecko.com/en/coins/gaia","GAIA","Proof of Stake","October 28, 2014 (about 1 year)","$8,941.61","N/A","1.0 Minute","24.1 Million
+                      /
+                      24 Million","","",""
+"Crypto","https://www.coingecko.com/en/coins/crypto","Crypto","Lyra2RE","April 30, 2015 (7 months)","$314.42","N/A","0.5 Minute","2.91 Million
+                      /
+                      65.8 Million","","",""
+"BitShares","https://www.coingecko.com/en/coins/bitshares","BitShares","null","July 19, 2014 (over 1 year)","$7,823,059.06","N/A","0.167 Minute","2.53 Billion
+                      /
+                      2 Billion","","",""
+"Virtacoin","https://www.coingecko.com/en/coins/virtacoin","Virtacoin","Scrypt","May 30, 2014 (over 1 year)","$162,333.38","N/A","1.0 Minute","11.6 Billion
+                      /
+                      21 Billion","","",""
+"Techcoin","https://www.coingecko.com/en/coins/techcoin","Techcoin","X13","June 24, 2014 (over 1 year)","","N/A","5.0 Minute","null","","",""
+"ArtByte","https://www.coingecko.com/en/coins/artbyte","ArtByte","Scrypt","May  1, 2014 (over 1 year)","$48,226.15","N/A","2.0 Minute","583 Million
+                      /
+                      1 Billion","","",""
+"Razor","https://www.coingecko.com/en/coins/razor","Razor","Scrypt","June 14, 2014 (over 1 year)","$6,470.19","N/A","1.25 Minute","2 Million
+                      /
+                      2 Million","","",""
+"Worldcoin","https://www.coingecko.com/en/coins/worldcoin","Worldcoin","Scrypt","May 14, 2013 (over 2 years)","$596,211.90","9.43 GH/s","0.5 Minute","93.7 Million
+                      /
+                      265 Million","","",""
+"Qibuck","https://www.coingecko.com/en/coins/qibuck","Qibuck","X13","August  7, 2014 (over 1 year)","$46,443.86","N/A","null","517 Thousand
+                      /
+                      2 Million","","",""
+"Counterparty","https://www.coingecko.com/en/coins/counterparty","Counterparty","SHA-256","January  2, 2014 (almost 2 years)","$1,790,035.47","N/A","10.0 Minute","2.63 Million
+                      /
+                      2.65 Million","","",""
+"DogeCoinDark","https://www.coingecko.com/en/coins/dogecoindark","DogeCoinDark","Scrypt","October  9, 2014 (about 1 year)","$164,289.73","281 MH/s","0.5 Minute","9.27 Billion
+                      /
+                      13 Billion","","",""
+"Coinomat","https://www.coingecko.com/en/coins/coinomat","Coinomat","null","July 23, 2014 (over 1 year)","$70,852.33","N/A","null","3 Million
+                      /
+                      3 Million","","",""
+"Infinitecoin","https://www.coingecko.com/en/coins/infinitecoin","Infinitecoin","Scrypt","June  5, 2013 (over 2 years)","$428,103.57","176 KH/s","0.5 Minute","90.6 Billion
+                      /
+                      90.6 Billion","","",""
+"GameCredits","https://www.coingecko.com/en/coins/gamecredits","GameCredits","Scrypt","February 18, 2014 (almost 2 years)","$845,234.10","6.46 GH/s","1.5 Minute","51 Million
+                      /
+                      84 Million","","",""
+"GameCredits","https://www.coingecko.com/en/coins/gamecredits","GameCredits","Scrypt","February 18, 2014 (almost 2 years)","$845,234.10","6.46 GH/s","1.5 Minute","51 Million
+                      /
+                      84 Million","","",""
+"Boolberry","https://www.coingecko.com/en/coins/boolberry","Boolberry","Keccak","May 17, 2014 (over 1 year)","$55,336.22","N/A","2.0 Minute","5.82 Million
+                      /
+                      18.5 Million","","",""
+"Guarany","https://www.coingecko.com/en/coins/guarany","Guarany","Scrypt","November 14, 2014 (about 1 year)","$1,272.37","N/A","2.5 Minute","272 Thousand
+                      /
+                      10 Million","","",""
+"Netcoin","https://www.coingecko.com/en/coins/netcoin","Netcoin","Scrypt","September  2, 2013 (over 2 years)","$198,190.93","N/A","1.0 Minute","557 Million
+                      /
+                      321 Million","","",""
+"Startcoin","https://www.coingecko.com/en/coins/startcoin","Startcoin","X11","July 19, 2014 (over 1 year)","$886,905.59","18.6 GH/s","1.0 Minute","35 Million
+                      /
+                      84 Million","","",""
+"Karma","https://www.coingecko.com/en/coins/karma","Karma","Scrypt","February  4, 2014 (almost 2 years)","$19,402.15","N/A","1.0 Minute","69.3 Billion
+                      /
+                      92 Billion","","",""
+"APEXcoin","https://www.coingecko.com/en/coins/apexcoin","APEXcoin","X13","July 11, 2014 (over 1 year)","$13,899.11","N/A","1.0 Minute","6.13 Million
+                      /
+                      6 Million","","",""
+"TittieCoin","https://www.coingecko.com/en/coins/tittiecoin","TittieCoin","Scrypt","January 27, 2014 (almost 2 years)","$13,463.51","N/A","null","1.25 Billion
+                      /
+                      1.12 Billion","","",""
+"Electronic Gulden","https://www.coingecko.com/en/coins/electronicgulden","Electronic Gulden","Scrypt","March 19, 2014 (over 1 year)","$294,349.03","N/A","2.0 Minute","13.7 Million
+                      /
+                      21 Million","","",""
+"TrustPlus","https://www.coingecko.com/en/coins/trustplus","TrustPlus","X11","July  4, 2014 (over 1 year)","$103,808.67","N/A","0.75 Minute","null","","",""
+"Fastcoin","https://www.coingecko.com/en/coins/fastcoin","Fastcoin","Scrypt","May 28, 2013 (over 2 years)","$17,739.40","166 MH/s","0.2 Minute","127 Million
+                      /
+                      166 Million","","",""
+"Opal","https://www.coingecko.com/en/coins/opal","Opal","X13","August  3, 2014 (over 1 year)","$20,806.25","N/A","1.5 Minute","15 Million
+                      /
+                      15 Million","","",""
+"Crypto","https://www.coingecko.com/en/coins/crypto","Crypto","Lyra2RE","April 30, 2015 (7 months)","$314.42","N/A","0.5 Minute","2.91 Million
+                      /
+                      65.8 Million","","",""
+"Feathercoin","https://www.coingecko.com/en/coins/feathercoin","Feathercoin","NeoScrypt","April 16, 2013 (over 2 years)","$377,920.73","259 MH/s","1.0 Minute","104 Million
+                      /
+                      336 Million","","",""
+"Cryptonite","https://www.coingecko.com/en/coins/cryptonite","Cryptonite","M7","July 28, 2014 (over 1 year)","$33,429.06","N/A","1.0 Minute","164 Million
+                      /
+                      1.84 Billion","","",""
+"Florincoin","https://www.coingecko.com/en/coins/florincoin","Florincoin","Scrypt","June 17, 2013 (over 2 years)","$74,973.52","986 MH/s","0.67 Minute","102 Million
+                      /
+                      160 Million","","",""
+"Swarm","https://www.coingecko.com/en/coins/swarm","Swarm","null","May 28, 2014 (over 1 year)","$213,051.76","N/A","null","99.9 Million
+                      /
+                      100 Million","","",""
+"Positron","https://www.coingecko.com/en/coins/positron","Positron","SHA-256","April 11, 2015 (8 months)","$4,703.24","N/A","1.5 Minute","null","","",""
+"Bitcoin Scrypt","https://www.coingecko.com/en/coins/bitcoin-scrypt","Bitcoin Scrypt","Scrypt","September  8, 2013 (about 2 years)","$7,036.12","N/A","2.0 Minute","12.8 Million
+                      /
+                      21 Million","","",""
+"NuBits","https://www.coingecko.com/en/coins/nubits","NuBits","null","August  3, 2014 (over 1 year)","$990,897.51","N/A","null","null","","",""
+"Digitalcoin","https://www.coingecko.com/en/coins/digitalcoin","Digitalcoin","Multiple Algorithms","May 20, 2013 (over 2 years)","$282,801.49","N/A","0.67 Minute","28.3 Million
+                      /
+                      48.2 Million","","",""
+"jl777hodl","https://www.coingecko.com/en/coins/jl777hodl","jl777hodl","null","null","$119,560.00","N/A","null","null","","",""
+"Bitstar","https://www.coingecko.com/en/coins/bitstar","Bitstar","Proof of Stake","null","$40,130.63","N/A","0.5 Minute","18.8 Million
+                      /
+                      54.3 Million","","",""
+"Gridcoin","https://www.coingecko.com/en/coins/gridcoin-research","Gridcoin","Proof of Research","null","$4,411,390.00","N/A","1.5 Minute","370 Million
+                      /
+                      341 Million","","",""
+"Mastercoin (Omni)","https://www.coingecko.com/en/coins/mastercoin","Mastercoin (Omni)","SHA-256","August 31, 2013 (over 2 years)","$1,109,680.94","N/A","10.0 Minute","549 Thousand
+                      /
+                      563 Thousand","","",""
+"Goldcoin","https://www.coingecko.com/en/coins/goldcoin","Goldcoin","Scrypt","May 15, 2013 (over 2 years)","$107,541.73","1.16 GH/s","2.0 Minute","34.8 Million
+                      /
+                      123 Million","","",""
+"Wankcoin","https://www.coingecko.com/en/coins/wankcoin","Wankcoin","SHA-256","January 10, 2014 (almost 2 years)","","N/A","10.0 Minute","","","",""
+"Zetacoin","https://www.coingecko.com/en/coins/zetacoin","Zetacoin","SHA-256","August  3, 2013 (over 2 years)","$263,255.79","12 TH/s","0.5 Minute","163 Million
+                      /
+                      160 Million","","",""
+"Hobonickels","https://www.coingecko.com/en/coins/hobonickels","Hobonickels","Scrypt","July 24, 2013 (over 2 years)","$99,714.73","N/A","0.5 Minute","16.6 Million
+                      /
+                      120 Million","","",""
+"LibertyCoin","https://www.coingecko.com/en/coins/libertycoin","LibertyCoin","Proof of Stake","null","$3,977.00","N/A","null","null","","",""
+"Opal","https://www.coingecko.com/en/coins/opal","Opal","X13","August  3, 2014 (over 1 year)","$20,806.25","N/A","1.5 Minute","15 Million
+                      /
+                      15 Million","","",""
+"Magi","https://www.coingecko.com/en/coins/magi","Magi","null","September 15, 2014 (about 1 year)","$32,183.93","N/A","3.0 Minute","3.44 Million
+                      /
+                      25 Million","","",""
+"BitZeny","https://www.coingecko.com/en/coins/bitzeny","BitZeny","null","November  8, 2014 (about 1 year)","$7,334.61","N/A","1.5 Minute","75.6 Million
+                      /
+                      250 Million","","",""
+"Positron","https://www.coingecko.com/en/coins/positron","Positron","SHA-256","April 11, 2015 (8 months)","$4,703.24","N/A","1.5 Minute","null","","",""
+"Nyancoin","https://www.coingecko.com/en/coins/nyancoin","Nyancoin","Scrypt","January  6, 2014 (almost 2 years)","$15,985.98","370 MH/s","1.0 Minute","251 Million
+                      /
+                      337 Million","","",""
+"Sync","https://www.coingecko.com/en/coins/sync","Sync","Proof of Stake","May 17, 2014 (over 1 year)","$45,407.42","N/A","1.0 Minute","1.18 Thousand
+                      /
+                      1 Thousand","","",""
+"Franko","https://www.coingecko.com/en/coins/franko","Uh Oh! We're sorry, but something went wrong.","null","null","null","null","null","null","","",""
+"Hyper","https://www.coingecko.com/en/coins/hyper","Hyper","Proof of Stake","May 25, 2014 (over 1 year)","$219,032.04","N/A","0.5 Minute","null","","",""
+"DogeCoinDark","https://www.coingecko.com/en/coins/dogecoindark","DogeCoinDark","Scrypt","October  9, 2014 (about 1 year)","$164,289.73","281 MH/s","0.5 Minute","9.27 Billion
+                      /
+                      13 Billion","","",""
+"LibertyCoin","https://www.coingecko.com/en/coins/libertycoin","LibertyCoin","Proof of Stake","null","$3,977.00","N/A","null","null","","",""
+"Fantomcoin","https://www.coingecko.com/en/coins/fantomcoin","Fantomcoin","Cryptonight","May  6, 2014 (over 1 year)","$9,476.44","N/A","1.0 Minute","3.3 Million
+                      /
+                      18.4 Million","","",""
+"Virtacoin","https://www.coingecko.com/en/coins/virtacoin","Virtacoin","Scrypt","May 30, 2014 (over 1 year)","$162,333.38","N/A","1.0 Minute","11.6 Billion
+                      /
+                      21 Billion","","",""
+"Teslacoin","https://www.coingecko.com/en/coins/teslacoin","Teslacoin","Proof of Stake","January 17, 2014 (almost 2 years)","$16,844.45","N/A","0.5 Minute","65.3 Million
+                      /
+                      60.8 Million","","",""
+"Blakecoin","https://www.coingecko.com/en/coins/blakecoin","Blakecoin","Blake-256","October  6, 2013 (about 2 years)","$10,210.74","228 GH/s","3.0 Minute","8.66 Million
+                      /
+                      7 Billion","","",""
+"Elektron","https://www.coingecko.com/en/coins/elektron","Elektron","X13","April  7, 2015 (8 months)","$691.49","N/A","1.0 Minute","2.64 Million
+                      /
+                      3 Million","","",""
+"Whitecoin","https://www.coingecko.com/en/coins/whitecoin","Whitecoin","Proof of Stake","April 14, 2014 (over 1 year)","$45,185.70","N/A","1.5 Minute","307 Million
+                      /
+                      300 Million","","",""
+"Bytecent","https://www.coingecko.com/en/coins/bytecent","Bytecent","null","November  9, 2014 (about 1 year)","$80,744.72","N/A","1.0 Minute","792 Thousand
+                      /
+                      33 Million","","",""
+"Vanillacoin","https://www.coingecko.com/en/coins/vanillacoin","Vanillacoin","Proof of Stake","December 23, 2014 (11 months)","$682,956.63","N/A","null","12.1 Million
+                      /
+                      30.7 Million","","",""
+"Clams","https://www.coingecko.com/en/coins/clams","Clams","Proof of Stake","May 15, 2014 (over 1 year)","$633,995.57","N/A","1.0 Minute","1.08 Million
+                      /
+                      15 Million","","",""
+"Phoenixcoin","https://www.coingecko.com/en/coins/phoenixcoin","Phoenixcoin","NeoScrypt","May  8, 2013 (over 2 years)","$5,463.28","2.94 MH/s","1.5 Minute","41.1 Million
+                      /
+                      98 Million","","",""
+"Cryptokenz","https://www.coingecko.com/en/coins/cryptokenz","Cryptokenz","Proof of Stake","September  9, 2015 (3 months)","$15,082.75","N/A","2.0 Minute","null","","",""
+"Navajo","https://www.coingecko.com/en/coins/navajo","Navajo","X13","June  2, 2014 (over 1 year)","$103,300.55","N/A","0.5 Minute","59.5 Million
+                      /
+                      57 Million","","",""
+"Auroracoin","https://www.coingecko.com/en/coins/auroracoin","Auroracoin","Scrypt","January 24, 2014 (almost 2 years)","$291,724.59","4.5 GH/s","5.0 Minute","7.49 Million
+                      /
+                      21 Million","","",""
+"IOCoin","https://www.coingecko.com/en/coins/iocoin","IOCoin","Proof of Stake","July 24, 2014 (over 1 year)","$195,120.43","N/A","1.0 Minute","16.2 Million
+                      /
+                      16 Million","","",""
+"DopeCoin","https://www.coingecko.com/en/coins/dopecoin","DopeCoin","Scrypt","February 14, 2014 (almost 2 years)","$20,638.53","N/A","null","140 Million
+                      /
+                      200 Million","","",""
+"Judgecoin","https://www.coingecko.com/en/coins/judgecoin","Judgecoin","X13","July  5, 2014 (over 1 year)","$2,154.70","N/A","1.0 Minute","11.8 Million
+                      /
+                      11.5 Million","","",""
+"MaidSafeCoin","https://www.coingecko.com/en/coins/maidsafecoin","MaidSafeCoin","null","April 22, 2014 (over 1 year)","$5,578,613.58","N/A","null","453 Million
+                      /
+                      453 Million","","",""
+"EmerCoin","https://www.coingecko.com/en/coins/emercoin","EmerCoin","SHA-256","December 11, 2013 (almost 2 years)","$1,694,812.65","N/A","null","36.6 Million
+                      /
+                      1 Billion","","",""
+"Tacocoin","https://www.coingecko.com/en/coins/tacocoin","Tacocoin","Scrypt","null","$97.70","N/A","1.0 Minute","48.9 Million
+                      /
+                      50 Million","","",""
+"Jumbucks","https://www.coingecko.com/en/coins/jumbucks","Jumbucks","Scrypt","September  2, 2014 (over 1 year)","$87,565.28","N/A","1.0 Minute","3.48 Million
+                      /
+                      3.29 Million","","",""
+"Mineralscoin","https://www.coingecko.com/en/coins/mineralscoin","Mineralscoin","X11","null","$16,740.26","N/A","0.5 Minute","27.4 Million
+                      /
+                      30 Million","","",""
+"Mooncoin","https://www.coingecko.com/en/coins/mooncoin","Mooncoin","Scrypt","December 30, 2013 (almost 2 years)","$63,236.71","N/A","1.5 Minute","208 Billion
+                      /
+                      384 Billion","","",""
+"Phoenixcoin","https://www.coingecko.com/en/coins/phoenixcoin","Phoenixcoin","NeoScrypt","May  8, 2013 (over 2 years)","$5,463.28","2.94 MH/s","1.5 Minute","41.1 Million
+                      /
+                      98 Million","","",""
+"Earthcoin","https://www.coingecko.com/en/coins/earthcoin","Earthcoin","Scrypt","December 21, 2013 (almost 2 years)","$775,514.33","10 GH/s","1.0 Minute","9.01 Billion
+                      /
+                      13.5 Billion","","",""
+"ziftrCOIN","https://www.coingecko.com/en/coins/ziftrcoin","ziftrCOIN","ZR5","March  1, 2015 (9 months)","$0.00","N/A","1.0 Minute","?
+                      /
+                      10 Billion","","",""
+"Goldcoin","https://www.coingecko.com/en/coins/goldcoin","Goldcoin","Scrypt","May 15, 2013 (over 2 years)","$107,541.73","1.16 GH/s","2.0 Minute","34.8 Million
+                      /
+                      123 Million","","",""
+"Metal Music Coin","https://www.coingecko.com/en/coins/metal-music-coin","Metal Music Coin","Scrypt","null","$836.08","N/A","1.0 Minute","59.7 Million
+                      /
+                      2.5 Billion","","",""
+"Digibyte","https://www.coingecko.com/en/coins/digibyte","Digibyte","null","January 10, 2014 (almost 2 years)","$1,062,529.84","N/A","0.5 Minute","null","","",""
+"Namecoin","https://www.coingecko.com/en/coins/namecoin","Namecoin","SHA-256","April 19, 2011 (over 4 years)","$5,566,847.65","N/A","10.0 Minute","13 Million
+                      /
+                      21 Million","","",""
+"Groupcoin","https://www.coingecko.com/en/coins/groupcoin","null","null","null","null","null","null","null","","",""
+"MapCoin","https://www.coingecko.com/en/coins/mapcoin","MapCoin","Proof of Stake","September  6, 2015 (3 months)","$4,994.79","N/A","null","3 Million
+                      /
+                      3 Million","","",""
+"Maxcoin","https://www.coingecko.com/en/coins/maxcoin","Maxcoin","Keccak","February  6, 2014 (almost 2 years)","$171,000.28","171 GH/s","1.0 Minute","41.5 Million
+                      /
+                      100 Million","","",""
+"Teslacoin","https://www.coingecko.com/en/coins/teslacoin","Teslacoin","Proof of Stake","January 17, 2014 (almost 2 years)","$16,844.45","N/A","0.5 Minute","65.3 Million
+                      /
+                      60.8 Million","","",""
+"Ratecoin","https://www.coingecko.com/en/coins/ratecoin","Ratecoin","Proof of Stake","June 20, 2015 (6 months)","$33,112.77","N/A","0.5 Minute","80.4 Million
+                      /
+                      75 Million","","",""
+"Einsteinium","https://www.coingecko.com/en/coins/einsteinium","Einsteinium","Scrypt","March  1, 2014 (almost 2 years)","$14,838.36","47.8 MH/s","1.0 Minute","176 Million
+                      /
+                      300 Million","","",""
+"Freshcoin","https://www.coingecko.com/en/coins/freshcoin","Freshcoin","null","null","$5,065.78","N/A","null","6.58 Million
+                      /
+                      10 Million","","",""
+"NeuCoin","https://www.coingecko.com/en/coins/neucoin","NeuCoin","Proof of Stake","September 23, 2015 (2 months)","$1,337,442.50","N/A","1.0 Minute","160 Million
+                      /
+                      3 Billion","","",""
+"Syscoin","https://www.coingecko.com/en/coins/syscoin","Syscoin","Scrypt","null","$211,890.26","1.03 TH/s","null","429 Million
+                      /
+                      2 Billion","","",""
+"Coinomat","https://www.coingecko.com/en/coins/coinomat","Coinomat","null","July 23, 2014 (over 1 year)","$70,852.33","N/A","null","3 Million
+                      /
+                      3 Million","","",""
+"CryptoEscudo","https://www.coingecko.com/en/coins/cryptoescudo","CryptoEscudo","Scrypt","March 25, 2014 (over 1 year)","$27,524.07","N/A","2.0 Minute","144 Million
+                      /
+                      1 Billion","","",""
+"Steps","https://www.coingecko.com/en/coins/steps","Steps","Proof of Stake","September 16, 2015 (3 months)","$40,431.15","N/A","5.0 Minute","10.2 Million
+                      /
+                      9.24 Million","","",""
+"HellasCoin","https://www.coingecko.com/en/coins/hellascoin","HellasCoin","null","July  1, 2014 (over 1 year)","","N/A","null","null","","",""
+"Ultracoin","https://www.coingecko.com/en/coins/ultracoin","Ultracoin","Scrypt-Chacha","January 31, 2014 (almost 2 years)","$42,446.51","N/A","0.5 Minute","32.3 Million
+                      /
+                      100 Million","","",""
+"Transfercoin","https://www.coingecko.com/en/coins/transfercoin","Transfercoin","Proof of Stake","August 11, 2015 (4 months)","$13,320.05","N/A","1.0 Minute","null","","",""
+"Bitbean","https://www.coingecko.com/en/coins/bitbean","Bitbean","Proof of Stake","February 14, 2015 (10 months)","$55,155.09","N/A","1.0 Minute","1.06 Billion
+                      /
+                      50 Billion","","",""
+"BitStake","https://www.coingecko.com/en/coins/bitstake","BitStake","X11","January 11, 2015 (11 months)","$1,459.31","N/A","1.0 Minute","1.31 Million
+                      /
+                      1.3 Million","","",""
+"Monero","https://www.coingecko.com/en/coins/monero","Monero","Cryptonight","April 18, 2014 (over 1 year)","$3,794,119.97","N/A","1.0 Minute","10.2 Million
+                      /
+                      18.4 Million","","",""
+"Mintcoin","https://www.coingecko.com/en/coins/mintcoin","Mintcoin","Proof of Stake","February  6, 2014 (almost 2 years)","$563,280.13","N/A","0.5 Minute","null","","",""
+"Blakecoin","https://www.coingecko.com/en/coins/blakecoin","Blakecoin","Blake-256","October  6, 2013 (about 2 years)","$10,210.74","228 GH/s","3.0 Minute","8.66 Million
+                      /
+                      7 Billion","","",""
+"Execoin","https://www.coingecko.com/en/coins/execoin","Execoin","Scrypt-N","February 27, 2014 (almost 2 years)","$3,278.17","567 KH/s","0.75 Minute","17.9 Million
+                      /
+                      26.1 Million","","",""
+"Huntercoin","https://www.coingecko.com/en/coins/huntercoin","Huntercoin","null","January 27, 2014 (almost 2 years)","$7,315.11","N/A","1.0 Minute","4.17 Million
+                      /
+                      42 Million","","",""
+"Dashcoin","https://www.coingecko.com/en/coins/dashcoin","Dashcoin","Cryptonight","July  5, 2014 (over 1 year)","$13,438.09","N/A","2.0 Minute","12.1 Million
+                      /
+                      184 Billion","","",""
+"BitShares","https://www.coingecko.com/en/coins/bitshares","BitShares","null","July 19, 2014 (over 1 year)","$7,823,059.06","N/A","0.167 Minute","2.53 Billion
+                      /
+                      2 Billion","","",""
+"Ybcoin","https://www.coingecko.com/en/coins/ybcoin","Ybcoin","Proof of Stake","June 28, 2013 (over 2 years)","$2,160,980.02","N/A","null","3.01 Million
+                      /
+                      3 Million","","",""
+"Neoscoin","https://www.coingecko.com/en/coins/neoscoin","Neoscoin","SHA-256","August 19, 2014 (over 1 year)","$7,938.44","N/A","5.0 Minute","7.97 Million
+                      /
+                      21 Million","","",""
+"Uro","https://www.coingecko.com/en/coins/uro","Uro","X11","May 11, 2014 (over 1 year)","$15,686.27","N/A","3.0 Minute","1.11 Million
+                      /
+                      1 Million","","",""
+"Bottlecaps","https://www.coingecko.com/en/coins/bottlecaps","Bottlecaps","Scrypt","June 23, 2013 (over 2 years)","$72,548.78","N/A","1.0 Minute","33.6 Million
+                      /
+                      47.4 Million","","",""
+"Horizon","https://www.coingecko.com/en/coins/horizon","Horizon","Proof of Stake","null","$219,388.81","N/A","2.0 Minute","988 Million
+                      /
+                      1 Billion","","",""
+"HTMLcoin","https://www.coingecko.com/en/coins/htmlcoin","HTMLcoin","X15","September 12, 2014 (about 1 year)","$17,483.38","N/A","1.0 Minute","40.7 Billion
+                      /
+                      90 Billion","","",""
+"Guarany","https://www.coingecko.com/en/coins/guarany","Guarany","Scrypt","November 14, 2014 (about 1 year)","$1,272.37","N/A","2.5 Minute","272 Thousand
+                      /
+                      10 Million","","",""
+"TileCoin","https://www.coingecko.com/en/coins/tilecoin","TileCoin","null","September  8, 2014 (about 1 year)","$181,400.00","N/A","null","100 Million
+                      /
+                      100 Million","","",""
+"Crave","https://www.coingecko.com/en/coins/crave","Crave","Proof of Stake","March 20, 2015 (9 months)","$5,681.91","N/A","1.0 Minute","776 Thousand
+                      /
+                      2.08 Million","","",""
+"Bitbar","https://www.coingecko.com/en/coins/bitbar","Bitbar","Scrypt","May  2, 2013 (over 2 years)","$29,394.25","N/A","10.0 Minute","21.8 Thousand
+                      /
+                      9.7 Thousand","","",""
+"Crypti","https://www.coingecko.com/en/coins/crypti","Crypti","Proof of Stake","June 16, 2014 (over 1 year)","$173,795.44","N/A","1.0 Minute","100 Million
+                      /
+                      100 Million","","",""
+"Stealthcoin","https://www.coingecko.com/en/coins/stealthcoin","Stealthcoin","X13","July  4, 2014 (over 1 year)","$47,662.90","N/A","1.0 Minute","22.6 Million
+                      /
+                      20.7 Million","","",""
+"Dash","https://www.coingecko.com/en/coins/dash","Dash","X11","January 19, 2014 (almost 2 years)","$13,245,825.89","109 GH/s","2.5 Minute","6.03 Million
+                      /
+                      22 Million","","",""
+"Cinni","https://www.coingecko.com/en/coins/cinni","Cinni","Proof of Stake","null","$95,688.87","N/A","null","null","","",""
+"MasterTraderCoin","https://www.coingecko.com/en/coins/mastertradercoin","MasterTraderCoin","X11","January 21, 2015 (11 months)","$5,202.73","N/A","1.0 Minute","223 Thousand
+                      /
+                      10.1 Million","","",""
+"Diamond","https://www.coingecko.com/en/coins/diamond","Diamond","Groestl","July 13, 2013 (over 2 years)","$355,619.94","3.11 GH/s","1.0 Minute","1.4 Million
+                      /
+                      4.38 Million","","",""
+"Reddcoin","https://www.coingecko.com/en/coins/reddcoin","Reddcoin","Proof of Stake Velocity","January 26, 2014 (almost 2 years)","$390,304.27","N/A","1.0 Minute","27.9 Billion
+                      /
+                      27 Billion","","",""
+"MangoCoinz","https://www.coingecko.com/en/coins/mangocoinz","MangoCoinz","null","null","$12,465.26","N/A","null","null","","",""
+"Unbreakablecoin","https://www.coingecko.com/en/coins/unbreakablecoin","Unbreakablecoin","SHA-256","March 19, 2014 (over 1 year)","$12,252.94","N/A","5.0 Minute","2.27 Million
+                      /
+                      80 Million","","",""
+"Dogeparty","https://www.coingecko.com/en/coins/dogeparty","Dogeparty","Scrypt","August 13, 2014 (over 1 year)","$48,281.29","N/A","1.0 Minute","null","","",""
+"Ethereum","https://www.coingecko.com/en/coins/ethereum","Ethereum","Ethash","July 30, 2015 (4 months)","$61,844,779.03","N/A","0.2 Minute","null","","",""
+"Aiden","https://www.coingecko.com/en/coins/aiden","Aiden","null","April  5, 2014 (over 1 year)","$5,211.63","N/A","0.5 Minute","14.6 Million
+                      /
+                      84 Million","","",""
+"Sexcoin","https://www.coingecko.com/en/coins/sexcoin","Sexcoin","Scrypt","May 28, 2013 (over 2 years)","$70,219.89","650 MH/s","1.0 Minute","107 Million
+                      /
+                      250 Million","","",""
+"Banx Shares","https://www.coingecko.com/en/coins/banxshares","Banx Shares","null","August 13, 2014 (over 1 year)","","N/A","null","null","","",""
+"BitStake","https://www.coingecko.com/en/coins/bitstake","BitStake","X11","January 11, 2015 (11 months)","$1,459.31","N/A","1.0 Minute","1.31 Million
+                      /
+                      1.3 Million","","",""
+"Librexcoin","https://www.coingecko.com/en/coins/librexcoin","Librexcoin","X11","July 30, 2014 (over 1 year)","$46,645.01","N/A","1.0 Minute","9.78 Million
+                      /
+                      10 Million","","",""
+"Freicoin","https://www.coingecko.com/en/coins/freicoin","Freicoin","SHA-256","December 21, 2012 (almost 3 years)","$31,392.48","N/A","10.0 Minute","46 Million
+                      /
+                      100 Million","","",""
+"Whitecoin","https://www.coingecko.com/en/coins/whitecoin","Whitecoin","Proof of Stake","April 14, 2014 (over 1 year)","$45,185.70","N/A","1.5 Minute","307 Million
+                      /
+                      300 Million","","",""
+"Peercoin","https://www.coingecko.com/en/coins/peercoin","Peercoin","SHA-256","August 20, 2012 (over 3 years)","$9,187,614.10","N/A","10.0 Minute","22.8 Million
+                      /
+                      ?","","",""
+"Sexcoin","https://www.coingecko.com/en/coins/sexcoin","Sexcoin","Scrypt","May 28, 2013 (over 2 years)","$70,219.89","650 MH/s","1.0 Minute","107 Million
+                      /
+                      250 Million","","",""
+"MonetaryUnit","https://www.coingecko.com/en/coins/monetaryunit","MonetaryUnit","Quark","July 26, 2014 (over 1 year)","$10,690.01","244 MH/s","0.67 Minute","76.9 Million
+                      /
+                      1 Quadrillion","","",""
+"MaryJane","https://www.coingecko.com/en/coins/maryjane","MaryJane","X15","September 28, 2014 (about 1 year)","$29,863.32","N/A","null","15.4 Million
+                      /
+                      15.3 Million","","",""
+"Blocknet","https://www.coingecko.com/en/coins/blocknet","Blocknet","Proof of Stake","October 21, 2014 (about 1 year)","$566,040.52","N/A","1.5 Minute","3.91 Million
+                      /
+                      3.9 Million","","",""
+"Mineralscoin","https://www.coingecko.com/en/coins/mineralscoin","Mineralscoin","X11","null","$16,740.26","N/A","0.5 Minute","27.4 Million
+                      /
+                      30 Million","","",""
+"Bottlecaps","https://www.coingecko.com/en/coins/bottlecaps","Bottlecaps","Scrypt","June 23, 2013 (over 2 years)","$72,548.78","N/A","1.0 Minute","33.6 Million
+                      /
+                      47.4 Million","","",""
+"MapCoin","https://www.coingecko.com/en/coins/mapcoin","MapCoin","Proof of Stake","September  6, 2015 (3 months)","$4,994.79","N/A","null","3 Million
+                      /
+                      3 Million","","",""
