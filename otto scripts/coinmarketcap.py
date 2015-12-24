@@ -10,9 +10,14 @@ import ast
 from time import strftime
 from datetime import datetime
 
-def get_prices(basecoin):
-	priceurl = 'http://coinmarketcap.com/datapoints/'+basecoin+'/price_btc/'
-	volumeurl = 'http://coinmarketcap.com/datapoints/'+basecoin+'/volume/'
+def get_prices(basecoin, btcusd):
+	if btcusd == 'BTC':
+		priceurl = 'https://api.coinmarketcap.com/v1/datapoints/price_btc/'+basecoin+'/'
+	elif btcusd == 'USD':
+		priceurl = 'https://api.coinmarketcap.com/v1/datapoints/price_usd/'+basecoin+'/'
+	else:
+		print 'WRONG 2nd PARAMETER'
+	volumeurl = 'https://api.coinmarketcap.com/v1/datapoints/volume/'+basecoin+'/'
 	try:
 		prices = ast.literal_eval(urllib2.urlopen(priceurl).read())
 		volumes = ast.literal_eval(urllib2.urlopen(volumeurl).read())
@@ -24,6 +29,7 @@ def get_prices(basecoin):
 		return pricevolumes
 	except:
 		pass		
+
 
 def find_index(lst, key, value):
 	for i, dic in enumerate(lst):
@@ -52,7 +58,10 @@ def scrape_coins():
 
 def scrape_markets(coin):
 	url = str('http://coinmarketcap.com/currencies/'+ coin +'/#markets')
-	html = urllib2.urlopen(url).read()
+	try:
+		html = urllib2.urlopen(url).read()
+	except:
+		return []
 	soup = BeautifulSoup(html, 'html.parser')
 	tr = soup.findAll('tr')
 	markets = []
@@ -71,10 +80,15 @@ def get_csvs_recursive(directory_path):
 			files = files + get_csvs_recursive(os.path.join(directory_path, x))
 	return files
 
-def analyze_coin(coin):
+def analyze_coin(coin, btcusd):
 	try:
-		prices = sorted(list(get_prices(coin['slug'])), key = lambda k:k['date'])
-		print coin
+		if btcusd == 'BTC':
+			prices = sorted(list(get_prices(coin['slug'], 'BTC')), key = lambda k:k['date'])
+		elif btcusd == 'USD':
+			prices = sorted(list(get_prices(coin['slug'], 'USD')), key = lambda k:k['date'])
+		else:
+			print 'Wrong parameter, USD or BTC'
+			return 0
 		markets = scrape_markets(coin['slug'])
 		max_price = max(prices, key = operator.itemgetter('price'))['price']
 		min_price = min(prices, key = operator.itemgetter('price'))['price']
@@ -83,13 +97,20 @@ def analyze_coin(coin):
 		last_price = prices[-1]['price']
 		average = sum(map(lambda x: x['price'],prices))/len(prices)
 		average_after_max = sum(map(lambda x: x['price'],prices[index_max:]))/len(prices[index_max:])
+		active_days = (int(prices[-1]['date']/1000)-int(prices[0]['date']/1000))/86400
+		active_days_before_max = (int(prices[index_max-1]['date']/1000)-int(prices[0]['date']/1000))/86400
 		try:
 			average_volume_weighted = sum(map(lambda x: x['price']*x['volume'],prices))/sum(map(lambda x: x['volume'],prices))
 			average_volume_weighted_after_max = sum(map(lambda x: x['price']*x['volume'],prices[index_max:]))/sum(map(lambda x: x['volume'],prices[index_max:]))
 		except ZeroDivisionError:
 			average_volume_weighted = 0
 			average_volume_weighted_after_max = 0
-		total_volume = sum(map(lambda x: x['volume'],prices))
+		if btcusd == 'BTC':
+			total_volume = sum(map(lambda x: x['volume'],prices))
+			total_volume_before_max = sum(map(lambda x: x['volume'],prices[:index_max-1])) 
+		elif btcusd == 'USD':
+			total_volume = sum(map(lambda x: x['volume']*x['price'],prices))
+			total_volume_before_max = sum(map(lambda x: x['volume']*x['price'],prices[:index_max-1])) 
 		market_num = len(markets)
 		try:
 			severity_to_min_price = max_price/min_price
@@ -119,6 +140,14 @@ def analyze_coin(coin):
 			severity_to_average_after_max_volume_weighted = max_price/average_volume_weighted_after_max
 		except ZeroDivisionError:
 			severity_to_average_after_max_volume_weighted = 'NaN'
+		try:
+			normalized_total_volume = total_volume/active_days
+		except ZeroDivisionError:
+			normalized_total_volume = 'NaN'
+		try:
+			normalized_total_volume_before_max = total_volume_before_max/active_days_before_max
+		except ZeroDivisionError:
+			normalized_total_volume_before_max = 'NaN'
 		coin['severity_to_min_price'] = severity_to_min_price
 		coin['max_price'] = max_price
 		coin['min_price'] = min_price
@@ -131,6 +160,9 @@ def analyze_coin(coin):
 		coin['total_volume'] = total_volume
 		coin['market_num'] = market_num
 		coin['first_trade'] = datetime.fromtimestamp(int(prices[0]['date']/1000)).strftime('%Y-%m-%d')
+		coin['normalized_total_volume'] = normalized_total_volume
+		coin['normalized_total_volume_before_max'] = normalized_total_volume_before_max
+
 		if 'BTC-E' in markets:
 			coin['BTC-E'] = True
 		else:
@@ -175,6 +207,8 @@ fieldnames = [
 'severity_to_average_after_max',
 'severity_to_average_volume_weighted',
 'severity_to_average_after_max_volume_weighted',
+'normalized_total_volume',
+'normalized_total_volume_before_max',
 'total_volume',
 'market_num',
 'BTC-E',
@@ -201,7 +235,7 @@ fieldnames_coindata = [
 ]
 coins = []
 #coins = scrape_coins()
-with open('coindata.csv') as csvfile:
+with open('../coindata.csv') as csvfile:
 	reader = csv.DictReader(csvfile)
 	for coin in reader:
 		coins.append(coin)
@@ -226,15 +260,23 @@ with open('unmodified.csv', 'wb') as csvfile:
 	for coin in coins:
 		writer.writerow({'symbol': coin, 'coin_name': coins[coin]['coin_name']})
 '''
-
+coinusd = []
+coinbtc = []
 for i, coin in enumerate(coins):
-	print i+1, 'of', len(coins)
-	coin = analyze_coin(coin)
+	print i+1, 'of', len(coins), coin['coin_name']
+	coinusd.append(analyze_coin(coin, 'USD'))
+	coinbtc.append(analyze_coin(coin, 'BTC'))
 
-with open('full.csv','wb') as csvfile:
+with open('fullusd.csv','wb') as csvfile:
 	writer = csv.DictWriter(csvfile, fieldnames)
 	writer.writeheader()
-	for coin in coins:
+	for coin in coinusd:
+		writer.writerow(coin)
+
+with open('fullbtc.csv','wb') as csvfile:
+	writer = csv.DictWriter(csvfile, fieldnames)
+	writer.writeheader()
+	for coin in coinbtc:
 		writer.writerow(coin)
 '''
 with open('coinmarketanalisis.csv', 'wb') as csv:
