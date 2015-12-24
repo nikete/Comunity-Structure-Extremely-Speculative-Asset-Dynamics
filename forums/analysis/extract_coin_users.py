@@ -35,14 +35,14 @@ parser.add_argument("output_dir",
                     "active users (those who had mentioned the coin the most at time of "
                     "the network). Another CSV file containing the first introducers "
                     "of the coins will be also written to this folder.");
-parser.add_argument("modified_coins_earliest_dates",
+parser.add_argument("modified_coins_earliest_trade_dates",
                     help="A CSV file containing the earliest possible introduction date "
                     "for each modified coin. The first line is the header and each "
                     "following line looks like 'coin-name,YYYY/MM/DD' where the date is "
                     "the earliest possible introduction date for that coin. Depending on "
                     "the output file, mentions of a coin in a thread at a time older "
                     "than its earliest possible date is ignored")
-parser.add_argument("unmodified_coins_earliest_dates",
+parser.add_argument("unmodified_coins_earliest_trade_dates",
                     help="like above, but contains unmodified coin name and symbols.")
 parser.add_argument("-hd", "--history_days", type=int, default = -1,
                     help="This value determines the number of days of forum interactions "
@@ -73,20 +73,25 @@ args = parser.parse_args()
 class PostsTracker:
   def __init__(self):
     # Read earliest possible introduction dates. First one is mapping from coin name to
-    # earliest introduction date and second one is reverse: mapping from date to list of
-    # coins whose earliest introduction is the key date.
-    self.earliest_date_by_modified_coin = dict()
-    modified_coins_by_earliest_date = collections.defaultdict(set)   # Dummy
-    utils.read_earliest_dates(args.modified_coins_earliest_dates,
-                              self.earliest_date_by_modified_coin,
-                              modified_coins_by_earliest_date)
-    self.earliest_date_by_unmodified_coin = dict()
-    unmodified_coins_by_earliest_date = collections.defaultdict(set)   # Dummy
-    utils.read_earliest_dates(args.unmodified_coins_earliest_dates,
-                              self.earliest_date_by_unmodified_coin,
-                              unmodified_coins_by_earliest_date)
-    self.first_mention_network_date_by_unmodified_coin = dict()
-    self.first_thread_post_mention_network_date_by_unmodified_coin = dict()
+    # earliest trade date and second one is reverse: mapping from date to list of
+    # coins whose earliest trade is the key date.
+    self.earliest_trade_date_by_modified_coin = dict()
+    modified_coins_by_earliest_trade_date = collections.defaultdict(set)   # Dummy
+    utils.read_earliest_trade_dates(args.modified_coins_earliest_trade_dates,
+                              self.earliest_trade_date_by_modified_coin,
+                              modified_coins_by_earliest_trade_date)
+    self.earliest_trade_date_by_unmodified_coin = dict()
+    unmodified_coins_by_earliest_trade_date = collections.defaultdict(set)   # Dummy
+    utils.read_earliest_trade_dates(args.unmodified_coins_earliest_trade_dates,
+                              self.earliest_trade_date_by_unmodified_coin,
+                              unmodified_coins_by_earliest_trade_date)
+   
+    # mapping from coin to earliest mention in the forum or earliest mention in the first
+    # post of a new thread.
+    self.first_mention_date_by_modified_coin = dict()
+    self.first_thread_post_mention_date_by_modified_coin = dict()
+    self.first_mention_date_by_unmodified_coin = dict()
+    self.first_thread_post_mention_date_by_unmodified_coin = dict()
 
     # Used for tracking users in 1st list: 
     # 1-The users who have mentioned the modified coin name OR symbol the most in any post
@@ -155,15 +160,44 @@ class PostsTracker:
     self.num_subjects_per_user = collections.defaultdict(
         lambda: collections.defaultdict(int))
  
+  
+  def add_modified_coin_first_mention(self, modified_coin, user, date_time):
+    # we don't care if the first mention is after earliest date. we update first mention
+    # if mentioned coin is observed for first time, no matter the date
+    if modified_coin in self.first_mention_date_by_modified_coin:
+      return
+  
+    # the following code should happen only once, so we overwrite.
+    self.first_mention_date_by_modified_coin[modified_coin] = date_time.date()
+  
+  
+  def add_modified_coin_first_thread_post_mention(self,
+                                                  modified_coin,
+                                                  user, date_time):
+    # we don't care if the first mention is after earliest date. we update first mention
+    # if mentioned coin is observed for first time, no matter the date
+    if modified_coin in self.first_thread_post_mention_date_by_modified_coin:
+      return
+
+    # the following code should happen only once, so we overwrite.
+    self.first_thread_post_mention_date_by_modified_coin[modified_coin] = date_time.date()
+ 
+ 
   # Update coin mention if date is before earliest trade date. In addition, since we only
   # care about the last history_days before earliest days, post_date should not be more
   # than history_days before earliest date.
-  def add_modified_coin_mention(self, modified_coin, user, date_time):
+  def add_modified_coin_mention(self, modified_coin, user, date_time, new_subject):
+    # first take care of first mentions if any
+    self.add_modified_coin_first_mention(modified_coin, user, date_time)
+    if new_subject:
+      self.add_modified_coin_first_thread_post_mention(modified_coin, user, date_time)
+
+    # now update mention per user if valid within accepted time range
     if (self.is_coin_mention_too_new(modified_coin,
-                                     self.earliest_date_by_modified_coin,
+                                     self.earliest_trade_date_by_modified_coin,
                                      date_time) or
         self.is_coin_mention_too_old(modified_coin,
-                                     self.earliest_date_by_modified_coin,
+                                     self.earliest_trade_date_by_modified_coin,
                                      date_time)):
       return
 
@@ -171,39 +205,19 @@ class PostsTracker:
     # add coin url to list for user only if urls are requested
     if args.num_urls > 0:
       self.modified_urls_per_user[modified_coin][user].append((url, date_time))
-          
-  
-  # just like modified coin mentions, but keeps track of both unmodified coin name and
-  # symbol mentions
-  def add_unmodified_coin_mention(self, unmodified_coin, user, date_time):
-    if (self.is_coin_mention_too_new(unmodified_coin,
-                                     self.earliest_date_by_unmodified_coin,
-                                     date_time) or
-        self.is_coin_mention_too_old(unmodified_coin,
-                                     self.earliest_date_by_unmodified_coin,
-                                     date_time)):
-      return
-    
-    self.unmodified_mentions_per_user[unmodified_coin][user] += 1
-    # add coin url to list for user only if urls are requested
-    if args.num_urls > 0:
-      self.unmodified_urls_per_user[unmodified_coin][user].append((url, date_time))
 
 
   def add_unmodified_coin_first_mention(self, unmodified_coin, user, date_time):
     # we don't care if the first mention is after earliest date. we update first mention
     # if mentioned coin is observed for first time, no matter the date
-    if unmodified_coin in self.unmodified_first_mention:
+    if unmodified_coin in self.first_mention_date_by_unmodified_coin:
       return
   
     # the following code should happen only once, so we overwrite.
     self.unmodified_first_mention[unmodified_coin][user] = 1
     self.unmodified_first_mention_date_url[unmodified_coin][user] = [
         (url, date_time)]
-    # the network date of first mention should be 1 after date_time so that the first
-    # mention post is included in the graph.
-    self.first_mention_network_date_by_unmodified_coin[unmodified_coin] = (
-        date_time.date() + datetime.timedelta(days=1))
+    self.first_mention_date_by_unmodified_coin[unmodified_coin] = date_time.date()
   
   
   def add_unmodified_coin_first_thread_post_mention(self,
@@ -211,17 +225,37 @@ class PostsTracker:
                                                     user, date_time):
     # we don't care if the first mention is after earliest date. we update first mention
     # if mentioned coin is observed for first time, no matter the date
-    if unmodified_coin in self.unmodified_first_thread_post_mention:
+    if unmodified_coin in self.first_thread_post_mention_date_by_unmodified_coin:
       return
 
     # the following code should happen only once, so we overwrite.
     self.unmodified_first_thread_post_mention[unmodified_coin][user] = 1
     self.unmodified_first_thread_post_mention_date_url[unmodified_coin][user] = [
         (url, date_time)]
-    # the network date of first mention should be 1 after date_time so that the first
-    # mention post is included in the graph.
-    self.first_thread_post_mention_network_date_by_unmodified_coin[unmodified_coin] = (
-        date_time.date() + datetime.timedelta(days=1))
+    self.first_thread_post_mention_date_by_unmodified_coin[unmodified_coin] = date_time.date()
+
+
+  # just like modified coin mentions, but keeps track of both modified coin name and
+  # symbol mentions
+  def add_unmodified_coin_mention(self, unmodified_coin, user, date_time, new_subject):
+    # first take care of first mentions if any
+    self.add_unmodified_coin_first_mention(unmodified_coin, user, date_time)
+    if new_subject:
+      self.add_unmodified_coin_first_thread_post_mention(unmodified_coin, user, date_time)
+
+    # now update mention per user if valid within accepted time range
+    if (self.is_coin_mention_too_new(unmodified_coin,
+                                     self.earliest_trade_date_by_unmodified_coin,
+                                     date_time) or
+        self.is_coin_mention_too_old(unmodified_coin,
+                                     self.earliest_trade_date_by_unmodified_coin,
+                                     date_time)):
+      return
+    
+    self.unmodified_mentions_per_user[unmodified_coin][user] += 1
+    # add coin url to list for user only if urls are requested
+    if args.num_urls > 0:
+      self.unmodified_urls_per_user[unmodified_coin][user].append((url, date_time))
 
 
   def _update_user_activity(self, activity_per_user, user, date_time):
@@ -254,27 +288,29 @@ class PostsTracker:
     self._update_user_activity(self.num_subjects_per_user, user, date_time)
 
 
-  def is_coin_mention_too_new(self, mentioned_coin, earliest_date_by_coin, date_time):
+  def is_coin_mention_too_new(self, mentioned_coin, earliest_trade_date_by_coin,
+                              date_time):
     """ Returns true if coin mention is after earliest date or not in
-        earliest_date_by_coin """
-    if mentioned_coin not in earliest_date_by_coin:
+        earliest_trade_date_by_coin """
+    if mentioned_coin not in earliest_trade_date_by_coin:
       return True
 
     post_date = date_time.date()
-    earliest_date = earliest_date_by_coin[mentioned_coin]
+    earliest_trade_date = earliest_trade_date_by_coin[mentioned_coin]
     # if history_days is negative, we count all mentions no matter how far back.
-    return post_date >= earliest_date
+    return post_date >= earliest_trade_date
 
 
-  def is_coin_mention_too_old(self, mentioned_coin, earliest_date_by_coin, date_time):
+  def is_coin_mention_too_old(self, mentioned_coin, earliest_trade_date_by_coin,
+                              date_time):
     """ Returns true if coin mention is not within last history_days or not in
-        earliest_date_by_coin """
-    if mentioned_coin not in earliest_date_by_coin:
+        earliest_trade_date_by_coin """
+    if mentioned_coin not in earliest_trade_date_by_coin:
       return True
     post_date = date_time.date()
-    earliest_date = earliest_date_by_coin[mentioned_coin]
+    earliest_trade_date = earliest_trade_date_by_coin[mentioned_coin]
     return (args.history_days > 0 and
-            post_date <= earliest_date - datetime.timedelta(days=(args.history_days+1)))
+            post_date <= earliest_trade_date - datetime.timedelta(days=(args.history_days+1)))
 
 
   def write_modified_coin_most_mentioners(self):
@@ -285,15 +321,17 @@ class PostsTracker:
                            self.num_posts_per_user,
                            self.num_subjects_per_user,
                            self.first_post_per_user,
-                           self.earliest_date_by_modified_coin,
-                           self.earliest_date_by_modified_coin,
+                           self.earliest_trade_date_by_modified_coin,
+                           self.first_mention_date_by_modified_coin,
+                           self.earliest_trade_date_by_modified_coin,
                            args.num_active_users)
     # Simply quits without writing anything if no url request
     urls_output_filename = os.path.join(args.output_dir,
                                         "modified_coin_active_user_urls.csv")
     utils.write_coin_user_urls(urls_output_filename,
                                self.modified_urls_per_user,
-                               self.earliest_date_by_modified_coin,
+                               self.earliest_trade_date_by_modified_coin,
+                               self.first_mention_date_by_modified_coin,
                                args.num_active_users,
                                args.num_urls)
 
@@ -306,15 +344,17 @@ class PostsTracker:
                            self.num_posts_per_user,
                            self.num_subjects_per_user,
                            self.first_post_per_user,
-                           self.earliest_date_by_unmodified_coin,
-                           self.earliest_date_by_unmodified_coin,
+                           self.earliest_trade_date_by_unmodified_coin,
+                           self.first_mention_date_by_unmodified_coin,
+                           self.earliest_trade_date_by_unmodified_coin,
                            args.num_active_users)
     # Simply quits without writing anything if no url request
     urls_output_filename = os.path.join(args.output_dir,
                                         "unmodified_coin_active_user_urls.csv")
     utils.write_coin_user_urls(urls_output_filename,
                                self.unmodified_urls_per_user,
-                               self.earliest_date_by_unmodified_coin,
+                               self.earliest_trade_date_by_unmodified_coin,
+                               self.first_mention_date_by_unmodified_coin,
                                args.num_active_users,
                                args.num_urls)
 
@@ -327,14 +367,16 @@ class PostsTracker:
                            self.num_posts_per_user,
                            self.num_subjects_per_user,
                            self.first_post_per_user,
-                           self.earliest_date_by_unmodified_coin,
-                           self.first_mention_network_date_by_unmodified_coin,
+                           self.earliest_trade_date_by_unmodified_coin,
+                           self.first_mention_date_by_unmodified_coin,
+                           self.earliest_trade_date_by_unmodified_coin,
                            1)
     urls_output_filename = os.path.join(
         args.output_dir, "unmodified_coin_first_introducer_urls.csv")
     utils.write_coin_user_urls(urls_output_filename,
                                self.unmodified_first_mention_date_url,
-                               self.earliest_date_by_unmodified_coin,
+                               self.earliest_trade_date_by_unmodified_coin,
+                               self.first_mention_date_by_unmodified_coin,
                                1, 1)
 
 
@@ -346,14 +388,16 @@ class PostsTracker:
                            self.num_posts_per_user,
                            self.num_subjects_per_user,
                            self.first_post_per_user,
-                           self.earliest_date_by_unmodified_coin,
-                           self.first_thread_post_mention_network_date_by_unmodified_coin,
+                           self.earliest_trade_date_by_unmodified_coin,
+                           self.first_thread_post_mention_date_by_unmodified_coin,
+                           self.earliest_trade_date_by_unmodified_coin,
                            1)
     urls_output_filename = os.path.join(
         args.output_dir, "unmodified_coin_first_thread_post_introducer_urls.csv")
     utils.write_coin_user_urls(urls_output_filename,
                                self.unmodified_first_thread_post_mention_date_url,
-                               self.earliest_date_by_unmodified_coin,
+                               self.earliest_trade_date_by_unmodified_coin,
+                               self.first_thread_post_mention_date_by_unmodified_coin,
                                1, 1)
 
 
@@ -393,18 +437,14 @@ if __name__ == '__main__':
       for modified_coin in modified_coins:
         posts_tracker.add_modified_coin_mention(modified_coin,
                                                 user,
-                                                date_time)
+                                                date_time,
+                                                new_subject)
 
       for unmodified_coin in unmodified_coins:
-        posts_tracker.add_unmodified_coin_first_mention(unmodified_coin,
-                                                        user,
-                                                        date_time)
         posts_tracker.add_unmodified_coin_mention(unmodified_coin,
                                                   user,
-                                                  date_time)
-        if new_subject:
-          posts_tracker.add_unmodified_coin_first_thread_post_mention(
-              unmodified_coin, user, date_time)
+                                                  date_time,
+                                                  new_subject)
   
   
   # After we have processed all the posts, write the user sets.  

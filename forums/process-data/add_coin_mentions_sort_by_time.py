@@ -78,6 +78,10 @@ parser.add_argument('-es', '--extra_strings', dest='extra_strings', default='',
                     'of mms/ums flags (i.e. subject, content or their concatenation). '
                     'The extra strings are applied to both unmodified and modified '
                     'mention scheme.')
+parser.add_argument('-sc', '--subject_conent', dest='subject_content', default=False,
+                    action="store_true",
+                    help='Whether to output subject and content in the output file. '
+                    'Default is false.')
 args = parser.parse_args()
 
 def parse_mention_scheme(mention_scheme):
@@ -164,6 +168,8 @@ if __name__ == '__main__':
             "num_replies", "num_views", "url", "started_by", "user", "user_level",
             "user_activity", "date", "time",
             "mentioned_modified_coins", "mentioned_unmodified_coins"]
+  if args.subject_content:
+    header.extend(["subject", "content"])
 
 
   # this dictionary will hold all the data, not sorted though
@@ -218,6 +224,8 @@ if __name__ == '__main__':
                       num_replies, num_views, url, started_by, user, user_level,
                       user_activity, date, time,
                       mentioned_modified_coins_str, mentioned_unmodified_coins_str]
+        if args.subject_content:
+          output_row.extend([subject, content])
         post_timestamp = " ".join([date, time])
         posts_keyed_by_timestamp[post_timestamp].append(output_row)
       infile.close()

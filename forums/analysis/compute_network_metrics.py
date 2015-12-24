@@ -81,20 +81,23 @@ def read_coin_users(users_input_file):
   # a mapping from coin name list of (user, num_mentions).
   coin_users = collections.defaultdict(list)
   coin_network_dates = dict()
-  coin_earliest_dates = dict()
+  coin_earliest_trade_dates = dict()
+  coin_earliest_mention_dates = dict()
   max_num_coin_users = 0
   with open(users_input_file, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ',')
     next(csvreader, None)  # skip the headers
     for row in csvreader:
       coin = row[0]
-      earliest_date = row[1]
-      network_date = row[2]
-      coin_earliest_dates[coin] = earliest_date
+      earliest_trade_date = row[1]
+      earliest_mention_date = row[2]
+      network_date = row[3]
+      coin_earliest_trade_dates[coin] = earliest_trade_date
+      coin_earliest_mention_dates[coin] = earliest_mention_date
       coin_network_dates[coin] = network_date
       # go through active users/num_mentions/num_posts/num_subjects
       num_coin_users = 0
-      for i in range(3, len(row), 5):
+      for i in range(4, len(row), 5):
         user = row[i]
         num_mentions = row[i+1]
         num_posts = row[i+2]
@@ -109,7 +112,8 @@ def read_coin_users(users_input_file):
                                    days_since_first_post))
       max_num_coin_users = max(max_num_coin_users, num_coin_users)
 
-  return (max_num_coin_users, coin_users, coin_earliest_dates, coin_network_dates)
+  return (max_num_coin_users, coin_users,
+          coin_earliest_trade_dates, coin_earliest_mention_date, coin_network_dates)
 
 
 # Define weighted density as sum(edge weights)/(max number of possible edges) for directed
@@ -362,22 +366,27 @@ def compute_network_metrics(network_info):
     # Read in mapping from coin name to list of (active user, num mentions).
     (max_num_coin_users,
      coin_users,
-     coin_earliest_dates,
+     coin_earliest_trade_dates,
+     coin_earliest_mention_dates,
      coin_network_dates) = read_coin_users(args.users_input_file)
 
     if network_name not in coin_users:
       print 'Coin ' + network_name + ' is not in coin_users. Skipping'
       return 
-    if network_name not in coin_earliest_dates:
-      print 'Coin ' + network_name + ' is not in coin_earliest_dates. Skipping'
+    if network_name not in coin_earliest_trade_dates:
+      print 'Coin ' + network_name + ' is not in coin_earliest_trade_dates. Skipping'
+      return 
+    if network_name not in coin_earliest_mention_dates:
+      print 'Coin ' + network_name + ' is not in coin_earliest_mention_dates. Skipping'
       return 
     if network_name not in coin_network_dates:
       print 'Coin ' + network_name + ' is not in coin_network_dates. Skipping'
       return
 
-    earliest_trade_date = coin_earliest_dates[network_name]
+    earliest_trade_date = coin_earliest_trade_dates[network_name]
+    earliest_mention_date = coin_earliest_mention_dates[network_name]
     network_date = coin_network_dates[network_name]
-    result.extend([earliest_trade_date, network_date])
+    result.extend([earliest_trade_date, earliest_mention_date, network_date])
 
     # number of user-specific fields. Must update this number if you add a new field
     num_user_fields = 21 if directed_networks else 13
@@ -509,7 +518,8 @@ def main():
     # metrics are computed per coin
     (max_num_coin_users,
      coin_users,
-     coin_earliest_dates,
+     coin_earliest_trade_dates,
+     coin_earliest_mention_dates,
      coin_network_dates) = read_coin_users(args.users_input_file)
 
     # Determine filenames (dates) corresponding to each coin
@@ -523,7 +533,7 @@ def main():
       networks_info.append((network_file, network_name))
 
     # Extend header since user metrics are requested.
-    header.extend(["earliest_trade_date", "network_date"])
+    header.extend(["earliest_trade_date", "earliest_mention_date", "network_date"])
     for i in range(1, max_num_coin_users + 1):
       user = "user" + str(i)
       if args.directed_networks:
