@@ -1,6 +1,5 @@
 symbol,ann
 BTC,http://article.gmane.org/gmane.comp.encryption.general/12588/
-NMC,None
 IXC,https://bitcointalk.org/index.php?topic=36218.0
 I0C,https://bitcointalk.org/index.php?topic=36425.0
 SC,https://bitcointalk.org/index.php?topic=38453.0
@@ -9,8 +8,6 @@ TBX,https://bitcointalk.org/index.php?topic=45667.0
 FBX,https://bitcointalk.org/index.php?topic=46528.0
 LTC,https://bitcointalk.org/index.php?topic=47417.0
 BQC,https://bitcointalk.org/index.php?topic=307923.0
-FTC,None
-SRC,https://bitcointalk.org/index.php?topic=206017.0
 NET,https://bitcointalk.org/index.php?topic=201402.0
 FRK,https://bitcointalk.org/index.php?topic=202417.0
 ANC,https://bitcointalk.org/index.php?topic=309716.0
@@ -28,9 +25,7 @@ NBL,https://bitcointalk.org/index.php?topic=209035.0
 ALF,https://bitcointalk.org/index.php?topic=230868.0
 ARG,https://bitcointalk.org/index.php?topic=231524.0
 PWC,https://bitcointalk.org/index.php?topic=203505.0
-KGC,None
 FST,https://bitcointalk.org/index.php?topic=218852.0
-MEM,None
 GLC,https://bitcointalk.org/index.php?topic=243911.0
 6CN,https://bitcointalk.org/index.php?topic=239201.0
 RCH,https://bitcointalk.org/index.php?topic=239251.0
@@ -41,7 +36,6 @@ SXC,https://bitcointalk.org/index.php?topic=218158.0
 NC,https://bitcointalk.org/index.php?topic=241128.0
 TDC,https://bitcointalk.org/index.php?topic=242857.0
 VLC,https://bitcointalk.org/index.php?topic=239666.0
-JKC,None
 LKY,https://bitcointalk.org/index.php?topic=214614.0
 DOGE,https://bitcointalk.org/index.php?topic=361813.0
 APE,https://bitcointalk.org/index.php?topic=375938.0
@@ -50,7 +44,6 @@ CAT,https://bitcointalk.org/index.php?topic=441402.0
 PND,https://bitcointalk.org/index.php?topic=464476.0
 JBG,https://bitcointalk.org/index.php?topic=530408.0
 SPC,https://bitcointalk.org/index.php?topic=206164.0
-GDC,None
 CSC,https://bitcointalk.org/index.php?topic=258090.0
 RED,https://bitcointalk.org/index.php?topic=246693.0
 EGC,https://bitcointalk.org/index.php?topic=260484.0
@@ -93,10 +86,10 @@ BEST,https://bitcointalk.org/index.php?topic=266439.0
 POK,https://bitcointalk.org/index.php?topic=250711.0
 CYB,https://bitcointalk.org/index.php?topic=261194.0
 AMC,https://bitcointalk.org/index.php?topic=932375.0
-BOS,https://bitcointalk.org/index.php?topic=355729.0
+BSS,https://bitcointalk.org/index.php?topic=355729.0
 LOVE,https://bitcointalk.org/index.php?topic=367898.0
 SMC,https://bitcointalk.org/index.php?topic=182430.0
-DNC,https://bitcointalk.org/index.php?topic=216653.0
+DragonCoin,https://bitcointalk.org/index.php?topic=216653.0
 SPT,https://bitcointalk.org/index.php?topic=259764.0
 CPR,https://bitcointalk.org/index.php?topic=272170.0
 PINGAS,https://bitcointalk.org/index.php?topic=387319.0
@@ -141,15 +134,9 @@ RON,https://bitcointalk.org/index.php?topic=478244.0
 PIC,https://bitcointalk.org/index.php?topic=431508.0
 BEER,https://bitcointalk.org/index.php?topic=445553.0
 PAS,https://bitcointalk.org/index.php?topic=445560.0
-WWW,None
 FISH,https://bitcointalk.org/index.php?topic=391858.0
-COLA,None
-TEL,None
 VDC,https://bitcointalk.org/index.php?topic=440159.0
-OIL,None
-SHOP,None
 HAC,https://bitcointalk.org/index.php?topic=431512.0
-HDC,None
 LADY,https://bitcointalk.org/index.php?topic=445680.0
 MUSC,https://bitcointalk.org/index.php?topic=445668.0
 CIC,https://bitcointalk.org/index.php?topic=445624.0
@@ -238,9 +225,7 @@ SHADE,https://bitcointalk.org/index.php?topic=768941.0
 XBOT,https://bitcointalk.org/index.php?topic=760803.0
 CGA,https://bitcointalk.org/index.php?topic=771830.0
 BTLS,https://bitcointalk.org/index.php?topic=777275.0
-VAC,None
 SLK,https://hashtalk.org/topic/7310/sleakcoin-release-source-first-then-win-wallet-etc
-DOLLAR,None
 SNG,https://bitcointalk.org/index.php?topic=804527.0
 DPC,https://bitcointalk.org/index.php?topic=795749.0
 MTLMC,https://bitcointalk.org/index.php?topic=808657.0
@@ -270,7 +255,6 @@ FOF,https://bitcointalk.org/index.php?topic=515642.0
 NLG,https://bitcointalk.org/index.php?topic=554412.0
 BUN,https://bitcointalk.org/index.php?topic=589180.0
 LQC,https://bitcointalk.org/index.php?topic=60026.0
-DVC,None
 STY,https://bitcointalk.org/index.php?topic=451343.0
 FRC,https://bitcointalk.org/index.php?topic=89843.0
 ZTC,https://bitcointalk.org/index.php?topic=219644.0
@@ -327,7 +311,6 @@ BC,https://bitcointalk.org/index.php?topic=469640.0
 ZEIT,https://bitcointalk.org/index.php?topic=487814.0
 QBT,https://bitcointalk.org/index.php?topic=345328.0
 FLT,https://bitcointalk.org/index.php?topic=509499.0
-TRC,None
 BTE,https://bitcointalk.org/index.php?topic=169559.0
 XPM,https://bitcointalk.org/index.php?topic=251850.0
 DTC,https://bitcointalk.org/index.php?topic=325735.0
@@ -338,7 +321,6 @@ ZET,https://bitcointalk.org/index.php?topic=267545.0
 TEA,https://bitcointalk.org/index.php?topic=434432.0
 MYR,https://bitcointalk.org/index.php?topic=483515.0
 CHC,https://bitcointalk.org/index.php?topic=422149.0
-MZC,None
 SIC,https://bitcointalk.org/index.php?topic=240894.0
 QRK,https://bitcointalk.org/index.php?topic=260031.0
 OBC,https://bitcointalk.org/index.php?topic=281373.0
@@ -431,9 +413,7 @@ CLD,https://bitcointalk.org/index.php?topic=702981.0
 BTO,https://bitcointalk.org/index.php?topic=714852.0
 BIZ,https://bitcointalk.org/index.php?topic=725670.0
 Pal,https://bitcointalk.org/index.php?topic=712124.0
-MWC,https://bitcointalk.org/index.php?topic=725620.0
 DSV,https://bitcointalk.org/index.php?topic=695096.0
-MTS,None
 MAG,https://bitcointalk.org/index.php?topic=727297.0
 VMINE,https://bitcointalk.org/index.php?topic=709911.0
 DEPO-GBP,https://bitcointalk.org/index.php?topic=729189.0
@@ -444,13 +424,12 @@ BCSH,https://bitcointalk.org/index.php?topic=737857.0
 CYX,https://bitcointalk.org/index.php?topic=702483.0
 TMC,https://bitcointalk.org/index.php?topic=731983.0
 RACE,https://bitcointalk.org/index.php?topic=734819.0
-AZC,None
 AMBER,https://bitcointalk.org/index.php?topic=742928.0
 LMR,https://bitcointalk.org/index.php?topic=739681.0
 CryptoXTC,https://bitcointalk.org/index.php?topic=728168.0
 XURO,https://bitcointalk.org/index.php?topic=745861.0
 GLY,https://cryptocointalk.com/topic/13229-8-20golden-loaf-yanukovich-gly/
-MWC,https://bitcointalk.org/index.php?topic=752808.0
+MWC,https://bitcointalk.org/index.php?topic=725620.0
 Neos,https://bitcointalk.org/index.php?topic=744291.0
 EQX,https://bitcointalk.org/index.php?topic=746191.0
 CCB,https://bitcointalk.org/index.php?topic=667866.0
@@ -488,6 +467,7 @@ DOUG,https://bitcointalk.org/index.php?topic=464041.0
 MET,https://bitcointalk.org/index.php?topic=454848.0
 SOMA,https://bitcointalk.org/index.php?topic=444273.0
 QB,https://bitcointalk.org/index.php?topic=488455.0
+SunriseCoin,https://bitcointalk.org/index.php?topic=206017.0
 SRC,https://bitcointalk.org/index.php?topic=270852.0
 DIME,https://bitcointalk.org/index.php?topic=382164.0
 MUE,https://bitcointalk.org/index.php?topic=778322.0
@@ -526,7 +506,6 @@ POD,https://bitcointalk.org/index.php?topic=465846.0
 GAY,https://bitcointalk.org/index.php?topic=465940.0
 CKE,https://bitcointalk.org/index.php?topic=462272.0
 ORO,https://cryptocointalk.com/topic/4341-orobit-coin/
-ATC,None
 BEN,https://bitcointalk.org/index.php?topic=444543.0
 HXC,https://bitcointalk.org/index.php?topic=489172.0
 CTD,https://bitcointalk.org/index.php?topic=528453.0
@@ -553,7 +532,6 @@ UBTC,https://bitcointalk.org/index.php?topic=687265.0
 BTI,https://bitcointalk.org/index.php?topic=693243.0
 YLC,https://bitcointalk.org/index.php?topic=714088.0
 PAC,https://bitcointalk.org/index.php?topic=734531.0
-SSD,None
 DRX,https://bitcointalk.org/index.php?topic=730801.0
 NEOS,https://cryptocointalk.com/topic/14218-neoscoin-neos-information/page-2#entry120023
 ASD,http://asdcoin.com/forum
@@ -562,14 +540,10 @@ BIG,https://bitcointalk.org/index.php?topic=715904.0
 XMG,https://bitcointalk.org/index.php?topic=735170.0
 AXR,https://bitcointalk.org/index.php?topic=738534.0
 MOBI,https://bitcointalk.org/index.php?topic=774762.0
-NODE,https://bitcointalk.org/index.php?topic=590421.0
-WWC,None
 AU,https://bitcointalk.org/index.php?topic=793502.0
-PPCD,https://bitcointalk.org/index.php?topic=832845.0
 DOGEBC,https://bitcointalk.org/index.php?topic=819211.0
 PPCD,https://bitcointalk.org/index.php?topic=832845.0
 FUD,https://bitcointalk.org/index.php?topic=856352.0
-FLIRT,https://bitcointalk.org/index.php?topic=867068.0
 URAN,https://bitcointalk.org/index.php?topic=855647.0
 PIMP,https://bitcointalk.org/index.php?topic=871506.0
 FLIRT,https://bitcointalk.org/index.php?topic=867068.0
@@ -608,7 +582,7 @@ XDN,https://bitcointalk.org/index.php?topic=788916.0
 BBR,https://bitcointalk.org/index.php?topic=577267.0
 MCN,https://bitcointalk.org/index.php?topic=657820.0
 OEC,https://bitcointalk.org/index.php?topic=693540.0
-CNC,https://bitcointalk.org/index.php?topic=686485.0
+CryptoNote,https://bitcointalk.org/index.php?topic=686485.0
 INF8,https://bitcointalk.org/index.php?topic=698727.0
 ASAP,https://bitcointalk.org/index.php?topic=705494.0
 CRR,https://bitcointalk.org/index.php?topic=695608.0
@@ -619,7 +593,5 @@ SBK,https://bitcointalk.org/index.php?topic=741346.0
 DB,https://bitcointalk.org/index.php?topic=893230.0
 DSH,https://bitcointalk.org/index.php?topic=678232.0
 XTV,https://bitcointalk.org/index.php?topic=1126558.0
-BDC,None
-PLD,None
 XPB,https://bitcointalk.org/index.php?topic=909624.0
 DNC,https://bitcointalk.org/index.php?topic=818365.0
