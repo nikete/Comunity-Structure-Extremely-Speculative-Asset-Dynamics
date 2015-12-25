@@ -126,7 +126,7 @@ with open(os.path.join(args.output_dir, 'technicality.csv'),'wb') as csvfile:
   for coin in processed_list:
     csvfile.write(str(','.join(coin)+'\n'))
 
-with open(os.path.join(args.output_dir, 'ann_mapofcoins.csv'),'wb')as csvfile:
+with open(os.path.join(args.output_dir, 'ann_mapofcoins.csv'),'wb') as csvfile:
   csvfile.write(str(','.join(['symbol', 'name', 'ann'])+'\n'))
   for coin in processed_list_ann:
     csvfile.write(str(','.join(coin)+'\n'))
