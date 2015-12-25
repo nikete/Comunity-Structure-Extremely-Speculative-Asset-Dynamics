@@ -1,625 +1,625 @@
-symbol,children_amount,algorithm,technical,premine,pos
-BTC, 96, SHA-256d, 0, 0, 0
-NMC, 0, SHA-256d, 0, 0, 0
-IXC, 1, SHA-256d, 0, 1, 0
-I0C, 0, SHA-256d, 0, 0, 0
-SC, 0, SHA-256d, 0, 1, 0
-GG, 0, SHA-256d, 0, 1, 0
-TBX, 3, Scrypt, 1, 1, 0
-FBX, 0, Scrypt, 0, 0, 0
-LTC, 226, Scrypt, 0, 1, 0
-BQC, 0, Scrypt, 0, 0, 0
-FTC, 1, Scrypt, 0, 0, 0
-SRC, 0, Scrypt, 0, 0, 0
-NET, 0, Scrypt, 0, 0, 0
-FRK, 0, Scrypt, 0, 0, 0
-ANC, 0, Scrypt, 0, 0, 0
-IFC, 0, Scrypt, 0, 0, 0
-XNC, 0, Scrypt, 0, 1, 0
-FLO, 0, Scrypt, 0, 0, 0
-MEC, 1, Scrypt, 0, 0, 0
-NAN, 0, Scrypt, 0, 1, 0
-MNC, 1, Scrypt, 0, 0, 0
-TCN, 0, Scrypt, 0, 0, 0
-DGC, 0, Multi-algo, 1, 0, 0
-WDC, 1, Scrypt, 0, 0, 0
-PNC, 0, Scrypt, 0, 0, 0
-NBL, 0, Scrypt, 0, 0, 0
-ALF, 0, Scrypt, 0, 1, 0
-ARG, 0, Scrypt, 0, 0, 0
-PWC, 0, Scrypt, 0, 1, 0
-KGC, 0, Scrypt, 0, 0, 0
-FST, 0, Scrypt, 0, 0, 0
-MEM, 0, Scrypt, 0, 1, 0
-GLC, 0, Scrypt, 0, 0, 0
-6CN, 0, Scrypt, 0, 0, 0
-RCH, 0, Scrypt, 0, 1, 0
-REC, 0, Scrypt, 0, 1, 0
-eDC, 0, Scrypt, 0, 1, 0
-EMD, 0, Scrypt, 0, 1, 0
-SXC, 0, Scrypt, 0, 1, 0
-NC, 0, Scrypt, 0, 1, 0
-TDC, 0, Scrypt, 0, 0, 0
-VLC, 0, Scrypt, 0, 1, 0
-JKC, 3, Scrypt, 0, 0, 0
-LKY, 2, Scrypt, 0, 0, 0
-DOGE, 4, Scrypt, 0, 0, 0
-APE, 0, Scrypt, 0, 1, 0
-NYAN, 0, Scrypt, 0, 1, 0
-CAT, 0, Scrypt, 0, 0, 0
-PND, 0, Scrypt, 0, 0, 0
-JBG, 0, Scrypt, 0, 0, 0
-SPC, 0, Scrypt, 0, 0, 0
-GDC, 0, Scrypt, 0, 0, 0
-CSC, 0, Scrypt, 0, 0, 0
-RED, 0, Scrypt, 0, 1, 0
-EGC, 0, Scrypt, 0, 0, 0
-ELP, 0, Scrypt, 0, 1, 0
-QTC, 0, Scrypt, 0, 0, 0
-USC, 0, Scrypt, 0, 1, 0
-FEC, 0, Scrypt, 0, 0, 0
-GLD, 0, Scrypt, 0, 0, 0
-PXC, 0, Scrypt, 0, 0, 0
-RYC, 1, Scrypt, 0, 0, 0
-SBC, 0, Scrypt, 0, 1, 0
-NRB, 0, Scrypt, 0, 0, 0
-CTC, 0, Scrypt, 0, 1, 0
-JPC, 0, Scrypt, 0, 1, 0
-CNC, 0, Scrypt, 0, 0, 0
-EZC, 0, Scrypt, 0, 0, 0
-ICE, 0, Scrypt, 0, 0, 0
-HYC, 0, Scrypt, 0, 1, 0
-ELC, 0, Scrypt, 0, 0, 0
-ZEU, 0, Scrypt, 0, 0, 0
-BEL, 0, Scrypt, 0, 0, 0
-PLT, 0, Scrypt, 0, 1, 0
-EXC, 0, Scrypt, 0, 1, 0
-ITC, 0, Scrypt, 0, 0, 0
-GIL, 0, Scrypt, 0, 1, 0
-PCN, 0, Scrypt, 0, 0, 0
-WEC, 0, Scrypt, 0, 1, 0
-TYC, 0, Scrypt, 0, 0, 0
-ARC, 0, Scrypt, 0, 0, 0
-CRC, 0, Scrypt, 0, 1, 0
-DBL, 0, Scrypt, 0, 0, 0
-GME, 0, Scrypt, 0, 0, 0
-STR, 1, Scrypt, 0, 0, 1
-ADT, 1, Scrypt, 0, 1, 1
-COL, 0, Scrypt, 0, 1, 1
-FLS, 0, Scrypt, 0, 0, 0
-QWC, 0, Scrypt, 0, 1, 0
-VAG, 0, Scrypt, 0, 1, 0
-BEST, 0, Scrypt, 0, 0, 0
-POK, 0, Scrypt, 0, 1, 0
-CYB, 0, Scrypt, 0, 1, 0
-AMC, 0, Scrypt, 0, 1, 0
-BOS, 0, Scrypt, 0, 1, 0
-LOVE, 0, Scrypt, 0, 0, 0
-SMC, 3, Scrypt, 0, 0, 0
-DNC, 0, Scrypt, 0, 0, 0
-SPT, 1, Scrypt, 0, 0, 0
-CPR, 1, Scrypt, 0, 0, 1
-PINGAS, 0, Scrypt, 0, 0, 0
-GEO, 0, Scrypt, 0, 1, 0
-LOTTO, 0, Scrypt, 0, 1, 0
-XIV, 0, Scrypt, 0, 1, 0
-LDC, 0, Scrypt, 0, 0, 0
-CHI, 0, Scrypt, 0, 1, 0
-MEOW, 0, Scrypt, 0, 0, 0
-HTC, 0, Scrypt, 0, 0, 0
-NWC, 0, Scrypt, 0, 0, 0
-HAM, 0, Scrypt, 0, 0, 0
-VWC, 0, Scrypt, 0, 0, 0
-MOON, 0, Scrypt, 0, 0, 0
-TFC, 0, Scrypt, 0, 0, 0
-TIPS, 0, Scrypt, 0, 1, 0
-42, 0, Scrypt, 0, 0, 0
-CAGE, 0, Scrypt, 0, 1, 0
-BOS, 0, Scrypt, 0, 0, 0
-VOLT, 0, Scrypt, 0, 1, 0
-MDC, 0, Scrypt, 0, 1, 0
-BAT, 0, Scrypt, 0, 1, 0
-SOL, 0, Scrypt, 0, 1, 0
-NOBL, 0, Scrypt, 0, 0, 0
-MOSC, 0, Scrypt, 0, 1, 0
-SOC, 0, Scrypt, 0, 1, 0
-JUN, 0, Scrypt, 0, 0, 0
-BEC, 0, Scrypt, 0, 0, 0
-ALC, 0, Scrypt, 0, 1, 0
-KARM, 0, Scrypt, 0, 0, 0
-HBC, 0, Scrypt, 0, 0, 0
-CORG, 0, Scrypt, 0, 0, 0
-OLY, 0, Scrypt, 0, 1, 0
-SNP, 0, Scrypt, 0, 1, 0
-FLAP, 0, Scrypt, 0, 0, 0
-DUCK, 0, Scrypt, 0, 0, 0
-CCC, 0, Scrypt, 0, 0, 0
-APP, 0, Scrypt, 0, 1, 0
-GMC, 0, Scrypt, 0, 1, 0
-ENC, 0, Scrypt, 0, 1, 0
-RON, 0, Scrypt, 0, 1, 0
-PIC, 14, Scrypt, 0, 1, 0
-BEER, 0, Scrypt, 0, 1, 0
-PAS, 0, Scrypt, 0, 1, 0
-WWW, 0, Scrypt, 0, 1, 0
-FISH, 0, Scrypt, 0, 1, 0
-COLA, 0, Scrypt, 0, 1, 0
-TEL, 0, Scrypt, 0, 1, 0
-VDC, 0, Scrypt, 0, 1, 0
-OIL, 0, Scrypt, 0, 1, 0
-SHOP, 0, Scrypt, 0, 1, 0
-HAC, 0, Scrypt, 0, 1, 0
-HDC, 0, Scrypt, 0, 1, 0
-LADY, 0, Scrypt, 0, 1, 0
-MUSC, 0, Scrypt, 0, 1, 0
-CIC, 0, Scrypt, 0, 1, 0
-CHAM, 0, Scrypt, 0, 0, 0
-NOTE, 0, Scrypt, 0, 0, 0
-FUNK, 0, Scrypt, 0, 0, 0
-VMP, 0, Scrypt, 0, 0, 0
-LYC, 0, Scrypt, 0, 0, 0
-ZMB, 0, Scrypt, 0, 0, 0
-MVC, 0, Scrypt, 0, 1, 0
-RBC, 0, Scrypt, 0, 1, 0
-PHI, 0, Scrypt, 0, 1, 0
-BLA, 0, Scrypt, 0, 1, 1
-FRY, 0, Scrypt, 0, 1, 0
-RPD, 0, Scrypt, 0, 1, 0
-LMC, 0, Scrypt, 0, 0, 0
-ANT, 0, Scrypt, 0, 1, 0
-BEE, 0, Scrypt, 0, 0, 0
-CARBON, 0, Scrypt, 0, 1, 0
-SHC, 0, Scrypt, 0, 1, 0
-VGC, 0, Scrypt, 0, 0, 0
-FSC, 0, Scrypt, 0, 0, 0
-EQB, 0, Scrypt, 0, 0, 0
-PENG, 0, Scrypt, 0, 1, 0
-ONI, 0, Scrypt, 0, 1, 0
-PCC, 0, Scrypt, 0, 0, 0
-VNC, 0, Scrypt, 0, 1, 0
-TAXI, 0, Scrypt, 0, 0, 0
-BLL, 0, Scrypt, 0, 0, 0
-MCR, 0, Scrypt, 0, 1, 0
-MRS, 0, Scrypt, 0, 1, 0
-LTB, 0, Scrypt, 0, 0, 0
-XXL, 0, Scrypt, 0, 0, 0
-SDM, 0, Scrypt, 0, 1, 0
-PAND, 0, Scrypt, 0, 1, 0
-RDD, 0, Scrypt, 0, 0, 0
-YACC, 0, Scrypt, 0, 0, 0
-PRC, 0, Scrypt, 0, 0, 0
-SUN, 0, Scrypt, 0, 1, 0
-SOCHI, 0, Scrypt, 0, 0, 0
-ZED, 0, Scrypt, 0, 1, 0
-TOP, 0, Scrypt, 0, 0, 0
-AUR, 0, Scrypt, 0, 1, 0
-BELI, 0, Scrypt, 0, 1, 0
-BELA, 0, Scrypt, 0, 1, 0
-COIN, 0, Scrypt, 0, 1, 0
-PIG, 0, Scrypt, 0, 1, 0
-CCN, 0, Scrypt, 0, 0, 0
-SVC, 0, Scrypt, 0, 1, 0
-EXE, 0, Scrypt, 0, 0, 0
-JNY, 0, Scrypt, 0, 1, 0
-GAM, 0, Scrypt, 0, 1, 0
-ISR, 0, Scrypt, 0, 1, 0
-YOLO, 0, Scrypt, 0, 0, 0
-FREEB, 0, Scrypt, 0, 1, 1
-MXT, 0, Scrypt, 0, 1, 0
-IDC, 0, Scrypt, 0, 1, 0
-FUN, 0, Scrypt, 0, 1, 0
-AIM, 0, Scrypt, 0, 0, 0
-WFC, 0, Scrypt, 0, 0, 1
-CFN, 0, Scrypt, 0, 1, 0
-G8, 0, Scrypt, 0, 0, 1
-XXX, 0, Scrypt, 0, 1, 1
-QTL, 0, Scrypt, 0, 0, 1
-FJC, 0, Scrypt, 0, 1, 1
-AID, 0, Scrypt, 0, 1, 1
-M.J, 0, Scrypt, 0, 1, 1
-numc, 0, Scrypt, 0, 1, 1
-RC, 0, Scrypt, 0, 1, 1
-CZC, 0, Multi-algo, 1, 0, 0
-Kool, 0, Scrypt, 0, 0, 1
-RSC, 0, Scrypt, 0, 0, 1
-LTCD, 0, Scrypt, 0, 1, 0
-CPTL, 0, Scrypt, 0, 0, 1
-BMY, 0, Scrypt, 0, 0, 1
-LNKC, 0, Scrypt, 0, 0, 0
-BLP, 0, Scrypt, 0, 1, 0
-EVC, 0, Scrypt, 0, 0, 0
-GB, 0, Scrypt, 0, 1, 1
-SYS, 0, Scrypt, 0, 1, 0
-BUY, 0, Scrypt, 0, 1, 0
-ROOT, 0, Scrypt, 0, 0, 1
-TRDR, 0, Scrypt, 0, 1, 0
-MANA, 0, Scrypt, 0, 0, 0
-SHADE, 0, Scrypt, 0, 1, 1
-XBOT, 0, Scrypt, 0, 1, 1
-CGA, 0, Scrypt, 0, 1, 0
-BTLS, 0, Scrypt, 0, 1, 0
-VAC, 0, Scrypt, 0, 0, 1
-SLK, 0, Scrypt, 0, 0, 0
-DOLLAR, 0, Scrypt, 0, 1, 0
-SNG, 0, Scrypt, 0, 1, 0
-DPC, 0, Scrypt, 0, 0, 1
-MTLMC, 0, Scrypt, 0, 1, 1
-SEED, 0, Scrypt, 0, 0, 1
-SMBR, 0, Scrypt, 0, 0, 1
-C2, 0, Scrypt, 0, 1, 1
-ONE, 0, Multi-algo, 1, 0, 0
-DBU, 0, Scrypt, 0, 0, 0
-VTR, 0, Scrypt, 0, 1, 1
-INS, 0, Scrypt, 0, 1, 0
-DIBS, 0, Scrypt, 0, 1, 0
-DGMS, 0, Scrypt, 0, 0, 0
-FSC2, 0, Scrypt, 0, 0, 1
-DIGI, 0, Scrypt, 0, 1, 0
-CARSI, 0, Scrypt, 0, 0, 1
-XTR, 0, Scrypt, 0, 1, 0
-EMC2, 0, Scrypt, 0, 0, 0
-DDC, 0, Scrypt, 0, 1, 0
-BRD, 0, Scrypt, 0, 1, 0
-EMO, 0, Scrypt, 0, 0, 0
-EUC, 0, Scrypt, 0, 1, 0
-KIMO, 0, Scrypt, 0, 1, 0
-RUP, 0, Scrypt, 0, 1, 0
-LEL, 0, Scrypt, 0, 0, 0
-GIAR, 0, Scrypt, 0, 0, 0
-FOF, 0, Scrypt, 0, 0, 0
-NLG, 0, Scrypt, 0, 1, 0
-BUN, 0, Scrypt, 0, 0, 1
-LQC, 0, Scrypt, 0, 0, 0
-DVC, 1, SHA-256d, 0, 0, 0
-STY, 0, SHA-256d, 0, 0, 0
-FRC, 1, SHA-256d, 0, 0, 0
-ZTC, 0, Scrypt, 1, 0, 0
-PPC, 3, SHA-256d, 0, 0, 1
-NVC, 27, Scrypt, 1, 0, 1
-YAC, 17, Scrypt, 0, 0, 0
-ONC, 0, Scrypt, 0, 0, 0
-ZCC, 0, Scrypt, 0, 0, 1
-FRE, 0, Scrypt, 0, 0, 1
-CENT, 0, Scrypt, 0, 1, 0
-APC, 0, Scrypt, 0, 0, 1
-ECO, 0, Scrypt, 0, 1, 1
-KING, 0, Multi-algo, 1, 0, 1
-PGC, 0, Scrypt, 0, 1, 0
-MRC, 0, Scrypt, 0, 0, 1
-CACH, 0, Scrypt, 0, 0, 0
-VTC, 1, Scrypt, 0, 1, 0
-ALT, 0, Scrypt, 0, 1, 0
-QQC, 0, Scrypt, 0, 0, 0
-JPU, 0, Scrypt, 0, 1, 1
-None, 0, Scrypt, 0, 1, 1
-FATE, 0, Scrypt, 0, 0, 0
-HRC, 0, Scrypt, 0, 0, 0
-MCC, 0, Scrypt, 0, 1, 1
-BTG, 0, Scrypt, 0, 0, 1
-BITB, 0, Scrypt, 0, 0, 1
-PHS, 0, Scrypt, 0, 0, 1
-CGB, 0, Scrypt, 0, 1, 1
-DMD, 2, Scrypt, 0, 0, 1
-GRW, 0, Scrypt, 0, 0, 1
-BAC, 0, Scrypt, 0, 0, 1
-CAP, 1, Scrypt, 0, 0, 1
-LBW, 0, Scrypt, 0, 0, 1
-HBN, 0, Scrypt, 0, 0, 1
-CMC, 1, Scrypt, 0, 0, 1
-PYC, 0, Scrypt, 0, 0, 1
-CDC, 0, Scrypt, 0, 1, 1
-GLX, 0, Scrypt, 0, 0, 1
-NEC, 0, Scrypt, 0, 0, 1
-TAG, 0, Scrypt, 0, 1, 1
-LK7, 0, Scrypt, 0, 0, 0
-SAV, 0, Scrypt, 0, 0, 1
-PPL, 0, Scrypt, 0, 0, 1
-SHT, 0, Scrypt, 0, 0, 1
-CIN, 0, Scrypt, 0, 0, 1
-BOC, 0, SHA-256d, 1, 1, 1
-TEK, 0, SHA-256d, 1, 0, 1
-NIG, 0, SHA-256d, 1, 0, 1
-GRA, 0, Scrypt, 0, 1, 1
-UFC, 0, Scrypt, 0, 1, 1
-XMAS, 0, Scrypt, 0, 0, 1
-MINT, 0, Scrypt, 0, 1, 1
-BC, 0, Scrypt, 0, 0, 1
-ZEIT, 0, Scrypt, 0, 1, 1
-QBT, 0, SHA-256d, 0, 1, 1
-FLT, 0, Scrypt, 1, 0, 1
-TRC, 0, SHA-256d, 0, 0, 1
-BTE, 0, SHA-256d, 0, 0, 0
-XPM, 3, Others, 1, 0, 0
-DTC, 0, Others, 0, 0, 0
-CDN, 0, Others, 0, 0, 0
-FTW, 0, Others, 0, 1, 0
-MEG, 0, Scrypt, 1, 1, 0
-ZET, 4, SHA-256d, 0, 0, 0
-TEA, 0, SHA-256d, 0, 0, 0
-MYR, 0, Multi-algo, 1, 0, 0
-CHC, 0, Multi-algo, 1, 0, 0
-MZC, 0, SHA-256d, 0, 0, 0
-SIC, 1, Quark, 1, 0, 0
-QRK, 23, Quark, 0, 0, 0
-OBC, 0, SHA-256d, 1, 0, 0
-RVD, 0, Quark, 0, 0, 0
-FZ, 0, Quark, 0, 0, 0
-ATO, 0, Quark, 0, 0, 0
-MOL, 0, Quark, 0, 0, 0
-SEC, 0, Quark, 0, 0, 0
-DRK, 99, X11, 1, 0, 0
-CC, 0, X11, 0, 1, 1
-Sync, 0, X11, 0, 1, 1
-RTC, 0, X11, 0, 1, 1
-MLGB, 0, X11, 0, 0, 0
-ACC, 0, X11, 0, 1, 0
-KRYP, 0, X11, 0, 1, 0
-GRN, 0, X11, 0, 1, 0
-PURE, 0, X11, 0, 1, 0
-NAC, 0, X11, 0, 1, 0
-HPC, 0, X11, 0, 1, 1
-suc, 0, X11, 0, 0, 1
-NL, 0, X11, 0, 1, 1
-LTCX, 0, X11, 0, 1, 0
-Iaura, 0, X11, 0, 1, 1
-BS, 0, X11, 0, 1, 0
-Voot, 0, X11, 0, 1, 1
-LIMX, 0, X11, 0, 1, 0
-GRE, 0, X11, 0, 1, 0
-WCC, 0, X11, 0, 0, 1
-MIN, 0, X11, 0, 0, 1
-TRS, 0, X11, 0, 0, 1
-KiB, 0, X11, 0, 0, 1
-LIT, 0, X11, 0, 1, 1
-FRAC, 0, X11, 0, 1, 0
-WVS, 0, X11, 0, 1, 1
-gue, 0, X11, 0, 0, 1
-NeWO, 0, Multi-algo, 1, 0, 1
-GOD, 0, X11, 0, 1, 1
-HODOR, 0, X11, 0, 1, 1
-SPCC, 0, X11, 0, 1, 1
-BULBA, 0, X11, 0, 1, 1
-TRUST, 0, X11, 0, 1, 1
-PP, 0, X11, 0, 1, 1
-CSO, 0, X11, 0, 0, 1
-MHYC, 0, X11, 0, 1, 1
-LOL, 0, X11, 0, 0, 1
-MIL, 0, X11, 0, 0, 1
-PIGGY, 0, X11, 0, 1, 1
-BOOTY, 0, X11, 0, 1, 1
-LIN, 0, X11, 0, 0, 1
-SND, 0, X11, 0, 0, 1
-BBL, 26, X-n, 1, 0, 0
-FIRE, 0, X-n, 0, 0, 1
-CORE, 0, X-n, 0, 1, 1
-ALEA, 0, X-n, 0, 1, 1
-ISIS, 0, X-n, 0, 1, 1
-Dino, 0, X-n, 0, 1, 1
-POS, 0, X-n, 0, 0, 1
-ANG, 0, X-n, 0, 0, 1
-COF, 0, X-n, 0, 0, 1
-SPATA, 0, X-n, 0, 1, 1
-BACK, 0, X-n, 0, 1, 1
-MInC, 0, X-n, 0, 0, 0
-LIZE, 0, X-n, 0, 0, 1
-NHC, 0, X-n, 0, 1, 1
-City, 0, X-n, 0, 0, 1
-FBIT, 0, X-n, 0, 0, 1
-LIMI, 0, X-n, 0, 1, 1
-CRYSTAL, 0, X-n, 0, 0, 1
-BBC, 0, X-n, 0, 1, 1
-OT, 0, X-n, 0, 1, 1
-XDE, 0, X-n, 0, 0, 1
-NMB, 0, X-n, 0, 0, 1
-GRYF, 0, X-n, 0, 1, 1
-VLT, 0, X-n, 0, 0, 1
-HTML5, 0, X-n, 0, 0, 1
-B1bl3, 0, X-n, 0, 1, 1
-U, 0, X-n, 0, 1, 1
-SRZ, 0, X11, 0, 1, 1
-RW, 0, X11, 0, 0, 1
-XAN, 0, X11, 0, 0, 1
-FVZ, 0, X11, 0, 1, 1
-ELTC, 0, X11, 0, 0, 1
-ESC, 0, X11, 0, 0, 1
-TEX, 0, X11, 0, 1, 1
-MC, 0, X11, 0, 0, 1
-FUSE, 0, X11, 0, 1, 1
-WITCH, 0, X11, 0, 0, 1
-ZEB, 0, X11, 0, 1, 1
-CLD, 0, X11, 0, 0, 1
-BTO, 0, X11, 0, 1, 0
-BIZ, 0, X11, 0, 1, 1
-Pal, 0, X11, 0, 1, 1
-MWC, 0, X11, 0, 1, 1
-DSV, 0, X11, 0, 1, 1
-MTS, 0, X11, 0, 1, 1
-MAG, 0, X11, 0, 0, 0
-VMINE, 0, X11, 0, 0, 1
-DEPO-GBP, 0, X11, 0, 1, 1
-XCR, 0, X11, 0, 0, 0
-X14, 2, X-n, 1, 1, 0
-SOLE, 0, X-n, 0, 0, 1
-BCSH, 0, X-n, 0, 0, 1
-CYX, 0, X11, 0, 1, 1
-TMC, 0, X11, 0, 1, 1
-RACE, 0, X11, 0, 1, 1
-AZC, 0, X11, 0, 0, 1
-AMBER, 0, X11, 0, 0, 1
-LMR, 0, X11, 0, 1, 0
-CryptoXTC, 0, X11, 0, 1, 0
-XURO, 0, X11, 0, 1, 1
-GLY, 0, X11, 0, 0, 0
-MWC, 0, X11, 0, 1, 1
-Neos, 0, Multi-algo, 1, 1, 0
-EQX, 0, X11, 0, 0, 1
-CCB, 0, X11, 0, 1, 1
-TNZ, 0, X11, 0, 1, 1
-CRCK, 0, X11, 0, 0, 1
-CHILD, 0, X11, 0, 0, 0
-ROS, 0, X11, 0, 1, 1
-STC, 0, X11, 0, 0, 1
-Envy, 0, X11, 0, 0, 0
-EXCL, 0, X11, 0, 0, 1
-DP, 0, X11, 0, 0, 0
-MTC, 0, X11, 0, 0, 0
-METAL, 0, X11, 0, 1, 1
-GHOST, 0, X11, 0, 0, 1
-WSTL, 0, X11, 0, 1, 1
-SPARK, 0, X11, 0, 1, 1
-OPTI, 0, X11, 0, 1, 1
-MOB, 0, X11, 0, 1, 1
-NKT, 0, X11, 0, 0, 1
-LFTC, 0, X11, 0, 1, 1
-CBR, 0, X11, 0, 1, 1
-WeTk, 0, X11, 0, 1, 1
-DGORE, 0, X11, 0, 0, 1
-SMAC, 0, X11, 0, 0, 0
-ZUR, 0, Quark, 0, 1, 0
-VLD, 0, Quark, 0, 0, 0
-ANI, 0, Quark, 0, 0, 0
-WIKI, 0, Quark, 0, 1, 0
-UNC, 0, Quark, 0, 0, 0
-MTS, 0, Quark, 0, 0, 0
-OFF, 0, Quark, 0, 1, 0
-TBC, 0, Quark, 0, 1, 0
-PRT, 0, Quark, 0, 0, 0
-DOUG, 0, Quark, 0, 1, 0
-MET, 0, Quark, 0, 1, 0
-SOMA, 0, Quark, 0, 0, 0
-QB, 0, Quark, 0, 0, 0
-SRC, 0, Quark, 0, 0, 0
-DIME, 0, Quark, 0, 1, 0
-MUE, 0, Quark, 0, 1, 0
-CL, 2, SHA-3, 1, 1, 0
-ECN, 0, SHA-3, 0, 0, 0
-MAX, 0, SHA-3, 0, 0, 0
-GRD, 0, Scrypt, 1, 0, 0
-TGC, 0, SHA-256d, 0, 0, 0
-SKC, 1, Multi-algo, 1, 0, 0
-XDC, 0, Multi-algo, 0, 0, 0
-ASC, 0, SHA-256d, 0, 0, 0
-BET, 0, SHA-256d, 0, 1, 0
-UNO, 1, SHA-256d, 0, 0, 0
-AMK, 0, SHA-256d, 0, 0, 0
-RKC, 0, SHA-256d, 0, 1, 0
-NYM, 0, SHA-256d, 0, 0, 1
-Curecoin, 0, SHA-256d, 0, 0, 0
-HUC, 0, SHA-256d, 0, 0, 0
-KMC, 0, Multi-algo, 1, 0, 0
-GLB, 0, SHA-256d, 0, 0, 0
-SNC, 0, SHA-256d, 0, 0, 1
-SSC, 0, SHA-3, 1, 1, 0
-AAC, 0, SHA-256d, 0, 0, 0
-BLC, 2, SHA-3, 1, 0, 0
-PHO, 0, SHA-3, 0, 0, 0
-365, 0, SHA-3, 0, 0, 0
-SPICE, 0, Multi-algo, 1, 1, 0
-INK, 0, Others, 1, 0, 0
-LGBT, 0, SHA-256d, 0, 0, 0
-LOOT, 0, SHA-256d, 0, 0, 0
-TAK, 0, SHA-256d, 0, 0, 0
-RIC, 0, Others, 1, 0, 0
-PWNY, 0, SHA-256d, 0, 0, 0
-LUC, 0, SHA-256d, 0, 1, 0
-POD, 0, SHA-256d, 0, 0, 0
-GAY, 0, SHA-256d, 0, 0, 0
-CKE, 0, SHA-256d, 0, 1, 0
-ORO, 0, SHA-256d, 0, 0, 0
-ATC, 0, SHA-256d, 0, 0, 0
-BEN, 0, SHA-256d, 0, 0, 0
-HXC, 0, SHA-3, 1, 1, 0
-CTD, 0, SHA-3, 1, 1, 0
-ARS, 0, SHA-256d, 0, 1, 0
-BTN, 0, SHA-256d, 0, 0, 1
-CX, 0, SHA-256d, 0, 0, 1
-ABC, 0, X11, 1, 1, 1
-PRO, 0, SHA-256d, 0, 1, 0
-EIC, 0, SHA-256d, 0, 0, 1
-ChC, 0, Multi-algo, 1, 0, 1
-BULL, 0, SHA-256d, 0, 0, 0
-GSY, 0, SHA256, 1, 0, 1
-ODNT, 0, SHA256d, 1, 0, 1
-PHR, 0, , 1, 0, 1
-STEPS, 0, , 1, 0, 1
-LOG, 0, Skein, 1, 0, 1
-GUINEA, 0, SHA-256d, 0, 0, 1
-SOV, 0, SHA-256d, 0, 0, 1
-eTaler, 0, SHA-256d, 0, 0, 1
-BTCD, 0, SHA-256d, 0, 0, 1
-ACOIN, 0, SHA-256d, 0, 0, 1
-TTY, 0, Multi-algo, 1, 1, 1
-UBTC, 0, SHA-256d, 0, 0, 1
-BTI, 0, SHA-256d, 0, 0, 1
-YLC, 1, SHA-256d, 0, 0, 0
-PAC, 0, SHA-256d, 0, 0, 0
-SSD, 0, SHA-256d, 0, 0, 1
-DRX, 0, SHA-256d, 0, 1, 1
-NEOS, 0, Multi-algo, 1, 1, 0
-ASD, 0, SHA-256d, 0, 1, 0
-REB, 0, SHA-256d, 0, 0, 0
-BIG, 0, SHA-256d, 0, 1, 0
-XMG, 0, SHA-256d, 0, 0, 1
-AXR, 0, Others, 1, 1, 1
-MOBI, 0, SHA-256d, 0, 0, 0
-NODE, 0, SHA-256d, 0, 0, 1
-WWC, 0, SHA-256d, 0, 0, 0
-AU, 0, SHA-256d, 0, 1, 1
-PPCD, 0, SHA-256d, 0, 1, 0
-DOGEBC, 0, SHA-256d, 0, 1, 0
-PPCD, 0, SHA-256d, 0, 1, 0
-FUD, 0, SHA-256d, 0, 0, 1
-FLIRT, 0, SHA-256d, 0, 0, 1
-URAN, 0, SHA-256d, 0, 1, 0
-PIMP, 0, Scrypt, 1, 1, 1
-FLIRT, 0, SHA-256d, 0, 0, 0
-DECR, 0, SHA-256d, 0, 0, 0
-PAYER, 0, SHA-256d, 0, 1, 1
-IQD, 0, SHA-256d, 0, 1, 0
-IMP, 0, SHA-256d, 0, 1, 0
-OAC, 0, SHA-3, 1, 1, 0
-MTX, 0, SHA-256d, 0, 0, 0
-SUP, 0, SHA-256d, 0, 0, 0
-NXT, 12, SHA-256d, 0, 0, 1
-NZ, 0, SHA-256d, 0, 0, 1
-NAS, 0, SHA-256d, 0, 0, 1
-Burst, 0, SHA-256d, 0, 0, 0
-ARN, 0, SHA-256d, 0, 0, 1
-STB, 0, SHA-256d, 0, 0, 1
-SKULL, 0, SHA-256d, 0, 0, 1
-XPH, 0, SHA-256d, 0, 1, 1
-VDO, 0, SHA-256d, 0, 0, 1
-NTX, 0, SHA-256d, 0, 0, 1
-FIMK, 0, SHA-256d, 0, 0, 1
-NODE, 0, SHA-256d, 0, 0, 1
-NBT, 0, SHA-256d, 0, 0, 1
-XRP, 4, SHA-256d, 0, 1, 0
-XNP, 0, SHA-256d, 0, 0, 1
-Splash, 0, SHA-256d, 0, 0, 1
-Radix, 0, SHA-256d, 0, 0, 1
-Stellar, 0, SHA-256d, 0, 0, 1
-BCN, 15, CryptoNight, 0, 0, 0
-FCN, 0, CryptoNight, 0, 0, 0
-XMR, 1, CryptoNight, 0, 0, 0
-AEON, 0, CryptoNight-Lite, 1, 0, 0
-QCN, 0, CryptoNight, 0, 0, 0
-MNT, 0, CryptoNight, 0, 0, 0
-XDN, 0, CryptoNight, 0, 0, 0
-BBR, 0, Wild Keccak, 1, 0, 0
-MCN, 0, CryptoNight, 0, 0, 0
-OEC, 0, CryptoNight, 0, 0, 1
-CNC, 6, CryptoNight, 0, 0, 1
-INF8, 0, CryptoNight, 1, 0, 1
-ASAP, 0, CryptoNight, 1, 0, 1
-CRR, 0, CryptoNight, 1, 0, 1
-RD, 0, CryptoNight, 1, 0, 0
-DOSH, 2, CryptoNight, 1, 0, 0
-DBK, 0, CryptoNight, 0, 0, 0
-SBK, 0, CryptoNight, 0, 0, 0
-DB, 0, CryptoNight, 1, 0, 0
-DSH, 0, CryptoNight, 0, 0, 1
-XTV, 0, CryptoNight, 0, 0, 1
-BDC, 0, CryptoNight, 0, 0, 0
-PLD, 0, CryptoNight, 0, 0, 0
-XPB, 0, Boulderhash, 1, 0, 0
-DNC, 0, Boulderhash, 1, 0, 0
+symbol,name,children_amount,algorithm,technical,premine,pos
+BTC,Bitcoin,96,SHA-256d,0,0,0
+NMC,Namecoin,0,SHA-256d,0,0,0
+IXC,iXcoin,1,SHA-256d,0,1,0
+I0C,I0coin,0,SHA-256d,0,0,0
+SC,SolidCoin,0,SHA-256d,0,1,0
+GG,GeistGeld,0,SHA-256d,0,1,0
+TBX,Tenebrix,3,Scrypt,1,1,0
+FBX,Fairbrix,0,Scrypt,0,0,0
+LTC,Litecoin,226,Scrypt,0,1,0
+BQC,BBQcoin,0,Scrypt,0,0,0
+FTC,Feathercoin,1,Scrypt,0,0,0
+SRC,Sunrisecoin,0,Scrypt,0,0,0
+NET,Netcoin,0,Scrypt,0,0,0
+FRK,Franko,0,Scrypt,0,0,0
+ANC,Anoncoin,0,Scrypt,0,0,0
+IFC,Infinitecoin,0,Scrypt,0,0,0
+XNC,Xencoin,0,Scrypt,0,1,0
+FLO,Florincoin,0,Scrypt,0,0,0
+MEC,Megacoin,1,Scrypt,0,0,0
+NAN,Nanotoken,0,Scrypt,0,1,0
+MNC,Mincoin,1,Scrypt,0,0,0
+TCN,Tr011Coin,0,Scrypt,0,0,0
+DGC,Digitalcoin,0,Multi-algo,1,0,0
+WDC,Worldcoin,1,Scrypt,0,0,0
+PNC,PornCoin,0,Scrypt,0,0,0
+NBL,Nibble,0,Scrypt,0,0,0
+ALF,AlphaCoin,0,Scrypt,0,1,0
+ARG,Argentum,0,Scrypt,0,0,0
+PWC,Powercoin,0,Scrypt,0,1,0
+KGC,Krugercoin,0,Scrypt,0,0,0
+FST,Fastcoin,0,Scrypt,0,0,0
+MEM,Memecoin,0,Scrypt,0,1,0
+GLC,Globalcoin,0,Scrypt,0,0,0
+6CN,6coin,0,Scrypt,0,0,0
+RCH,Richcoin,0,Scrypt,0,1,0
+REC,Realcoin,0,Scrypt,0,1,0
+eDC,e-Dollar,0,Scrypt,0,1,0
+EMD,Emerald,0,Scrypt,0,1,0
+SXC,Sexcoin,0,Scrypt,0,1,0
+NC,Nucoin,0,Scrypt,0,1,0
+TDC,Tradecoin,0,Scrypt,0,0,0
+VLC,Valuecoin,0,Scrypt,0,1,0
+JKC,Junkcoin,3,Scrypt,0,0,0
+LKY,Lukycoin,2,Scrypt,0,0,0
+DOGE,Dogecoin,4,Scrypt,0,0,0
+APE,Apecoin,0,Scrypt,0,1,0
+NYAN,Nyancoin,0,Scrypt,0,1,0
+CAT,Catcoin,0,Scrypt,0,0,0
+PND,Pandacoin,0,Scrypt,0,0,0
+JBG,JebigaCoin,0,Scrypt,0,0,0
+SPC,Supercoin,0,Scrypt,0,0,0
+GDC,Grandcoin,0,Scrypt,0,0,0
+CSC,Casinocoin,0,Scrypt,0,0,0
+RED,Redcoin,0,Scrypt,0,1,0
+EGC,Eaglecoin,0,Scrypt,0,0,0
+ELP,ElephantCoin,0,Scrypt,0,1,0
+QTC,Quantumcoin,0,Scrypt,0,0,0
+USC,Uscoin,0,Scrypt,0,1,0
+FEC,Ferretcoin,0,Scrypt,0,0,0
+GLD,Goldcoin,0,Scrypt,0,0,0
+PXC,Phoenixcoin,0,Scrypt,0,0,0
+RYC,Royalcoin,1,Scrypt,0,0,0
+SBC,Stablecoin,0,Scrypt,0,1,0
+NRB,Noirbits,0,Scrypt,0,0,0
+CTC,Crimecoin=Communitycoin,0,Scrypt,0,1,0
+JPC,Jupitercoin,0,Scrypt,0,1,0
+CNC,CHNCoin,0,Scrypt,0,0,0
+EZC,EzCoin,0,Scrypt,0,0,0
+ICE,Icecoin,0,Scrypt,0,0,0
+HYC,Hypercoin,0,Scrypt,0,1,0
+ELC,ELACoin,0,Scrypt,0,0,0
+ZEU,Zeuscoin,0,Scrypt,0,0,0
+BEL,Bells,0,Scrypt,0,0,0
+PLT,PlayToken,0,Scrypt,0,1,0
+EXC,Extremecoin,0,Scrypt,0,1,0
+ITC,Italycoin,0,Scrypt,0,0,0
+GIL,GIL,0,Scrypt,0,1,0
+PCN,Picoin,0,Scrypt,0,0,0
+WEC,Weedcoin,0,Scrypt,0,1,0
+TYC,Tinycoin(Angrycoin),0,Scrypt,0,0,0
+ARC,Argcoin,0,Scrypt,0,0,0
+CRC,Craftcoin,0,Scrypt,0,1,0
+DBL,Doubloons,0,Scrypt,0,0,0
+GME,Gamecoin,0,Scrypt,0,0,0
+STR,v,1,Scrypt,0,0,1
+ADT,AndroidsTokens,1,Scrypt,0,1,1
+COL,Colossuscoin,0,Scrypt,0,1,1
+FLS,Flashcoin,0,Scrypt,0,0,0
+QWC,Quickcoin,0,Scrypt,0,1,0
+VAG,VaginaCoin,0,Scrypt,0,1,0
+BEST,Bestcoin,0,Scrypt,0,0,0
+POK,Pokercoin,0,Scrypt,0,1,0
+CYB,Cryptobits,0,Scrypt,0,1,0
+AMC,Americancoin,0,Scrypt,0,1,0
+BOS,Bosscoin,0,Scrypt,0,1,0
+LOVE,Lovecoin,0,Scrypt,0,0,0
+SMC,Smallchange,3,Scrypt,0,0,0
+DNC,Dragoncoin,0,Scrypt,0,0,0
+SPT,Spots,1,Scrypt,0,0,0
+CPR,CopperBar,1,Scrypt,0,0,1
+PINGAS,Pingas,0,Scrypt,0,0,0
+GEO,GeoCoin,0,Scrypt,0,1,0
+LOTTO,Lottocoin,0,Scrypt,0,1,0
+XIV,Xivra,0,Scrypt,0,1,0
+LDC,Leadcoin,0,Scrypt,0,0,0
+CHI,Chicoin,0,Scrypt,0,1,0
+MEOW,Kittehcoin,0,Scrypt,0,0,0
+HTC,Hotcoin,0,Scrypt,0,0,0
+NWC,Networkcoin,0,Scrypt,0,0,0
+HAM,HamsterCoin,0,Scrypt,0,0,0
+VWC,Vaporcoin,0,Scrypt,0,0,0
+MOON,Mooncoin,0,Scrypt,0,0,0
+TFC,Transfercoin,0,Scrypt,0,0,0
+TIPS,Fedoracoin,0,Scrypt,0,1,0
+42,42coin,0,Scrypt,0,0,0
+CAGE,Cagecoin,0,Scrypt,0,1,0
+BOS,Bosscoin,0,Scrypt,0,0,0
+VOLT,Electric,0,Scrypt,0,1,0
+MDC,Mediacoin,0,Scrypt,0,1,0
+BAT,Batcoin,0,Scrypt,0,1,0
+SOL,Solcoin,0,Scrypt,0,1,0
+NOBL,NobleCoin,0,Scrypt,0,0,0
+MOSC,Mousecoin,0,Scrypt,0,1,0
+SOC,Socialcoin,0,Scrypt,0,1,0
+JUN,JunnonCoin,0,Scrypt,0,0,0
+BEC,Beaocoin,0,Scrypt,0,0,0
+ALC,Alcohoin,0,Scrypt,0,1,0
+KARM,Karmacoin,0,Scrypt,0,0,0
+HBC,Hobbitcoin,0,Scrypt,0,0,0
+CORG,Corgicoin,0,Scrypt,0,0,0
+OLY,Olimpiccoin,0,Scrypt,0,1,0
+SNP,Snapcoin,0,Scrypt,0,1,0
+FLAP,Flappycoin,0,Scrypt,0,0,0
+DUCK,DuckDuckcoin,0,Scrypt,0,0,0
+CCC,CancerCureCoin,0,Scrypt,0,0,0
+APP,Appcoin,0,Scrypt,0,1,0
+GMC,Gamerscoin,0,Scrypt,0,1,0
+ENC,Entropycoin,0,Scrypt,0,1,0
+RON,Swansoncoin,0,Scrypt,0,1,0
+PIC,Pizzacoin,14,Scrypt,0,1,0
+BEER,Beercoin,0,Scrypt,0,1,0
+PAS,Pastacoin,0,Scrypt,0,1,0
+WWW,Internetcoin,0,Scrypt,0,1,0
+FISH,Fishcoin,0,Scrypt,0,1,0
+COLA,Colacoin,0,Scrypt,0,1,0
+TEL,Phonecoin,0,Scrypt,0,1,0
+VDC,Vodcacoin,0,Scrypt,0,1,0
+OIL,Oilcoin,0,Scrypt,0,1,0
+SHOP,Shopcoin,0,Scrypt,0,1,0
+HAC,Hamburgercoin,0,Scrypt,0,1,0
+HDC,Hotdogcoin,0,Scrypt,0,1,0
+LADY,Ladycoin,0,Scrypt,0,1,0
+MUSC,Musiccoin,0,Scrypt,0,1,0
+CIC,Cinemacoin,0,Scrypt,0,1,0
+CHAM,Championcoin,0,Scrypt,0,0,0
+NOTE,DNotes,0,Scrypt,0,0,0
+FUNK,Cypherfunk,0,Scrypt,0,0,0
+VMP,Vampirecoin,0,Scrypt,0,0,0
+LYC,Lycancoin,0,Scrypt,0,0,0
+ZMB,Zombiecoin,0,Scrypt,0,0,0
+MVC,Moviecoin,0,Scrypt,0,1,0
+RBC,Rubycoin,0,Scrypt,0,1,0
+PHI,Phicoin,0,Scrypt,0,1,0
+BLA,Bladecoin,0,Scrypt,0,1,1
+FRY,Frycoin,0,Scrypt,0,1,0
+RPD,Rapidcoin,0,Scrypt,0,1,0
+LMC,Lemoncoin,0,Scrypt,0,0,0
+ANT,Antimatter,0,Scrypt,0,1,0
+BEE,Beecoin,0,Scrypt,0,0,0
+CARBON,Carboncoin,0,Scrypt,0,1,0
+SHC,Scherlockcoin,0,Scrypt,0,1,0
+VGC,Vegascoin,0,Scrypt,0,0,0
+FSC,Friendshipcoin,0,Scrypt,0,0,0
+EQB,EquestrianBit,0,Scrypt,0,0,0
+PENG,Penguincoin,0,Scrypt,0,1,0
+ONI,Onioncoin,0,Scrypt,0,1,0
+PCC,Polishcoin,0,Scrypt,0,0,0
+VNC,Verncoin,0,Scrypt,0,1,0
+TAXI,Taxicoin,0,Scrypt,0,0,0
+BLL,Billaume,0,Scrypt,0,0,0
+MCR,Macrocoin,0,Scrypt,0,1,0
+MRS,Marscoin,0,Scrypt,0,1,0
+LTB,Litebar,0,Scrypt,0,0,0
+XXL,XXLcoin,0,Scrypt,0,0,0
+SDM,Spodermancoin,0,Scrypt,0,1,0
+PAND,Pandacoin,0,Scrypt,0,1,0
+RDD,Reddcoin,0,Scrypt,0,0,0
+YACC,YACCoin,0,Scrypt,0,0,0
+PRC,Prospercoin,0,Scrypt,0,0,0
+SUN,Suncoin,0,Scrypt,0,1,0
+SOCHI,Sochicoin,0,Scrypt,0,0,0
+ZED,Zedcoin,0,Scrypt,0,1,0
+TOP,Topcoin,0,Scrypt,0,0,0
+AUR,Auroracoin,0,Scrypt,0,1,0
+BELI,Beli,0,Scrypt,0,1,0
+BELA,Bellacoin,0,Scrypt,0,1,0
+COIN,Coin,0,Scrypt,0,1,0
+PIG,PiggyCoin,0,Scrypt,0,1,0
+CCN,C-coin,0,Scrypt,0,0,0
+SVC,Sovereigncoin,0,Scrypt,0,1,0
+EXE,Execoin,0,Scrypt,0,0,0
+JNY,JennyCoin,0,Scrypt,0,1,0
+GAM,GammaCoin,0,Scrypt,0,1,0
+ISR,Isracoin,0,Scrypt,0,1,0
+YOLO,Yolocoin,0,Scrypt,0,0,0
+FREEB,FreebiesCoin,0,Scrypt,0,1,1
+MXT,MarteXcoin,0,Scrypt,0,1,0
+IDC,IndoCoin,0,Scrypt,0,1,0
+FUN,FunCoin,0,Scrypt,0,1,0
+AIM,AimCoin,0,Scrypt,0,0,0
+WFC,World Football Coin,0,Scrypt,0,0,1
+CFN,ConfessionCoin,0,Scrypt,0,1,0
+G8,G8Coin,0,Scrypt,0,0,1
+XXX,XXX Coin,0,Scrypt,0,1,1
+QTL,Quatloo,0,Scrypt,0,0,1
+FJC,FujiCoin-2.0,0,Scrypt,0,1,1
+AID,Aidcoins,0,Scrypt,0,1,1
+M.J,M.JCoin,0,Scrypt,0,1,1
+numc,Numbercoin,0,Scrypt,0,1,1
+RC,Russiacoin,0,Scrypt,0,1,1
+CZC,Czechcoin,0,Multi-algo,1,0,0
+Kool,Koolio Coin,0,Scrypt,0,0,1
+RSC,RescueCoin,0,Scrypt,0,0,1
+LTCD,LitecoinDark,0,Scrypt,0,1,0
+CPTL,CapitalCoin,0,Scrypt,0,0,1
+BMY,Bitmoney,0,Scrypt,0,0,1
+LNKC,LINKCOIN,0,Scrypt,0,0,0
+BLP,blueplanet coin,0,Scrypt,0,1,0
+EVC,Evolvecoin,0,Scrypt,0,0,0
+GB,GreenBacks,0,Scrypt,0,1,1
+SYS,Syscoin,0,Scrypt,0,1,0
+BUY,BuyCoin,0,Scrypt,0,1,0
+ROOT,ROOTCOIN,0,Scrypt,0,0,1
+TRDR,Trader Coin,0,Scrypt,0,1,0
+MANA,Mana,0,Scrypt,0,0,0
+SHADE,Shade,0,Scrypt,0,1,1
+XBOT,SocialxBot,0,Scrypt,0,1,1
+CGA,Crytographic Anomaly,0,Scrypt,0,1,0
+BTLS,BitLitS,0,Scrypt,0,1,0
+VAC,Vanadiumcoin,0,Scrypt,0,0,1
+SLK,SleakCoin,0,Scrypt,0,0,0
+DOLLAR,DollarCoin,0,Scrypt,0,1,0
+SNG,Songcoin,0,Scrypt,0,1,0
+DPC,DarkPeer,0,Scrypt,0,0,1
+MTLMC,Metal Music Coin,0,Scrypt,0,1,1
+SEED,Seedcoin,0,Scrypt,0,0,1
+SMBR,Sembro Token,0,Scrypt,0,0,1
+C2,Coin2,0,Scrypt,0,1,1
+ONE,1Coin,0,Multi-algo,1,0,0
+DBU,DuBeUcoin,0,Scrypt,0,0,0
+VTR,vTorrent,0,Scrypt,0,1,1
+INS,Insanity,0,Scrypt,0,1,0
+DIBS,VIRTUALDIBS,0,Scrypt,0,1,0
+DGMS,Digigems,0,Scrypt,0,0,0
+FSC2,Friendshipcoin2,0,Scrypt,0,0,1
+DIGI,DIGI,0,Scrypt,0,1,0
+CARSI,Carsicoin,0,Scrypt,0,0,1
+XTR,Extractcoin,0,Scrypt,0,1,0
+EMC2,Einsteinium,0,Scrypt,0,0,0
+DDC,Dokdocoin,0,Scrypt,0,1,0
+BRD,Birdcoin,0,Scrypt,0,1,0
+EMO,Emoticoin,0,Scrypt,0,0,0
+EUC,Eurocoin,0,Scrypt,0,1,0
+KIMO,KimoCoin,0,Scrypt,0,1,0
+RUP,RupayaCoin,0,Scrypt,0,1,0
+LEL,ComedyGold,0,Scrypt,0,0,0
+GIAR,Giarcoin,0,Scrypt,0,0,0
+FOF,FourOhFourCoin,0,Scrypt,0,0,0
+NLG,Guldencoin,0,Scrypt,0,1,0
+BUN,BunnyCoin,0,Scrypt,0,0,1
+LQC,Liquidcoin,0,Scrypt,0,0,0
+DVC,Devcoin,1,SHA-256d,0,0,0
+STY,Stories,0,SHA-256d,0,0,0
+FRC,Freicoin,1,SHA-256d,0,0,0
+ZTC,Zenithcoin,0,Scrypt,1,0,0
+PPC,Peercoin,3,SHA-256d,0,0,1
+NVC,Novacoin,27,Scrypt,1,0,1
+YAC,Yacoin,17,Scrypt,0,0,0
+ONC,Onecoin,0,Scrypt,0,0,0
+ZCC,ZcCoin,0,Scrypt,0,0,1
+FRE,Freecoin,0,Scrypt,0,0,1
+CENT,Pennies,0,Scrypt,0,1,0
+APC,Applecoin,0,Scrypt,0,0,1
+ECO,Ecocoin,0,Scrypt,0,1,1
+KING,KingCoin,0,Multi-algo,1,0,1
+PGC,Pangucoin,0,Scrypt,0,1,0
+MRC,Microcoin,0,Scrypt,0,0,1
+CACH,CACHeCoin,0,Scrypt,0,0,0
+VTC,Vertcoin,1,Scrypt,0,1,0
+ALT,Altcoin,0,Scrypt,0,1,0
+QQC,QQcoin,0,Scrypt,0,0,0
+JPU,J-coin,0,Scrypt,0,1,1
+None,Thorcoin,0,Scrypt,0,1,1
+FATE,Fatecoin,0,Scrypt,0,0,0
+HRC,Herocoin,0,Scrypt,0,0,0
+MCC,MadCowCoin,0,Scrypt,0,1,1
+BTG,Bitgem,0,Scrypt,0,0,1
+BITB,BitBar,0,Scrypt,0,0,1
+PHS,Philosopherstone,0,Scrypt,0,0,1
+CGB,CryptogenicBullion,0,Scrypt,0,1,1
+DMD,Diamond,2,Scrypt,0,0,1
+GRW,Growthcoin,0,Scrypt,0,0,1
+BAC,Basecoin,0,Scrypt,0,0,1
+CAP,Bottlecaps,1,Scrypt,0,0,1
+LBW,Lebowskis,0,Scrypt,0,0,1
+HBN,HoboNickels,0,Scrypt,0,0,1
+CMC,Cosmoscoin,1,Scrypt,0,0,1
+PYC,Paycoin,0,Scrypt,0,0,1
+CDC,Cloudcoin,0,Scrypt,0,1,1
+GLX,Galaxycoin,0,Scrypt,0,0,1
+NEC,Neocoin,0,Scrypt,0,0,1
+TAG,Tagcoin,0,Scrypt,0,1,1
+LK7,Lucky7Coin,0,Scrypt,0,0,0
+SAV,Savingcoin,0,Scrypt,0,0,1
+PPL,Peoplecoin,0,Scrypt,0,0,1
+SHT,Shitcoin,0,Scrypt,0,0,1
+CIN,Cinnamoncoin,0,Scrypt,0,0,1
+BOC,Bountycoin,0,SHA-256d,1,1,1
+TEK,Tekcoin,0,SHA-256d,1,0,1
+NIG,Nigeriacoin,0,SHA-256d,1,0,1
+GRA,Graincoin,0,Scrypt,0,1,1
+UFC,FederationCredits,0,Scrypt,0,1,1
+XMAS,Xmascoin,0,Scrypt,0,0,1
+MINT,Mintcoin,0,Scrypt,0,1,1
+BC,Blackcoin,0,Scrypt,0,0,1
+ZEIT,Zeitcoin,0,Scrypt,0,1,1
+QBT,Qubits,0,SHA-256d,0,1,1
+FLT,Fluttercoin,0,Scrypt,1,0,1
+TRC,Terracoin,0,SHA-256d,0,0,1
+BTE,Bytecoin,0,SHA-256d,0,0,0
+XPM,Primecoin,3,Others,1,0,0
+DTC,Datacoin,0,Others,0,0,0
+CDN,CDNcoin,0,Others,0,0,0
+FTW,pNUT,0,Others,0,1,0
+MEG,Memorycoin,0,Scrypt,1,1,0
+ZET,Zetacoin,4,SHA-256d,0,0,0
+TEA,Teacoin,0,SHA-256d,0,0,0
+MYR,Myriadcoin,0,Multi-algo,1,0,0
+CHC,Chaincoin,0,Multi-algo,1,0,0
+MZC,Mazacoin,0,SHA-256d,0,0,0
+SIC,Sifcoin,1,Quark,1,0,0
+QRK,Quark,23,Quark,0,0,0
+OBC,Obamacoin,0,SHA-256d,1,0,0
+RVD,RVDcoin,0,Quark,0,0,0
+FZ,Frozencoin,0,Quark,0,0,0
+ATO,Atomcoin,0,Quark,0,0,0
+MOL,Molecule,0,Quark,0,0,0
+SEC,Secondcoin,0,Quark,0,0,0
+DRK,Darkcoin,99,X11,1,0,0
+CC,Color-Coin,0,X11,0,1,1
+Sync,Sync,0,X11,0,1,1
+RTC,RIGHTCOIN,0,X11,0,1,1
+MLGB,Malegebe,0,X11,0,0,0
+ACC,Antarcticcoin,0,X11,0,1,0
+KRYP,Kryptonite,0,X11,0,1,0
+GRN,GraniteCoin,0,X11,0,1,0
+PURE,PureCoin,0,X11,0,1,0
+NAC,Napalcoin,0,X11,0,1,0
+HPC,HAPPYCOIN,0,X11,0,1,1
+suc,StarbucksCoin,0,X11,0,0,1
+NL,Nanolite,0,X11,0,1,1
+LTCX,LiteCoinX,0,X11,0,1,0
+Iaura,Iaurab Coin,0,X11,0,1,1
+BS,BitSlap,0,X11,0,1,0
+Voot,VootCoin,0,X11,0,1,1
+LIMX,LimeCoinX,0,X11,0,1,0
+GRE,GoldReserve,0,X11,0,1,0
+WCC,WorldCupCoin ,0,X11,0,0,1
+MIN,Minerals,0,X11,0,0,1
+TRS,Triskelecoin,0,X11,0,0,1
+KiB,Kibweecoin,0,X11,0,0,1
+LIT,Lightcoin,0,X11,0,1,1
+FRAC,Fractalcoin,0,X11,0,1,0
+WVS,WaveCoin,0,X11,0,1,1
+gue,Guerillacoin,0,X11,0,0,1
+NeWO,NeWOcoin,0,Multi-algo,1,0,1
+GOD,Godcoin,0,X11,0,1,1
+HODOR,HODORCOIN,0,X11,0,1,1
+SPCC,Sportcoin,0,X11,0,1,1
+BULBA,BulbaCoin,0,X11,0,1,1
+TRUST,TRUSTplus,0,X11,0,1,1
+PP,PeerPay,0,X11,0,1,1
+CSO,CSCoin,0,X11,0,0,1
+MHYC,MachineryCoin,0,X11,0,1,1
+LOL,LeagueCoin,0,X11,0,0,1
+MIL,Millionaire Coin,0,X11,0,0,1
+PIGGY,New Piggycoin,0,X11,0,1,1
+BOOTY,TreasureHuntCoin,0,X11,0,1,1
+LIN,Linearcoin,0,X11,0,0,1
+SND,Soundcoin,0,X11,0,0,1
+BBL,BitBlock,26,X-n,1,0,0
+FIRE,Firecoin,0,X-n,0,0,1
+CORE,Corecoin,0,X-n,0,1,1
+ALEA,Aleacoin,0,X-n,0,1,1
+ISIS,Isiscoin,0,X-n,0,1,1
+Dino,DinosaurCoin,0,X-n,0,1,1
+POS,PosCoin,0,X-n,0,0,1
+ANG,AngelCoin,0,X-n,0,0,1
+COF,CoffeeCoin,0,X-n,0,0,1
+SPATA,Spartacus,0,X-n,0,1,1
+BACK,Backpacker,0,X-n,0,1,1
+MInC,MinersCoin,0,X-n,0,0,0
+LIZE,Lizarde,0,X-n,0,0,1
+NHC,Neverhoodcoin,0,X-n,0,1,1
+City,CityCoin,0,X-n,0,0,1
+FBIT,FileBit,0,X-n,0,0,1
+LIMI,LimiCoin,0,X-n,0,1,1
+CRYSTAL,CrystalCoin,0,X-n,0,0,1
+BBC,BigBangCoin,0,X-n,0,1,1
+OT,OverTime,0,X-n,0,1,1
+XDE,DoubleEagle,0,X-n,0,0,1
+NMB,Nimbus,0,X-n,0,0,1
+GRYF,GryfenCoin,0,X-n,0,1,1
+VLT,VolatilityCoin,0,X-n,0,0,1
+HTML5,Swapping,0,X-n,0,0,1
+B1bl3,B1bl3Coin,0,X-n,0,1,1
+U,UCoin,0,X-n,0,1,1
+SRZ,SuarezCoin,0,X11,0,1,1
+RW,RedWire,0,X11,0,0,1
+XAN,Xanoncoin,0,X11,0,0,1
+FVZ,FVZcoin,0,X11,0,1,1
+ELTC,EliteCoin,0,X11,0,0,1
+ESC,ESportsCoin,0,X11,0,0,1
+TEX,Texas Coin,0,X11,0,1,1
+MC,MultiCoin,0,X11,0,0,1
+FUSE,Fusecoin,0,X11,0,1,1
+WITCH,WitchCoin,0,X11,0,0,1
+ZEB,Zebracoin,0,X11,0,1,1
+CLD,XCloudcoin,0,X11,0,0,1
+BTO,Bitore,0,X11,0,1,0
+BIZ,BizCoin,0,X11,0,1,1
+Pal,PalestineCoin,0,X11,0,1,1
+MWC,MultiWalletCoin,0,X11,0,1,1
+DSV,DSValue,0,X11,0,1,1
+MTS,Mantis,0,X11,0,1,1
+MAG,MagCoin,0,X11,0,0,0
+VMINE,VMINE,0,X11,0,0,1
+DEPO-GBP,DEPO,0,X11,0,1,1
+XCR,CRYPTI,0,X11,0,0,0
+X14,X14coin,2,X-n,1,1,0
+SOLE,Solecoin,0,X-n,0,0,1
+BCSH,BitCash,0,X-n,0,0,1
+CYX,Cryptex,0,X11,0,1,1
+TMC,TheoremCoin,0,X11,0,1,1
+RACE,Racecoin,0,X11,0,1,1
+AZC,AzzaCoin,0,X11,0,0,1
+AMBER,AmberCoin,0,X11,0,0,1
+LMR,LemurCoin,0,X11,0,1,0
+CryptoXTC,CryptoXTC,0,X11,0,1,0
+XURO,Xuro,0,X11,0,1,1
+GLY,GOLDEN LOAF YANUKOVICH,0,X11,0,0,0
+MWC,multiwallet,0,X11,0,1,1
+Neos,Neoscoin,0,Multi-algo,1,1,0
+EQX,Equinox,0,X11,0,0,1
+CCB,CryptoClub,0,X11,0,1,1
+TNZ,Tanzanite,0,X11,0,1,1
+CRCK,CrackCoin,0,X11,0,0,1
+CHILD,x-children,0,X11,0,0,0
+ROS,ROSCOIN,0,X11,0,1,1
+STC,scattercoin,0,X11,0,0,1
+Envy,Envy Coin,0,X11,0,0,0
+EXCL,Exclusive Coin,0,X11,0,0,1
+DP,DigitalPrice,0,X11,0,0,0
+MTC,MetalCoin,0,X11,0,0,0
+METAL,MetalCoin,0,X11,0,1,1
+GHOST,GhostCoin,0,X11,0,0,1
+WSTL,WhistleCoin,0,X11,0,1,1
+SPARK,Spark,0,X11,0,1,1
+OPTI,OptimumCoin,0,X11,0,1,1
+MOB,Mobcoin,0,X11,0,1,1
+NKT,Nakamotodark,0,X11,0,0,1
+LFTC,LFTCCoin,0,X11,0,1,1
+CBR,CryptoBancor,0,X11,0,1,1
+WeTk,Weed Tokens,0,X11,0,1,1
+DGORE,Dogegorecoin,0,X11,0,0,1
+SMAC,SMAC Coin,0,X11,0,0,0
+ZUR,Zurcoin,0,Quark,0,1,0
+VLD,Vanillacoin,0,Quark,0,0,0
+ANI,Animecoin,0,Quark,0,0,0
+WIKI,Wikicoin,0,Quark,0,1,0
+UNC,Unioncoin,0,Quark,0,0,0
+MTS,Metiscoin,0,Quark,0,0,0
+OFF,Cthulhu Offerings,0,Quark,0,1,0
+TBC,Bullcoin,0,Quark,0,1,0
+PRT,Particle,0,Quark,0,0,0
+DOUG,Dougcoin,0,Quark,0,1,0
+MET,Metacoin,0,Quark,0,1,0
+SOMA,Somacoin,0,Quark,0,0,0
+QB,QuarkBar,0,Quark,0,0,0
+SRC,SecureCoin,0,Quark,0,0,0
+DIME,DimeCoin,0,Quark,0,1,0
+MUE,MonetaryUnit,0,Quark,0,1,0
+CL,Copperlark,2,SHA-3,1,1,0
+ECN,eCoin,0,SHA-3,0,0,0
+MAX,Maxcoin,0,SHA-3,0,0,0
+GRD,Gridcoin,0,Scrypt,1,0,0
+TGC,Tigercoin,0,SHA-256d,0,0,0
+SKC,Skeincoin,1,Multi-algo,1,0,0
+XDC,Xedoscoin,0,Multi-algo,0,0,0
+ASC,AsicCoin,0,SHA-256d,0,0,0
+BET,Betacoin,0,SHA-256d,0,1,0
+UNO,Unobtanium,1,SHA-256d,0,0,0
+AMK,AmKoin,0,SHA-256d,0,0,0
+RKC,ReikiCoin,0,SHA-256d,0,1,0
+NYM,Naanayam,0,SHA-256d,0,0,1
+Curecoin,Curecoin,0,SHA-256d,0,0,0
+HUC,Huntecoin,0,SHA-256d,0,0,0
+KMC,Kimcoin,0,Multi-algo,1,0,0
+GLB,Globe,0,SHA-256d,0,0,0
+SNC,Snowcoin,0,SHA-256d,0,0,1
+SSC,Siriuscoin,0,SHA-3,1,1,0
+AAC,AllAgesCoin,0,SHA-256d,0,0,0
+BLC,Blakecoin,2,SHA-3,1,0,0
+PHO,Photon,0,SHA-3,0,0,0
+365,365Coin,0,SHA-3,0,0,0
+SPICE,Melange,0,Multi-algo,1,1,0
+INK,INKcoin,0,Others,1,0,0
+LGBT,Rainbowcoin,0,SHA-256d,0,0,0
+LOOT,CryptoLoot,0,SHA-256d,0,0,0
+TAK,Takeicoin,0,SHA-256d,0,0,0
+RIC,Riecoin,0,Others,1,0,0
+PWNY,Pwnycoin,0,SHA-256d,0,0,0
+LUC,Lusocoin,0,SHA-256d,0,1,0
+POD,Podcoin,0,SHA-256d,0,0,0
+GAY,Gaycoin,0,SHA-256d,0,0,0
+CKE,Cookies,0,SHA-256d,0,1,0
+ORO,Orobit,0,SHA-256d,0,0,0
+ATC,Altcoin,0,SHA-256d,0,0,0
+BEN,Benjamins,0,SHA-256d,0,0,0
+HXC,Helixcoin,0,SHA-3,1,1,0
+CTD,CateDoge,0,SHA-3,1,1,0
+ARS,Arkenstone,0,SHA-256d,0,1,0
+BTN,BitcoinNEW,0,SHA-256d,0,0,1
+CX,XtraCoin,0,SHA-256d,0,0,1
+ABC,AngryBirdsCoin,0,X11,1,1,1
+PRO,PAYPRO Coin,0,SHA-256d,0,1,0
+EIC,CANTORcoin,0,SHA-256d,0,0,1
+ChC,CHARONscoin,0,Multi-algo,1,0,1
+BULL,BlueBullCoin,0,SHA-256d,0,0,0
+GSY,GenesysCoin,0,SHA256,1,0,1
+ODNT,Old Dogs New Tricks,0,SHA256d,1,0,1
+PHR,#PHREAK,0,,1,0,1
+STEPS,STEPS,0,,1,0,1
+LOG,Woodcoin,0,Skein,1,0,1
+GUINEA,Guinea,0,SHA-256d,0,0,1
+SOV,Sovereign,0,SHA-256d,0,0,1
+eTaler,Electric Taler,0,SHA-256d,0,0,1
+BTCD,BitcoinDark,0,SHA-256d,0,0,1
+ACOIN,Acoin,0,SHA-256d,0,0,1
+TTY,Trinity,0,Multi-algo,1,1,1
+UBTC,Umbrella-BTC,0,SHA-256d,0,0,1
+BTI,Instant Coin,0,SHA-256d,0,0,1
+YLC,YellowLionCoin,1,SHA-256d,0,0,0
+PAC,Pleiades Coin,0,SHA-256d,0,0,0
+SSD,SonicScrewdriver,0,SHA-256d,0,0,1
+DRX,Darkfox,0,SHA-256d,0,1,1
+NEOS,Neoscoin IPO,0,Multi-algo,1,1,0
+ASD,ASDCoin,0,SHA-256d,0,1,0
+REB,Rebirthcoin,0,SHA-256d,0,0,0
+BIG,BIGBullion,0,SHA-256d,0,1,0
+XMG,Magi,0,SHA-256d,0,0,1
+AXR,Axron,0,Others,1,1,1
+MOBI,MobiusCoin,0,SHA-256d,0,0,0
+NODE,NODECoin,0,SHA-256d,0,0,1
+WWC,WorldWideCoin,0,SHA-256d,0,0,0
+AU,Aurumcoin,0,SHA-256d,0,1,1
+PPCD,PeercoinDark,0,SHA-256d,0,1,0
+DOGEBC,DOGEBLACKCOIN,0,SHA-256d,0,1,0
+PPCD,PeercoinDark,0,SHA-256d,0,1,0
+FUD,FUDcoin,0,SHA-256d,0,0,1
+FLIRT,FlirtCoin,0,SHA-256d,0,0,1
+URAN,URANUSCOIN,0,SHA-256d,0,1,0
+PIMP,PimpCash,0,Scrypt,1,1,1
+FLIRT,Flirt Life,0,SHA-256d,0,0,0
+DECR,DecryptRcoin,0,SHA-256d,0,0,0
+PAYER,ePAYERCOIN,0,SHA-256d,0,1,1
+IQD,Dinarcoin,0,SHA-256d,0,1,0
+IMP,Imperialcoin,0,SHA-256d,0,1,0
+OAC,Overly Attached Coin,0,SHA-3,1,1,0
+MTX,Matrixcoin,0,SHA-256d,0,0,0
+SUP,SupCoin,0,SHA-256d,0,0,0
+NXT,NXT,12,SHA-256d,0,0,1
+NZ,NeXT Horizon,0,SHA-256d,0,0,1
+NAS,NAS,0,SHA-256d,0,0,1
+Burst,Burst,0,SHA-256d,0,0,0
+ARN,ArenaCoin,0,SHA-256d,0,0,1
+STB,STABLE,0,SHA-256d,0,0,1
+SKULL,SKULLCOIN,0,SHA-256d,0,0,1
+XPH,Pathfinder,0,SHA-256d,0,1,1
+VDO,Vidio,0,SHA-256d,0,0,1
+NTX,NTXcoin,0,SHA-256d,0,0,1
+FIMK,FIMKrypto,0,SHA-256d,0,0,1
+NODE,NODE,0,SHA-256d,0,0,1
+NBT,NuBits,0,SHA-256d,0,0,1
+XRP,Ripple,4,SHA-256d,0,1,0
+XNP,NetPay,0,SHA-256d,0,0,1
+Splash,Splash,0,SHA-256d,0,0,1
+Radix,Radix,0,SHA-256d,0,0,1
+Stellar,Stellar,0,SHA-256d,0,0,1
+BCN,Bytecoin,15,CryptoNight,0,0,0
+FCN,Fantomcoin,0,CryptoNight,0,0,0
+XMR,Bitmonero/Monero,1,CryptoNight,0,0,0
+AEON,AEON,0,CryptoNight-Lite,1,0,0
+QCN,QuazarCoin,0,CryptoNight,0,0,0
+MNT,MountCoin,0,CryptoNight,0,0,0
+XDN,DarkNote,0,CryptoNight,0,0,0
+BBR,Boolberry,0,Wild Keccak,1,0,0
+MCN,MonetaVerde,0,CryptoNight,0,0,0
+OEC,OneEvilCoin,0,CryptoNight,0,0,1
+CNC,CryptoNoteCoin,6,CryptoNight,0,0,1
+INF8,Infinium-8,0,CryptoNight,1,0,1
+ASAP,ASAPcoin,0,CryptoNight,1,0,1
+CRR,CherryNote,0,CryptoNight,1,0,1
+RD,Red Wind,0,CryptoNight,1,0,0
+DOSH,Dosh-Kapital,2,CryptoNight,1,0,0
+DBK,DiamondBack,0,CryptoNight,0,0,0
+SBK,Silverback,0,CryptoNight,0,0,0
+DB,DoctorByte,0,CryptoNight,1,0,0
+DSH,Dashcoin,0,CryptoNight,0,0,1
+XTV,Tavos,0,CryptoNight,0,0,1
+BDC,Buddhacoin,0,CryptoNight,0,0,0
+PLD,Paladincoin,0,CryptoNight,0,0,0
+XPB,Pebblecoin,0,Boulderhash,1,0,0
+DNC,DarkNetCoin,0,Boulderhash,1,0,0
