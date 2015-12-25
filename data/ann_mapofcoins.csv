@@ -1,6 +1,5 @@
 symbol,name,ann
 BTC,Bitcoin,http://article.gmane.org/gmane.comp.encryption.general/12588/
-NMC,Namecoin,None
 IXC,iXcoin,https://bitcointalk.org/index.php?topic=36218.0
 I0C,I0coin,https://bitcointalk.org/index.php?topic=36425.0
 SC,SolidCoin,https://bitcointalk.org/index.php?topic=38453.0
@@ -9,7 +8,6 @@ TBX,Tenebrix,https://bitcointalk.org/index.php?topic=45667.0
 FBX,Fairbrix,https://bitcointalk.org/index.php?topic=46528.0
 LTC,Litecoin,https://bitcointalk.org/index.php?topic=47417.0
 BQC,BBQcoin,https://bitcointalk.org/index.php?topic=307923.0
-FTC,Feathercoin,None
 SRC,Sunrisecoin,https://bitcointalk.org/index.php?topic=206017.0
 NET,Netcoin,https://bitcointalk.org/index.php?topic=201402.0
 FRK,Franko,https://bitcointalk.org/index.php?topic=202417.0
@@ -28,9 +26,7 @@ NBL,Nibble,https://bitcointalk.org/index.php?topic=209035.0
 ALF,AlphaCoin,https://bitcointalk.org/index.php?topic=230868.0
 ARG,Argentum,https://bitcointalk.org/index.php?topic=231524.0
 PWC,Powercoin,https://bitcointalk.org/index.php?topic=203505.0
-KGC,Krugercoin,None
 FST,Fastcoin,https://bitcointalk.org/index.php?topic=218852.0
-MEM,Memecoin,None
 GLC,Globalcoin,https://bitcointalk.org/index.php?topic=243911.0
 6CN,6coin,https://bitcointalk.org/index.php?topic=239201.0
 RCH,Richcoin,https://bitcointalk.org/index.php?topic=239251.0
@@ -41,7 +37,6 @@ SXC,Sexcoin,https://bitcointalk.org/index.php?topic=218158.0
 NC,Nucoin,https://bitcointalk.org/index.php?topic=241128.0
 TDC,Tradecoin,https://bitcointalk.org/index.php?topic=242857.0
 VLC,Valuecoin,https://bitcointalk.org/index.php?topic=239666.0
-JKC,Junkcoin,None
 LKY,Lukycoin,https://bitcointalk.org/index.php?topic=214614.0
 DOGE,Dogecoin,https://bitcointalk.org/index.php?topic=361813.0
 APE,Apecoin,https://bitcointalk.org/index.php?topic=375938.0
@@ -50,7 +45,6 @@ CAT,Catcoin,https://bitcointalk.org/index.php?topic=441402.0
 PND,Pandacoin,https://bitcointalk.org/index.php?topic=464476.0
 JBG,JebigaCoin,https://bitcointalk.org/index.php?topic=530408.0
 SPC,Supercoin,https://bitcointalk.org/index.php?topic=206164.0
-GDC,Grandcoin,None
 CSC,Casinocoin,https://bitcointalk.org/index.php?topic=258090.0
 RED,Redcoin,https://bitcointalk.org/index.php?topic=246693.0
 EGC,Eaglecoin,https://bitcointalk.org/index.php?topic=260484.0
@@ -141,15 +135,9 @@ RON,Swansoncoin,https://bitcointalk.org/index.php?topic=478244.0
 PIC,Pizzacoin,https://bitcointalk.org/index.php?topic=431508.0
 BEER,Beercoin,https://bitcointalk.org/index.php?topic=445553.0
 PAS,Pastacoin,https://bitcointalk.org/index.php?topic=445560.0
-WWW,Internetcoin,None
 FISH,Fishcoin,https://bitcointalk.org/index.php?topic=391858.0
-COLA,Colacoin,None
-TEL,Phonecoin,None
 VDC,Vodcacoin,https://bitcointalk.org/index.php?topic=440159.0
-OIL,Oilcoin,None
-SHOP,Shopcoin,None
 HAC,Hamburgercoin,https://bitcointalk.org/index.php?topic=431512.0
-HDC,Hotdogcoin,None
 LADY,Ladycoin,https://bitcointalk.org/index.php?topic=445680.0
 MUSC,Musiccoin,https://bitcointalk.org/index.php?topic=445668.0
 CIC,Cinemacoin,https://bitcointalk.org/index.php?topic=445624.0
@@ -238,9 +226,7 @@ SHADE,Shade,https://bitcointalk.org/index.php?topic=768941.0
 XBOT,SocialxBot,https://bitcointalk.org/index.php?topic=760803.0
 CGA,Crytographic Anomaly,https://bitcointalk.org/index.php?topic=771830
 BTLS,BitLitS,https://bitcointalk.org/index.php?topic=777275.0
-VAC,Vanadiumcoin,None
 SLK,SleakCoin,https://hashtalk.org/topic/7310/sleakcoin-release-source-first-then-win-wallet-etc
-DOLLAR,DollarCoin,None
 SNG,Songcoin,https://bitcointalk.org/index.php?topic=804527.0
 DPC,DarkPeer,https://bitcointalk.org/index.php?topic=795749.0
 MTLMC,Metal Music Coin,https://bitcointalk.org/index.php?topic=808657.0
@@ -270,7 +256,6 @@ FOF,FourOhFourCoin,https://bitcointalk.org/index.php?topic=515642.0
 NLG,Guldencoin,https://bitcointalk.org/index.php?topic=554412.0
 BUN,BunnyCoin,https://bitcointalk.org/index.php?topic=589180.0
 LQC,Liquidcoin,https://bitcointalk.org/index.php?topic=60026.0
-DVC,Devcoin,None
 STY,Stories,https://bitcointalk.org/index.php?topic=451343.0
 FRC,Freicoin,https://bitcointalk.org/index.php?topic=89843.0
 ZTC,Zenithcoin,https://bitcointalk.org/index.php?topic=219644.0
@@ -327,7 +312,6 @@ BC,Blackcoin,https://bitcointalk.org/index.php?topic=469640.0
 ZEIT,Zeitcoin,https://bitcointalk.org/index.php?topic=487814.0
 QBT,Qubits,https://bitcointalk.org/index.php?topic=345328.0
 FLT,Fluttercoin,https://bitcointalk.org/index.php?topic=509499.0
-TRC,Terracoin,None
 BTE,Bytecoin,https://bitcointalk.org/index.php?topic=169559.0
 XPM,Primecoin,https://bitcointalk.org/index.php?topic=251850.0
 DTC,Datacoin,https://bitcointalk.org/index.php?topic=325735.0
@@ -338,7 +322,6 @@ ZET,Zetacoin,https://bitcointalk.org/index.php?topic=267545.0
 TEA,Teacoin,https://bitcointalk.org/index.php?topic=434432.0
 MYR,Myriadcoin,https://bitcointalk.org/index.php?topic=483515.0
 CHC,Chaincoin,https://bitcointalk.org/index.php?topic=422149.0
-MZC,Mazacoin,None
 SIC,Sifcoin,https://bitcointalk.org/index.php?topic=240894.0
 QRK,Quark,https://bitcointalk.org/index.php?topic=260031.0
 OBC,Obamacoin,https://bitcointalk.org/index.php?topic=281373.0
@@ -433,7 +416,6 @@ BIZ,BizCoin,https://bitcointalk.org/index.php?topic=725670.0
 Pal,PalestineCoin,https://bitcointalk.org/index.php?topic=712124.0
 MWC,MultiWalletCoin,https://bitcointalk.org/index.php?topic=725620
 DSV,DSValue,https://bitcointalk.org/index.php?topic=695096.0
-MTS,Mantis,None
 MAG,MagCoin,https://bitcointalk.org/index.php?topic=727297.0
 VMINE,VMINE,https://bitcointalk.org/index.php?topic=709911.0
 DEPO-GBP,DEPO,https://bitcointalk.org/index.php?topic=729189.0
@@ -444,7 +426,6 @@ BCSH,BitCash,https://bitcointalk.org/index.php?topic=737857.0
 CYX,Cryptex,https://bitcointalk.org/index.php?topic=702483.0
 TMC,TheoremCoin,https://bitcointalk.org/index.php?topic=731983.0
 RACE,Racecoin,https://bitcointalk.org/index.php?topic=734819.0
-AZC,AzzaCoin,None
 AMBER,AmberCoin,https://bitcointalk.org/index.php?topic=742928.0
 LMR,LemurCoin,https://bitcointalk.org/index.php?topic=739681.0
 CryptoXTC,CryptoXTC,https://bitcointalk.org/index.php?topic=728168.0
@@ -526,7 +507,6 @@ POD,Podcoin,https://bitcointalk.org/index.php?topic=465846.0
 GAY,Gaycoin,https://bitcointalk.org/index.php?topic=465940.0
 CKE,Cookies,https://bitcointalk.org/index.php?topic=462272.0
 ORO,Orobit,https://cryptocointalk.com/topic/4341-orobit-coin/
-ATC,Altcoin,None
 BEN,Benjamins,https://bitcointalk.org/index.php?topic=444543.0
 HXC,Helixcoin,https://bitcointalk.org/index.php?topic=489172.0
 CTD,CateDoge,https://bitcointalk.org/index.php?topic=528453.0
@@ -553,7 +533,6 @@ UBTC,Umbrella-BTC,https://bitcointalk.org/index.php?topic=687265.0
 BTI,Instant Coin,https://bitcointalk.org/index.php?topic=693243.0
 YLC,YellowLionCoin,https://bitcointalk.org/index.php?topic=714088.0
 PAC,Pleiades Coin,https://bitcointalk.org/index.php?topic=734531.0
-SSD,SonicScrewdriver,None
 DRX,Darkfox,https://bitcointalk.org/index.php?topic=730801.0
 NEOS,Neoscoin IPO,https://cryptocointalk.com/topic/14218-neoscoin-neos-information/page-2#entry120023
 ASD,ASDCoin,http://asdcoin.com/forum
@@ -563,7 +542,6 @@ XMG,Magi,https://bitcointalk.org/index.php?topic=735170.0
 AXR,Axron,https://bitcointalk.org/index.php?topic=738534.0
 MOBI,MobiusCoin,https://bitcointalk.org/index.php?topic=774762.0
 NODE,NODECoin,https://bitcointalk.org/index.php?topic=590421.0
-WWC,WorldWideCoin,None
 AU,Aurumcoin,https://bitcointalk.org/index.php?topic=793502.0
 PPCD,PeercoinDark,https://bitcointalk.org/index.php?topic=832845.0
 DOGEBC,DOGEBLACKCOIN,https://bitcointalk.org/index.php?topic=819211.0
@@ -598,7 +576,6 @@ XNP,NetPay,https://bitcointalk.org/index.php?topic=303011.0
 Splash,Splash,https://bitcointalk.org/index.php?topic=372486.0
 Radix,Radix,https://bitcointalk.org/index.php?topic=500209.0
 Stellar,Stellar,https: //bitcointalk.org/index.php?topic=720096.0
-BCN,Bytecoin,
 FCN,Fantomcoin,https://bitcointalk.org/index.php?topic=598823.0
 XMR,Bitmonero/Monero,https://bitcointalk.org/index.php?topic=563821.0
 AEON,AEON,https://bitcointalk.org/index.php?topic=641696.0
@@ -619,7 +596,5 @@ SBK,Silverback,https://bitcointalk.org/index.php?topic=741346.0
 DB,DoctorByte,https://bitcointalk.org/index.php?topic=893230.0
 DSH,Dashcoin,https://bitcointalk.org/index.php?topic=678232.0
 XTV,Tavos,https://bitcointalk.org/index.php?topic=1126558.0
-BDC,Buddhacoin,None
-PLD,Paladincoin,None
 XPB,Pebblecoin,https://bitcointalk.org/index.php?topic=909624.0
 DNC,DarkNetCoin,https://bitcointalk.org/index.php?topic=818365.0
