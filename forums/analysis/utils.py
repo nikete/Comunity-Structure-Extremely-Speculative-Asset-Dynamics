@@ -65,6 +65,7 @@ def write_network(output_dir, network_name, vertex_names, edge_weights, directed
     interactions.write_pickle(network_filename)
   
 def write_coin_users(users_output_filename,
+                     name_by_coin,
                      coin_mentions_per_user,
                      num_posts_per_user,
                      num_subjects_per_user,
@@ -75,7 +76,8 @@ def write_coin_users(users_output_filename,
                      num_users):
   """ Write the coin most active users (top mentioners) along with some activity stats
   to an output file.
-  
+
+  name_by_coin: mapping from coin symbol to its name
   coin_mentions_per_user: a mapping from coin name to a another mapping from user to
   number of times the user mentioned the coin *before the network date*.
   num_posts_per_user: mapping from user to another mapping from date to number of posts
@@ -94,7 +96,8 @@ def write_coin_users(users_output_filename,
   users with their number of mentions will be written to output.
   """
   csvwriter = csv.writer(open(users_output_filename, 'w'), delimiter=',')
-  header = ["coin", "earliest_trade_date", "earliest_mention_date", "network_date"]
+  header = ["symbol", "name", "earliest_trade_date", "earliest_mention_date",
+            "network_date"]
   for i in range(1, num_users+1):
     header.append("user" + str(i))
     header.append("user" + str(i) + "_num_mentions")
@@ -108,7 +111,8 @@ def write_coin_users(users_output_filename,
     if (coin not in earliest_trade_date_by_coin or
         coin not in earliest_mention_date_by_coin):
       continue
-
+    
+    name = name_by_coin[coin]
     coin_earliest_trade_date = earliest_trade_date_by_coin[coin]
     coin_earliest_mention_date = earliest_mention_date_by_coin[coin]
     coin_network_date = network_date_by_coin[coin]
@@ -118,7 +122,7 @@ def write_coin_users(users_output_filename,
                                       key=operator.itemgetter(1),
                                       reverse=True)
     
-    coin_output_row = [coin, coin_earliest_trade_date, coin_earliest_mention_date,
+    coin_output_row = [coin, name, coin_earliest_trade_date, coin_earliest_mention_date,
                        coin_network_date]
     # iterate over all acitve users for this coin. The number of active users could be
     # less than the max above.
@@ -151,12 +155,14 @@ def write_coin_users(users_output_filename,
     csvwriter.writerow(coin_output_row)
 
 def write_coin_user_urls(urls_output_filename,
+                         name_by_coin,
                          coin_urls_per_user,
                          earliest_trade_date_by_coin,
                          earliest_mention_date_by_coin,
                          num_users, num_urls):
   """ Writes the url and dates where active/first introducer users mentioned the coin.
   
+  name_by_coin: mapping from coin symbol to its name
   num_users: the number of most active/first introducer users to write to the file.
   num_urls: the number of urls/dates per user.
   """
@@ -165,7 +171,7 @@ def write_coin_user_urls(urls_output_filename,
     return
 
   csvwriter = csv.writer(open(urls_output_filename, 'w'), delimiter=',')
-  header = ["coin", "earliest_trade_date", "earliest_mention_date"]
+  header = ["symbol", "name", "earliest_trade_date", "earliest_mention_date"]
   for i in range(1, num_users+1):
     header.append("user" + str(i))
     for j in range(1, num_urls+1):
@@ -179,6 +185,7 @@ def write_coin_user_urls(urls_output_filename,
         coin not in earliest_mention_date_by_coin):
       continue
 
+    name = name_by_coin[coin]
     coin_earliest_trade_date = earliest_trade_date_by_coin[coin]
     coin_earliest_mention_date = earliest_mention_date_by_coin[coin]
 
@@ -190,7 +197,7 @@ def write_coin_user_urls(urls_output_filename,
                                   key=lambda k: len(k[1]),
                                   reverse=True)
     
-    coin_output_row = [coin, coin_earliest_trade_date, coin_earliest_mention_date]
+    coin_output_row = [coin, name, coin_earliest_trade_date, coin_earliest_mention_date]
     for i in range(0, num_users):
       if i < len(urls_per_user_sorted):
         user = urls_per_user_sorted[i][0]
@@ -228,6 +235,19 @@ def read_earliest_trade_dates(introduction_dates_file,
       earliest_trade_date = datetime.datetime.strptime(row[2], '%Y-%m-%d').date()
       earliest_trade_date_by_coin[row[1]] = earliest_trade_date
       coins_by_earliest_trade_date[earliest_trade_date].add(row[1])
+
+def read_coin_name_symbols(input_file,
+                           name_by_coin,
+                           coin_by_name):
+  with open(input_file, 'r') as infile:
+    reader = csv.reader(infile)
+    next(reader, None)  # skip the headers
+    for row in reader:
+      name = row[0]
+      coin = row[1]
+      name_by_coin[coin] = name
+      coin_by_name[name] = coin
+
 
 # Takes a row from the input file containing posts, parses it and returns a tuple
 # containing relevent fields of the row. Many of the fields are not returned, add them

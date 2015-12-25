@@ -85,6 +85,18 @@ class PostsTracker:
     utils.read_earliest_trade_dates(args.unmodified_coins_earliest_trade_dates,
                               self.earliest_trade_date_by_unmodified_coin,
                               unmodified_coins_by_earliest_trade_date)
+
+    # mapping from coin symbol to its name to be included in outputs
+    self.name_by_modified_coin = dict()
+    coin_by_modified_name = dict()
+    utils.read_coin_name_symbols(args.modified_coins_earliest_trade_dates,
+                                 self.name_by_modified_coin,
+                                 coin_by_modified_name)
+    self.name_by_unmodified_coin = dict()
+    coin_by_unmodified_name = dict()
+    utils.read_coin_name_symbols(args.modified_coins_earliest_trade_dates,
+                                 self.name_by_modified_coin,
+                                 coin_by_modified_name)
    
     # mapping from coin to earliest mention in the forum or earliest mention in the first
     # post of a new thread.
@@ -186,7 +198,7 @@ class PostsTracker:
   # Update coin mention if date is before earliest trade date. In addition, since we only
   # care about the last history_days before earliest days, post_date should not be more
   # than history_days before earliest date.
-  def add_modified_coin_mention(self, modified_coin, user, date_time, new_subject):
+  def add_modified_coin_mention(self, modified_coin, user, date_time, new_subject, url):
     # first take care of first mentions if any
     self.add_modified_coin_first_mention(modified_coin, user, date_time)
     if new_subject:
@@ -207,7 +219,7 @@ class PostsTracker:
       self.modified_urls_per_user[modified_coin][user].append((url, date_time))
 
 
-  def add_unmodified_coin_first_mention(self, unmodified_coin, user, date_time):
+  def add_unmodified_coin_first_mention(self, unmodified_coin, user, date_time, url):
     # we don't care if the first mention is after earliest date. we update first mention
     # if mentioned coin is observed for first time, no matter the date
     if unmodified_coin in self.first_mention_date_by_unmodified_coin:
@@ -222,7 +234,8 @@ class PostsTracker:
   
   def add_unmodified_coin_first_thread_post_mention(self,
                                                     unmodified_coin,
-                                                    user, date_time):
+                                                    user, date_time,
+                                                    url):
     # we don't care if the first mention is after earliest date. we update first mention
     # if mentioned coin is observed for first time, no matter the date
     if unmodified_coin in self.first_thread_post_mention_date_by_unmodified_coin:
@@ -237,11 +250,12 @@ class PostsTracker:
 
   # just like modified coin mentions, but keeps track of both modified coin name and
   # symbol mentions
-  def add_unmodified_coin_mention(self, unmodified_coin, user, date_time, new_subject):
+  def add_unmodified_coin_mention(self, unmodified_coin, user, date_time, new_subject, url):
     # first take care of first mentions if any
-    self.add_unmodified_coin_first_mention(unmodified_coin, user, date_time)
+    self.add_unmodified_coin_first_mention(unmodified_coin, user, date_time, url)
     if new_subject:
-      self.add_unmodified_coin_first_thread_post_mention(unmodified_coin, user, date_time)
+      self.add_unmodified_coin_first_thread_post_mention(unmodified_coin, user, date_time,
+                                                         url)
 
     # now update mention per user if valid within accepted time range
     if (self.is_coin_mention_too_new(unmodified_coin,
@@ -317,6 +331,7 @@ class PostsTracker:
     active_users_output_filename = os.path.join(
         args.output_dir, "modified_coin_active_users.csv")
     utils.write_coin_users(active_users_output_filename,
+                           self.name_by_modified_coin,
                            self.modified_mentions_per_user,
                            self.num_posts_per_user,
                            self.num_subjects_per_user,
@@ -329,6 +344,7 @@ class PostsTracker:
     urls_output_filename = os.path.join(args.output_dir,
                                         "modified_coin_active_user_urls.csv")
     utils.write_coin_user_urls(urls_output_filename,
+                               self.name_by_modified_coin,
                                self.modified_urls_per_user,
                                self.earliest_trade_date_by_modified_coin,
                                self.first_mention_date_by_modified_coin,
@@ -340,6 +356,7 @@ class PostsTracker:
     active_users_output_filename = os.path.join(
         args.output_dir, "unmodified_coin_active_users.csv")
     utils.write_coin_users(active_users_output_filename,
+                           self.name_by_unmodified_coin,
                            self.unmodified_mentions_per_user,
                            self.num_posts_per_user,
                            self.num_subjects_per_user,
@@ -352,6 +369,7 @@ class PostsTracker:
     urls_output_filename = os.path.join(args.output_dir,
                                         "unmodified_coin_active_user_urls.csv")
     utils.write_coin_user_urls(urls_output_filename,
+                               self.name_by_unmodified_coin,
                                self.unmodified_urls_per_user,
                                self.earliest_trade_date_by_unmodified_coin,
                                self.first_mention_date_by_unmodified_coin,
@@ -363,6 +381,7 @@ class PostsTracker:
     first_introducers_output_filename = os.path.join(
         args.output_dir, "unmodified_coin_first_introducers.csv")
     utils.write_coin_users(first_introducers_output_filename,
+                           self.name_by_unmodified_coin,
                            self.unmodified_first_mention,
                            self.num_posts_per_user,
                            self.num_subjects_per_user,
@@ -374,6 +393,7 @@ class PostsTracker:
     urls_output_filename = os.path.join(
         args.output_dir, "unmodified_coin_first_introducer_urls.csv")
     utils.write_coin_user_urls(urls_output_filename,
+                               self.name_by_unmodified_coin,
                                self.unmodified_first_mention_date_url,
                                self.earliest_trade_date_by_unmodified_coin,
                                self.first_mention_date_by_unmodified_coin,
@@ -384,6 +404,7 @@ class PostsTracker:
     first_thread_post_introducers_output_filename = os.path.join(
         args.output_dir, "unmodified_coin_first_thread_post_introducers.csv")
     utils.write_coin_users(first_thread_post_introducers_output_filename,
+                           self.name_by_unmodified_coin,
                            self.unmodified_first_thread_post_mention,
                            self.num_posts_per_user,
                            self.num_subjects_per_user,
@@ -395,6 +416,7 @@ class PostsTracker:
     urls_output_filename = os.path.join(
         args.output_dir, "unmodified_coin_first_thread_post_introducer_urls.csv")
     utils.write_coin_user_urls(urls_output_filename,
+                               self.name_by_unmodified_coin,
                                self.unmodified_first_thread_post_mention_date_url,
                                self.earliest_trade_date_by_unmodified_coin,
                                self.first_thread_post_mention_date_by_unmodified_coin,
@@ -438,13 +460,15 @@ if __name__ == '__main__':
         posts_tracker.add_modified_coin_mention(modified_coin,
                                                 user,
                                                 date_time,
-                                                new_subject)
+                                                new_subject,
+                                                url)
 
       for unmodified_coin in unmodified_coins:
         posts_tracker.add_unmodified_coin_mention(unmodified_coin,
                                                   user,
                                                   date_time,
-                                                  new_subject)
+                                                  new_subject,
+                                                  url)
   
   
   # After we have processed all the posts, write the user sets.  
