@@ -1,20 +1,30 @@
-\documentclass{acm_proc_article_sp}% http://www.acm.org/sigs/publications/acm_proc_article-sp.cls/view
-%\usepackage{graphicx}
+\documentclass[letterpaper]{article}
+
+\usepackage{aaai}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+
+\usepackage{graphicx}
 \graphicspath{ {images/} }
-%\usepackage[section]{placeins}
-%\usepackage{pdflscape}
 \usepackage{enumitem}
 \usepackage{color}
 \usepackage{subfigure}
 \usepackage{hyperref}
 
-\begin{document}
-\title{Forever Blowing Blockchains: Social Structure and Speculative Bubbles in Cryptocurrencies}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
 
-\numberofauthors{6} %  in this sample file, there are a *total*
-% of EIGHT authors. SIX appear on the 'first-page' (for formatting
-% reasons) and the remaining two appear in the \additionalauthors section.
+\pdfinfo{
+Forever Blowing Blockchains: Social Structure and Speculative Bubbles in Cryptocurrencies
+/Nicolas Della Penna, Eaman Jahani, Peter Krafft, Octavio Bunge, Harper Reed, Alex "Sandy" Pentland, Julain McAuley}
+\setcounter{secnumdepth}{0}  
+ \begin{document}
+% The file aaai.sty is the style file for AAAI Press 
+% proceedings, working notes, and technical reports.
 %
+\title{Forever Blowing Blockchains: Social Structure and Speculative Bubbles in Cryptocurrencies}
 \author{
 % You can go ahead and credit any number of authors here,
 % e.g. one 'row of three' or two rows (consisting of one row of three
@@ -27,55 +37,52 @@
 % e-mail address with \email.
 %
 % 1st. author
-\alignauthor
 Nicolas Della Penna \thanks{indicates equal contributions.}\\
 %Nicolas Della Penna \titlenote{is a first co-author of this paper.}\\% He conceived the study, methodology, and wrote the initial manuscript and the notebook with the data analysis.}\\
-       \affaddr{ANU}\\
-       \email{n@nikete.com}
+ANU \\
+n@nikete.com
 % 2nd. author
-\alignauthor
+\And
 Eaman Jahani \footnotemark[1] \\
 %Eaman Jahani \titlenote{is a first co-author of this paper.}\\% He wrote the forum scrapers, constructed networks and their measures, and wrote up the relevant sections in network data and variables.}
-       \affaddr{MIT} \\
-        \email{eaman@mit.edu}
+MIT \\
+eaman@mit.edu
 % 3rd. author
-\alignauthor
+\And
 Peter Krafft \\%\titlenote{helped with methodology and literature review} \\
-       \affaddr{MIT} \\
-       \email{pkrafft@mit.edu}
-\and  % use '\and' if you need 'another row' of author names
-\alignauthor
+MIT \\
+pkrafft@mit.edu
+\And
 Octavio Bunge \\%\titlenote{ wrote scrapers for coin prices, and the non-trivialness measure.}\\
-       \affaddr{Universidad de Belgrano} \\
-        \email{octavio.bunge@\\comunidad.ub.edu.ar}
+Universidad de Belgrano \\
+octavio.bunge@\\comunidad.ub.edu.ar
 % 4th. author
-\alignauthor 
+\AND
 Harper Reed \\%\titlenote{helped with the writing and literature review}\\
-%       \affaddr{Harper Rules LLC}\\
-       \email{~\\harper@nata2.org}
+\\
+harper@nata2.org
 % 5th. author
-\and  % use '\and' if you need 'another row' of author names
-\alignauthor Alex (Sandy) Pentland \\ %\titlenote{helped with methodology and writing}\\
-       \affaddr{MIT Media Lab}\\
-       \email{pentland@mit.edu}
+\And  % use '\and' if you need 'another row' of author names
+Alex (Sandy) Pentland \\ %\titlenote{helped with methodology and writing}\\
+MIT Media Lab \\
+pentland@mit.edu
 % 4th. author
-\alignauthor  Julian McAuley \\%\titlenote{helped with methodology and writing}\\
-       \affaddr{UC San Diego}\\
-       \email{jmcauley@cse.ucsd.edu}
+\And
+Julian McAuley \\%\titlenote{helped with methodology and writing}\\
+UC San Diego \\
+jmcauley@cse.ucsd.edu
 }
-
 \maketitle
+
 
 \begin{abstract}
 
 We study the power of structural features of the social network around cryptocurrencies to understand the severity and magnitude of bubbles. 
 We introduce a novel dataset that combines measures of the social network surrounding the introduction of coins in online cryptocurrency forums, the trading  behavior across marketplaces, and the presence of nontrivial changes to the source code in relation to previous coins.
-Our network are constructed based on the intensity of social interactions in the forums and all the structural features of the network are measured based on the state of the social network before the relevant cryptocurrency is ever traded.
-Our study reveals that structural features of the network and the nature of the source code changes achieve substantial predictive power on the severity of trading price bubbles 
+Our networks are constructed based on the intensity of social interactions in the main discussion forum of cryptocurrencies. All the structural features of the network are measured based on the state of the social network before the relevant cryptocurrency is ever traded; therefore allowing for predictions into the future by avoiding any possible confounding between the prices and community attention.
+Our study reveals that structural features of the network and the nature of the source code changes achieve substantial predictive power on the severity of trading price bubbles.
 
 \end{abstract}
-
-
 
 \section{Introduction}
 \input{intro.tex}
@@ -109,7 +116,7 @@ Our study reveals that structural features of the network and the nature of the 
 \input{tables/log_severity_forumOR.tex}
 \input{tables/log_volume_forumOR.tex}
 
-\subsection{Future Work}
+\section{Future Work}
 \input{future_work.tex}
 
 \section{Conclusion}
@@ -127,27 +134,20 @@ Our study reveals that structural features of the network and the nature of the 
 %
 % The following two commands are all you need in the
 % initial runs of your .tex file to
-% produce the bibliography for the citations in your paper.
-\bibliographystyle{abbrv}
-\bibliography{bubble}  % sigproc.bib is the name of the Bibliography in this case
+% produce the bibliography for the citations in your paper
+\bibliography{bubble}
+\bibliographystyle{aaai}
 % You must have a proper ".bib" file
 %  and remember to run:
 % latex bibtex latex latex
 % to resolve all references
-%
-% ACM needs 'a single self-contained file'!
-%
-%APPENDICES are optional
-%\balancecolumns
-\appendix
-Appendix A
-\input{tables/log_volume_forumAND.tex}
-\input{tables/log_severity_forumAND.tex}
 
-%\section{Linear model coeficients}
 %\balancecolumns
+%\appendix
+%Appendix A
+%\input{tables/log_volume_forumAND.tex}
+%\input{tables/log_severity_forumAND.tex}
 
-% That's all folks!
 \end{document}
 
 
