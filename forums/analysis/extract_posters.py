@@ -138,6 +138,8 @@ if __name__ == '__main__':
     os.makedirs(args.output_dir)
   earliest_trade_date_by_coin = dict()
   name_by_coin = dict()
+  valid_coins = set()
+  valid_names = set()
   with open(args.coins_earliest_trade_dates, mode='r') as infile:
     reader = csv.reader(infile)
     reader.next()
@@ -147,38 +149,67 @@ if __name__ == '__main__':
       earliest_trade_date = row[2]
       earliest_trade_date_by_coin[coin] = earliest_trade_date
       name_by_coin[coin] = name
+      valid_coins.add(coin)
+      valid_names.add(name.lower())
 
   existing_coins_by_introduction_url = dict()
   existing_introduction_urls_by_coin = dict()
-  missing_introduction_urls_by_coin = dict()
+  missing_coin_name_introduction_urls_by_coin = dict()
+  missing_name_introduction_urls_by_coin = dict()
+  missing_coin_introduction_urls_by_coin = dict()
   invalid_introduction_urls_by_coin = dict()
+  mapofcoins_name_by_coin = dict()
   with open(args.coins_introduction_urls, mode='r') as infile:
     reader = csv.reader(infile)
     for row in reader:
       coin = row[0].upper()
-      url = row[1]
+      name = row[1].lower()
+      url = row[2]
+      mapofcoins_name_by_coin[coin] = name
       if 'bitcointalk' not in url:
         invalid_introduction_urls_by_coin[coin] = url
-      elif coin not in earliest_trade_date_by_coin:
-        missing_introduction_urls_by_coin[coin] = url
+      elif coin not in valid_coins and name not in valid_names:
+        missing_coin_name_introduction_urls_by_coin[coin] = url
+      elif coin not in valid_coins:
+        missing_coin_introduction_urls_by_coin[coin] = url
+      elif name not in valid_names:
+        missing_name_introduction_urls_by_coin[coin] = url
       else:
         existing_introduction_urls_by_coin[coin] = url
         existing_coins_by_introduction_url[url] = coin
 
  
-  # write coin introduction urls that appear in our trade dates
-  existing_coins_filename = os.path.join(args.output_dir, "existing.csv")
-  csvwriter = csv.writer(open(existing_coins_filename, 'w'), delimiter=',')
-  csvwriter.writerow(['symbol', 'introduction_url'])
+  # write coin introduction urls that appear in our valid name and symbols
+  existing_filename = os.path.join(args.output_dir, "existing.csv")
+  csvwriter = csv.writer(open(existing_filename, 'w'), delimiter=',')
+  csvwriter.writerow(['symbol', 'name', 'earliest_trade_date'])
   for coin, url in existing_introduction_urls_by_coin.iteritems():
-    csvwriter.writerow([coin, url])
+    name = mapofcoins_name_by_coin[coin]
+    csvwriter.writerow([coin, name, url])
   
-  # write coin introduction urls that do not appear in our trade dates
-  missing_price_coins_filename = os.path.join(args.output_dir, "missing_price.csv")
-  csvwriter = csv.writer(open(missing_price_coins_filename, 'w'), delimiter=',')
-  csvwriter.writerow(['symbol', 'introduction_url'])
-  for coin, url in missing_introduction_urls_by_coin.iteritems():
-    csvwriter.writerow([coin, url])
+  # write coin introduction urls that do not appear in our valid names and coins
+  missing_coin_name_filename = os.path.join(args.output_dir, "missing_coin_name.csv")
+  csvwriter = csv.writer(open(missing_coin_name_filename, 'w'), delimiter=',')
+  csvwriter.writerow(['symbol', 'name', 'earliest_trade_date'])
+  for coin, url in missing_coin_name_introduction_urls_by_coin.iteritems():
+    name = mapofcoins_name_by_coin[coin]
+    csvwriter.writerow([coin, name, url])
+  
+  # write coin introduction urls that do not appear in our valid names
+  missing_name_filename = os.path.join(args.output_dir, "missing_name.csv")
+  csvwriter = csv.writer(open(missing_name_filename, 'w'), delimiter=',')
+  csvwriter.writerow(['symbol', 'name', 'earliest_trade_date'])
+  for coin, url in missing_name_introduction_urls_by_coin.iteritems():
+    name = mapofcoins_name_by_coin[coin]
+    csvwriter.writerow([coin, name, url])
+  
+  # write coin introduction urls that do not appear in our valid coins
+  missing_coin_filename = os.path.join(args.output_dir, "missing_coin.csv")
+  csvwriter = csv.writer(open(missing_coin_filename, 'w'), delimiter=',')
+  csvwriter.writerow(['symbol', 'name', 'earliest_trade_date'])
+  for coin, url in missing_coin_introduction_urls_by_coin.iteritems():
+    name = mapofcoins_name_by_coin[coin]
+    csvwriter.writerow([coin, name, url])
 
   # write coins that do not appear in introduction list
   missing_url_coins_filename = os.path.join(args.output_dir, "missing_url.csv")
