@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import json, urllib2, csv
 from bs4 import BeautifulSoup
 import argparse
@@ -96,21 +98,26 @@ for coin in coinlist:
     if m is not None:
       url = re.sub(r'new$', '', url)
   
-    # if url does not end with .0, add one to end of topic number 
-    m = re.search(r'\.$', url)
-    if m is not None:
-      url = re.sub(r'\.$', '.0', url)
-
-    # if end misses .0, add it
-    m = re.search(r'[1-9]$', url)
-    if m is not None:
-      url = re.sub(r'$', '.0', url)
-    
     # remove ;all from the end
     m = re.search(r';all$', url)
     if m is not None:
       url = re.sub(r';all$', '', url)
+    
+    # if url does not end with .0, add one to end of topic number 
+    m = re.search(r'\.$', url)
+    if m is not None:
+      url = re.sub(r'\.$', '.0', url)
+    
+    # if end misses .0, add it
+    m = re.search(r'\.\d+$', url)
+    if m is not None:
+      url = re.sub(r'$\.\d+', '.0', url)
 
+    # if end misses .0, add it
+    m = re.search(r'\.\d$', url)
+    if m is None:
+      url = re.sub(r'$', '.0', url)
+    
     ann = url
 
   processed_list.append([str(symbol), str(name), str(children_amount), str(algorithm), str(technical), str(premine), str(pos)])		
