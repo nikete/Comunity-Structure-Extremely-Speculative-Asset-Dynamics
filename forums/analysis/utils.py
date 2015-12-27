@@ -109,7 +109,9 @@ def write_coin_users(users_output_filename,
   for coin, mentions_per_user in coin_mentions_per_user.iteritems():
     # don't output if coin has no earliest trade or mention date
     if (coin not in earliest_trade_date_by_coin or
-        coin not in earliest_mention_date_by_coin):
+        coin not in earliest_mention_date_by_coin or
+        coin not in name_by_coin or
+        coin not in network_date_by_coin):
       continue
     
     name = name_by_coin[coin]
@@ -181,8 +183,10 @@ def write_coin_user_urls(urls_output_filename,
 
   for coin, urls_per_user in coin_urls_per_user.iteritems():
     # don't output if coin has no earliest trade or mention date
+    # don't output if coin has no earliest trade or mention date
     if (coin not in earliest_trade_date_by_coin or
-        coin not in earliest_mention_date_by_coin):
+        coin not in earliest_mention_date_by_coin or
+        coin not in name_by_coin):
       continue
 
     name = name_by_coin[coin]
