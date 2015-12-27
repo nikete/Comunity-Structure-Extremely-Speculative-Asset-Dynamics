@@ -28,7 +28,7 @@ print 'coin, market, proportional difference'
 for coin in coins:
 	markets = coins[coin]['btc']
 	if 'cryptsy' in markets:
-		print coin,
+		coin_name = coin
 		cryptsy = json.load(open(str('ccc/'+coin+'-btc-cryptsy.json')))
 		if len(markets) > 1:
 			coin = {market: json.load(open(str('ccc/'+coin+'-btc-'+market+'.json'))) for market in markets if market != 'cryptsy'}
@@ -39,9 +39,9 @@ for coin in coins:
 					except KeyError:
 						i = -1
 					if i != -1:
-						print ', '.join([market, price['date'], str((price['price']-cryptsy[i]['price'])/cryptsy[i]['price'])])
+						print ', '.join([coin_name, market, price['date'], str((price['price']-cryptsy[i]['price'])/cryptsy[i]['price'])])
 		else:
-			print ', NaN, NaN'
+			print ', NaN, NaN, NaN'
 
 						
 '''
