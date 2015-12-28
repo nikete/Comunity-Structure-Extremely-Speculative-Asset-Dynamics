@@ -94,9 +94,9 @@ class PostsTracker:
                                  coin_by_modified_name)
     self.name_by_unmodified_coin = dict()
     coin_by_unmodified_name = dict()
-    utils.read_coin_name_symbols(args.modified_coins_earliest_trade_dates,
-                                 self.name_by_modified_coin,
-                                 coin_by_modified_name)
+    utils.read_coin_name_symbols(args.unmodified_coins_earliest_trade_dates,
+                                 self.name_by_unmodified_coin,
+                                 coin_by_unmodified_name)
    
     # mapping from coin to earliest mention in the forum or earliest mention in the first
     # post of a new thread.

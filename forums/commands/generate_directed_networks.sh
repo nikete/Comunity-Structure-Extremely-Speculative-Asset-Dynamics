@@ -1,4 +1,4 @@
-INPUT_FILE="/home/eaman/research/bitcoin/processed-data/forums-posts-with-modified-symbol-or-name-unmodified-symbol-and-name-sorted-by-time.csv"
+INPUT_FILE="/home/eaman/research/bitcoin/forum-data/unmodified-symbol-or-name-in-subject----unmodified-symbol-or-name-in-subject-sorted-by-time.csv"
 OUTPUT_DIR="/home/eaman/research/bitcoin/networks"
 
 ./analysis/generate_networks_timed.py $INPUT_FILE ${OUTPUT_DIR}/directed_90days/ -dn -hd 90
