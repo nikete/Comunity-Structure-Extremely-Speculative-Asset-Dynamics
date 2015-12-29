@@ -235,18 +235,19 @@ fieldnames_coindata = [
 ]
 coins = []
 #coins = scrape_coins()
-with open('../coindata.csv') as csvfile:
-	reader = csv.DictReader(csvfile)
-	for coin in reader:
-		coins.append(coin)
+if os.path.isfile('../coindata.csv'):
+	with open('../coindata.csv') as csvfile:
+		reader = csv.DictReader(csvfile)
+		for coin in reader:
+			coins.append(coin)
+else:
+	coins = scrape_coins()
+	with open('../coindata.csv','wb') as csvfile:
+		writer = csv.DictWriter(csvfile, fieldnames_coindata)
+		writer.writeheader()
+		for coin in coins:
+			writer.writerow({'symbol': coin, 'slug': coins[coin]['slug'], 'coin_name':coins[coin]['coin_name']})
 
-'''
-with open('coindata.csv','wb') as csvfile:
-	writer = csv.DictWriter(csvfile, fieldnames_coindata)
-	writer.writeheader()
-	for coin in coins:
-		writer.writerow({'symbol': coin, 'slug': coins[coin]['slug'], 'coin_name':coins[coin]['coin_name']})
-'''
 '''
 with open('modified.csv', 'wb') as csvfile:
 	writer = csv.DictWriter(csvfile, fieldnames_modified_to_be_unique)
