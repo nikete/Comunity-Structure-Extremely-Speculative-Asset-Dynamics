@@ -228,7 +228,7 @@ if __name__ == '__main__':
           output_row.extend([subject, content])
         post_timestamp = " ".join([date, time])
         posts_keyed_by_timestamp[post_timestamp].append(output_row)
-    infile.close()
+      infile.close()
 
   print("Sorting the posts by timestamp...")
   posts_keyed_by_timestamp_sorted = collections.OrderedDict(
