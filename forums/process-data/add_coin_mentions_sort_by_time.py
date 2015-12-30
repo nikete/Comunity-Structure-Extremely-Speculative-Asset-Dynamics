@@ -228,21 +228,21 @@ if __name__ == '__main__':
           output_row.extend([subject, content])
         post_timestamp = " ".join([date, time])
         posts_keyed_by_timestamp[post_timestamp].append(output_row)
-      infile.close()
+    infile.close()
 
-    print("Sorting the posts by timestamp...")
-    posts_keyed_by_timestamp_sorted = collections.OrderedDict(
-        sorted(posts_keyed_by_timestamp.items()))
-    print("Finished sorting the posts by timestamp")
-    
-    # prepare output file and write header to output
-    output_dir = os.path.dirname(args.output)
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-    output_file = open(args.output, 'w')
-    csvwriter = csv.writer(output_file, delimiter=',')
-    csvwriter.writerow(header)
-    for timestamp_rows in posts_keyed_by_timestamp_sorted.itervalues():
-        for timestamp_row in timestamp_rows:
-            csvwriter.writerow(timestamp_row)
+  print("Sorting the posts by timestamp...")
+  posts_keyed_by_timestamp_sorted = collections.OrderedDict(
+      sorted(posts_keyed_by_timestamp.items()))
+  print("Finished sorting the posts by timestamp")
+  
+  # prepare output file and write header to output
+  output_dir = os.path.dirname(args.output)
+  if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+  output_file = open(args.output, 'w')
+  csvwriter = csv.writer(output_file, delimiter=',')
+  csvwriter.writerow(header)
+  for timestamp_rows in posts_keyed_by_timestamp_sorted.itervalues():
+    for timestamp_row in timestamp_rows:
+      csvwriter.writerow(timestamp_row)
 
