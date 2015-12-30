@@ -99,9 +99,13 @@ class PostsTracker:
     """
     self._update_user_activity(self.num_subjects_per_user, user, date_time)
   
-  def add_coin_announcement(self, coin, user, date_time, new_subject, url):
+  def add_coin_announcement(self, coin, started_by, user, date_time, new_subject, url):
     if coin in self.first_mention_date_by_coin:
       return
+    
+    if started_by != user:
+      print ('error: started_by:' + started_by + ' is not the same as user: ' + user +
+             'for introduction_url: ' + url)
 
     # the following code should happen only once, so we overwrite.
     self.first_mention[coin][user] = 1
@@ -148,48 +152,53 @@ if __name__ == '__main__':
       earliest_trade_date_by_coin[coin] = earliest_trade_date
       name_by_coin[coin] = name
 
-  existing_coins_by_introduction_url = dict()
-  existing_introduction_urls_by_coin = dict()
+  matching_coins_by_introduction_url = dict()
+  matching_introduction_urls_by_coin = dict()
   missing_introduction_urls_by_coin = dict()
   invalid_introduction_urls_by_coin = dict()
   with open(args.coins_introduction_urls, mode='r') as infile:
     reader = csv.reader(infile)
     for row in reader:
       coin = row[0].upper()
-      url = row[1]
+      url = row[2]
       if 'bitcointalk' not in url:
         invalid_introduction_urls_by_coin[coin] = url
       elif coin not in earliest_trade_date_by_coin:
         missing_introduction_urls_by_coin[coin] = url
       else:
-        existing_introduction_urls_by_coin[coin] = url
-        existing_coins_by_introduction_url[url] = coin
+        matching_introduction_urls_by_coin[coin] = url
+        matching_coins_by_introduction_url[url] = coin
 
  
   # write coin introduction urls that appear in our trade dates
-  existing_coins_filename = os.path.join(args.output_dir, "existing.csv")
-  csvwriter = csv.writer(open(existing_coins_filename, 'w'), delimiter=',')
+  matching_coins_filename = os.path.join(args.output_dir,
+                                         "matching_between_coinlist_introductionurls.csv")
+  csvwriter = csv.writer(open(matching_coins_filename, 'w'), delimiter=',')
   csvwriter.writerow(['symbol', 'introduction_url'])
-  for coin, url in existing_introduction_urls_by_coin.iteritems():
+  for coin, url in matching_introduction_urls_by_coin.iteritems():
     csvwriter.writerow([coin, url])
   
-  # write coin introduction urls that do not appear in our trade dates
-  missing_price_coins_filename = os.path.join(args.output_dir, "missing_price.csv")
+  # write coin introduction urls that do not appear in our trade dates but appear in
+  # introduction urls
+  missing_price_coins_filename = os.path.join(args.output_dir,
+                                              "missing_from_coinlist.csv")
   csvwriter = csv.writer(open(missing_price_coins_filename, 'w'), delimiter=',')
   csvwriter.writerow(['symbol', 'introduction_url'])
   for coin, url in missing_introduction_urls_by_coin.iteritems():
     csvwriter.writerow([coin, url])
 
-  # write coins that do not appear in introduction list
-  missing_url_coins_filename = os.path.join(args.output_dir, "missing_url.csv")
-  csvwriter = csv.writer(open(missing_url_coins_filename, 'w'), delimiter=',')
+  # write coins that do not appear in introduction list but we have price data for them
+  missing_introduction_coins_filename = os.path.join(args.output_dir,
+                                                     "missing_from_introductionurls.csv")
+  csvwriter = csv.writer(open(missing_introduction_coins_filename, 'w'), delimiter=',')
   csvwriter.writerow(['symbol', 'name', 'earliest_trade_date'])
   for coin, earliest_trade_date in earliest_trade_date_by_coin.iteritems():
-    if coin in existing_introduction_urls_by_coin:
+    if coin in matching_introduction_urls_by_coin:
       continue
     name = name_by_coin[coin]
     csvwriter.writerow([coin, name, earliest_trade_date])
-  
+ 
+  coins_with_matching_urls = set()
   
   with open(args.forum_input, mode='r') as infile:
     reader = csv.reader(infile)
@@ -216,9 +225,24 @@ if __name__ == '__main__':
         posts_tracker.add_user_subject(user, date_time)
       
       # check whether url exists in introduction urls and get the coin
-      if url in existing_coins_by_introduction_url:
-        coin = existing_coins_by_introduction_url[url]
-        posts_tracker.add_coin_announcement(coin, user, date_time, new_subject, url)
-
+      if url in matching_coins_by_introduction_url:
+        coin = matching_coins_by_introduction_url[url]
+        posts_tracker.add_coin_announcement(coin, started_by, user, date_time,
+                                            new_subject, url)
+        coins_with_matching_urls.add(coin)
+        
   # After we have processed all the posts, write the user sets.  
   posts_tracker.write_coin_announcements()
+  
+  # write coins that appear in our introduction list, but their url is missing from forum
+  # data
+  matching_coins = set(matching_introduction_urls_by_coin.keys())
+  coins_missing_urls = matching_coins - coins_with_matching_urls
+  missing_url_forums_filename = os.path.join(args.output_dir,
+                                             "missing_url_from_forums.csv")
+  csvwriter = csv.writer(open(missing_url_forums_filename, 'w'), delimiter=',')
+  csvwriter.writerow(['symbol', 'name', 'url'])
+  for coin in coins_missing_urls:
+    name = name_by_coin[coin]
+    url = matching_introduction_urls_by_coin[coin]
+    csvwriter.writerow([coin, name, url])
