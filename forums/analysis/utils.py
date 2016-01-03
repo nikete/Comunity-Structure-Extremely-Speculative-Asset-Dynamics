@@ -236,9 +236,10 @@ def read_earliest_trade_dates(introduction_dates_file,
     reader = csv.reader(infile)
     next(reader, None)  # skip the headers
     for row in reader:
+      coin = row[1].upper()
       earliest_trade_date = datetime.datetime.strptime(row[2], '%Y-%m-%d').date()
-      earliest_trade_date_by_coin[row[1]] = earliest_trade_date
-      coins_by_earliest_trade_date[earliest_trade_date].add(row[1])
+      earliest_trade_date_by_coin[coin] = earliest_trade_date
+      coins_by_earliest_trade_date[earliest_trade_date].add(coin)
 
 def read_coin_name_symbols(input_file,
                            name_by_coin,
@@ -248,7 +249,7 @@ def read_coin_name_symbols(input_file,
     next(reader, None)  # skip the headers
     for row in reader:
       name = row[0]
-      coin = row[1]
+      coin = row[1].upper()
       name_by_coin[coin] = name
       coin_by_name[name] = coin
 
@@ -273,8 +274,8 @@ def extract_fields_from_row(input_row):
   user_activity = input_row[11]
   date = input_row[12]
   time = input_row[13]
-  mentioned_modified_coins = [x for x in input_row[14].split('|') if x]
-  mentioned_unmodified_coins = [x for x in input_row[15].split('|') if x]
+  mentioned_modified_coins = [x.upper() for x in input_row[14].split('|') if x]
+  mentioned_unmodified_coins = [x.upper() for x in input_row[15].split('|') if x]
  
   # composite fields
   date_time = datetime.datetime.strptime(date + ' ' + time, '%Y-%m-%d %H:%M:%S')
