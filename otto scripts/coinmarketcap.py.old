@@ -1,0 +1,298 @@
+import csv
+import urllib2, json
+import operator
+from pprint import pprint
+from bs4 import BeautifulSoup
+import os
+from os import path
+import re
+import ast
+from time import strftime
+from datetime import datetime
+
+def get_prices(basecoin, btcusd):
+    pricevolumes = []
+    priceurl = 'https://api.coinmarketcap.com/v1/datapoints/'+basecoin+'/'
+    try:
+        prices = ast.literal_eval(urllib2.urlopen(priceurl).read())
+    except urllib2.HTTPError:
+        return pricevolumes        
+    try:
+        if btcusd == 'BTC':
+            for price in prices['price_btc']:
+                for volume in prices['volume_btc']:
+                    if price[0] == volume[0]:
+                        pricevolumes.append({'price':float(price[1]), 'volume':int(volume[1]), 'date':volume[0]})
+            return pricevolumes
+        if btcusd == 'USD':
+            for price in prices['price_usd']:
+                for volume in prices['volume_usd']:
+                    if price[0] == volume[0]:
+                        pricevolumes.append({'price':float(price[1]), 'volume':int(volume[1]), 'date':volume[0]})
+            return pricevolumes
+    except KeyError, IndexError:
+        pass        
+
+
+def find_index(lst, key, value):
+    for i, dic in enumerate(lst):
+        if dic[key] == value:
+            return i
+    return -1
+
+def scrape_coins():
+    url = 'http://coinmarketcap.com/all/views/all/'
+    html = urllib2.urlopen(url).read()
+    soup = BeautifulSoup(html, 'html.parser')
+    tr = soup.findAll('tr')
+    coins = {}
+    for c in tr:
+        try:
+            symbol = c.find('td',{'class':'text-left'}).text
+            slug = c.find('td', {'class':'no-wrap currency-name'}).a['href']
+            unique_name = slug.replace('currencies','').replace('/','').replace('assets','').lower()
+            url2 = 'http://coinmarketcap.com' + slug
+            html2 = urllib2.urlopen(url2).read()
+            soup2 = BeautifulSoup(html2, 'html.parser')
+            coins[symbol] = {'slug': unique_name, 'coin_name':soup2.find('h1',{'class':'text-large'}).text.rstrip().lstrip().split(' (')[0]}
+        except AttributeError:
+            pass
+    return coins
+
+def scrape_markets(coin):
+    url = str('http://coinmarketcap.com/currencies/'+ coin +'/#markets')
+    try:
+        html = urllib2.urlopen(url).read()
+    except:
+        return []
+    soup = BeautifulSoup(html, 'html.parser')
+    tr = soup.findAll('tr')
+    markets = []
+    for c in tr:
+        if len(c.findAll('td')) == 7:
+            market = c.findAll('td')[1].text
+            markets.append(market)
+    return markets
+
+def get_csvs_recursive(directory_path):
+    files = []
+    for x in os.listdir(directory_path):
+        if '.csv' in x and '_severity' not in x:
+            files.append(os.path.join(directory_path, x))
+        if os.path.isdir(os.path.join(directory_path, x)):
+            files = files + get_csvs_recursive(os.path.join(directory_path, x))
+    return files
+
+def analyze_coin(coin, btcusd):
+    try:
+        if btcusd == 'BTC':
+            prices = sorted(list(get_prices(coin['slug'], 'BTC')), key = lambda k:k['date'])
+        elif btcusd == 'USD':
+            prices = sorted(list(get_prices(coin['slug'], 'USD')), key = lambda k:k['date'])
+        else:
+            print 'Wrong parameter, USD or BTC'
+            return 0
+        markets = scrape_markets(coin['slug'])
+        if len(prices) > 0:
+            try:
+                max_price = max(prices, key = operator.itemgetter('price'))['price']
+            except ValueError:
+                max_price = 0
+            try:
+                min_price = min(prices, key = operator.itemgetter('price'))['price']
+            except ValueError:
+                min_price = 0
+            index_max = find_index(prices, 'price', max_price)
+            try:
+                min_price_after_max = (min(prices[index_max:], key = operator.itemgetter('price'))['price'])
+            except ValueError:
+                min_price_after_max = 0
+            last_price = prices[-1]['price']
+            average = sum(map(lambda x: x['price'],prices))/len(prices)
+            average_after_max = sum(map(lambda x: x['price'],prices[index_max:]))/len(prices[index_max:])
+            active_days = (int(prices[-1]['date']/1000)-int(prices[0]['date']/1000))/86400
+            active_days_before_max = (int(prices[index_max-1]['date']/1000)-int(prices[0]['date']/1000))/86400
+            try:
+                average_volume_weighted = sum(map(lambda x: x['price']*x['volume'],prices))/sum(map(lambda x: x['volume'],prices))
+                average_volume_weighted_after_max = sum(map(lambda x: x['price']*x['volume'],prices[index_max:]))/sum(map(lambda x: x['volume'],prices[index_max:]))
+            except ZeroDivisionError, UnboundLocalError:
+                average_volume_weighted = 0
+                average_volume_weighted_after_max = 0
+            
+            total_volume = sum(map(lambda x: x['volume'],prices))
+            total_volume_before_max = sum(map(lambda x: x['volume'],prices[:index_max-1])) 
+            market_num = len(markets)
+        try:
+            severity_to_min_price = max_price/min_price
+        except ZeroDivisionError, UnboundLocalError:
+            severity_to_min_price = 'NaN'
+        try:
+            severity_to_min_price_after_max = max_price/min_price_after_max
+        except ZeroDivisionError, UnboundLocalError:
+            severity_to_min_price_after_max = 'NaN'
+        try:
+            severity_to_last = max_price/last_price
+        except ZeroDivisionError, UnboundLocalError:
+            severity_to_last = 'NaN'
+        try:
+            severity_to_average = max_price/average
+        except ZeroDivisionError, UnboundLocalError:
+            severity_to_average = 'NaN'
+        try:
+            severity_to_average_after_max = max_price/average_after_max
+        except ZeroDivisionError, UnboundLocalError:
+            severity_to_average_after_max = 'NaN'
+        try:
+            severity_to_average_volume_weighted = max_price/average_volume_weighted
+        except ZeroDivisionError, UnboundLocalError:
+            severity_to_average_volume_weighted = 'NaN'
+        try:
+            severity_to_average_after_max_volume_weighted = max_price/average_volume_weighted_after_max
+        except ZeroDivisionError, UnboundLocalError:
+            severity_to_average_after_max_volume_weighted = 'NaN'
+        try:
+            normalized_total_volume = total_volume/active_days
+        except ZeroDivisionError, UnboundLocalError:
+            normalized_total_volume = 'NaN'
+        try:
+            normalized_total_volume_before_max = total_volume_before_max/active_days_before_max
+        except ZeroDivisionError, UnboundLocalError:
+            normalized_total_volume_before_max = 'NaN'
+        coin['severity_to_min_price'] = severity_to_min_price
+        coin['max_price'] = max_price
+        coin['min_price'] = min_price
+        coin['severity_to_min_price_after_max'] = severity_to_min_price_after_max
+        coin['severity_to_last'] = severity_to_last
+        coin['severity_to_average'] = severity_to_average
+        coin['severity_to_average_after_max'] = severity_to_average_after_max
+        coin['severity_to_average_volume_weighted'] = severity_to_average_volume_weighted
+        coin['severity_to_average_after_max_volume_weighted'] = severity_to_average_after_max_volume_weighted
+        coin['total_volume'] = total_volume
+        coin['market_num'] = market_num
+        coin['first_trade'] = datetime.fromtimestamp(int(prices[0]['date']/1000)).strftime('%Y-%m-%d')
+        coin['normalized_total_volume'] = normalized_total_volume
+        coin['normalized_total_volume_before_max'] = normalized_total_volume_before_max
+
+        if 'BTC-E' in markets:
+            coin['BTC-E'] = True
+        else:
+            coin['BTC-E'] = False
+        if 'Kraken' in markets:
+            coin['Kraken'] = True
+        else:
+            coin['Kraken'] = False
+        if 'Poloniex' in markets:
+            coin['Poloniex'] = True
+        else:
+            coin['Poloniex'] = False
+        if 'Cryptsy' in markets:
+            coin['Cryptsy'] = True
+        else:
+            coin['Cryptsy'] = False
+        if 'BTC38' in markets:
+            coin['BTC38'] = True
+        else:
+            coin['BTC38'] = False
+        if 'BTER' in markets:
+            coin['BTER'] = True
+        else:
+            coin['BTER'] = False
+        if 'Bittrex' in markets:
+            coin['Bittrex'] = True
+        else:
+            coin['Bittrex'] = False
+    except TypeError, IndexError:
+        pass
+    return coin
+
+fieldnames = [
+'symbol',
+'slug',
+'coin_name',
+'max_price',
+'min_price',
+'severity_to_min_price',
+'severity_to_min_price_after_max',
+'severity_to_last','severity_to_average',
+'severity_to_average_after_max',
+'severity_to_average_volume_weighted',
+'severity_to_average_after_max_volume_weighted',
+'normalized_total_volume',
+'normalized_total_volume_before_max',
+'total_volume',
+'market_num',
+'BTC-E',
+'Kraken',
+'Poloniex',
+'Cryptsy',
+'BTC38',
+'BTER',
+'Bittrex',
+'first_trade',
+]
+fieldnames_modified_to_be_unique = [
+'symbol',
+'coin_name'
+]
+fieldnames_unmodified = [
+'symbol',
+'coin_name'
+]
+fieldnames_coindata = [
+'symbol',
+'coin_name',
+'slug'
+]
+coins = []
+#coins = scrape_coins()
+if os.path.isfile('../coindata.csv'):
+    with open('../coindata.csv') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for coin in reader:
+            coins.append(coin)
+else:
+    coins = scrape_coins()
+    with open('../coindata.csv','wb') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames_coindata)
+        writer.writeheader()
+        for coin in coins:
+            writer.writerow({'symbol': coin, 'slug': coins[coin]['slug'], 'coin_name':coins[coin]['coin_name']})
+
+'''
+with open('modified.csv', 'wb') as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames_modified_to_be_unique)
+    writer.writeheader()
+    for coin in coins:
+        writer.writerow({'symbol': coin, 'coin_name': coins[coin]['slug']})
+
+with open('unmodified.csv', 'wb') as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames_unmodified)
+    writer.writeheader()
+    for coin in coins:
+        writer.writerow({'symbol': coin, 'coin_name': coins[coin]['coin_name']})
+'''
+coinusd = []
+coinbtc = []
+for i, coin in enumerate(coins):
+    print i+1, 'of', len(coins), coin['coin_name']
+    coinusd.append(analyze_coin(coin, 'USD'))
+    coinbtc.append(analyze_coin(coin, 'BTC'))
+
+with open('fullusd.csv','wb') as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames)
+    writer.writeheader()
+    for coin in coinusd:
+        writer.writerow(coin)
+
+with open('fullbtc.csv','wb') as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames)
+    writer.writeheader()
+    for coin in coinbtc:
+        writer.writerow(coin)
+'''
+with open('coinmarketanalisis.csv', 'wb') as csv:
+    csv.write('coin, '+', '.join(buffer_['coin'])+'\n')
+    for coin in buffer_:
+        if coin is not 'coin':
+            csv.write(str(coin+ ', '+', '.join(map(lambda x: str(x), buffer_[coin]))+'\n'))
+'''
