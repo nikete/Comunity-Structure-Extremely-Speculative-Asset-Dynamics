@@ -93,6 +93,11 @@ def analyze_prices(prices, markets, pair):
             active_days_before_max = (int(prices[index_max]['date']/1000)-int(prices[0]['date']/1000))/86400
         else:
             active_days_before_max = 0
+        # add one day to all active days so if the max happens to be in first date, active
+        # days does not become zero. It correctly corresponds to end of the first day.
+        active_days += 1
+        active_days_before_max += 1
+        
         try:
             average_volume_weighted = sum(map(lambda x: x[pair]*x['volume'],prices))/sum(map(lambda x: x['volume'],prices))
             average_volume_weighted_after_max = sum(map(lambda x: x[pair]*x['volume'],prices[index_max:]))/sum(map(lambda x: x['volume'],prices[index_max:]))
