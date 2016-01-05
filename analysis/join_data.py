@@ -6,7 +6,6 @@ import os
 import csv
 import sys
 import collections
-import igraph
 import datetime
 import operator
 import pandas
@@ -16,10 +15,11 @@ parser = argparse.ArgumentParser(
     'file. Falls back on remaining files in order.')
 parser.add_argument('price_metric_file',
                     help='The location of CSV file containing price metrics.')
-parser.add_argument('trivialness_file',
-                    help='The location of CSV file containing trivialness.')
 parser.add_argument('network_metric_files', nargs='+',
                     help='The location of CSV file containing network metrics.')
+parser.add_argument('-t', dest='trivialness_file',
+                    help='The location of CSV file containing trivialness. If given, '
+                    'data will also be joined against trivialness.')
 parser.add_argument('output_file',
                     help='Location of joined output csv file.')
 parser.add_argument("-d", "--max_days_btwn_trade_introduction",
@@ -32,12 +32,19 @@ parser.add_argument("-d", "--max_days_btwn_trade_introduction",
 args = parser.parse_args()
 
 if __name__ == '__main__':
-  price_metrics = pandas.read_csv(args.price_metric_file, sep = ',', parse_dates = [21])
-  trivialness = pandas.read_csv(args.trivialness_file, sep = ',')
+  price_metrics = pandas.read_csv(args.price_metric_file, sep = ',', parse_dates = [23])
+  price_metrics['symbol'] = map(lambda x: x.upper(), price_metrics['symbol'])
   all_network_metrics = list()
   for network_file in args.network_metric_files:
-    network_metrics = pandas.read_csv(network_file, sep = ',', parse_dates = [1,2])
+    network_metrics = pandas.read_csv(network_file, sep = ',', parse_dates = [2,3,4])
+    network_metrics['coin'] = map(lambda x: x.upper(), network_metrics['coin'])
     all_network_metrics.append(network_metrics)
+  
+  join_trivialness = False
+  if args.trivialness_file:
+    trivialness = pandas.read_csv(args.trivialness_file, sep = ',')
+    trivialness['coin'] = map(lambda x: x.upper(), trivialness['coin'])
+    join_trivialness = True
 
   price_joined_networks = None
   for network_metrics in all_network_metrics:
@@ -46,11 +53,12 @@ if __name__ == '__main__':
                           how='inner',
                           left_on='symbol',
                           right_on='coin')
-    joined = pandas.merge(joined,
-                          trivialness,
-                          how='inner',
-                          left_on='symbol',
-                          right_on='coin')
+    if join_trivialness:
+      joined = pandas.merge(joined,
+                            trivialness,
+                            how='inner',
+                            left_on='symbol',
+                            right_on='coin')
     if price_joined_networks is None:
       price_joined_networks = joined
     else:
@@ -70,7 +78,11 @@ if __name__ == '__main__':
     print 'Joined ' + str(len(joined_coins)) + ' coins'
     print ''
 
-  price_joined_networks['diff'] = (price_joined_networks['earliest_trade_date'] -
+  network_coins_missing = set(network_metrics['coin']) - set(price_joined_networks['symbol'])
+  print 'Coins from networks data missing: ' + str(network_coins_missing)
+  price_coins_missing = set(price_metrics['symbol']) - set(price_joined_networks['symbol'])
+  print 'Coins from price data missing: ' + str(price_coins_missing)
+  price_joined_networks['diff'] = (price_joined_networks['earliest_mention_date'] -
                                    price_joined_networks['network_date'])
   num_original_coins = len(price_joined_networks.index)
   price_joined_networks = price_joined_networks[price_joined_networks['diff'] <
@@ -78,15 +90,16 @@ if __name__ == '__main__':
   num_verified_coins = len(price_joined_networks.index)
   print ('Removed ' + str(num_original_coins - num_verified_coins) + ' coins which had '
          'more than ' + str(args.max_days_btwn_trade_introduction) + ' between '
-         'introduction and earliest trade date.')
+         'network and earliest mention date.')
   
 
   price_columns = list(price_metrics.columns.values)
   network_columns = list(all_network_metrics[0].columns.values)
-  trivial_columns = list(trivialness.columns.values)
   columns_to_write = price_columns
   columns_to_write.extend(network_columns)
-  columns_to_write.extend(trivial_columns)
+  if join_trivialness:
+    trivial_columns = list(trivialness.columns.values)
+    columns_to_write.extend(trivial_columns)
   columns_to_write = [x for x in columns_to_write
                       if x not in ['coin', 'coin_x', 'coin_y', 'slug']]
   price_joined_networks.to_csv(args.output_file, index=False, columns = columns_to_write)
