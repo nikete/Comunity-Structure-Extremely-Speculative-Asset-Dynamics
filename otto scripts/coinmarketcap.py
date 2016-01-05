@@ -230,10 +230,11 @@ coins = scrape_coins()
 btc_analysis = []
 usd_analysis = []
 for coin in coins:
+    print coin
     for pair in ['usd','btc']:
         prices = get_prices(coins[coin]['slug'])
         markets = scrape_markets(coins[coin]['slug'])
-        analysis = analyze_prices(prices, markets, 'btc')
+        analysis = analyze_prices(prices, markets, pair)
         result = analysis.copy()
         result.update({'symbol': coin})
         result.update(coins[coin])
@@ -242,13 +243,6 @@ for coin in coins:
         if pair == 'usd':
             usd_analysis.append(result)
       
-
-# <codecell>
-
-print usd_analysis
-
-# <codecell>
-
 with open('fullusd.csv','wb') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames)
     writer.writeheader()
@@ -259,13 +253,3 @@ with open('fullbtc.csv','wb') as csvfile:
     writer.writeheader()
     for coin in btc_analysis:
         writer.writerow(coin)
-
-# <codecell>
-
-
-# <codecell>
-
-
-# <codecell>
-
-
