@@ -104,9 +104,11 @@ def analyze_prices(prices, markets, pair):
         except ZeroDivisionError, UnboundLocalError:
             average_volume_weighted = 0
             average_volume_weighted_after_max = 0
-            
+        
+        # add one to index max for volume before max, so that the volume of the max day is
+        # also counted.
         total_volume = sum(map(lambda x: x['volume'],prices))
-        total_volume_before_max = sum(map(lambda x: x['volume'],prices[:index_max])) 
+        total_volume_before_max = sum(map(lambda x: x['volume'],prices[:index_max+1])) 
         market_num = len(markets)
         try:
             severity_to_min_price = max_price/min_price
