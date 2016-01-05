@@ -6,12 +6,12 @@ library(stargazer)
 setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
 source("analysis/elastic_net.R")
 setwd(dir = "data")
-#data = read.csv(file = "joined_with_fallback.csv", header = TRUE, sep = ",")
-data = read.csv(file = "joined_with_fallback_d200.csv", header = TRUE, sep = ",")
-#data = read.csv(file = "joined_with_fallback_d100.csv", header = TRUE, sep = ",")
+data = read.csv(file = "joined_price_network.csv", header = TRUE, sep = ",")
+data$earliest_mention_date = as.character(data$earliest_mention_date, format = "%Y-%m-%d")
 data$network_date = as.character(data$network_date, format = "%Y-%m-%d")
 data$earliest_trade_date = as.character(data$earliest_trade_date, format = "%Y-%m-%d")
 data$log_severity_to_average_after_max_volume_weighted = log(data$severity_to_average_after_max_volume_weighted)
+data$magnitude = data$normalized_total_volume_before_max / data$normalized_total_volume
 # add interaction terms
 data$user1_clustering_coefficient_nontrivial = data$user1_clustering_coefficient * data$nontrivial
 data$user1_closeness_centrality_weighted_nontrivial = data$user1_closeness_centrality_weighted * data$nontrivial
@@ -24,6 +24,7 @@ data$user1_degree_outgoing_nontrivial = data$user1_degree_outgoing * data$nontri
 data$user1_satoshi_distance_inf = data$user1_satoshi_distance>7
 data$user1_satoshi_distance[data$user1_satoshi_distance_inf] = 7
 
+data = data[data$symbol != "BTC",]
 
 data_size = nrow(data)
 # 60% train
@@ -52,28 +53,28 @@ all_independent_vars =  c("user1_num_posts",
                           "user1_satoshi_pagerank_unweighted",
                           "user1_satoshi_pagerank_weighted",
                           "user1_pagerank_unweighted",
-                          "user1_pagerank_weighted",
+                          "user1_pagerank_weighted")
                           "nontrivial")
 cor(train_data[,all_independent_vars])
-cor(train_data[,all_independent_vars])>0.95
+cor(train_data[,all_independent_vars])>0.9
 good_independent_vars =  c("user1_num_posts",
                            "user1_num_subjects",
                            "user1_days_since_first_post",
                            "user1_degree_incoming",
-                           "user1_degree_incoming_nontrivial",
+                           #"user1_degree_incoming_nontrivial",
                            "user1_degree_outgoing",
-                           "user1_degree_outgoing_nontrivial",
+                           #"user1_degree_outgoing_nontrivial",
                            "user1_clustering_coefficient",
-                           "user1_clustering_coefficient_nontrivial",
+                           #"user1_clustering_coefficient_nontrivial",
                            "user1_closeness_centrality_weighted",
-                           "user1_closeness_centrality_weighted_nontrivial",
+                           #"user1_closeness_centrality_weighted_nontrivial",
                            "user1_betweenness_centrality_weighted",
-                           "user1_betweenness_centrality_weighted_nontrivial",
+                           #"user1_betweenness_centrality_weighted_nontrivial",
                            "user1_satoshi_pagerank_weighted",
-                           "user1_satoshi_pagerank_weighted_nontrivial",
-                           "user1_pagerank_weighted",
-                           "user1_pagerank_weighted_nontrivial",
-                           "nontrivial")
+                           #"user1_satoshi_pagerank_weighted_nontrivial",
+                           "user1_pagerank_weighted")
+                           #"user1_pagerank_weighted_nontrivial",
+                           #"nontrivial")
 cor(train_data[,good_independent_vars])>0.9
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
@@ -101,7 +102,7 @@ summary(lmfit)
 oldpar = par(mfrow = c(2,2))
 plot(lmfit, las=1)
 par(oldpar)
-train_data[which(cooks.distance(lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
+train_data[which(cooks.distance(lmfit) > 30/nrow(train_data)), c("coin_name", "symbol", dependent_var, nonzero_coefs)]
 
 # get robust standard errors
 robust_se = diag(vcovHC(lmfit, type="HC"))^0.5
@@ -382,7 +383,7 @@ nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
 model6_lmfit = lm(as.formula(lm_formula), train_data)
-model6_lm_sum = summary(model7_lmfit)
+model6_lm_sum = summary(model6_lmfit)
 model6_lm_sum
 
 # investigate the assumption of ols
@@ -469,14 +470,28 @@ model7_wlmfit = lm(as.formula(lm_formula), train_data, weights=model7_rlmfit$w)
 summary(model7_wlmfit)
 
 
-
-# Create the table
+cov.labels = c("num subject",
+               "days since first post",
+               "incoming degree",
+               "satoshi pagerank",
+               "clustering coefficient",
+               "closeness centrality",
+               "betweenness centrality")
+depvar.label = c("Severity")
 stargazer(model1_wlmfit,
-          model2_wlmfit,
+          #model2_wlmfit,
           model3_wlmfit,
           model4_wlmfit,
-          model5_wlmfit,
+          #model5_wlmfit,
           model6_wlmfit,
-          model7_wlmfit,
-          dep.var.labels=c("Model1","Model2"),
-          title="Results", align=TRUE)
+          #model7_wlmfit,
+          dep.var.labels=depvar.label,
+          column.labels=c("Model1","Model3", "Model4", "Model6"),
+          column.sep.width = "3pt",
+          omit.table.layout = "#",
+          df = FALSE,
+          title="", align=TRUE,
+          covariate.labels = cov.labels,
+          float.env = "table*",
+          digits = 3,
+          out="../tables/log_severity_without_trivialness.tex")
