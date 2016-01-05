@@ -11,6 +11,7 @@
 \usepackage{color}
 \usepackage{subfigure}
 \usepackage{hyperref}
+\usepackage{dcolumn}
 
 \frenchspacing
 \setlength{\pdfpagewidth}{8.5in}
@@ -20,7 +21,8 @@
 Forever Blowing Blockchains: Social Structure \& Speculative Bubbles
 /Nicolas Della Penna, Eaman Jahani, Peter Krafft, Octavio Bunge, Harper Reed, Alex "Sandy" Pentland, Julain McAuley}
 \setcounter{secnumdepth}{0}  
- \begin{document}
+
+\begin{document}
 % The file aaai.sty is the style file for AAAI Press 
 % proceedings, working notes, and technical reports.
 %
@@ -80,7 +82,7 @@ jmcauley@cse.ucsd.edu
 We study the power of structural features of the social network around cryptocurrencies to understand the severity and magnitude of bubbles. 
 We introduce a novel dataset that combines measures of the social network surrounding the introduction of coins in online cryptocurrency forums, the trading  behavior across marketplaces, and the presence of nontrivial changes to the source code in relation to previous coins.
 Our networks are constructed based on the intensity of social interactions in the main discussion forum of cryptocurrencies. All the structural features of the network are measured based on the state of the social network before the relevant cryptocurrency is ever traded; therefore allowing for predictions into the future by avoiding any possible confounding between the prices and community attention.
-Our study reveals that structural features of the network and the nature of the source code changes achieve substantial predictive power on the severity of trading price bubbles.
+Our study reveals that structural features of the network and the nature of the source code changes achieve substantial predictive power on the severity of trading price bubbles. In particular, merely the structural position of users who introduce new coins in the forum, before the coins have been even traded,  explains  20\% of variation in bubble severities.
 
 \end{abstract}
 
@@ -113,8 +115,7 @@ Our study reveals that structural features of the network and the nature of the 
 
 \section{Results}
 \input{results.tex}
-\input{tables/log_severity_forumOR.tex}
-\input{tables/log_volume_forumOR.tex}
+
 
 \section{Future Work}
 \input{future_work.tex}
@@ -122,12 +123,7 @@ Our study reveals that structural features of the network and the nature of the 
 \section{Conclusion}
 \input{conclusion.tex}
 
-%\input{tables/volume.tex}
-%\input{tables/severity.tex}
-
-
-
-
+\input{tables/log_severity_without_trivialness.tex}
 
 %\section{Acknowledgments}
 
@@ -142,11 +138,6 @@ Our study reveals that structural features of the network and the nature of the 
 % latex bibtex latex latex
 % to resolve all references
 
-%\balancecolumns
-%\appendix
-%Appendix A
-%\input{tables/log_volume_forumAND.tex}
-%\input{tables/log_severity_forumAND.tex}
 
 \end{document}
 
