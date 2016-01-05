@@ -106,7 +106,7 @@ def analyze_prices(prices, markets, pair):
             average_volume_weighted_after_max = 0
             
         total_volume = sum(map(lambda x: x['volume'],prices))
-        total_volume_before_max = sum(map(lambda x: x['volume'],prices[:index_max-1])) 
+        total_volume_before_max = sum(map(lambda x: x['volume'],prices[:index_max])) 
         market_num = len(markets)
         try:
             severity_to_min_price = max_price/min_price
