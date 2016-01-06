@@ -6,24 +6,17 @@ library(stargazer)
 setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
 source("analysis/elastic_net.R")
 setwd(dir = "data")
-data = read.csv(file = "joined_price_network.csv", header = TRUE, sep = ",")
+data = read.csv(file = "joined_price_network_usd.csv", header = TRUE, sep = ",")
 data$earliest_mention_date = as.character(data$earliest_mention_date, format = "%Y-%m-%d")
 data$network_date = as.character(data$network_date, format = "%Y-%m-%d")
 data$earliest_trade_date = as.character(data$earliest_trade_date, format = "%Y-%m-%d")
 data$log_severity_to_average_after_max_volume_weighted = log(data$severity_to_average_after_max_volume_weighted)
 data$magnitude = data$normalized_total_volume_before_max / data$normalized_total_volume
-# add interaction terms
-data$user1_clustering_coefficient_nontrivial = data$user1_clustering_coefficient * data$nontrivial
-data$user1_closeness_centrality_weighted_nontrivial = data$user1_closeness_centrality_weighted * data$nontrivial
-data$user1_betweenness_centrality_weighted_nontrivial = data$user1_betweenness_centrality_weighted * data$nontrivial
-data$user1_satoshi_pagerank_weighted_nontrivial = data$user1_satoshi_pagerank_weighted * data$nontrivial
-data$user1_pagerank_weighted_nontrivial = data$user1_pagerank_weighted * data$nontrivial
-data$user1_degree_incoming_nontrivial = data$user1_degree_incoming * data$nontrivial
-data$user1_degree_outgoing_nontrivial = data$user1_degree_outgoing * data$nontrivial
 # fix infinite satoshi distance
 data$user1_satoshi_distance_inf = data$user1_satoshi_distance>7
 data$user1_satoshi_distance[data$user1_satoshi_distance_inf] = 7
 
+# remove btc if present
 data = data[data$symbol != "BTC",]
 
 data_size = nrow(data)
@@ -50,39 +43,35 @@ all_independent_vars =  c("user1_num_posts",
                           "user1_closeness_centrality_outgoing_weighted",
                           "user1_betweenness_centrality_weighted",
                           "user1_satoshi_distance",
+                          "user1_satoshi_distance_inf",
                           "user1_satoshi_pagerank_unweighted",
                           "user1_satoshi_pagerank_weighted",
                           "user1_pagerank_unweighted",
                           "user1_pagerank_weighted")
-                          "nontrivial")
 cor(train_data[,all_independent_vars])
 cor(train_data[,all_independent_vars])>0.9
+
+
+#####################################
+# Model 0: Initial exploration, using all vars. No specific model
+# find the best elastic net model config and get nonzero coefficients on best alpha 
 good_independent_vars =  c("user1_num_posts",
                            "user1_num_subjects",
                            "user1_days_since_first_post",
                            "user1_degree_incoming",
-                           #"user1_degree_incoming_nontrivial",
                            "user1_degree_outgoing",
-                           #"user1_degree_outgoing_nontrivial",
                            "user1_clustering_coefficient",
-                           #"user1_clustering_coefficient_nontrivial",
                            "user1_closeness_centrality_weighted",
-                           #"user1_closeness_centrality_weighted_nontrivial",
                            "user1_betweenness_centrality_weighted",
-                           #"user1_betweenness_centrality_weighted_nontrivial",
+                           "user1_satoshi_distance",
+                           "user1_satoshi_distance_inf",
                            "user1_satoshi_pagerank_weighted",
-                           #"user1_satoshi_pagerank_weighted_nontrivial",
                            "user1_pagerank_weighted")
-                           #"user1_pagerank_weighted_nontrivial",
-                           #"nontrivial")
 cor(train_data[,good_independent_vars])>0.9
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
-
-# Initial exploration, using all vars. No specific model
-# find the best elastic net model config and get nonzero coefficients on best alpha 
 alphas=seq(1,1,by=0.05)
 best_model = cross_validate_alphas(x, y, alphas)
 best_alpha = best_model[2]
@@ -132,10 +121,10 @@ weights_ordered[1:15,]
 #####################################
 # Model 1: Use only simple user stats
 good_independent_vars =  c("user1_num_posts",
-                          "user1_num_subjects",
-                          "user1_days_since_first_post",
-                          "user1_degree_incoming",
-                          "user1_degree_outgoing")
+                           "user1_num_subjects",
+                           "user1_days_since_first_post",
+                           "user1_degree_incoming",
+                           "user1_degree_outgoing")
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
@@ -178,12 +167,19 @@ summary(model1_wlmfit)
 
 
 #####################################
-# Model 2: Use only nontrivialness
-good_independent_vars =  c("nontrivial")
+# Model 2: Use only vars relative to satoshi
+good_independent_vars =  c("user1_satoshi_distance",
+                           "user1_satoshi_distance_inf",
+                           "user1_satoshi_pagerank_weighted")
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
-nonzero_coefs = good_independent_vars
+
+# find the best elastic net model config and get nonzero coefficients on best alpha 
+alphas=seq(1,1,by=0.05)
+best_model = cross_validate_alphas(x, y, alphas)
+best_alpha = best_model[2]
+nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
 
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
@@ -216,10 +212,12 @@ summary(model2_wlmfit)
 
 
 #####################################
-# Model 3: Use only vars relative to satoshi
-good_independent_vars =  c("user1_satoshi_pagerank_weighted",
-                           "user1_satoshi_distance",
-                           "user1_satoshi_distance_inf")
+# Model 3: Use network measures
+good_independent_vars =  c("user1_clustering_coefficient",
+                           "user1_closeness_centrality_weighted",
+                           "user1_betweenness_centrality_weighted",
+                           "user1_pagerank_weighted")
+cor(train_data[,good_independent_vars])>0.9
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
@@ -260,11 +258,20 @@ summary(model3_wlmfit)
 
 
 
+
 #####################################
-# Model 4: Use network measures
-good_independent_vars =  c("user1_clustering_coefficient",
+# Model 4: Use all vars
+good_independent_vars =  c("user1_num_posts",
+                           "user1_num_subjects",
+                           "user1_days_since_first_post",
+                           "user1_degree_incoming",
+                           "user1_degree_outgoing",
+                           "user1_clustering_coefficient",
                            "user1_closeness_centrality_weighted",
                            "user1_betweenness_centrality_weighted",
+                           "user1_satoshi_distance",
+                           "user1_satoshi_distance_inf",
+                           "user1_satoshi_pagerank_weighted",
                            "user1_pagerank_weighted")
 cor(train_data[,good_independent_vars])>0.9
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
@@ -306,27 +313,26 @@ model4_wlmfit = lm(as.formula(lm_formula), train_data, weights=model4_rlmfit$w)
 summary(model4_wlmfit)
 
 
-
-
 #####################################
-# Model 5: Use network measures, satoshi measures with nontrivial interaction term
-good_independent_vars =  c("user1_clustering_coefficient_nontrivial",
-                           "user1_closeness_centrality_weighted_nontrivial",
-                           "user1_betweenness_centrality_weighted_nontrivial",
-                           "user1_satoshi_pagerank_weighted_nontrivial",
-                           "user1_pagerank_weighted_nontrivial",
-                           "user1_degree_incoming_nontrivial",
-                           "user1_degree_outgoing_nontrivial")
+# Model 5: Use all vars without feature selection
+good_independent_vars =  c("user1_num_posts",
+                           "user1_num_subjects",
+                           "user1_days_since_first_post",
+                           "user1_degree_incoming",
+                           "user1_degree_outgoing",
+                           "user1_clustering_coefficient",
+                           "user1_closeness_centrality_weighted",
+                           "user1_betweenness_centrality_weighted",
+                           "user1_satoshi_distance",
+                           "user1_satoshi_distance_inf",
+                           "user1_satoshi_pagerank_weighted",
+                           "user1_pagerank_weighted")
 cor(train_data[,good_independent_vars])>0.9
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
-# find the best elastic net model config and get nonzero coefficients on best alpha 
-alphas=seq(1,1,by=0.05)
-best_model = cross_validate_alphas(x, y, alphas)
-best_alpha = best_model[2]
-nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
+nonzero_coefs = good_independent_vars
 
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
@@ -357,141 +363,48 @@ model5_wlmfit = lm(as.formula(lm_formula), train_data, weights=model5_rlmfit$w)
 summary(model5_wlmfit)
 
 
-#####################################
-# Model 6: Use network measures, satoshi measures and user simple stats without any nontrivial measure
-good_independent_vars =  c("user1_num_posts",
-                           "user1_num_subjects",
-                           "user1_days_since_first_post",
-                           "user1_degree_incoming",
-                           "user1_degree_outgoing",
-                           "user1_clustering_coefficient",
-                           "user1_closeness_centrality_weighted",
-                           "user1_betweenness_centrality_weighted",
-                           "user1_satoshi_pagerank_weighted",
-                           "user1_pagerank_weighted")
-cor(train_data[,good_independent_vars])>0.9
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
-x = data.matrix(train_data[,good_independent_vars])
-y = train_data[,dependent_var]
-
-# find the best elastic net model config and get nonzero coefficients on best alpha 
-alphas=seq(1,1,by=0.05)
-best_model = cross_validate_alphas(x, y, alphas)
-best_alpha = best_model[2]
-nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
-
-# Run simple ols
-lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
-model6_lmfit = lm(as.formula(lm_formula), train_data)
-model6_lm_sum = summary(model6_lmfit)
-model6_lm_sum
-
-# investigate the assumption of ols
-oldpar = par(mfrow = c(2,2))
-plot(model6_lmfit, las=1)
-par(oldpar)
-train_data[which(cooks.distance(model6_lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
-
-# Get summary with robust standard errors
-model6_rlm_sum = model6_lm_sum
-model6_rlm_sum$coefficients = unclass(coeftest(model6_lmfit, vcov=vcovHC(model6_lmfit, "HC0")))
-model6_rlm_sum
-
-# run robust regression using iterated re-weighted least square
-model6_rlmfit = rlm(as.formula(lm_formula), train_data, psi="psi.huber", method="M", model=T)
-summary = summary(model6_rlmfit)
-dd = data.frame(summary$coefficients)
-dd$p.value = 2*pt(abs(dd$t.value), summary$df[2], lower.tail=FALSE)
-dd
-# above uses the psi.huber penalty function. but below we simply use mse.
-# the results are similar nevertheless.
-model6_wlmfit = lm(as.formula(lm_formula), train_data, weights=model6_rlmfit$w)
-summary(model6_wlmfit)
-
-
 
 #####################################
-# Model 7: Use all metrics
-good_independent_vars =  c("user1_num_posts",
-                           "user1_num_subjects",
-                           "user1_days_since_first_post",
-                           "user1_degree_incoming",
-                           "user1_degree_incoming_nontrivial",
-                           "user1_degree_outgoing",
-                           "user1_degree_outgoing_nontrivial",
-                           "user1_clustering_coefficient",
-                           "user1_clustering_coefficient_nontrivial",
-                           "user1_closeness_centrality_weighted",
-                           "user1_closeness_centrality_weighted_nontrivial",
-                           "user1_betweenness_centrality_weighted",
-                           "user1_betweenness_centrality_weighted_nontrivial",
-                           "user1_satoshi_pagerank_weighted",
-                           "user1_satoshi_pagerank_weighted_nontrivial",
-                           "user1_pagerank_weighted",
-                           "user1_pagerank_weighted_nontrivial",
-                           "nontrivial")
-cor(train_data[,good_independent_vars])>0.9
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
-x = data.matrix(train_data[,good_independent_vars])
-y = train_data[,dependent_var]
-
-# find the best elastic net model config and get nonzero coefficients on best alpha 
-alphas=seq(1,1,by=0.05)
-best_model = cross_validate_alphas(x, y, alphas)
-best_alpha = best_model[2]
-nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
-
-# Run simple ols
-lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
-model7_lmfit = lm(as.formula(lm_formula), train_data)
-model7_lm_sum = summary(model7_lmfit)
-model7_lm_sum
-
-# investigate the assumption of ols
-oldpar = par(mfrow = c(2,2))
-plot(model7_lmfit, las=1)
-par(oldpar)
-train_data[which(cooks.distance(model7_lmfit) > 30/nrow(train_data)), c("coin_name", dependent_var, nonzero_coefs)]
-
-# Get summary with robust standard errors
-model7_rlm_sum = model7_lm_sum
-model7_rlm_sum$coefficients = unclass(coeftest(model7_lmfit, vcov=vcovHC(model7_lmfit, "HC0")))
-model7_rlm_sum
-
-# run robust regression using iterated re-weighted least square
-model7_rlmfit = rlm(as.formula(lm_formula), train_data, psi="psi.huber", method="M", model=T)
-summary = summary(model7_rlmfit)
-dd = data.frame(summary$coefficients)
-dd$p.value = 2*pt(abs(dd$t.value), summary$df[2], lower.tail=FALSE)
-dd
-# above uses the psi.huber penalty function. but below we simply use mse.
-# the results are similar nevertheless.
-model7_wlmfit = lm(as.formula(lm_formula), train_data, weights=model7_rlmfit$w)
-summary(model7_wlmfit)
-
-
-cov.labels = c("num subject",
-               "days since first post",
-               "incoming degree",
-               "satoshi pagerank",
-               "clustering coefficient",
-               "closeness centrality",
-               "betweenness centrality")
+# Print table
+order =  c("user1_num_posts",
+           "user1_num_subjects",
+           "user1_days_since_first_post",
+           "user1_degree_incoming",
+           "user1_degree_outgoing",
+           "user1_clustering_coefficient",
+           "user1_closeness_centrality_weighted",
+           "user1_betweenness_centrality_weighted",
+           "user1_satoshi_distance",
+           "user1_satoshi_distance_inf",
+           "user1_satoshi_pagerank_weighted",
+           "user1_pagerank_weighted")
+cov.labels = c("Number of posts",
+               "Number of subject",
+               "Days since first post",
+               "Incoming degree",
+               "Outgoing degree",
+               "Clustering coefficient",
+               "Closeness centrality",
+               "Betweenness centrality",
+               "Satoshi distance",
+               "Infinite Satoshi distance",
+               "Satoshi pagerank",
+               "Pagerank")
 depvar.label = c("Severity")
 stargazer(model1_wlmfit,
-          #model2_wlmfit,
+          model2_wlmfit,
           model3_wlmfit,
           model4_wlmfit,
-          #model5_wlmfit,
-          model6_wlmfit,
-          #model7_wlmfit,
-          dep.var.labels=depvar.label,
-          column.labels=c("Model1","Model3", "Model4", "Model6"),
+          model5_wlmfit,
+          dep.var.labels= "",
+          column.labels=c("Model1","Model2", "Model3", "Model4", "Model5", "Model6"),
           column.sep.width = "3pt",
           omit.table.layout = "#",
           df = FALSE,
           title="", align=TRUE,
+          dep.var.caption = depvar.label,
+          order = order,
           covariate.labels = cov.labels,
           float.env = "table*",
           digits = 3,
-          out="../tables/log_severity_without_trivialness.tex")
+          out="../tables/log_severity.tex")
