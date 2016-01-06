@@ -83,7 +83,7 @@ def analyze_prices(prices, markets, pair):
     if len(prices) > 0:
         max_price = max(prices, key = operator.itemgetter(pair))[pair]
         min_price = min(prices, key = operator.itemgetter(pair))[pair]
-        index_max = find_index(prices, 'btc', max_price)
+        index_max = find_index(prices, pair, max_price)
         average = sum(map(lambda x: x[pair],prices))/len(prices)
         average_after_max = sum(map(lambda x: x[pair],prices[index_max:]))/len(prices)
         active_days = (int(prices[-1]['date']/1000)-int(prices[0]['date']/1000))/86400
