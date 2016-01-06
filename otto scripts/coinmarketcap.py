@@ -156,6 +156,7 @@ def analyze_prices(prices, markets, pair):
         coin['severity_to_average_volume_weighted'] = severity_to_average_volume_weighted
         coin['severity_to_average_after_max_volume_weighted'] = severity_to_average_after_max_volume_weighted
         coin['total_volume'] = total_volume
+        coin['total_volume_before_max'] = total_volume_before_max
         coin['market_num'] = market_num
         coin['first_trade'] = datetime.fromtimestamp(int(prices[0]['date']/1000)).strftime('%Y-%m-%d')
         coin['normalized_total_volume'] = normalized_total_volume
@@ -210,6 +211,7 @@ fieldnames = [
 'normalized_total_volume',
 'normalized_total_volume_before_max',
 'total_volume',
+'total_volume_before_max',
 'market_num',
 'BTC-E',
 'Kraken',
