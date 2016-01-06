@@ -20,6 +20,11 @@ def find_index(lst, key, value):
             return i
     return -1
 
+def find_first_non_zero(lst, key):
+    for i, dic in enumerate(lst):
+        if dic[key] >= 0.0:
+            return i
+    return -1
 # <codecell>
 
 def get_prices(basecoin):
@@ -256,7 +261,7 @@ for coin in coins:
     prices = get_prices(coins[coin]['slug'])
     markets = scrape_markets(coins[coin]['slug'])
     for pair in ['usd','btc']:
-        analysis = analyze_prices(prices, markets, pair)
+        analysis = analyze_prices(prices[find_first_non_zero(prices, 'volume'):], markets, pair)
         result = analysis.copy()
         result.update({'symbol': coin})
         result.update(coins[coin])
