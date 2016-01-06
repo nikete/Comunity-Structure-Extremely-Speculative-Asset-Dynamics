@@ -107,8 +107,12 @@ def analyze_prices(prices, markets, pair):
         
         # add one to index max for volume before max, so that the volume of the max day is
         # also counted.
-        total_volume = sum(map(lambda x: x['volume'],prices))
-        total_volume_before_max = sum(map(lambda x: x['volume'],prices[:index_max+1])) 
+        # volume in destination currency, pair: either btc or usd
+        total_volume = sum(map(lambda x: x['volume']*x[pair], prices))
+        total_volume_before_max = sum(map(lambda x: x['volume']*x[pair], prices[:index_max+1])) 
+        # volume in the currency itself
+        total_volume_orig = sum(map(lambda x: x['volume'], prices))
+        total_volume_orig_before_max = sum(map(lambda x: x['volume'], prices[:index_max+1])) 
         market_num = len(markets)
         try:
             severity_to_min_price = max_price/min_price
@@ -146,6 +150,14 @@ def analyze_prices(prices, markets, pair):
             normalized_total_volume_before_max = total_volume_before_max/active_days_before_max
         except ZeroDivisionError, UnboundLocalError:
             normalized_total_volume_before_max = 'NaN'
+        try:
+            normalized_total_volume_orig = total_volume_orig/active_days
+        except ZeroDivisionError, UnboundLocalError:
+            normalized_total_volume_orig = 'NaN'
+        try:
+            normalized_total_volume_orig_before_max = total_volume_orig_before_max/active_days_before_max
+        except ZeroDivisionError, UnboundLocalError:
+            normalized_total_volume_orig_before_max = 'NaN'
         coin['severity_to_min_price'] = severity_to_min_price
         coin['max_price'] = max_price
         coin['min_price'] = min_price
@@ -157,10 +169,14 @@ def analyze_prices(prices, markets, pair):
         coin['severity_to_average_after_max_volume_weighted'] = severity_to_average_after_max_volume_weighted
         coin['total_volume'] = total_volume
         coin['total_volume_before_max'] = total_volume_before_max
+        coin['total_volume_orig'] = total_volume_orig
+        coin['total_volume_orig_before_max'] = total_volume_orig_before_max
         coin['market_num'] = market_num
         coin['first_trade'] = datetime.fromtimestamp(int(prices[0]['date']/1000)).strftime('%Y-%m-%d')
         coin['normalized_total_volume'] = normalized_total_volume
         coin['normalized_total_volume_before_max'] = normalized_total_volume_before_max
+        coin['normalized_total_volume_orig'] = normalized_total_volume_orig
+        coin['normalized_total_volume_orig_before_max'] = normalized_total_volume_orig_before_max
 
         if 'BTC-E' in markets:
             coin['BTC-E'] = True
@@ -210,8 +226,12 @@ fieldnames = [
 'severity_to_average_after_max_volume_weighted',
 'normalized_total_volume',
 'normalized_total_volume_before_max',
+'normalized_total_volume_orig',
+'normalized_total_volume_orig_before_max',
 'total_volume',
 'total_volume_before_max',
+'total_volume_orig',
+'total_volume_orig_before_max',
 'market_num',
 'BTC-E',
 'Kraken',
