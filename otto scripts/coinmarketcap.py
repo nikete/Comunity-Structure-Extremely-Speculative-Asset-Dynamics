@@ -29,10 +29,10 @@ def get_prices(basecoin):
         pricevolumes = []
         for a,b,c in zip(prices['price_usd'], prices['volume_usd'], prices['price_btc']):
             if a[1] == 0:
-                volume = 0
+                volume_orig = 0
             else:
-                volume = b[1]/a[1]
-            pricevolumes.append({'date': a[0], 'usd': a[1], 'btc': c[1], 'volume': volume})
+                volume_orig = (1.0*b[1])/a[1]
+            pricevolumes.append({'date': a[0], 'usd': a[1], 'btc': c[1], 'volume_orig': volume_orig})
     except:
         pass
     pricevolumes = sorted(pricevolumes, key = lambda k:k['date'])
@@ -99,8 +99,8 @@ def analyze_prices(prices, markets, pair):
         active_days_before_max += 1
         
         try:
-            average_volume_weighted = sum(map(lambda x: x[pair]*x['volume'],prices))/sum(map(lambda x: x['volume'],prices))
-            average_volume_weighted_after_max = sum(map(lambda x: x[pair]*x['volume'],prices[index_max:]))/sum(map(lambda x: x['volume'],prices[index_max:]))
+            average_volume_weighted = sum(map(lambda x: x[pair]*x['volume_orig'],prices))/sum(map(lambda x: x['volume_orig'],prices))
+            average_volume_weighted_after_max = sum(map(lambda x: x[pair]*x['volume_orig'],prices[index_max:]))/sum(map(lambda x: x['volume_orig'],prices[index_max:]))
         except ZeroDivisionError, UnboundLocalError:
             average_volume_weighted = 0
             average_volume_weighted_after_max = 0
@@ -108,11 +108,11 @@ def analyze_prices(prices, markets, pair):
         # add one to index max for volume before max, so that the volume of the max day is
         # also counted.
         # volume in destination currency, pair: either btc or usd
-        total_volume = sum(map(lambda x: x['volume']*x[pair], prices))
-        total_volume_before_max = sum(map(lambda x: x['volume']*x[pair], prices[:index_max+1])) 
+        total_volume = sum(map(lambda x: x['volume_orig']*x[pair], prices))
+        total_volume_before_max = sum(map(lambda x: x['volume_orig']*x[pair], prices[:index_max+1])) 
         # volume in the currency itself
-        total_volume_orig = sum(map(lambda x: x['volume'], prices))
-        total_volume_orig_before_max = sum(map(lambda x: x['volume'], prices[:index_max+1])) 
+        total_volume_orig = sum(map(lambda x: x['volume_orig'], prices))
+        total_volume_orig_before_max = sum(map(lambda x: x['volume_orig'], prices[:index_max+1])) 
         market_num = len(markets)
         try:
             severity_to_min_price = max_price/min_price
