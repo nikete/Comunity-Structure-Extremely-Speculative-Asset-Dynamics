@@ -253,9 +253,9 @@ btc_analysis = []
 usd_analysis = []
 for coin in coins:
     print coin
+    prices = get_prices(coins[coin]['slug'])
+    markets = scrape_markets(coins[coin]['slug'])
     for pair in ['usd','btc']:
-        prices = get_prices(coins[coin]['slug'])
-        markets = scrape_markets(coins[coin]['slug'])
         analysis = analyze_prices(prices, markets, pair)
         result = analysis.copy()
         result.update({'symbol': coin})
