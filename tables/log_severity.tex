@@ -3,8 +3,6 @@
 % Date and time: Thu, Jan 07, 2016 - 06:43:41
 % Requires LaTeX packages: dcolumn 
 \begin{table*}[!htbp] \centering 
-  \caption{} 
-  \label{} 
 \begin{tabular}{@{\extracolsep{3pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -16,7 +14,7 @@
  Number of posts & -0.0004^{**} &  &  & -0.0002 & -0.0004^{*} \\ 
   & (0.0002) &  &  & (0.0001) & (0.0002) \\ 
   & & & & & \\ 
- Number of subject & 0.009^{***} &  &  & 0.009^{***} & 0.009^{***} \\ 
+ Number of subjects & 0.009^{***} &  &  & 0.009^{***} & 0.009^{***} \\ 
   & (0.003) &  &  & (0.003) & (0.003) \\ 
   & & & & & \\ 
  Days since first post & -0.001^{***} &  &  & -0.001^{***} & -0.001^{***} \\ 
@@ -62,4 +60,9 @@ F Statistic & \multicolumn{1}{c}{7.512$^{***}$} & \multicolumn{1}{c}{12.892$^{**
 \hline \\[-1.8ex] 
 \textit{Note:}  & \multicolumn{5}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 \end{tabular} 
+\label{} 
+\caption{Robust regression results of bubble severity as defined in variables section.
+Regression was performed using Huber weights after Elastic net feature selection. Empty
+cells indicate that the independent variable was not included in the model either
+explicitly or due to feature selection.}
 \end{table*} 
