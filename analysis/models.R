@@ -384,7 +384,7 @@ order =  c("user1_num_posts",
            "user1_satoshi_pagerank_weighted",
            "user1_pagerank_weighted")
 cov.labels = c("Number of posts",
-               "Number of subject",
+               "Number of subjects",
                "Days since first post",
                "Incoming degree",
                "Outgoing degree",
