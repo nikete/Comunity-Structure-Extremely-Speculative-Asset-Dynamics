@@ -22,7 +22,7 @@ def find_index(lst, key, value):
 
 def find_first_non_zero(lst, key):
     for i, dic in enumerate(lst):
-        if dic[key] >= 0.0:
+        if dic[key] > 0.0:
             return i
     return -1
 # <codecell>
@@ -261,6 +261,7 @@ for coin in coins:
     prices = get_prices(coins[coin]['slug'])
     markets = scrape_markets(coins[coin]['slug'])
     for pair in ['usd','btc']:
+        # remove first zero volume days from data
         analysis = analyze_prices(prices[find_first_non_zero(prices, 'volume_orig'):], markets, pair)
         result = analysis.copy()
         result.update({'symbol': coin})
