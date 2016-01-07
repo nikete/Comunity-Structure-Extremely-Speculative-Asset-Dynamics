@@ -20,6 +20,11 @@ data$log_magnitude_orig = log(data$magnitude_orig)
 data$user1_satoshi_distance_inf = data$user1_satoshi_distance>7
 data$user1_satoshi_distance[data$user1_satoshi_distance_inf] = 7
 
+dependent_var = "log_severity_to_average_after_max_volume_weighted"
+#dependent_var = "magnitude"
+#dependent_var = "log_magnitude"
+#data = data[data$magnitude!=0,]
+
 # remove btc if present
 data = data[data$symbol != "BTC",]
 
@@ -54,12 +59,6 @@ all_independent_vars =  c("user1_num_posts",
                           "user1_pagerank_weighted")
 cor(train_data[,all_independent_vars])
 cor(train_data[,all_independent_vars])>0.9
-
-
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
-#dependent_var = "magnitude"
-#dependent_var = "log_magnitude"
-#train_data = train_data[train_data$magnitude!=0,]
 
 #####################################
 # Model 0: Initial exploration, using all vars. No specific model
@@ -397,7 +396,7 @@ cov.labels = c("Number of posts",
                "Satoshi pagerank",
                "Pagerank")
 depvar.label = c("Severity")
-#depvar.label = c("Magnitude")
+depvar.label = c("Magnitude")
 stargazer(model1_wlmfit,
           model2_wlmfit,
           model3_wlmfit,
@@ -414,4 +413,4 @@ stargazer(model1_wlmfit,
           covariate.labels = cov.labels,
           float.env = "table*",
           digits = 3,
-          out="../tables/log_severity.tex")
+          out="../tables/log_magnitude.tex")
