@@ -7,11 +7,15 @@ setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dy
 source("analysis/elastic_net.R")
 setwd(dir = "data")
 data = read.csv(file = "joined_price_network_usd.csv", header = TRUE, sep = ",")
+#data = read.csv(file = "joined_price_network_btc.csv", header = TRUE, sep = ",")
 data$earliest_mention_date = as.character(data$earliest_mention_date, format = "%Y-%m-%d")
 data$network_date = as.character(data$network_date, format = "%Y-%m-%d")
 data$earliest_trade_date = as.character(data$earliest_trade_date, format = "%Y-%m-%d")
 data$log_severity_to_average_after_max_volume_weighted = log(data$severity_to_average_after_max_volume_weighted)
 data$magnitude = data$normalized_total_volume_before_max / data$normalized_total_volume
+data$log_magnitude = log(data$magnitude)
+data$magnitude_orig = data$normalized_total_volume_orig_before_max / data$normalized_total_volume_orig
+data$log_magnitude_orig = log(data$magnitude_orig)
 # fix infinite satoshi distance
 data$user1_satoshi_distance_inf = data$user1_satoshi_distance>7
 data$user1_satoshi_distance[data$user1_satoshi_distance_inf] = 7
@@ -52,6 +56,11 @@ cor(train_data[,all_independent_vars])
 cor(train_data[,all_independent_vars])>0.9
 
 
+dependent_var = "log_severity_to_average_after_max_volume_weighted"
+#dependent_var = "magnitude"
+#dependent_var = "log_magnitude"
+#train_data = train_data[train_data$magnitude!=0,]
+
 #####################################
 # Model 0: Initial exploration, using all vars. No specific model
 # find the best elastic net model config and get nonzero coefficients on best alpha 
@@ -68,7 +77,6 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_satoshi_pagerank_weighted",
                            "user1_pagerank_weighted")
 cor(train_data[,good_independent_vars])>0.9
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -81,6 +89,7 @@ cvfit = cv.glmnet(x, y, nfolds=5, type.measure="mse", standardize=T, alpha=best_
 plot(cvfit)
 cvfit$lambda.min
 coef(cvfit, s="lambda.min")
+nonzero_coefs
 
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
@@ -125,7 +134,6 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_days_since_first_post",
                            "user1_degree_incoming",
                            "user1_degree_outgoing")
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -171,7 +179,6 @@ summary(model1_wlmfit)
 good_independent_vars =  c("user1_satoshi_distance",
                            "user1_satoshi_distance_inf",
                            "user1_satoshi_pagerank_weighted")
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -180,6 +187,7 @@ alphas=seq(1,1,by=0.05)
 best_model = cross_validate_alphas(x, y, alphas)
 best_alpha = best_model[2]
 nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
+nonzero_coefs
 
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
@@ -218,7 +226,6 @@ good_independent_vars =  c("user1_clustering_coefficient",
                            "user1_betweenness_centrality_weighted",
                            "user1_pagerank_weighted")
 cor(train_data[,good_independent_vars])>0.9
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -274,7 +281,6 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_satoshi_pagerank_weighted",
                            "user1_pagerank_weighted")
 cor(train_data[,good_independent_vars])>0.9
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -328,7 +334,7 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_satoshi_pagerank_weighted",
                            "user1_pagerank_weighted")
 cor(train_data[,good_independent_vars])>0.9
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
+#dependent_var = "magnitude"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -391,13 +397,14 @@ cov.labels = c("Number of posts",
                "Satoshi pagerank",
                "Pagerank")
 depvar.label = c("Severity")
+#depvar.label = c("Magnitude")
 stargazer(model1_wlmfit,
           model2_wlmfit,
           model3_wlmfit,
           model4_wlmfit,
           model5_wlmfit,
           dep.var.labels= "",
-          column.labels=c("Model1","Model2", "Model3", "Model4", "Model5", "Model6"),
+          column.labels=c("Model1","Model2", "Model3", "Model4", "Model5"),
           column.sep.width = "3pt",
           omit.table.layout = "#",
           df = FALSE,
