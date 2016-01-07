@@ -261,7 +261,7 @@ for coin in coins:
     prices = get_prices(coins[coin]['slug'])
     markets = scrape_markets(coins[coin]['slug'])
     for pair in ['usd','btc']:
-        analysis = analyze_prices(prices[find_first_non_zero(prices, 'volume'):], markets, pair)
+        analysis = analyze_prices(prices[find_first_non_zero(prices, 'volume_orig'):], markets, pair)
         result = analysis.copy()
         result.update({'symbol': coin})
         result.update(coins[coin])
