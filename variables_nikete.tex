@@ -1,3 +1,4 @@
+
 Our main outcome measures are the severity of the largest drop in the price of each cryptocoin, and the magnitude (volume) of the transactions made with the cryptocoin measured in USD.
 We operationalize the intensity of a bubble as the proportion of a 1 dollar that would be lost buying at the maximum price and selling after that proportionally to the volume of the market till the present. Magnitude of a bubble is defined as the proportion of the average daily volume prior to maximum price to the overall average daily volume.
 More formally for each coin $c$, let $P_c,V_c$ be two vectors of length $T$ each indexed by days since the coin $c$ started trading.
@@ -18,3 +19,9 @@ We define the severity of the bubble experienced by the coin $c$ as the fraction
 \begin{equation}
 severity_{c} = \log(\frac{ p_{t_{max}}} {\bar{p}_{(t_{max},T)} })
 \end{equation}
+
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{log_magnitude_log_severity}
+\caption{The relative distribution of our dependent variables. Note that the magnitude is shown in terms of its natural log due to its heavy-tailed distribution. Both outcome measures exhibit a heavy-tailed non-normal distribution which is a violation of simple OLS assumptions. For this reason, our analysis uses a robust regression method using Huber weights.}
+\end{figure}
