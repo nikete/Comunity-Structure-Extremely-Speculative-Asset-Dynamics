@@ -1,7 +1,10 @@
-output_filename = "../tables/log_magnitude.tex"
+input_filename = "./data/joined_price_network_usd.csv"
+output_filename = "./tables/log_severity_usd.tex"
 dependent_var_label = "Severity"
-dependent_var_label = "Magnitude"
-dependent_var = "magnitude"
+#dependent_var_label = "Magnitude"
+dependent_var = "log_severity_to_average_after_max_volume_weighted"
+#dependent_var = "magnitude"
+#dependent_var = "log_magnitude"
 
 library(glmnet)
 library(MASS)
@@ -10,9 +13,7 @@ library(lmtest)
 library(stargazer)
 setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
 source("analysis/elastic_net.R")
-setwd(dir = "data")
-data = read.csv(file = "joined_price_network_usd.csv", header = TRUE, sep = ",")
-#data = read.csv(file = "joined_price_network_btc.csv", header = TRUE, sep = ",")
+data = read.csv(file = input_filename, header = TRUE, sep = ",")
 data$earliest_mention_date = as.character(data$earliest_mention_date, format = "%Y-%m-%d")
 data$network_date = as.character(data$network_date, format = "%Y-%m-%d")
 data$earliest_trade_date = as.character(data$earliest_trade_date, format = "%Y-%m-%d")
@@ -25,9 +26,6 @@ data$log_magnitude_orig = log(data$magnitude_orig)
 data$user1_satoshi_distance_inf = data$user1_satoshi_distance>7
 data$user1_satoshi_distance[data$user1_satoshi_distance_inf] = 7
 
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
-#dependent_var = "magnitude"
-#dependent_var = "log_magnitude"
 if (dependent_var == "magnitude" | dependent_var == "log_magnitude") {
   data = data[data$magnitude!=0,]
 }
