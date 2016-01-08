@@ -1,3 +1,8 @@
+output_filename = "../tables/log_magnitude.tex"
+dependent_var_label = "Severity"
+dependent_var_label = "Magnitude"
+dependent_var = "magnitude"
+
 library(glmnet)
 library(MASS)
 library(sandwich)
@@ -23,7 +28,9 @@ data$user1_satoshi_distance[data$user1_satoshi_distance_inf] = 7
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 #dependent_var = "magnitude"
 #dependent_var = "log_magnitude"
-#data = data[data$magnitude!=0,]
+if (dependent_var == "magnitude" | dependent_var == "log_magnitude") {
+  data = data[data$magnitude!=0,]
+}
 
 # remove btc if present
 data = data[data$symbol != "BTC",]
@@ -395,8 +402,7 @@ cov.labels = c("Number of posts",
                "Infinite Satoshi distance",
                "Satoshi pagerank",
                "Pagerank")
-depvar.label = c("Severity")
-depvar.label = c("Magnitude")
+depvar.label = c(dependent_var_label)
 stargazer(model1_wlmfit,
           model2_wlmfit,
           model3_wlmfit,
@@ -413,4 +419,4 @@ stargazer(model1_wlmfit,
           covariate.labels = cov.labels,
           float.env = "table*",
           digits = 3,
-          out="../tables/log_magnitude.tex")
+          out=output_filename)
