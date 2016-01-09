@@ -1,16 +1,5 @@
 % EAMAN: The y range of these two figures should be the same. The text on axis should be larger. Preferably, box the plots too.
 %EAMAN: these plots add little information and are obsolete now as the trivialness is missing for a large portion of coins, and shows no significance for the coins that have that data. 
-\begin{figure*}
-\centering
-\begin{subfigure}
-{\includegraphics[width=0.45\textwidth]{log_severity_centrality.pdf}}
-\end{subfigure}
-\begin{subfigure}
-{\includegraphics[width=0.45\textwidth]{log_volume_centrality.pdf}}
-\end{subfigure}
-\label{volume_severity_centrality}
-\caption{The log of bubble severity (left) and bubble magnitude (right) vs. introducer closeness centrality per trivial and nontrivial coins. Centrality of asset introducer has a stronger relationship with bubble severity than its magnitude in the case of trivial coins, while this relationship is the opposite in the case of coins with actual technological innovations.}
-\end{figure*}
 
 Speculative bubbles are perceived to periodically take over markets \cite{garber2001famous}.
 Going back at least to the \emph{South Sea} bubble in the early 18\textsuperscript{th} century, well-informed parties  have invested knowingly in bubbles, and found it profitable \cite{temin2004riding}.
@@ -43,6 +32,13 @@ Many of the new coins announced on the forums experience a frenzied period of ri
 %\includegraphics[width=\columnwidth]{AuroraCoin}
 %\end{figure}
 
+\begin{figure}
+\centering
+\includegraphics[width=1.1\columnwidth]{severity_boxplot.pdf}
+\label{severity_boxplot}
+\caption{The bubble severity vs. coin introducer closeness centrality in the discussion network. Centrality of asset introducer is the most predictive variable for bubble severity in our final model. It has a stronger relationship with bubble severity than its magnitude.}
+\end{figure}
+
 While the mechanisms that drive bubbles have been studied both theoretically 
 \cite{abolafia1988enacting,earl2007decision,bakker2010social,harras2011grow}
 and experimentally
@@ -69,7 +65,7 @@ while our best model performs an order of magnitude better in both tasks and doe
 %JULIAN: R^2 of 0.1 (if I interpret correctly) doesn't sound impressive until you've argued the fundamental difficulty of the problem, you might wait to mention such numbers.
 %JULIAN: Would sound more impressive if you just said "it performs an order of magnitude better"
 %EAMAN: sure..
-The main driver of our explanatory power is the centrality of users in the directed communication network derived from the forum. The severity of the bubbles increase with the centrality of the users who introduce new coins to the community, while both the severity and the magnitude of bubbles decrease with the seniority of such users.
+The main driver of our explanatory power is the centrality of users in the directed communication network derived from the forum. As it can be seen in Figure ~\ref{severity_boxplot}, the severity of the bubbles increase with the centrality of the users who introduce new coins to the community. However, both the severity and the magnitude of bubbles decrease with the seniority of such users.
 %JULIAN: Above sentence is tough to parse, but kind of an important one.
 %EAMAN: tried fixing. how does it sound?
 
@@ -80,3 +76,4 @@ The main driver of our explanatory power is the centrality of users in the direc
 %Interestingly this effect is concentrated in different ways depending on whether the coin software is more than a trivial modification to existing code base: as shown in Figure \ref{volume_severity_centrality} trivial coins have more severe bubbles the more central their introducers are, while volume is greater the more central the introducer of a nontrivial coin is.
 
 %Methodologically the free parameters in the way we do the weights on the weighted graph  is horrible, a million free parameters get introduced. follow up work for another paper: do some unsupervised feature learning over the dam forums threads to build the network; use some internal validity metric . Find political way of saying this in future work.
+
