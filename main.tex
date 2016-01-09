@@ -113,13 +113,24 @@ Our study reveals that structural features of the network and the nature of the 
 \section{Conclusion}
 \input{conclusion.tex}
 
-\input{tables/log_severity_usd.tex}
-\input{tables/magnitude_usd.tex}
+
 \input{tables/log_severity_btc.tex}
+%\caption{Robust regression results of bubble severity as defined in variables section.
+%Regression was performed using Huber weights after Elastic net feature selection. Empty
+%cells indicate that the independent variable was not included in the model either
+%explicitly or due to feature selection.}
+\input{tables/log_severity_usd.tex}
+
 \input{tables/magnitude_btc.tex}
-%\input{tables/magnitude1.tex}
-%\input{tables/log_magnitude.tex}
-%\input{tables/log_severity_with_trivialness.tex}
+%\caption{Robust regression results of bubble magnitude as defined in variables section.
+%Regression was performed using Huber weights after Elastic net feature selection. Empty
+%cells indicate that the independent variable was not included in the model either
+%explicitly or due to feature selection. Note that train sample size is smaller than
+%severity due to missing volume data in the first few trading days of several coins.}
+\input{tables/magnitude_usd.tex}
+\input{tables/log_magnitude_usd.tex}
+\input{tables/magnitude_btc.tex}
+\input{tables/log_magnitude_btc.tex}
 
 %\section{Acknowledgments}
 

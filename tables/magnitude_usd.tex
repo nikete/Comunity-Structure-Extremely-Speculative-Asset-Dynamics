@@ -1,12 +1,14 @@
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Thu, Jan 07, 2016 - 07:21:30
+% Date and time: Sat, Jan 09, 2016 - 05:53:43
 % Requires LaTeX packages: dcolumn 
 \begin{table*}[!htbp] \centering 
+  \caption{} 
+  \label{} 
 \begin{tabular}{@{\extracolsep{3pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & \multicolumn{5}{c}{Magnitude} \\ 
+ & \multicolumn{5}{c}{Magnitude (USD)} \\ 
 \cline{2-6} 
 \\[-1.8ex] & \multicolumn{5}{c}{} \\ 
  & \multicolumn{1}{c}{Model1} & \multicolumn{1}{c}{Model2} & \multicolumn{1}{c}{Model3} & \multicolumn{1}{c}{Model4} & \multicolumn{1}{c}{Model5} \\ 
@@ -14,56 +16,53 @@
  Number of posts &  &  &  &  & -0.002 \\ 
   &  &  &  &  & (0.002) \\ 
   & & & & & \\ 
- Number of subjects & 0.121^{***} &  &  & 0.113^{***} & 0.119^{***} \\ 
-  & (0.029) &  &  & (0.029) & (0.029) \\ 
+ Number of subjects & 0.117^{***} &  &  & 0.111^{***} & 0.117^{***} \\ 
+  & (0.028) &  &  & (0.028) & (0.028) \\ 
   & & & & & \\ 
- Days since first post & -0.009^{***} &  &  & -0.009^{***} & -0.009^{**} \\ 
+ Days since first post & -0.007^{**} &  &  & -0.007^{**} & -0.006^{*} \\ 
   & (0.003) &  &  & (0.003) & (0.003) \\ 
   & & & & & \\ 
- Incoming degree & 0.007 &  &  &  & 0.010 \\ 
+ Incoming degree & 0.002 &  &  &  & 0.006 \\ 
   & (0.005) &  &  &  & (0.010) \\ 
   & & & & & \\ 
- Outgoing degree & -0.012 &  &  &  & 0.008 \\ 
-  & (0.010) &  &  &  & (0.017) \\ 
+ Outgoing degree & -0.009 &  &  &  & 0.003 \\ 
+  & (0.009) &  &  &  & (0.016) \\ 
   & & & & & \\ 
- Clustering coefficient &  &  & -28.354^{*} & -22.889 & -18.260 \\ 
-  &  &  & (15.649) & (15.549) & (16.075) \\ 
+ Clustering coefficient &  &  & -15.737 & -20.462 & -12.983 \\ 
+  &  &  & (14.777) & (14.921) & (15.536) \\ 
   & & & & & \\ 
- Closeness centrality &  &  &  &  & -102.973 \\ 
-  &  &  &  &  & (553.606) \\ 
+ Closeness centrality &  &  & -848.601^{*} &  & -668.028 \\ 
+  &  &  & (510.506) &  & (589.335) \\ 
   & & & & & \\ 
  Betweenness centrality &  &  &  &  & -0.00000 \\ 
   &  &  &  &  & (0.00000) \\ 
   & & & & & \\ 
- Satoshi distance &  & -3.803 &  &  & 2.121 \\ 
-  &  & (3.516) &  &  & (6.220) \\ 
+ Satoshi distance &  & -3.056 &  &  & 0.057 \\ 
+  &  & (3.876) &  &  & (6.043) \\ 
   & & & & & \\ 
- Infinite Satoshi distance &  &  &  & -0.784 & -0.835 \\ 
-  &  &  &  & (0.900) & (1.434) \\ 
+ Infinite Satoshi distance &  &  &  &  & -0.376 \\ 
+  &  &  &  &  & (1.391) \\ 
   & & & & & \\ 
- Satoshi pagerank &  & -4,494.512 &  &  & -3,397.094 \\ 
-  &  & (2,887.775) &  &  & (18,773.750) \\ 
+ Satoshi pagerank &  & -3,754.647 &  &  & -460.601 \\ 
+  &  & (5,440.924) &  &  & (18,078.010) \\ 
   & & & & & \\ 
- Pagerank &  &  &  &  & -757.968 \\ 
-  &  &  &  &  & (8,639.071) \\ 
+ Pagerank &  &  &  &  & -2,423.304 \\ 
+  &  &  &  &  & (8,339.200) \\ 
   & & & & & \\ 
- Constant & 7.172^{***} & 6.680^{***} & 8.080^{***} & 11.688^{***} & 10.808^{*} \\ 
-  & (0.945) & (0.676) & (0.852) & (3.435) & (5.947) \\ 
+ Coin Vintage Control & -0.007^{**} & -0.009^{***} & -0.012^{***} & -0.007^{**} & -0.009^{**} \\ 
+  & (0.003) & (0.003) & (0.004) & (0.003) & (0.004) \\ 
+  & & & & & \\ 
+ Constant & 10.959^{***} & 12.190^{***} & 15.327^{***} & 12.129^{***} & 15.059^{**} \\ 
+  & (2.100) & (1.924) & (2.564) & (1.825) & (6.093) \\ 
   & & & & & \\ 
 \hline \\[-1.8ex] 
-Observations & \multicolumn{1}{c}{339} & \multicolumn{1}{c}{375} & \multicolumn{1}{c}{339} & \multicolumn{1}{c}{339} & \multicolumn{1}{c}{339} \\ 
-R$^{2}$ & \multicolumn{1}{c}{0.059} & \multicolumn{1}{c}{0.009} & \multicolumn{1}{c}{0.010} & \multicolumn{1}{c}{0.061} & \multicolumn{1}{c}{0.071} \\ 
-Adjusted R$^{2}$ & \multicolumn{1}{c}{0.048} & \multicolumn{1}{c}{0.004} & \multicolumn{1}{c}{0.007} & \multicolumn{1}{c}{0.049} & \multicolumn{1}{c}{0.036} \\ 
-Residual Std. Error & \multicolumn{1}{c}{11.325} & \multicolumn{1}{c}{10.910} & \multicolumn{1}{c}{11.809} & \multicolumn{1}{c}{11.551} & \multicolumn{1}{c}{11.166} \\ 
-F Statistic & \multicolumn{1}{c}{5.264$^{***}$} & \multicolumn{1}{c}{1.666} & \multicolumn{1}{c}{3.283$^{*}$} & \multicolumn{1}{c}{5.399$^{***}$} & \multicolumn{1}{c}{2.061$^{**}$} \\ 
+Observations & \multicolumn{1}{c}{339} & \multicolumn{1}{c}{339} & \multicolumn{1}{c}{339} & \multicolumn{1}{c}{339} & \multicolumn{1}{c}{339} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.072} & \multicolumn{1}{c}{0.031} & \multicolumn{1}{c}{0.042} & \multicolumn{1}{c}{0.073} & \multicolumn{1}{c}{0.088} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.058} & \multicolumn{1}{c}{0.022} & \multicolumn{1}{c}{0.033} & \multicolumn{1}{c}{0.062} & \multicolumn{1}{c}{0.051} \\ 
+Residual Std. Error & \multicolumn{1}{c}{10.868} & \multicolumn{1}{c}{10.664} & \multicolumn{1}{c}{10.810} & \multicolumn{1}{c}{11.145} & \multicolumn{1}{c}{10.702} \\ 
+F Statistic & \multicolumn{1}{c}{5.173$^{***}$} & \multicolumn{1}{c}{3.532$^{**}$} & \multicolumn{1}{c}{4.884$^{***}$} & \multicolumn{1}{c}{6.542$^{***}$} & \multicolumn{1}{c}{2.405$^{***}$} \\ 
 \hline 
 \hline \\[-1.8ex] 
 \textit{Note:}  & \multicolumn{5}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 \end{tabular} 
-\label{} 
-\caption{Robust regression results of bubble magnitude as defined in variables section.
-Regression was performed using Huber weights after Elastic net feature selection. Empty
-cells indicate that the independent variable was not included in the model either
-explicitly or due to feature selection. Note that train sample size is smaller than
-severity due to missing volume data in the first few trading days of several coins.}
 \end{table*} 
