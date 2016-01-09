@@ -1,7 +1,7 @@
 input_filename = "./data/joined_price_network_usd.csv"
-output_filename = "./images/magnitude_boxplot.pdf"
-#x_var = "user1_closeness_centrality_weighted"
-x_var = "user1_days_since_first_post"
+output_filename = "./images/severity_boxplot.pdf"
+x_var = "user1_closeness_centrality_weighted"
+#x_var = "user1_days_since_first_post"
 y_var = "log_severity_to_average_after_max_volume_weighted"
 #y_var = "magnitude"
 #y_var = "log_magnitude"
@@ -67,9 +67,10 @@ ggplot(data = tmp_df, aes(x=x, y=y)) +
   theme_bw() +
   theme(panel.border = element_rect(fill=NA, colour = "black", size=1),
         legend.key = element_blank(),
-        axis.text = element_text(size=10),
-        axis.title = element_text(size=12),
-        legend.text = element_text(size=10),
+        axis.text = element_text(size=13),
+        axis.title.x = element_text(size=14,vjust=-0.6),
+        axis.title.y = element_text(size=14),
+        legend.text = element_text(size=11),
         legend.title = element_text(size=12)) +
   labs(x = xlabel, y = ylabel) +
   guides(fill = guide_legend(title = legend_title)) +
