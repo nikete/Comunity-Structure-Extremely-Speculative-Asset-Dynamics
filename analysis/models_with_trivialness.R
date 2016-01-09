@@ -1,3 +1,11 @@
+input_filename = "./data/joined_price_network_btc.csv"
+output_filename = "./tables/log_severity_btc.tex"
+dependent_var_label = "Severity"
+#dependent_var_label = "Magnitude"
+dependent_var = "log_severity_to_average_after_max_volume_weighted"
+#dependent_var = "magnitude"
+#dependent_var = "log_magnitude"
+
 library(glmnet)
 library(MASS)
 library(sandwich)
@@ -5,27 +13,13 @@ library(lmtest)
 library(stargazer)
 setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
 source("analysis/elastic_net.R")
-setwd(dir = "data")
-data = read.csv(file = "joined_price_network_trivialness_usd.csv", header = TRUE, sep = ",")
-data$earliest_mention_date = as.character(data$earliest_mention_date, format = "%Y-%m-%d")
-data$network_date = as.character(data$network_date, format = "%Y-%m-%d")
-data$earliest_trade_date = as.character(data$earliest_trade_date, format = "%Y-%m-%d")
-data$log_severity_to_average_after_max_volume_weighted = log(data$severity_to_average_after_max_volume_weighted)
-data$magnitude = data$normalized_total_volume_before_max / data$normalized_total_volume
-# add interaction terms
-data$user1_clustering_coefficient_nontrivial = data$user1_clustering_coefficient * data$nontrivial
-data$user1_closeness_centrality_weighted_nontrivial = data$user1_closeness_centrality_weighted * data$nontrivial
-data$user1_betweenness_centrality_weighted_nontrivial = data$user1_betweenness_centrality_weighted * data$nontrivial
-data$user1_satoshi_pagerank_weighted_nontrivial = data$user1_satoshi_pagerank_weighted * data$nontrivial
-data$user1_pagerank_weighted_nontrivial = data$user1_pagerank_weighted * data$nontrivial
-data$user1_degree_incoming_nontrivial = data$user1_degree_incoming * data$nontrivial
-data$user1_degree_outgoing_nontrivial = data$user1_degree_outgoing * data$nontrivial
-# fix infinite satoshi distance
-data$user1_satoshi_distance_inf = data$user1_satoshi_distance>7
-data$user1_satoshi_distance[data$user1_satoshi_distance_inf] = 7
-
-data = data[data$symbol != "BTC",]
-
+source("analysis/utils.R")
+ 
+remove_zero_volume = FALSE 
+if (dependent_var == "magnitude" | dependent_var == "log_magnitude") {
+  remove_zero_volume = TRUE
+}
+data = read_data(input_filename, remove_zero_volume)
 data_size = nrow(data)
 # 60% train
 train_size = floor(0.60 * data_size)

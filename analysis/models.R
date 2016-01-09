@@ -1,7 +1,10 @@
-input_filename = "./data/joined_price_network_usd.csv"
-output_filename = "./tables/log_severity_usd.tex"
-dependent_var_label = "Severity"
-#dependent_var_label = "Magnitude"
+input_filename = "./data/joined_price_network_btc.csv"
+output_filename = "./tables/log_severity_btc.tex"
+#output_filename = "./tables/magnitude_btc.tex"
+#output_filename = "./tables/log_magnitude_btc.tex"
+dependent_var_label = "Severity (BTC)"
+#dependent_var_label = "Magnitude (BTC)"
+#dependent_var_label = "Log Magnitude (BTC)"
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 #dependent_var = "magnitude"
 #dependent_var = "log_magnitude"
@@ -13,26 +16,13 @@ library(lmtest)
 library(stargazer)
 setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
 source("analysis/elastic_net.R")
-data = read.csv(file = input_filename, header = TRUE, sep = ",")
-data$earliest_mention_date = as.character(data$earliest_mention_date, format = "%Y-%m-%d")
-data$network_date = as.character(data$network_date, format = "%Y-%m-%d")
-data$earliest_trade_date = as.character(data$earliest_trade_date, format = "%Y-%m-%d")
-data$log_severity_to_average_after_max_volume_weighted = log(data$severity_to_average_after_max_volume_weighted)
-data$magnitude = data$normalized_total_volume_before_max / data$normalized_total_volume
-data$log_magnitude = log(data$magnitude)
-data$magnitude_orig = data$normalized_total_volume_orig_before_max / data$normalized_total_volume_orig
-data$log_magnitude_orig = log(data$magnitude_orig)
-# fix infinite satoshi distance
-data$user1_satoshi_distance_inf = data$user1_satoshi_distance>7
-data$user1_satoshi_distance[data$user1_satoshi_distance_inf] = 7
-
+source("analysis/utils.R")
+ 
+remove_zero_volume = FALSE 
 if (dependent_var == "magnitude" | dependent_var == "log_magnitude") {
-  data = data[data$magnitude!=0,]
+  remove_zero_volume = TRUE
 }
-
-# remove btc if present
-data = data[data$symbol != "BTC",]
-
+data = read_data(input_filename, remove_zero_volume)
 data_size = nrow(data)
 # 60% train
 train_size = floor(0.60 * data_size)
@@ -61,7 +51,8 @@ all_independent_vars =  c("user1_num_posts",
                           "user1_satoshi_pagerank_unweighted",
                           "user1_satoshi_pagerank_weighted",
                           "user1_pagerank_unweighted",
-                          "user1_pagerank_weighted")
+                          "user1_pagerank_weighted",
+                          "date_control")
 cor(train_data[,all_independent_vars])
 cor(train_data[,all_independent_vars])>0.9
 
@@ -79,7 +70,8 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_satoshi_distance",
                            "user1_satoshi_distance_inf",
                            "user1_satoshi_pagerank_weighted",
-                           "user1_pagerank_weighted")
+                           "user1_pagerank_weighted",
+                           "date_control")
 cor(train_data[,good_independent_vars])>0.9
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
@@ -137,7 +129,8 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_num_subjects",
                            "user1_days_since_first_post",
                            "user1_degree_incoming",
-                           "user1_degree_outgoing")
+                           "user1_degree_outgoing",
+                           "date_control")
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -182,7 +175,8 @@ summary(model1_wlmfit)
 # Model 2: Use only vars relative to satoshi
 good_independent_vars =  c("user1_satoshi_distance",
                            "user1_satoshi_distance_inf",
-                           "user1_satoshi_pagerank_weighted")
+                           "user1_satoshi_pagerank_weighted",
+                           "date_control")
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -228,7 +222,8 @@ summary(model2_wlmfit)
 good_independent_vars =  c("user1_clustering_coefficient",
                            "user1_closeness_centrality_weighted",
                            "user1_betweenness_centrality_weighted",
-                           "user1_pagerank_weighted")
+                           "user1_pagerank_weighted",
+                           "date_control")
 cor(train_data[,good_independent_vars])>0.9
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
@@ -283,7 +278,8 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_satoshi_distance",
                            "user1_satoshi_distance_inf",
                            "user1_satoshi_pagerank_weighted",
-                           "user1_pagerank_weighted")
+                           "user1_pagerank_weighted",
+                           "date_control")
 cor(train_data[,good_independent_vars])>0.9
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
@@ -336,7 +332,8 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_satoshi_distance",
                            "user1_satoshi_distance_inf",
                            "user1_satoshi_pagerank_weighted",
-                           "user1_pagerank_weighted")
+                           "user1_pagerank_weighted",
+                           "date_control")
 cor(train_data[,good_independent_vars])>0.9
 #dependent_var = "magnitude"
 x = data.matrix(train_data[,good_independent_vars])
@@ -387,7 +384,8 @@ order =  c("user1_num_posts",
            "user1_satoshi_distance",
            "user1_satoshi_distance_inf",
            "user1_satoshi_pagerank_weighted",
-           "user1_pagerank_weighted")
+           "user1_pagerank_weighted",
+           "date_control")
 cov.labels = c("Number of posts",
                "Number of subjects",
                "Days since first post",
@@ -399,7 +397,8 @@ cov.labels = c("Number of posts",
                "Satoshi distance",
                "Infinite Satoshi distance",
                "Satoshi pagerank",
-               "Pagerank")
+               "Pagerank",
+               "Coin Vintage Control")
 depvar.label = c(dependent_var_label)
 stargazer(model1_wlmfit,
           model2_wlmfit,

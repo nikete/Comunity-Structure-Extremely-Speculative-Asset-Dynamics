@@ -1,4 +1,4 @@
-input_filename = "./data/joined_price_network_usd.csv"
+input_filename = "./data/joined_price_network_btc.csv"
 output_filename = "./images/severity_boxplot.pdf"
 x_var = "user1_closeness_centrality_weighted"
 #x_var = "user1_days_since_first_post"
@@ -16,29 +16,14 @@ y_max= 6
 num_bins = 10
 
 
-
 library(ggplot2)
-setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
-data = read.csv(file = input_filename, header = TRUE, sep = ",")
-data$earliest_mention_date = as.character(data$earliest_mention_date, format = "%Y-%m-%d")
-data$network_date = as.character(data$network_date, format = "%Y-%m-%d")
-data$earliest_trade_date = as.character(data$earliest_trade_date, format = "%Y-%m-%d")
-data$log_severity_to_average_after_max_volume_weighted = log(data$severity_to_average_after_max_volume_weighted)
-data$magnitude = data$normalized_total_volume_before_max / data$normalized_total_volume
-data$log_magnitude = log(data$magnitude)
-data$magnitude_orig = data$normalized_total_volume_orig_before_max / data$normalized_total_volume_orig
-data$log_magnitude_orig = log(data$magnitude_orig)
-# fix infinite satoshi distance
-data$user1_satoshi_distance_inf = data$user1_satoshi_distance>7
-data$user1_satoshi_distance[data$user1_satoshi_distance_inf] = 7
-
-#if (dependent_var == "magnitude" | dependent_var == "log_magnitude") {
-#  data = data[data$magnitude!=0,]
-#}
-
-# remove btc if present
-data = data[data$symbol != "BTC",]
-
+source("analysis/utils.R")
+ 
+remove_zero_volume = FALSE 
+if (dependent_var == "magnitude" | dependent_var == "log_magnitude") {
+  remove_zero_volume = TRUE
+}
+data = read_data(input_filename, remove_zero_volume)
 data_size = nrow(data)
 # 60% train
 train_size = floor(0.60 * data_size)
