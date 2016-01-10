@@ -1,6 +1,5 @@
-currency = "BTC"
-#dependent_var = "log_severity_to_average_after_max_volume_weighted"
-dependent_var = "magnitude"
+currency = "USD"
+dependent_var = "log_severity_to_average_after_max_volume_weighted"
 #dependent_var = "log_magnitude"
 
 if (currency == "BTC") {
@@ -15,15 +14,8 @@ if (dependent_var == "log_severity_to_average_after_max_volume_weighted") {
   } else if (currency == "USD") {
     output_filename = "./tables/log_severity_usd.tex"
   }
-} else if (dependent_var == "magnitude") {
-  dependent_var_label = paste0("Magnitude (", currency, ")")
-  if (currency == "BTC") {
-    output_filename = "./tables/magnitude_btc.tex"
-  } else if (currency == "USD") {
-    output_filename = "./tables/magnitude_usd.tex"
-  }
 } else if (dependent_var == "log_magnitude") {
-  dependent_var_label = paste0("Log Magnitude (", currency, ")")
+  dependent_var_label = paste0("Magnitude (", currency, ")")
   if (currency == "BTC") {
     output_filename = "./tables/log_magnitude_btc.tex"
   } else if (currency == "USD") {
@@ -32,8 +24,9 @@ if (dependent_var == "log_severity_to_average_after_max_volume_weighted") {
 }
 
 # whether to control for the coin vintage by converting the dependent var to its residual
-# after rlm regressing on the control variable
-control_date = TRUE
+# after rlm regressing on the control variable or just include it in the regression. False
+# includes it in the regression
+control_date = FALSE
 
 library(glmnet)
 library(MASS)
@@ -48,7 +41,7 @@ remove_zero_volume = FALSE
 if (dependent_var == "magnitude" | dependent_var == "log_magnitude") {
   remove_zero_volume = TRUE
 }
-data = read_data(input_filename, remove_zero_volume)
+data = read_data(input_filename, remove_zero_volume, interaction_terms = FALSE)
 data_size = nrow(data)
 # 60% train
 train_size = floor(0.60 * data_size)
@@ -107,6 +100,9 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_satoshi_distance_inf",
                            "user1_satoshi_pagerank_weighted",
                            "user1_pagerank_weighted")
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 cor(train_data[,good_independent_vars])>0.9
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
@@ -165,6 +161,9 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_days_since_first_post",
                            "user1_degree_incoming",
                            "user1_degree_outgoing")
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -212,6 +211,9 @@ summary(model1_wlmfit)
 good_independent_vars =  c("user1_satoshi_distance",
                            "user1_satoshi_distance_inf",
                            "user1_satoshi_pagerank_weighted")
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -223,6 +225,7 @@ nonzero_coefs = extract_nonzero_coefs(best_model$coefs)
 nonzero_coefs
 #nonzero_coefs = c("user1_satoshi_distance", "user1_satoshi_pagerank_weighted")
 #nonzero_coefs = c("user1_satoshi_distance_inf", "user1_satoshi_pagerank_weighted")
+#nonzero_coefs = c("user1_satoshi_pagerank_weighted")
 
 # Run simple ols
 lm_formula = paste(dependent_var, "~", paste(nonzero_coefs, collapse=" + "))
@@ -260,6 +263,9 @@ good_independent_vars =  c("user1_clustering_coefficient",
                            "user1_closeness_centrality_weighted",
                            "user1_betweenness_centrality_weighted",
                            "user1_pagerank_weighted")
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 cor(train_data[,good_independent_vars])>0.9
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
@@ -317,6 +323,9 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_satoshi_distance_inf",
                            "user1_satoshi_pagerank_weighted",
                            "user1_pagerank_weighted")
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 cor(train_data[,good_independent_vars])>0.9
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
@@ -371,6 +380,9 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_satoshi_distance_inf",
                            "user1_satoshi_pagerank_weighted",
                            "user1_pagerank_weighted")
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 cor(train_data[,good_independent_vars])>0.9
 #dependent_var = "magnitude"
 x = data.matrix(train_data[,good_independent_vars])
@@ -434,6 +446,10 @@ cov.labels = c("Number of posts",
                "Infinite Satoshi distance",
                "Satoshi pagerank",
                "Pagerank")
+if (!control_date) {
+  order = c(order, "date_control")
+  cov.labels = c(cov.labels, "Coin Vintage Control")
+}
 depvar.label = c(dependent_var_label)
 stargazer(model1_wlmfit,
           model2_wlmfit,
