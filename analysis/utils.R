@@ -35,3 +35,15 @@ read_data = function(input_filename, remove_zero_volume, interaction_terms) {
   data = data[data$symbol != "BTC",]
   return(data)
 }
+
+# a function for taking the average of a field by the closest points to it in date 
+normalize_by_closest_date = function(df, field) {
+  for(i in 1:nrow(df)) {
+    row = df[i,]
+    indices = which(df$network_date_date > (row["network_date_date"] - 15) &
+                    df$network_date_date < (row["network_date_date"] + 15))
+    df[i,paste0(field,"_average")] = mean(df[indices, field])
+    df[i,paste0(field,"_sd")] = sd(df[indices, field])
+  }
+  return(df)
+}
