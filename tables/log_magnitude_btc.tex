@@ -1,6 +1,6 @@
 
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Sat, Jan 09, 2016 - 07:40:41
+% Date and time: Sun, Jan 10, 2016 - 04:22:04
 % Requires LaTeX packages: dcolumn 
 \begin{table*}[!htbp] \centering 
   \caption{} 
@@ -8,7 +8,7 @@
 \begin{tabular}{@{\extracolsep{3pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & \multicolumn{5}{c}{Log Magnitude (BTC)} \\ 
+ & \multicolumn{5}{c}{Magnitude (BTC)} \\ 
 \cline{2-6} 
 \\[-1.8ex] & \multicolumn{5}{c}{} \\ 
  & \multicolumn{1}{c}{Model1} & \multicolumn{1}{c}{Model2} & \multicolumn{1}{c}{Model3} & \multicolumn{1}{c}{Model4} & \multicolumn{1}{c}{Model5} \\ 
@@ -20,44 +20,47 @@
   &  &  &  &  & (0.009) \\ 
   & & & & & \\ 
  Days since first post & -0.001^{***} &  &  & -0.001^{***} & -0.001^{***} \\ 
-  & (0.0003) &  &  & (0.0003) & (0.0004) \\ 
+  & (0.0004) &  &  & (0.0004) & (0.0004) \\ 
   & & & & & \\ 
- Incoming degree &  &  &  &  & 0.003^{***} \\ 
-  &  &  &  &  & (0.001) \\ 
+ Incoming degree & 0.001^{**} &  &  & 0.001^{*} & 0.003^{***} \\ 
+  & (0.001) &  &  & (0.001) & (0.001) \\ 
   & & & & & \\ 
  Outgoing degree &  &  &  &  & 0.001 \\ 
   &  &  &  &  & (0.002) \\ 
   & & & & & \\ 
- Clustering coefficient &  &  & -3.110 &  & 0.697 \\ 
-  &  &  & (2.146) &  & (2.406) \\ 
+ Clustering coefficient &  &  & -2.479 &  & 0.758 \\ 
+  &  &  & (2.182) &  & (2.428) \\ 
   & & & & & \\ 
- Closeness centrality &  &  & -133.941^{**} & -157.105^{***} & -100.898 \\ 
-  &  &  & (61.015) & (51.712) & (68.435) \\ 
+ Closeness centrality &  &  & -179.899^{***} & -180.161^{***} & -109.986 \\ 
+  &  &  & (68.190) & (61.738) & (76.436) \\ 
   & & & & & \\ 
  Betweenness centrality &  &  &  &  & -0.00000 \\ 
   &  &  &  &  & (0.00000) \\ 
   & & & & & \\ 
- Satoshi distance &  & -0.643 &  & -0.629 & -0.960 \\ 
-  &  & (0.508) &  & (0.492) & (0.769) \\ 
+ Satoshi distance &  &  &  &  & 0.170 \\ 
+  &  &  &  &  & (0.173) \\ 
   & & & & & \\ 
- Infinite Satoshi distance &  &  &  &  & 0.165 \\ 
-  &  &  &  &  & (0.172) \\ 
+ Infinite Satoshi distance &  &  &  & -0.474 & -0.978 \\ 
+  &  &  &  & (0.496) & (0.774) \\ 
   & & & & & \\ 
- Satoshi pagerank &  & -1,245.514^{*} &  &  & 2,478.515 \\ 
-  &  & (688.567) &  &  & (3,690.264) \\ 
+ Satoshi pagerank &  & -428.544 &  &  & 2,543.459 \\ 
+  &  & (700.471) &  &  & (3,699.492) \\ 
   & & & & & \\ 
- Pagerank &  &  & -30.468 &  & -2,103.399 \\ 
-  &  &  & (290.737) &  & (1,509.339) \\ 
+ Pagerank &  &  & -143.905 &  & -2,131.528 \\ 
+  &  &  & (293.446) &  & (1,511.748) \\ 
   & & & & & \\ 
- Constant & 0.173^{*} & 0.090 & 0.321^{**} & 0.442^{***} & -0.456 \\ 
-  & (0.095) & (0.091) & (0.129) & (0.129) & (0.706) \\ 
+ Coin Vintage Control & -0.0004 &  & -0.002^{***} & -0.001^{**} & -0.001^{**} \\ 
+  & (0.0004) &  & (0.0004) & (0.0004) & (0.0005) \\ 
+  & & & & & \\ 
+ Constant & 1.604^{***} & 1.343^{***} & 2.604^{***} & 2.294^{***} & 1.444^{*} \\ 
+  & (0.251) & (0.091) & (0.328) & (0.341) & (0.755) \\ 
   & & & & & \\ 
 \hline \\[-1.8ex] 
 Observations & \multicolumn{1}{c}{339} & \multicolumn{1}{c}{339} & \multicolumn{1}{c}{339} & \multicolumn{1}{c}{339} & \multicolumn{1}{c}{339} \\ 
-R$^{2}$ & \multicolumn{1}{c}{0.027} & \multicolumn{1}{c}{0.013} & \multicolumn{1}{c}{0.029} & \multicolumn{1}{c}{0.056} & \multicolumn{1}{c}{0.086} \\ 
-Adjusted R$^{2}$ & \multicolumn{1}{c}{0.024} & \multicolumn{1}{c}{0.007} & \multicolumn{1}{c}{0.020} & \multicolumn{1}{c}{0.048} & \multicolumn{1}{c}{0.052} \\ 
-Residual Std. Error & \multicolumn{1}{c}{1.394} & \multicolumn{1}{c}{1.416} & \multicolumn{1}{c}{1.410} & \multicolumn{1}{c}{1.373} & \multicolumn{1}{c}{1.363} \\ 
-F Statistic & \multicolumn{1}{c}{9.175$^{***}$} & \multicolumn{1}{c}{2.251} & \multicolumn{1}{c}{3.346$^{**}$} & \multicolumn{1}{c}{6.634$^{***}$} & \multicolumn{1}{c}{2.550$^{***}$} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.057} & \multicolumn{1}{c}{0.001} & \multicolumn{1}{c}{0.052} & \multicolumn{1}{c}{0.082} & \multicolumn{1}{c}{0.099} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.049} & \multicolumn{1}{c}{-0.002} & \multicolumn{1}{c}{0.041} & \multicolumn{1}{c}{0.068} & \multicolumn{1}{c}{0.063} \\ 
+Residual Std. Error & \multicolumn{1}{c}{1.386} & \multicolumn{1}{c}{1.433} & \multicolumn{1}{c}{1.401} & \multicolumn{1}{c}{1.371} & \multicolumn{1}{c}{1.365} \\ 
+F Statistic & \multicolumn{1}{c}{6.811$^{***}$} & \multicolumn{1}{c}{0.374} & \multicolumn{1}{c}{4.620$^{***}$} & \multicolumn{1}{c}{5.933$^{***}$} & \multicolumn{1}{c}{2.761$^{***}$} \\ 
 \hline 
 \hline \\[-1.8ex] 
 \textit{Note:}  & \multicolumn{5}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
