@@ -262,7 +262,7 @@ for coin in coins:
     markets = scrape_markets(coins[coin]['slug'])
     for pair in ['usd','btc']:
         # remove first zero volume days from data
-        analysis = analyze_prices(prices[find_first_non_zero(prices, 'volume_orig'):], markets, pair)
+        analysis = analyze_prices(prices, markets, pair)
         result = analysis.copy()
         result.update({'symbol': coin})
         result.update(coins[coin])

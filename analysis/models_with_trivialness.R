@@ -1,3 +1,33 @@
+currency = "USD"
+#dependent_var = "log_severity_to_average_after_max_volume_weighted"
+dependent_var = "log_magnitude"
+
+if (currency == "BTC") {
+  input_filename = "./data/joined_price_network_trivialness_btc.csv"
+} else if (currency == "USD") {
+  input_filename = "./data/joined_price_network_trivialness_usd.csv"
+}
+if (dependent_var == "log_severity_to_average_after_max_volume_weighted") {
+  dependent_var_label = paste0("Severity (", currency, ")")
+  if (currency == "BTC") {
+    output_filename = "./tables/log_severity_with_trivialness_btc.tex"
+  } else if (currency == "USD") {
+    output_filename = "./tables/log_severity_with_trivialness_usd.tex"
+  }
+} else if (dependent_var == "log_magnitude") {
+  dependent_var_label = paste0("Magnitude (", currency, ")")
+  if (currency == "BTC") {
+    output_filename = "./tables/log_magnitude_with_trivialness_btc.tex"
+  } else if (currency == "USD") {
+    output_filename = "./tables/log_magnitude_with_trivialness_usd.tex"
+  }
+}
+
+# whether to control for the coin vintage by converting the dependent var to its residual
+# after rlm regressing on the control variable or just include it in the regression. False
+# includes it in the regression
+control_date = FALSE
+
 library(glmnet)
 library(MASS)
 library(sandwich)
@@ -5,27 +35,13 @@ library(lmtest)
 library(stargazer)
 setwd(dir = "~/research/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/")
 source("analysis/elastic_net.R")
-setwd(dir = "data")
-data = read.csv(file = "joined_price_network_trivialness_usd.csv", header = TRUE, sep = ",")
-data$earliest_mention_date = as.character(data$earliest_mention_date, format = "%Y-%m-%d")
-data$network_date = as.character(data$network_date, format = "%Y-%m-%d")
-data$earliest_trade_date = as.character(data$earliest_trade_date, format = "%Y-%m-%d")
-data$log_severity_to_average_after_max_volume_weighted = log(data$severity_to_average_after_max_volume_weighted)
-data$magnitude = data$normalized_total_volume_before_max / data$normalized_total_volume
-# add interaction terms
-data$user1_clustering_coefficient_nontrivial = data$user1_clustering_coefficient * data$nontrivial
-data$user1_closeness_centrality_weighted_nontrivial = data$user1_closeness_centrality_weighted * data$nontrivial
-data$user1_betweenness_centrality_weighted_nontrivial = data$user1_betweenness_centrality_weighted * data$nontrivial
-data$user1_satoshi_pagerank_weighted_nontrivial = data$user1_satoshi_pagerank_weighted * data$nontrivial
-data$user1_pagerank_weighted_nontrivial = data$user1_pagerank_weighted * data$nontrivial
-data$user1_degree_incoming_nontrivial = data$user1_degree_incoming * data$nontrivial
-data$user1_degree_outgoing_nontrivial = data$user1_degree_outgoing * data$nontrivial
-# fix infinite satoshi distance
-data$user1_satoshi_distance_inf = data$user1_satoshi_distance>7
-data$user1_satoshi_distance[data$user1_satoshi_distance_inf] = 7
-
-data = data[data$symbol != "BTC",]
-
+source("analysis/utils.R")
+ 
+remove_zero_volume = FALSE 
+if (dependent_var == "magnitude" | dependent_var == "log_magnitude") {
+  remove_zero_volume = TRUE
+}
+data = read_data(input_filename, remove_zero_volume, interaction_terms = TRUE)
 data_size = nrow(data)
 # 60% train
 train_size = floor(0.60 * data_size)
@@ -58,6 +74,15 @@ all_independent_vars =  c("user1_num_posts",
 cor(train_data[,all_independent_vars])
 cor(train_data[,all_independent_vars])>0.9
 
+if (control_date) {
+  control_formula = paste(dependent_var, "~ date_control")
+  rlmfit = rlm(as.formula(control_formula), train_data, psi="psi.huber", method="M", model=T)
+  summary = summary(rlmfit)
+  dd = data.frame(summary$coefficients)
+  dd$p.value = 2*pt(abs(dd$t.value), summary$df[2], lower.tail=FALSE)
+  dd
+  train_data[,dependent_var] = rlmfit$residuals
+}
 
 #####################################
 # Model 0: Initial exploration, using all vars. No specific model
@@ -82,6 +107,9 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_pagerank_weighted",
                            "user1_pagerank_weighted_nontrivial",
                            "nontrivial")
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 cor(train_data[,good_independent_vars])>0.9
 dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
@@ -143,7 +171,9 @@ good_independent_vars =  c("user1_num_posts",
                           "user1_days_since_first_post",
                           "user1_degree_incoming",
                           "user1_degree_outgoing")
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -187,7 +217,9 @@ summary(model1_wlmfit)
 #####################################
 # Model 2: Use only nontrivialness
 good_independent_vars =  c("nontrivial")
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 nonzero_coefs = good_independent_vars
@@ -227,7 +259,9 @@ summary(model2_wlmfit)
 good_independent_vars =  c("user1_satoshi_pagerank_weighted",
                            "user1_satoshi_distance",
                            "user1_satoshi_distance_inf")
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -273,8 +307,10 @@ good_independent_vars =  c("user1_clustering_coefficient",
                            "user1_closeness_centrality_weighted",
                            "user1_betweenness_centrality_weighted",
                            "user1_pagerank_weighted")
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 cor(train_data[,good_independent_vars])>0.9
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -324,8 +360,10 @@ good_independent_vars =  c("user1_clustering_coefficient_nontrivial",
                            "user1_pagerank_weighted_nontrivial",
                            "user1_degree_incoming_nontrivial",
                            "user1_degree_outgoing_nontrivial")
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 cor(train_data[,good_independent_vars])>0.9
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -378,8 +416,10 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_satoshi_distance",
                            "user1_satoshi_distance_inf",
                            "user1_pagerank_weighted")
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 cor(train_data[,good_independent_vars])>0.9
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -441,8 +481,10 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_pagerank_weighted",
                            "user1_pagerank_weighted_nontrivial",
                            "nontrivial")
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 cor(train_data[,good_independent_vars])>0.9
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -503,8 +545,10 @@ good_independent_vars =  c("user1_num_posts",
                            "user1_pagerank_weighted",
                            "user1_pagerank_weighted_nontrivial",
                            "nontrivial")
+if (!control_date) {
+  good_independent_vars = c(good_independent_vars, "date_control")
+}
 cor(train_data[,good_independent_vars])>0.9
-dependent_var = "log_severity_to_average_after_max_volume_weighted"
 x = data.matrix(train_data[,good_independent_vars])
 y = train_data[,dependent_var]
 
@@ -564,31 +608,36 @@ cov.labels =  c("num posts",
                 "num subjects",
                 "days since first post",
                 "incoming degree",
-                "incoming degree * nontrivial",
+                "incoming * nontrivial",
                 "outgoing degree",
-                "outgoing degree * nontrivial",
+                "outgoing * nontrivial",
                 "clustering coefficient",
                 "clustering coefficient * nontrivial",
                 "closeness centrality",
-                "closeness centrality * nontrivial",
+                "closeness * nontrivial",
                 "betweenness centrality",
-                "betweenness centrality* nontrivial",
+                "betweenness * nontrivial",
                 "satoshi pagerank",
-                "satoshi pagerank * nontrivial",
+                "satoshi * nontrivial",
                 "satoshi distance",
                 "Infinite satoshi distance",
                 "pagerank",
                 "pagerank * nontrivial",
                 "nontrivial")
-depvar.label = c("Severity")
+if (!control_date) {
+  order = c(order, "date_control")
+  cov.labels = c(cov.labels, "Coin Vintage Control")
+}
+depvar.label = c(dependent_var_label)
 stargazer(model2_wlmfit,
           model3_wlmfit,
           model4_wlmfit,
+          model5_wlmfit,
           model6_wlmfit,
           model7_wlmfit,
           model8_wlmfit,
           dep.var.labels= "",
-          column.labels=c("Model2", "Model3", "Model4", "Model6", "Model7", "Model8"),
+          column.labels=c("Model2", "Model3", "Model4", "Model5", "Model6", "Model7", "Model8"),
           column.sep.width = "0pt",
           omit.table.layout = "#",
           df = FALSE,
@@ -599,4 +648,4 @@ stargazer(model2_wlmfit,
           covariate.labels = cov.labels,
           float.env = "table*",
           digits = 3,
-          out="../tables/log_severity_with_trivialness.tex")
+          out=output_filename)

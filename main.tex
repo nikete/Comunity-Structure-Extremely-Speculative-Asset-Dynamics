@@ -72,7 +72,7 @@ jmcauley@cse.ucsd.edu
 We study the power of structural features of the social network around cryptocurrencies to understand the severity and magnitude of bubbles. 
 We introduce a novel dataset that combines measures of the social network surrounding the introduction of coins in online cryptocurrency forums, the trading  behavior across marketplaces, and the presence of nontrivial changes to the source code in relation to previous coins.
 Our networks are constructed based on the intensity of social interactions in the main discussion forum of cryptocurrencies. All the structural features of the network are measured based on the state of the social network before the relevant cryptocurrency is ever traded; therefore allowing for predictions into the future by avoiding any possible confounding between the prices and community attention.
-Our study reveals that structural features of the network and the nature of the source code changes achieve substantial predictive power on the severity of trading price bubbles. In particular, merely the structural position of users who introduce new coins in the forum, before the coins have been even traded,  explains  20\% of variation in bubble severities.
+Our study reveals that structural features of the network and the nature of the source code changes achieve substantial predictive power on the severity of trading price bubbles. In particular, merely the structural position of users who introduce new coins in the forum, before the coins have been even traded, \textcolor{red}{explains more than 20\% of variation in bubble severities.}
 
 \end{abstract}
 
@@ -82,9 +82,9 @@ Our study reveals that structural features of the network and the nature of the 
 \input{lit.tex}
 
 \section{Data Description}
-\subsection{Prices, Exchanges, and Coin characteristics} \label{data_nikete}
+\subsection{Prices, Exchanges, and Coin characteristics}
 \input{data_nikete.tex}
-\input{data_otto.tex}
+%\input{data_otto.tex}
 
 \subsection{Forum Discussions}
 \input{data_eaman1.tex}
@@ -94,7 +94,7 @@ Our study reveals that structural features of the network and the nature of the 
 
 
 \section{Variables}
-\subsection{Magnitude and Severity} \label{variables_nikete}
+\subsection{Magnitude and Severity}
 \input{variables_nikete.tex}
 
 \subsection{Network Structure}
@@ -113,8 +113,36 @@ Our study reveals that structural features of the network and the nature of the 
 \section{Conclusion}
 \input{conclusion.tex}
 
-\input{tables/log_severity.tex}
-%\input{tables/log_severity_with_trivialness.tex}
+
+\input{tables/log_severity_btc.tex}
+%\caption{Robust regression results of bubble severity as defined in variables section.
+%Regression was performed using Huber weights after Elastic net feature selection. Empty
+%cells indicate that the independent variable was not included in the model either
+%explicitly or due to feature selection.}
+\input{tables/log_severity_usd.tex}
+
+%\caption{Robust regression results of bubble magnitude as defined in variables section.
+%Regression was performed using Huber weights after Elastic net feature selection. Empty
+%cells indicate that the independent variable was not included in the model either
+%explicitly or due to feature selection. Note that train sample size is smaller than
+%severity due to missing volume data in the first few trading days of several coins.}
+\input{tables/log_magnitude_usd.tex}
+\input{tables/log_magnitude_btc.tex}
+
+\input{tables/log_severity_with_trivialness_btc.tex}
+%\caption{Robust regression results of bubble severity as defined in variables section.
+%Regression was performed using Huber weights after Elastic net feature selection. Empty
+%cells indicate that the independent variable was not included in the model either
+%explicitly or due to feature selection.}
+\input{tables/log_severity_with_trivialness_usd.tex}
+
+%\caption{Robust regression results of bubble magnitude as defined in variables section.
+%Regression was performed using Huber weights after Elastic net feature selection. Empty
+%cells indicate that the independent variable was not included in the model either
+%explicitly or due to feature selection. Note that train sample size is smaller than
+%severity due to missing volume data in the first few trading days of several coins.}
+\input{tables/log_magnitude_with_trivialness_usd.tex}
+\input{tables/log_magnitude_with_trivialness_btc.tex}
 
 %\section{Acknowledgments}
 
