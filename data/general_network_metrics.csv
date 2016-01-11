@@ -1,4 +1,4 @@
-coin,num_vertices,num_edges,unweighted_density,weighted_density,unweighted_average_path_length,clustering_coefficient,average_degree
+network_date,num_vertices,num_edges,unweighted_density,weighted_density,unweighted_average_path_length,clustering_coefficient,average_degree
 2015-07-13,75540,896787,0.0001571576,0.0001756697,59682.75,0.0479975,23.74337
 2013-09-28,16631,210347,0.0007605007,0.0008989472,11587.74,0.09436781,25.29577
 2014-05-30,55852,597848,0.000191652,0.0002164696,44342.67,0.05158648,21.40829
