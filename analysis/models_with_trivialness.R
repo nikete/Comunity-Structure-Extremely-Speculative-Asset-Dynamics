@@ -1,6 +1,6 @@
 currency = "USD"
-#dependent_var = "log_severity_to_average_after_max_volume_weighted"
-dependent_var = "log_magnitude"
+dependent_var = "log_severity_to_average_after_max_volume_weighted"
+#dependent_var = "log_magnitude"
 
 if (currency == "BTC") {
   input_filename = "./data/joined_price_network_trivialness_btc.csv"
@@ -41,7 +41,8 @@ remove_zero_volume = FALSE
 if (dependent_var == "magnitude" | dependent_var == "log_magnitude") {
   remove_zero_volume = TRUE
 }
-data = read_data(input_filename, remove_zero_volume, interaction_terms = TRUE)
+data = read_data(input_filename, remove_zero_volume, normalize_closeness = TRUE, interaction_terms = TRUE)
+
 data_size = nrow(data)
 # 60% train
 train_size = floor(0.60 * data_size)

@@ -1,4 +1,4 @@
-read_data = function(input_filename, remove_zero_volume, interaction_terms) {
+read_data = function(input_filename, remove_zero_volume, normalize_closeness, interaction_terms) {
   data = read.csv(file = input_filename, header = TRUE, sep = ",")
   data$earliest_mention_date_str = as.character(data$earliest_mention_date, format = "%Y-%m-%d")
   data$earliest_mention_date_date = as.Date(data$earliest_mention_date)
@@ -8,6 +8,11 @@ read_data = function(input_filename, remove_zero_volume, interaction_terms) {
   data$earliest_trade_date_date = as.Date(data$earliest_trade_date)
   data$date_control = as.integer(data$earliest_trade_date_date - min(data$earliest_trade_date_date))
   
+  # normalize centralities by average path length
+  if (normalize_closeness) {
+    data$user1_closeness_centrality_weighted = data$user1_closeness_centrality_weighted * data$unweighted_average_path_length
+    data$user1_closeness_centrality_unweighted = data$user1_closeness_centrality_unweighted * data$unweighted_average_path_length
+  }
   data$log_severity_to_average_after_max_volume_weighted = log(data$severity_to_average_after_max_volume_weighted)
   data$magnitude = data$normalized_total_volume_before_max / data$normalized_total_volume
   data$log_magnitude = log(data$magnitude)
@@ -37,13 +42,20 @@ read_data = function(input_filename, remove_zero_volume, interaction_terms) {
 }
 
 # a function for taking the average of a field by the closest points to it in date 
-normalize_by_closest_date = function(df, field) {
+average_sd_by_closest_date = function(df, field) {
   for(i in 1:nrow(df)) {
     row = df[i,]
-    indices = which(df$network_date_date > (row["network_date_date"] - 15) &
-                    df$network_date_date < (row["network_date_date"] + 15))
+    indices = which(df$network_date_date > (row["network_date_date"] - 25) &
+                    df$network_date_date < (row["network_date_date"] + 25))
     df[i,paste0(field,"_average")] = mean(df[indices, field])
     df[i,paste0(field,"_sd")] = sd(df[indices, field])
   }
+  return(df)
+}
+
+normalize_by_closest_date = function(df1, field) {
+  df = average_sd_by_closest_date(df1, field)
+  df[,field] = (df[,field] - df[,paste0(field,"_average")]) / df[,paste0(field,"_sd")]
+  df = df[!is.na(df[,field]),]
   return(df)
 }
