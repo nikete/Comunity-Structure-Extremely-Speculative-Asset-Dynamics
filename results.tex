@@ -1,30 +1,30 @@
 All reported models, figures, and results are using only $60\%$ of the data, the other $40\%$ is being held out, and the researchers are blidning themselves to it, until the paper is ready for publication, so as to have a measure of true out of sample fit. 
 
-We fitted $5$ models with our methodology for each of our two outcome measures in both USD and BTC terms (4 total outcome vairables).
-
-Tables 1 and 2 report the coefficient estimates for standardized variables for the two outcome variables where we have the most substantial explanatory power beyond coin vintage: severity in USD and magnitude in BTC. While normally comparing R squared accross moels is not meaningful, the combination of having hte same set of explanatory variables, while the depdent variables all have the same mean and standard eviations, does make them into a useful sumarries of model fit. 
-While the results for severity are not The magnitude measure is not much affected
-
-
-The results for severity are very similar accross both USD and BTC, and largely show that closeness centrality and satoshi distance are have explatory power beyond time. they are both positively associated, with satoshi distance being orders of magnitude more important.
-
-Interestingly, days since first post is negative, while the number of subject the user posts accross is positive.
-
-
-
-
-
-
-
+We present results for $5$ models fitted with our methodology to each of our two outcome measures in both USD and BTC terms, 4 total outcome vairables.
 
 Our User model considers how long a user has been active, and how many users have replied to them and he has replied to. 
-Our nontrivial model consists of a single binary variable encoding wether the source code of the coin is a not a trivial change to existing coins. 
 Our Satoshi model considers the distance and pagerank relative to satoshi.
-None  of these three models achieve out of sample error rates beyond simply predicting $0$ constantly for either of our outcome measures of interest.
-
 Our Network model encodes directed edges when a user interacts with another, and proceeds to estimate closeness centrality and clustering measures based on this. 
 Our Weighted model uses the intensity of interactions to create a weighted network and construct a similar set of measures to the Network model.
 Our All model contains all previous mentioned variables, there is extreme collinearity in this model and thus it's estimated coefficients and standard errors should be interpreted with extreme caution. 
+We also considered if a coin is non-trivial and it's interaction with th network and satoshi metrics. It did not consistently improve the model fit, and is thus excluded from reporting. 
+
+Tables 1 and 2 report the coefficient estimates for standardized variables for the two outcome variables where we have the most substantial explanatory power beyond coin vintage: severity in USD and magnitude in BTC. While normally comparing R squared accross moels is not meaningful, the combination of having the same set of explanatory variables, while the depdent variables all have the same mean and standard eviations, does make them into a useful sumarries of model fit in this particular case. 
+While the results for severity are not mcuh affected, the magnitude measure is less predictable in USD than in BTC.
+We do not include the tables for severity in BTC and magnitude in USD to meet page limit restrictions.
+There are no subsntantial changes beyond fewer variables being selected by the elasticnet for mangnitude BTC, which is consistent with its lower predictability.
+
+The results for severity are very similar accross both USD and BTC, and largely show that closeness centrality and satoshi distance are have explatory power beyond time. They are both positively associated with a bubbles severity
+
+
+It is interesting that a simple measure like distance that leverages very specific domain knowledge (that the Satoshi user) outperforms so many candidate measures from the social network literature.
+
+
+Days since first post is negative, while the number of subject the user posts accross is positive.
+
+
+
+
 
 
 
