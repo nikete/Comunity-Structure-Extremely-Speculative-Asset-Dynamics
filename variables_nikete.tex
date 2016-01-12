@@ -3,7 +3,9 @@ We operationalize the intensity of a bubble as the proportion of a 1 dollar that
 More formally for each coin $c$, let $P_c,V_c$ be two vectors of length $T$ each indexed by days since the coin $c$ started trading.
 Let $v_{c,t}$, the $t^{th}$ element of $V_c$ be the number of $c$ coins traded across all exchanges $t$ days after $c$'s introduction to the market. 
 Similarly, let $p_t$ be the representative price of coin $c$ on day $t$.
-\footnote{There are several ways that this can be defined reasonably. For the markets organized as continuous double auctions the price of the first or last transaction of the day,  the average price transacted during a day, the average best asking bid at midnight or noon, would all be reasonable choices. Exchange price aggregators and exchanges own historical data do not provide enough precision to pin this down, as it is entirely possible that the aggregators are using inconsistent definitions for the underlying exchanges.}. Then, we simply define our magnitude measure for coin $c$ as
+\footnote{There are several ways that this can be defined reasonably. For the markets organized as continuous double auctions the price of the first or last transaction of the day,  the average price transacted during a day, the average best asking bid at midnight or noon, would all be reasonable choices. Exchange price aggregators and exchanges own historical data do not provide enough precision to pin this down, as it is entirely possible that the aggregators are using inconsistent definitions for the underlying exchanges.}. 
+
+Then, we simply define our magnitude measure for coin $c$ as
 \begin{equation}
 magnitude_{c} = \log(\frac{\sum_{t=1}^{t_{max}} v_t p_t} {\sum_{t=1}^{T} v_t  p_t} \frac{T}{t_{max}})
 \end{equation}
