@@ -23,7 +23,7 @@ remove_zero_volume = FALSE
 if (dependent_var == "magnitude" | dependent_var == "log_magnitude") {
   remove_zero_volume = TRUE
 }
-data = read_data(input_filename, remove_zero_volume)
+data = read_data(input_filename, remove_zero_volume, normalize_closeness = TRUE, interaction_terms = FALSE)
 data_size = nrow(data)
 # 60% train
 train_size = floor(0.60 * data_size)
