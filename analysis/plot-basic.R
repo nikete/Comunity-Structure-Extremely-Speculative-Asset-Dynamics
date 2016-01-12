@@ -1,7 +1,7 @@
 
-df_btc = read.csv('data/joined_price_network_btc.csv', stringsAsFactors = F)
-df_usd = read.csv('data/joined_price_network_usd.csv', stringsAsFactors = F)
-data = read.csv('data/all_introducer_metrics.csv', stringsAsFactors = F)
+df_btc = read.csv('../data/joined_price_network_btc.csv', stringsAsFactors = F)
+df_usd = read.csv('../data/joined_price_network_usd.csv', stringsAsFactors = F)
+data = read.csv('../data/introducers/all_introducer_metrics.csv', stringsAsFactors = F)
 
 data$earliest_mention_date_str = as.character(data$earliest_mention_date, format = "%Y-%m-%d")
 data$earliest_mention_date_date = as.Date(data$earliest_mention_date)
@@ -43,34 +43,34 @@ for(i in 1:nrow(sub)) {
 
 #plot(sub$network_date_date, sub$user1_closeness_centrality_weighted)
 
-pdf('severity-usd.pdf',4,4)
+pdf('../images/severity-usd.pdf',3,3)
 par(oma = c(0,0,0,0) + 0.1,
     mar = c(3.5,3.5,1,1) + 0.1)
-plot(sub$network_date_date, log(sub$usd_severity), pch = 20, cex = 1, xlab = '', ylab = '')
+plot(sub$network_date_date, log(sub$usd_severity), pch = 20, cex = 0.5, xlab = '', ylab = '')
 title(xlab="Date", line=2.2, cex.lab=1.2, family="Times")
 title(ylab="Severity (USD)", line=2.2, cex.lab=1.2, family="Times")
 dev.off()
 
-pdf('magnitude-usd.pdf',4,4)
+pdf('../images/magnitude-usd.pdf',3,3)
 par(oma = c(0,0,0,0) + 0.1,
     mar = c(3.5,3.5,1,1) + 0.1)
-plot(sub$network_date_date, log(sub$usd_volume), pch = 20, cex = 1, xlab = '', ylab = '')
+plot(sub$network_date_date, log(sub$usd_volume), pch = 20, cex = 0.5, xlab = '', ylab = '')
 title(xlab="Date", line=2.2, cex.lab=1.2, family="Times")
 title(ylab="Magnitude (USD)", line=2.2, cex.lab=1.2, family="Times")
 dev.off()
 
-pdf('severity-btc.pdf',4,4)
+pdf('../images/severity-btc.pdf',3,3)
 par(oma = c(0,0,0,0) + 0.1,
     mar = c(3.5,3.5,1,1) + 0.1)
-plot(sub$network_date_date, log(sub$btc_severity), pch = 20, cex = 1, xlab = '', ylab = '')
+plot(sub$network_date_date, log(sub$btc_severity), pch = 20, cex = 0.5, xlab = '', ylab = '')
 title(xlab="Date", line=2.2, cex.lab=1.2, family="Times")
 title(ylab="Severity (BTC)", line=2.2, cex.lab=1.2, family="Times")
 dev.off()
 
-pdf('magnitude-btc.pdf',4,4)
+pdf('../images/magnitude-btc.pdf',3,3)
 par(oma = c(0,0,0,0) + 0.1,
     mar = c(3.5,3.5,1,1) + 0.1)
-plot(sub$network_date_date, log(sub$btc_volume), pch = 20, cex = 1, xlab = '', ylab = '')
+plot(sub$network_date_date, log(sub$btc_volume), pch = 20, cex = 0.5, xlab = '', ylab = '')
 title(xlab="Date", line=2.2, cex.lab=1.2, family="Times")
 title(ylab="Magnitude (BTC)", line=2.2, cex.lab=1.2, family="Times")
 dev.off()
@@ -79,4 +79,3 @@ dev.off()
 #plot(sub$user1_closeness_centrality_weighted, log(sub$severity))
 #plot(sub$user1_closeness_centrality_weighted, log(sub$volume))
 
-sub = 
