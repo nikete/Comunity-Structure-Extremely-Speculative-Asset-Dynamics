@@ -5,5 +5,6 @@ latest PDF: https://www.sharelatex.com/github/repos/nikete/Comunity-Structure-Ex
 
 [![PDF Status](https://www.sharelatex.com/github/repos/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/builds/latest/badge.svg)](https://www.sharelatex.com/github/repos/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/builds/latest/output.pdf)
 
+Data Description:
+1- Forum data:The processed forum data can be found in https://www.dropbox.com/sh/grxbcuyo4cquyow/AABgnyGD0EtpJwrzfkgJdSuMa?dl=0
 
-deadline for ICWSM: http://www.timeanddate.com/countdown/generic?iso=20160111T235959&p0=103&msg=ICWSM+%2716+Full+Paper+Submission+Deadline&font=sanserif&csz=1
