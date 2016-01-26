@@ -12,7 +12,8 @@ latest PDF: https://www.sharelatex.com/github/repos/nikete/Comunity-Structure-Ex
 4. **mapofcoins announcements**: A list of 593 coin announcement that were fetched from mapofcoins page. These are less reliable than verified announcements above, but nevertheless better than our candidates. Not all of these coins actually match the list of our coins in item 2 above. https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/ann_mapofcoins.csv
 
 ## Extract Introducer Candidates:
-The current candidates are in data/introducers/ in five different directories depending on how the coin mentions are detected:
+The current candidates are in *data/introducers/* in five different directories depending on how the coin mentions are detected:
+
 1. unmodified-symbol-and-name-in-subject
 2. unmodified-symbol-and-name-in-subject-content
 3. unmodified-symbol-and-name-in-subject-with-ANN
@@ -20,10 +21,11 @@ The current candidates are in data/introducers/ in five different directories de
 5. unmodified-symbol-or-name-in-subject-with-ANN
 
 The verified announcements are extracted from these candidates. We manually checked these candidates and used the one that was the best as the first announcement of the coin. If the forum-data changes or new coins are added to our list, you can regenerate the new set of candidates:
-1. Update the top level directory in first line of [forums/commands/extract_users.sh](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/forums/commands/extract_users.sh)
-2. Run ./forums/commands/extract_users.sh
 
-The new set of candidates will be written in data/introducers/unlimited directory. You can compare them with current set of candidates in data/introducers. 
+1. Update the top level directory in first line of [forums/commands/extract_users.sh](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/forums/commands/extract_users.sh)
+2. Run *./forums/commands/extract_users.sh*
+
+The new set of candidates will be written in *data/introducers/unlimited* directory. You can compare them with current set of candidates in data/introducers. 
 [data/introducers/verified_introducers.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/introducers/verified_introducers.csv) contains the list of 336 announcments we verified from the candidates.
 
 
