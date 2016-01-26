@@ -9,28 +9,27 @@ import datetime
 import utils
 
 parser = argparse.ArgumentParser(
-    description='This script extracts multiple sets of users per coin. '
+    description='This script extracts two sets of users per coin. '
                 'The following is a description of these  different sets:'  
                 '1-The users who have mentioned the unmodified coin for the first time '
                 'in any post any date.   '
-                '2-The users who have mentioned both the unmodified coin for the first '
+                '2-The users who have mentioned the unmodified coin for the first '
                 'time in a post that starts a new thread any date.   '
-                'Note that this script does not decide whether a modifed or unmodified '
+                'Note that this script does not decide whether a unmodified '
                 'coin is mentioned in a post. The mentioned coins per post are provided '
-                'as input. In other words, the input is free to decide on whatever '
-                'mention scheme to use.')
+                'as input. This is done by the add_coin_mentions_sort_by_time.py script. '
+                'In other words, the input is free to decide on whatever mention scheme '
+                'to use.')
 parser.add_argument("forum_input",
                     help="The location of CSV file containing posts from all forums "
                     "sorted by date and time. The last two columns of file should "
                     "contain the list of modified and unmodified coins mentions in the "
-                    "post.")
+                    "post. This file only uses the last column (unmodified mention)")
 parser.add_argument("output_dir",
                     help="The directory where the users lists will be written to. These "
-                    "will be multiple csvs. For example, a CSV file will also be written "
-                    "to this directory mapping each coin name to the list of its most "
-                    "active users (those who had mentioned the coin the most at time of "
-                    "the network). Another CSV file containing the first introducers "
-                    "of the coins will be also written to this folder.");
+                    "will be multiple csvs. For example, a CSV file containing the "
+                    "first introducers of the coins based on the two scheme above will "
+                    "be written to this folder.");
 parser.add_argument("unmodified_coins_earliest_trade_dates",
                     help="A CSV file containing the earliest possible introduction date "
                     "for each unmodified coin. The first line is the header and each "
@@ -75,29 +74,28 @@ class PostsTracker:
     # The users who have mentioned the unmodified coin name AND symbol for
     # the first time in any post any date
     # A mapping from coin name to the first user that mentions that coin. This could have
-    # been a simple dict, but for consistency, the structure of this is similar to
-    # coin_mention maps. The number of mentions for any user will always be one, and we
-    # will only track of one user per coin.
-    # This could be full of false positives, and that's why we look at number of mentions.
+    # been a simple dict. update.....
+    # The number of mentions for any user will always be one, and we will only track of
+    # one user per coin.
+    # This could be full of false positives, and that's why we used to  look at number of
+    # mentions, but folks disagreed...
     # It could still be useful if coin mentions are assigned when both name and symbol are
     # present in the text.
     self.unmodified_first_mention = collections.defaultdict(
         lambda: collections.defaultdict(int)) 
-    # Keeps track of url and date of the first mention of each coin by users in the second
-    # list. A mapping from coin name to the URL and date of the first mention.
+    # Keeps track of url and date of the first mention of each coin by users. A mapping
+    # from coin name to the URL and date of the first mention.
     self.unmodified_first_mention_date_url = collections.defaultdict(
         lambda: collections.defaultdict(list))
 
     
     # Used for tracking users in 2nd list: 
-    # The users who have mentioned both the unmodified coin name AND symbol 
-    # for the first time in a post that starts a new thread any date.
-    # This could have been a simple dict, but for consistency we employed the same
-    # structure and coin_mention maps.
+    # The users who have mentioned the unmodified coin name for the first time in a post
+    # that starts a new thread any date.
     self.unmodified_first_thread_post_mention = collections.defaultdict(
         lambda: collections.defaultdict(int)) 
     # Keeps track of url and date of the first mention of each coin in first post of a
-    # thread by users in the fourth list.
+    # thread by users
     self.unmodified_first_thread_post_mention_date_url = collections.defaultdict(
         lambda: collections.defaultdict(list))
 
