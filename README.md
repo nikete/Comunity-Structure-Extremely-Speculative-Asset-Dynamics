@@ -25,7 +25,7 @@ The verified announcements are extracted from these candidates. We manually chec
 1. Update the top level directory in first line of [forums/commands/extract_users.sh](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/forums/commands/extract_users.sh)
 2. Run *./forums/commands/extract_users.sh*
 
-The new set of candidates will be written in *data/introducers/unlimited* directory. You can compare them with current set of candidates in data/introducers. 
-[data/introducers/verified_introducers.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/introducers/verified_introducers.csv) contains the list of 336 announcments we verified from the candidates.
+The new set of candidates will be written in *data/introducers/unlimited* directory. There will be a file containing introducing user info and another file containing the announcment URL per coin. You can compare them with current set of candidates in 
+[data/verified_announcements.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/verified_announcements.csv) which contains the list of 336 announcments we verified from the candidates.
 
 
