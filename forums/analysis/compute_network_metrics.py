@@ -36,12 +36,17 @@ parser.add_argument("output_file",
                     "csv format. Each row will contain the coin network, user who "
                     "introduced the first, date of first introduction and all the "
                     "network measures")
-parser.add_argument("-s", "--skip_general_metrics", dest="skip_general_metrics",
+parser.add_argument("-sg", "--skip_general_metrics", dest="skip_general_metrics",
                     default = False, action = "store_true",
                     help="Whether we should compute general network metrics such as "
                     "density or number of vertices. These metrics are independent of any "
                     "coin and only depend on date. Default is false which means they "
                     "will be computed.")
+parser.add_argument("-su", "--skip_user_metrics", dest="skip_user_metrics",
+                    default = False, action = "store_true",
+                    help="Whether we should compute user speicific metrics such as "
+                    "centrality measures. These metrics are dependent on the coins and "
+                    "the user. Default is false which means they will be computed.")
 parser.add_argument("-u", "--users_input_file", dest="users_input_file",
                     help="If provided, coin-specific measures for users in this "
                     "file (such as centrality, betweenness and coefficient) will be "
@@ -89,15 +94,16 @@ def read_coin_users(users_input_file):
     next(csvreader, None)  # skip the headers
     for row in csvreader:
       coin = row[0]
-      earliest_trade_date = row[1]
-      earliest_mention_date = row[2]
-      network_date = row[3]
+      name = row[1]
+      earliest_trade_date = row[2]
+      earliest_mention_date = row[3]
+      network_date = row[4]
       coin_earliest_trade_dates[coin] = earliest_trade_date
       coin_earliest_mention_dates[coin] = earliest_mention_date
       coin_network_dates[coin] = network_date
       # go through active users/num_mentions/num_posts/num_subjects
       num_coin_users = 0
-      for i in range(4, len(row), 5):
+      for i in range(5, len(row), 5):
         user = row[i]
         num_mentions = row[i+1]
         num_posts = row[i+2]
@@ -113,7 +119,7 @@ def read_coin_users(users_input_file):
       max_num_coin_users = max(max_num_coin_users, num_coin_users)
 
   return (max_num_coin_users, coin_users,
-          coin_earliest_trade_dates, coin_earliest_mention_date, coin_network_dates)
+          coin_earliest_trade_dates, coin_earliest_mention_dates, coin_network_dates)
 
 
 # Define weighted density as sum(edge weights)/(max number of possible edges) for directed
@@ -292,9 +298,41 @@ def compute_network_unweighted_density(network):
   return utils.round_to_sigfigs(network.density(loops=True), NUM_SIGFIGS)
 
 
-def compute_network_average_path_length(network, directed_networks):
+def compute_network_unweighted_average_path_length(network, directed_networks):
   average_path_length = network.average_path_length(directed = directed_networks,
-                                                    unconn = True)
+                                                    unconn = False)
+  return utils.round_to_sigfigs(average_path_length, NUM_SIGFIGS)
+
+
+def compute_network_weighted_average_path_length(network, directed_networks):
+  if len(network.es) == 0:
+    return 0
+  
+  # weights are requested, we should use the inverse of weights, since higher weights
+  # means more interactions between two users
+  weights = [1.0/w for w in network.es['weight']]
+  if directed_networks:
+    shortest_paths = network.shortest_paths(source = network.vs, target = network.vs,
+                                            weights = weights, mode = igraph.OUT)
+  else:
+    shortest_paths = network.shortest_paths(source = network.vs, target = network.vs,
+                                            weights = weights, mode = igraph.ALL)
+  
+  # iterate over all shortest paths and add them up
+  # assign the largest path length to unconnected nodes
+  max_path_length = -1
+  for i in shortest_paths: 
+    for path_length in i:
+      if path_length != float('Inf') and path_length > max_path_length:
+        max_path_length = path_length
+  
+  num_pairs = 0
+  sum_path_lengths = 0
+  for i in shortest_paths: 
+    for path_length in i:
+      sum_path_lengths += min(path_length, max_path_length)
+      num_pairs += 1
+  average_path_length = sum_path_lengths / num_pairs
   return utils.round_to_sigfigs(average_path_length, NUM_SIGFIGS)
 
 
@@ -350,19 +388,27 @@ def compute_network_metrics(network_info):
     num_edges = len(network.es)
     unweighted_density = compute_network_unweighted_density(network)
     weighted_density = compute_network_weighted_density(network, directed_networks)
-    unweighted_diameter = network.diameter(directed = directed_networks)
-    weighted_diameter = compute_network_weighted_diameter(network, directed_networks)
-    average_path_length = compute_network_average_path_length(network, directed_networks)
+    #unweighted_diameter = network.diameter(directed = directed_networks)
+    #weighted_diameter = compute_network_weighted_diameter(network, directed_networks)
+    unweighted_average_path_length = compute_network_unweighted_average_path_length(
+        network, directed_networks)
+    #weighted_average_path_length = compute_network_weighted_average_path_length(
+    #    network, directed_networks)
     clustering_coefficient = compute_network_clustering_coefficient(network)
     average_degree = compute_network_average_degree(network)
 
     result.extend([num_vertices, num_edges,
-                   unweighted_density, weighted_density,
-                   unweighted_diameter, weighted_diameter,
-                   average_path_length, clustering_coefficient, average_degree])
+                   unweighted_density,
+                   weighted_density,
+                   #unweighted_diameter,
+                   #weighted_diameter,
+                   unweighted_average_path_length,
+                   #weighted_average_path_length,
+                   clustering_coefficient,
+                   average_degree])
   
   # user metrics requested?
-  if args.users_input_file:
+  if not args.skip_user_metrics:
     # Read in mapping from coin name to list of (active user, num mentions).
     (max_num_coin_users,
      coin_users,
@@ -506,14 +552,21 @@ def main():
   header = ["coin"]
   if not args.skip_general_metrics:
     header.extend(["num_vertices", "num_edges",
-                   "unweighted_density", "weighted_density",
-                   "unweighted_diameter", "weighted_diameter",
-                   "average_path_length", "clustering_coefficient", "average_degree"])
+                   "unweighted_density",
+                   "weighted_density",
+                   #"unweighted_diameter",
+                   #"weighted_diameter",
+                   "unweighted_average_path_length",
+                   #"weighted_average_path_length",
+                   "clustering_coefficient",
+                   "average_degree"])
 
   # Keeps track of all input filenames along with their network name in a list, so that it
   # can be used as input to pool of workers
   networks_info = list()
-  # user metrics requested? but they are different for directed and undirected graphs.
+  # coin specific metrics requested? but they are different for directed and undirected
+  # graphs. the user specific metrics could still be not requested, since we might just
+  # want to compute general metrics at introduction dates
   if args.users_input_file:
     # metrics are computed per coin
     (max_num_coin_users,
@@ -532,46 +585,48 @@ def main():
         continue
       networks_info.append((network_file, network_name))
 
-    # Extend header since user metrics are requested.
-    header.extend(["earliest_trade_date", "earliest_mention_date", "network_date"])
-    for i in range(1, max_num_coin_users + 1):
-      user = "user" + str(i)
-      if args.directed_networks:
-        header.extend([user,
-                       user + "_num_mentions",
-                       user + "_num_posts",
-                       user + "_num_subjects",
-                       user + "_days_since_first_post",
-                       user + "_degree_total",
-                       user + "_degree_incoming",
-                       user + "_degree_outgoing",
-                       user + "_clustering_coefficient",
-                       user + "_closeness_centrality_unweighted",
-                       user + "_closeness_centrality_weighted",
-                       user + "_closeness_centrality_incoming_unweighted",
-                       user + "_closeness_centrality_outgoing_unweighted",
-                       user + "_closeness_centrality_incoming_weighted",
-                       user + "_closeness_centrality_outgoing_weighted",
-                       user + "_betweenness_centrality_weighted",
-                       user + "_satoshi_distance",
-                       user + "_satoshi_pagerank_unweighted",
-                       user + "_satoshi_pagerank_weighted",
-                       user + "_pagerank_unweighted",
-                       user + "_pagerank_weighted"])
-      else:
-        header.extend([user,
-                       user + "_num_mentions",
-                       user + "_num_posts",
-                       user + "_num_subjects",
-                       user + "_days_since_first_post",
-                       user + "_degree",
-                       user + "_clustering_coefficient",
-                       user + "_closeness_centrality_unweighted",
-                       user + "_closeness_centrality_weighted",
-                       user + "_betweenness_centrality_weighted",
-                       user + "_laplacian_centrality",
-                       user + "_pagerank_unweighted",
-                       user + "_pagerank_weighted"])
+    # are the metrics for users requested?
+    if not args.skip_user_metrics:
+      # Extend header since user metrics are requested.
+      header.extend(["earliest_trade_date", "earliest_mention_date", "network_date"])
+      for i in range(1, max_num_coin_users + 1):
+        user = "user" + str(i)
+        if args.directed_networks:
+          header.extend([user,
+                         user + "_num_mentions",
+                         user + "_num_posts",
+                         user + "_num_subjects",
+                         user + "_days_since_first_post",
+                         user + "_degree_total",
+                         user + "_degree_incoming",
+                         user + "_degree_outgoing",
+                         user + "_clustering_coefficient",
+                         user + "_closeness_centrality_unweighted",
+                         user + "_closeness_centrality_weighted",
+                         user + "_closeness_centrality_incoming_unweighted",
+                         user + "_closeness_centrality_outgoing_unweighted",
+                         user + "_closeness_centrality_incoming_weighted",
+                         user + "_closeness_centrality_outgoing_weighted",
+                         user + "_betweenness_centrality_weighted",
+                         user + "_satoshi_distance",
+                         user + "_satoshi_pagerank_unweighted",
+                         user + "_satoshi_pagerank_weighted",
+                         user + "_pagerank_unweighted",
+                         user + "_pagerank_weighted"])
+        else:
+          header.extend([user,
+                         user + "_num_mentions",
+                         user + "_num_posts",
+                         user + "_num_subjects",
+                         user + "_days_since_first_post",
+                         user + "_degree",
+                         user + "_clustering_coefficient",
+                         user + "_closeness_centrality_unweighted",
+                         user + "_closeness_centrality_weighted",
+                         user + "_betweenness_centrality_weighted",
+                         user + "_laplacian_centrality",
+                         user + "_pagerank_unweighted",
+                         user + "_pagerank_weighted"])
   else:
     # metrics are computed per date
     for input_file in os.listdir(args.networks_input_dir):
