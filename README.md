@@ -28,4 +28,17 @@ The verified announcements are extracted from these candidates. We manually chec
 The new set of candidates will be written in *data/introducers/unlimited* directory. There will be a file containing introducing user info and another file containing the announcment URL per coin. You can compare them with current set of candidates in 
 [data/verified_announcements.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/verified_announcements.csv) which contains the list of 336 announcments we verified from the candidates.
 
+## Extract Verified Introducer Info:
+Note that we have two sets of verified announcements: [mapofcoin announcements](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/ann_mapofcoins.csv) and [manually verified announcements](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/verified_announcements.csv) from candidates. Once we have the verified announcment (and mapofcoins announcement) URLs we need to find the corresponding post and the announcer in the forums:
 
+1. User info corresponding to verified announcers:
+```
+./forums/analysis/extract_posters.py ./forum-data/unmodified-symbol-or-name-in-subject----unmodified-symbol-and-name-in-subject-sorted-by-time.csv ./data/coins-with-earliest-trade-date.csv ./data/verified_announcements.csv ./verified_output_dir
+```
+
+2. User info corresponding to mapofcoins announcers: 
+```
+./forums/analysis/extract_posters.py ./forum-data/unmodified-symbol-or-name-in-subject----unmodified-symbol-and-name-in-subject-sorted-by-time.csv ./data/coins-with-earliest-trade-date.csv ./data/verified_announcements.csv ./mapofcoins_output_dir
+```
+
+There will be several output files in each output dir, but the main output file will be *coin_announcement.csv* which contains the user information corresponding to announcers listed in the input file. The format of this file is exactly the same as output from [forums/commands/extract_users.sh](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/forums/commands/extract_users.sh) in previous step.
