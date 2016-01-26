@@ -112,7 +112,8 @@ class PostsTracker:
     self.num_subjects_per_user = collections.defaultdict(
         lambda: collections.defaultdict(int))
  
-  
+ 
+  # keeps track of the first mention of a coin (first list)
   def add_unmodified_coin_first_mention(self, unmodified_coin, user, date_time, url):
     # we don't care if the first mention is after earliest date. we update first mention
     # if mentioned coin is observed for first time, no matter the date
@@ -126,6 +127,7 @@ class PostsTracker:
     self.first_mention_date_by_unmodified_coin[unmodified_coin] = date_time.date()
   
   
+  # keeps track of the first mention of a coin in the first post of a thread (second list)
   def add_unmodified_coin_first_thread_post_mention(self,
                                                     unmodified_coin,
                                                     user, date_time,
@@ -142,11 +144,11 @@ class PostsTracker:
     self.first_thread_post_mention_date_by_unmodified_coin[unmodified_coin] = date_time.date()
 
 
-  # just like modified coin mentions, but keeps track of both modified coin name and
-  # symbol mentions
+  # keeps track of first mentions in both lists  
   def add_unmodified_coin_mention(self, unmodified_coin, user, date_time, new_subject, url):
     # first take care of first mentions if any
     self.add_unmodified_coin_first_mention(unmodified_coin, user, date_time, url)
+    # is it the first post a thread?
     if new_subject:
       self.add_unmodified_coin_first_thread_post_mention(unmodified_coin, user, date_time,
                                                          url)
@@ -182,6 +184,7 @@ class PostsTracker:
 
 
 
+  # writes both the introducer and introduction url from the first list of users
   def write_unmodified_coin_first_mentioners(self):
     first_introducers_output_filename = os.path.join(
         args.output_dir, "unmodified_coin_first_introducers.csv")
@@ -205,6 +208,7 @@ class PostsTracker:
                                1, 1)
 
 
+  # writes both the introducer and introduction url from the second list of user
   def write_unmodified_coin_first_thread_post_mentioners(self):
     first_thread_post_introducers_output_filename = os.path.join(
         args.output_dir, "unmodified_coin_first_thread_post_introducers.csv")
