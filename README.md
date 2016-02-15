@@ -42,4 +42,23 @@ Note that we have two sets of verified announcements: [mapofcoin announcements](
   ./forums/analysis/extract_posters.py ./forum-data/unmodified-symbol-or-name-in-subject----unmodified-symbol-and-name-in-subject-sorted-by-time.csv ./data/coins-with-earliest-trade-date.csv ./data/ann_mapofcoins.csv ./mapofcoins_output_dir
   ```
 
+
 There will be several output files in each output dir, but the main output file will be *coin_announcement.csv* which contains the user information corresponding to announcers listed in the input file. The format of this file is exactly the same as output from [forums/commands/extract_users.sh](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/forums/commands/extract_users.sh) in previous step.
+
+## Join all introducer sources:
+So far, we have three data sources containing the information about coin introducers, in the decreasing accuracy order:
+
+1. Manually verified introducers: This will be the *verified_output_dir/coin_announcement.csv* output file from first command in the previous step. Current version of verified introducers info is [here](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/introducers/verified_introducers.csv).
+
+2. Mapofcoin introducers: This will be the *mapofcoins_output_dir/coin_announcement.csv* output file from first command in the previous step. This file contains the user and post info of the announcement URL. Current version of mapofcoins introducers info is [here](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/introducers/mapofcoins_introducers.csv).
+
+3. Unverified introducer candidates: These are contained in the output files from *extract_users.sh* command above. There will be several candidate sets using differene searching criteria. The three more accurate ones are: [unmodified-symbol-and-name-in-subject-with-ANN/unmodified_coin_first_thread_post_introducers.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/introducers/unmodified-symbol-and-name-in-subject-with-ANN/unmodified_coin_first_thread_post_introducers.csv), [unmodified-symbol-and-name-in-subject/unmodified_coin_first_thread_post_introducers.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/introducers/unmodified-symbol-and-name-in-subject/unmodified_coin_first_thread_post_introducers.csv) and [unmodified-symbol-and-name-in-subject-content/unmodified_coin_first_thread_post_introducers.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/introducers/unmodified-symbol-and-name-in-subject-content/unmodified_coin_first_thread_post_introducers.csv).
+
+We need to join these different sources of introducers into a single file, which we can later use as the input for computing network metrics of all coin introducers. We can do this using [join_introducers.py](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/forums/analysis/join_introducers.py). The script takes multiple introducer sources, and you should provide the input sources in the decreasing accuracy order. All the introducers in the first file will be included in the output, the second input source will be as a fallback for coins whose introducers was not included in the first file. The third will be as a fallback for the first and second and so on...
+
+```
+./forums/analysis/join_introducers.py ./verified_output_dir/coin_announcement.csv ./mapofcoins_output_dir/coin_announcement.csv ./data/introducers/unmodified-symbol-and-name-in-subject-with-ANN/unmodified_coin_first_thread_post_introducers.csv ./data/introducers/unmodified-symbol-and-name-in-subject/unmodified_coin_first_thread_post_introducers.csv ./data/introducers/unmodified-symbol-and-name-in-subject-content/unmodified_coin_first_thread_post_introducers.csv ./data/introducers/unmodified-symbol-or-name-in-subject-with-ANN/unmodified_coin_first_thread_post_introducers.csv ./data/introducers/unmodified-symbol-or-name-in-subject/unmodified_coin_first_thread_post_introducers.csv ./data/introducers/all_introducers.csv
+```
+
+The output will be *./data/introducers/all_introducers.csv*. The current output of this step is [all_introducers_concat.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/introducers/all_introducers_concat.csv). It contains introducer post info of 659 coins.
+
