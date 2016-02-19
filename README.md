@@ -62,3 +62,12 @@ We need to join these different sources of introducers into a single file, which
 
 The output will be *./data/introducers/all_introducers.csv*. The current output of this step is [all_introducers_concat.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/introducers/all_introducers_concat.csv). It contains introducer post info of 659 coins.
 
+## Generate discussion networks:
+In this step, we will generate the directed discussion networks in the forum for each day since the start of the forums. We will need the [processed forum data](https://www.dropbox.com/sh/grxbcuyo4cquyow/AABgnyGD0EtpJwrzfkgJdSuMa?dl=0) listed in the data description section above as the input. The output will be be a directory which contains an igraph network in pickle format for each day since 2009-11.
+
+```
+mkdir networks
+./forums/commands/generate_directed_networks.sh
+```
+
+The bash script requires an input directory named 'forum-data' under the top-level repo directory containing the processed forum data. The output will be in networks/directed_unlimited directory.
