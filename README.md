@@ -70,4 +70,22 @@ mkdir networks
 ./forums/commands/generate_directed_networks.sh
 ```
 
-The bash script requires an input directory named 'forum-data' under the top-level repo directory containing the processed forum data. The output will be in networks/directed_unlimited directory.
+The bash script requires an input directory named 'forum-data' under the top-level repo directory containing the processed forum data. The output will be in *networks/directed_unlimited* directory.
+
+## Compute introducer metrics:
+Now that we have both the daily discussion networks and the introducers per coin, we can compute the introducers' network metrics in their respective network (i.e. each introducer metrics need to be computed in the network corresponding to the date of its first trade).
+
+If you want to include general network metrics (irrespective of the introducer) such as density, average path length, clustering coefficient and average degree):
+
+```
+NUM_PROCESSORS=2
+./forums/analysis/compute_network_metrics.py -dn -n $NUM_PROCESSORS -u ./data/introducers/all_introducers.csv ./networks/directed_unlimited/ ./data/introducers/all_introducers_metrics.csv
+```
+
+The command above assumes you have already generated the networks, joined the introducers and placed them in directories/files mentioned in previous two steps. Furthermore, this command will take a long time to finish, so it uses multiple processors. You should set *NUM_PROCESSORS* accordingly and keep in mind that even if you don't exceeed the number of cores in your machine, you could exceed the total RAM available (In such case, you might need to settle for smaller number of cores). Based on our previous experience, this command could take up to two days in AWS 36 core machines. The output of the command, *./data/introducers/all_introducers_metrics.csv*, will be a csv with a line per each coin/introducer containing the introducer network metrics. The current output of this step is [all_introducer_metrics.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/introducers/all_introducer_metrics.csv)
+
+If you don't want to include general network metrics in the output:
+```
+NUM_PROCESSORS=2
+./forums/analysis/compute_network_metrics.py -sg -dn -n $NUM_PROCESSORS -u ./data/introducers/all_introducers.csv ./networks/directed_unlimited/ ./data/introducers/all_introducers_metrics.csv
+```
