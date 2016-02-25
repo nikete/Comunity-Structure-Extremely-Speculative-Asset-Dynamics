@@ -89,3 +89,12 @@ If you don't want to include general network metrics in the output:
 NUM_PROCESSORS=2
 ./forums/analysis/compute_network_metrics.py -sg -dn -n $NUM_PROCESSORS -u ./data/introducers/all_introducers.csv ./networks/directed_unlimited/ ./data/introducers/all_introducers_metrics.csv
 ```
+
+## Compute coin metrics:
+In this step, we compute the price (bubble severity) and volume (bubble magnitude) variation per each coin.
+
+```
+python otto\ scripts/coinmarketcap.py
+```
+
+The script will take few minutes to finish as it will need to crawl coinmarketcap website for each coin price and volume history. It will generate two csv outputs, *fullusd.csv* and *fullbtc.csv*, containing the coin metrics per line in USD and BTC. The current outputs of this step are [coin_measures_btc.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/coin_measures_btc.csv) and [coin_measures_usd.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/coin_measures_usd.csv).
