@@ -98,3 +98,13 @@ python otto\ scripts/coinmarketcap.py
 ```
 
 The script will take few minutes to finish as it will need to crawl coinmarketcap website for each coin price and volume history. It will generate two csv outputs, *fullusd.csv* and *fullbtc.csv*, containing the coin metrics per line in USD and BTC. The current outputs of this step are [coin_measures_btc.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/coin_measures_btc.csv) and [coin_measures_usd.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/coin_measures_usd.csv).
+
+# Join coin and introducer metrics:
+Now that we have our introducer metrics (derived from forums) and coin metrics (derived from their prices on coinmarketcap), we can join them into a single file ready for our statistical analysis. This step uses the output from previous two steps:
+
+```
+./analysis/join_data.py ./data/coin_measures_btc.csv ./data/introducers/all_introducer_metrics.csv ./joined_metrics_btc.csv
+./analysis/join_data.py ./data/coin_measures_usd.csv ./data/introducers/all_introducer_metrics.csv ./joined_metrics_usd.csv
+```
+
+The first command uses the BTC coin metrics in the joined output (*joined_metrics_btc.csv*). The current output of this command is [joined_price_network_btc.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/joined_price_network_btc.csv). The second command uses the USD coin metrics in the joined output (*joined_metrics_usd.csv). The current output of this command is [joined_price_network_usd.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/joined_price_network_usd.csv).
