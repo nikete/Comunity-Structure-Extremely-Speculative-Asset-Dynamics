@@ -108,3 +108,6 @@ Now that we have our introducer metrics (derived from forums) and coin metrics (
 ```
 
 The first command uses the BTC coin metrics in the joined output (*joined_metrics_btc.csv*). The current output of this command is [joined_price_network_btc.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/joined_price_network_btc.csv). The second command uses the USD coin metrics in the joined output (*joined_metrics_usd.csv). The current output of this command is [joined_price_network_usd.csv](https://github.com/nikete/Comunity-Structure-Extremely-Speculative-Asset-Dynamics/blob/master/data/joined_price_network_usd.csv).
+
+# The statistical analysis and prediction power:
+TODO: explain analysis/models.R
